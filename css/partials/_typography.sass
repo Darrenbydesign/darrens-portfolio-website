@@ -1,0 +1,57 @@
+//=======Typography==========
++font-face("source_sans_prolight","../fonts/sourcesanspro-light-webfont","source_sans_prolight")
++font-face("source_sans_proregular","../fonts/sourcesanspro-regular-webfont","source_sans_proregular")
++font-face("source_sans_prosemibold","../fonts/sourcesanspro-semibold-webfont","source_sans_prosemibold")
++font-face("fontawesome","../fonts/fontawesome","fontawesome")
++font-face("amblelight","../fonts/Amble-Light-webfont","amblelight")
++font-face("ambleregular","../fonts/Amble-Regular-webfont","ambleregular")
+
+body
+    font-size: $base-text-px
+    font-size: 100%
+    font-family: $font-stack
+    color: $base-text-color
+
+h1
+    font-size: 2.25em
+    // 16x2.25=36px
+
+h2
+    font-size: 1.5em
+    // 16x1.5=24px
+
+h3
+    font-size: 1.125em
+    // 16x1.125=18px
+
+h4
+    font-size: 0.875em
+    // 16x0.875=14px
+
+h5
+    font-size: 0.75em
+    // 16x0.75=12px
+
+h6
+    font-size: 0.625em
+    // 16x0.625=10px
+
+h1, h2, h3, h4, h5, h6
+    font-family: $font-stack-headers
+    color: $primary-color
+
+p
+    font-size: 1em
+    //16x1=16px
+    text-indent: 0
+    line-height: 1.5
+    margin-top: 1.5em
+    margin-bottom: 1.5em
+
+small
+    font-size: 0.6875em
+
+blockquote
+    padding: 10.5px 21px
+    margin: 0px 0px 21px
+    border-left: 5px solid $third-color

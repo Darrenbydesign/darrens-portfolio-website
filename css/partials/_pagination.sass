@@ -1,0 +1,54 @@
+//========Pagination========
+
+.pagination
+    display: inline-block
+    padding-left: 0
+    margin: 20px 0
+    +border-radius(2px)
+    >
+        li
+            display: inline
+            >
+                a, span
+                    position: relative
+                    float: left
+                    padding: 6px 12px
+                    line-height: 1.42857
+                    text-decoration: none
+                    background-color: $background-color
+                    border: 1px solid $third-color
+            &:first-child >
+                a, span
+                    margin-left: 0
+                    border-bottom-left-radius: 4px
+                    border-top-left-radius: 4px
+            &:last-child >
+                a, span
+                    border-top-right-radius: 4px
+                    border-bottom-right-radius: 4px
+            >
+                a:hover, span:hover, a:focus, span:focus
+                    background-color: #eeeeee
+        .active >
+            a, span, a:hover, span:hover, a:focus, span:focus
+                z-index: 2
+                color: white
+                cursor: default
+                background-color: $third-color
+                border: 1px solid $primary-color
+        .disabled >
+            span
+                color: $base-text-color
+                cursor: not-allowed
+                background-color: white
+                border: 1px solid lighten($third-color,15)
+            a
+                color: $base-text-color
+                cursor: not-allowed
+                background-color: white
+                border: 1px solid lighten($third-color,15)
+                &:hover, &:focus
+                    color: $base-text-color
+                    cursor: not-allowed
+                    background-color: white
+                    border: 1px solid lighten($third-color,15)

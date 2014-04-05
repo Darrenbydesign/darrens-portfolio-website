@@ -1,0 +1,10 @@
+%head
+	%title Darren By Design
+	%meta{:charset => "utf-8" }
+	%link{:rel => "stylesheet", :href => "css/mysite.css"}
+	%link{:rel => "stylesheet", :href => "css/font-awesome.css"}
+%header.header
+	%a{:href => "index.html"}
+		%h1.logo.hide-words.text-center
+			Darren Sorrels Graphic & Web Designer
+	= Haml::Engine.new(File.read('_navigation.haml')).render

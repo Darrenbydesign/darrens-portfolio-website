@@ -1,0 +1,162 @@
+.featured-container
+    position: relative
+    overflow: hidden
+    margin: 0 0 10px
+    padding: 40px 0 60px
+    nav 
+        span
+            position: absolute
+            top: 50%
+            width: 60px
+            height: 100px
+            +border-radius(2px)
+            background: $secondary-color
+            color: #fff
+            font-size: 50px
+            text-align: center
+            margin-top: -50px
+            line-height: 100px
+            cursor: pointer
+            font-weight: normal
+            &:hover,&:focus
+                background: $primary-color
+    ul
+        margin: 0
+        padding: 0
+        white-space: nowrap
+        list-style: none
+        li
+            transform: translateZ(0)
+            display: inline
+            margin: 0
+            padding: 0
+            a
+                text-align: center
+                outline: none
+            img
+                border: none
+                max-width: 75%
+                margin: 0 auto
+                padding-bottom: 10px
+                transition: left 0.4s ease-in-out, opacity 0.6s ease-in-out
+
+.fc-prev
+    left: 0
+    &:before
+        content: "<"
+.fc-next
+    right: 0
+    &:before
+        content: ">"
+.fc-nav
+    position: absolute
+    bottom: 0
+    margin: 0 auto
+    white-space: nowrap
+    text-align: center
+    width: 100%
+.fc-dots
+    display: inline-block
+    width: 18px
+    height: 18px
+    background: $primary-color
+    margin: 4px
+    border-radius: 50%
+    cursor: pointer
+    &:hover
+        background: $third-color
+
+// this part is the main box of the tab the content is joined to each tab. This makes positioning super easy!
+// .tab
+//     direction: ltr
+//     max-height: 32em
+//     overflow: auto
+//     label
+//         background: $secondary-color
+//         border-radius: 8px
+//         padding: 15px
+//         margin: 15px 5px
+//         width: 20%
+//         max-width: 30%
+//         display: block
+//         position: relative
+//         left: 1px
+//         text-align: center
+//     [type=radio]
+//         display: none
+//         &:checked ~ label
+//             color: $link-color
+//             background: $background-color
+//             z-index: 2
+//         &:checked ~ label ~ [class*="tab-content"]
+//             z-index: 1
+// .tab-content
+//     position: absolute
+//     top: 0px
+//     left: 15%
+//     background: lighten($BGcolor-info, 10)
+//     right: 0
+//     bottom: 0
+//     padding: 15px 20px
+//     margin-left: 50px
+//     height: 32em
+//     overflow: auto
+//     text-align: left
+//     ul
+//         list-style: none
+//         li
+//             margin: 10px 5px
+// Vertical Tab attempt number three use this one! but its still buggy!
+
+//main container for Tab attmept 3
+
+/ tab method number 2 vertical tabs but  doesnt have independent scroll between tabs and content
+.tab-container
+    position: relative
+    min-height: 32em
+    max-height: 32em
+    clear: both
+    overflow: auto
+    padding: 5px
+    background: lighten($primary-color, 10%)
+    direction: rtl
+
+
+.tb-wrap
+    max-height: 32em
+    // width: 100%
+    background: $primary-color
+    +border-radius(2px)
+    margin: 0 1px 3%
+    @extend .bg-trim
+    list-style: none
+    [id*="folder-"]
+        background: white
+        padding: 20px
+        max-height: inherit
+        min-height: 31em
+        overflow: auto
+        border: 2px solid #cccccc
+        min-width: 60%
+        visibility: hidden
+        display: none
+        li
+            list-style: none
+            padding: 5px 15px
+        &:target
+            visibility: visible
+            display: inherit
+            z-index: 1
+            transition: border 0.3s ease
+            border: 3px solid $secondary-color
+            +border-radius(2px)
+
+    //=====UNUSED=====
+    //   >span
+    //     width: 0%
+    //     animation: slide 5s ease-out infinite alternate
+    // @keyframes slide
+    //   0%
+    //     width: 0%
+    //   100%
+    //     width: 100%

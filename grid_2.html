@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Darren By Design</title>
+    <meta charset='utf-8'>
+    <link href='css/mysite.css' rel='stylesheet'>
+    <link href='css/font-awesome.css' rel='stylesheet'>
+    <script src='js/jquery-1.11.0.min.js'></script>
+    <script>
+$(function(){
+  // alert("Help me!!!");
+      // global variables for script
+    'use strict';
+    var current, size;
+    // console.log("this is from the DBDligthbox.js");
+    $('.lb-trigger').click(function(e) {
+
+        // prevent default click event
+        e.preventDefault();
+
+        // grab href from clicked element
+        // determine the index of clicked trigger
+        // create HTML markup for lightbox window
+        var image_href = $(this).attr("href"),
+            slideNum = $('.lb-trigger').index(this) + 1,
+            lightbox =
+                '<div class="lightbox">' +
+                '<div class="btn-tiny close">' + "Close Me" + '</div>' +
+                '<div class="lb-content">' +
+                '<div class="lb-nav">' +
+                '<a class="lb-prev slide-nav">Prev</a>' +
+                '<a class="lb-next slide-nav">Next</a>' +
+                '</div>' +
+                '<figure>' +
+                // '<img src="' + image_href + '"/>' +
+                '<figcaption>' +
+                '<h3>' + "image_name" + '</h3>' +
+                '<p>' + 'Lorem ipsum Quis elit ut non ea consequat aliqua cupidatat Ut minim occaecat veniam esse.' + '</p>' +
+                '</figcaption>' +
+                '</figure>' +
+                '</div>' +
+                '</div>',
+            previous_image,
+            next_image;
+
+
+        // // find out if .lightbox exists
+        // if ($('.lightbox').length > 0) {
+        //     // .lightbox exists
+        //     $('.lightbox').fadeIn(300);
+        //     // .lightbox does not exist - create and insert (runs 1st time only)
+        // } else {
+            //insert lightbox HTML into page
+          $('body').append(lightbox);
+
+          // fill lightbox with .lb-trigger hrefs in .grid-box
+          $('.grid-box').find('.lb-trigger').each(function() {
+              var $href = $(this).attr('href');
+              if(image_href === $href) {
+                $('.lb-content').prepend($('<img src="' + $href + '">').show());
+              } else {
+                $('.lb-content').prepend($('<img src="' + $href + '">').hide());
+              }
+          });
+        //slideNum = $('.lb-trigger').index(this) + 1,
+        console.log("lb-length:" + $('.lb-trigger').length)
+        if(slideNum === $('.lb-trigger').length){
+          next_image = $('.lb-trigger').first(); //.attr("href");
+          previous_image = $(this).closest('li').prev('li').find('.lb-trigger'); //.attr("href");
+        } else if (slideNum === 1) {
+          next_image = $(this).closest('li').next('li').find('.lb-trigger'); //.attr("href");
+          previous_image = $('.lb-trigger').last(); //.attr("href");
+        } else {
+          next_image = $(this).closest('li').next('li').find('.lb-trigger'); //.attr("href");
+          previous_image = $(this).closest('li').prev('li').find('.lb-trigger'); //.attr("href");
+        }
+
+
+        console.log("slideNum:" + slideNum + " next_image href: " + next_image.attr("href") + "\tprevious_image href: " + previous_image.attr("href"));
+        // }
+
+        //Click anywhere on the page to get rid of lightbox window
+        $('.lightbox').click(function(event) {
+            // using .on() instead of .live(). more modern, and fixes event bubbling issues
+            $(this).fadeOut(300);
+            $(this).remove();
+        });
+
+        $('.lb-prev').click(function(){
+           $('.lightbox').click();
+          $(previous_image).click();
+        })
+        $('.lb-next').click(function() {
+           $('.lightbox').click();
+          $(next_image).click();
+        })
+    });
+
+
+    
+
+
+
+
+    $(document.documentElement).keyup(function(event) {
+
+        var $this = $(this),
+            dest;
+
+        if (event.keyCode === 37) { // left arrow key
+            dest = current - 1;
+            if (dest < 0) {
+                dest = size - 1;
+            }
+        } else if (event.keyCode === 39) { // right arrow key
+            dest = current + 1;
+            if (dest > size - 1) {
+                dest = 0;
+            }
+
+        }
+
+        // fadeOut curent slide, FadeIn next/prev slide
+        $('.lb-content img:eq(' + current + ')').hide();
+        $('.lb-content img:eq(' + dest + ')').show();
+
+        // update current slide
+        current = dest;
+    });
+});
+    </script>
+  </head>
+  <header class='header'>
+    <a href='index.html'>
+      <h1 class='logo hide-words text-center'>
+        Darren Sorrels Graphic & Web Designer
+      </h1>
+    </a>
+  </header>
+  <nav class='nav-hrz center'>
+    <ul>
+      <li>
+        <a href='index.html'>Home</a>
+      </li>
+      <li>
+        <a href='about.html'>About</a>
+      </li>
+      <li>
+        <a href='portfolio.html'>Portfolio</a>
+      </li>
+      <li>
+        <a href='blog.html'>Blog</a>
+      </li>
+    </ul>
+  </nav>
+  <body>
+    <!-- main part of header page above -->
+    <div class='container'>
+      <section class='slab'>
+        <div class='blk-12'>
+          <h1>grid-box</h1>
+          <h2>Posters & Wallpapers</h2>
+          <div class='grid-box imageSet'>
+            <ul>
+              <li>
+                <figure>
+                  <a class='lb-trigger' href='img/phone_wallpapers/batman.jpg'>
+                    <img alt='batman.jpg' src='img/phone_wallpapers/batman.jpg'>
+                  </a>
+                  <figcaption>
+                    <h3>batman.jpg</h3>
+                    <span>by Darren Sorrels</span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class='lb-trigger' href='img/phone_wallpapers/superman.jpg'>
+                    <img alt='superman.jpg' src='img/phone_wallpapers/superman.jpg'>
+                  </a>
+                  <figcaption>
+                    <h3>superman.jpg</h3>
+                    <span>by Darren Sorrels</span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class='lb-trigger' href='img/phone_wallpapers/flash.jpg'>
+                    <img alt='flash.jpg' src='img/phone_wallpapers/flash.jpg'>
+                  </a>
+                  <figcaption>
+                    <h3>flash.jpg</h3>
+                    <span>by Darren Sorrels</span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class='lb-trigger' href='img/phone_wallpapers/brainiac.jpg'>
+                    <img alt='brainiac.jpg' src='img/phone_wallpapers/brainiac.jpg'>
+                  </a>
+                  <figcaption>
+                    <h3>brainiac.jpg</h3>
+                    <span>by Darren Sorrels</span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class='lb-trigger' href='img/Logos/Flyte_1.jpg'>
+                    <img alt='Flyte_1.jpg' src='img/Logos/Flyte_1.jpg'>
+                  </a>
+                  <figcaption>
+                    <h3>Flyte_1.jpg</h3>
+                    <span>by Darren Sorrels</span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class='lb-trigger' href='img/Logos/Flyte_2.jpg'>
+                    <img alt='Flyte_2.jpg' src='img/Logos/Flyte_2.jpg'>
+                  </a>
+                  <figcaption>
+                    <h3>Flyte_2.jpg</h3>
+                    <span>by Darren Sorrels</span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class='lb-trigger' href='img/Logos/Flyte_3.jpg'>
+                    <img alt='Flyte_3.jpg' src='img/Logos/Flyte_3.jpg'>
+                  </a>
+                  <figcaption>
+                    <h3>Flyte_3.jpg</h3>
+                    <span>by Darren Sorrels</span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class='lb-trigger' href='img/Logos/purls&amp;knit_color_logo.png'>
+                    <img alt='purls&amp;knit_color_logo.png' src='img/Logos/purls&amp;knit_color_logo.png'>
+                  </a>
+                  <figcaption>
+                    <h3>purls&knit_color_logo.png</h3>
+                    <span>by Darren Sorrels</span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class='lb-trigger' href='img/illustration/FOTC_Germaine.jpg'>
+                    <img alt='FOTC_Germaine.jpg' src='img/illustration/FOTC_Germaine.jpg'>
+                  </a>
+                  <figcaption>
+                    <h3>FOTC_Germaine.jpg</h3>
+                    <span>by Darren Sorrels</span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class='lb-trigger' href='img/illustration/starfox_1.jpg'>
+                    <img alt='starfox_1.jpg' src='img/illustration/starfox_1.jpg'>
+                  </a>
+                  <figcaption>
+                    <h3>starfox_1.jpg</h3>
+                    <span>by Darren Sorrels</span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class='lb-trigger' href='img/web_design/aou_site.jpg'>
+                    <img alt='aou_site.jpg' src='img/web_design/aou_site.jpg'>
+                  </a>
+                  <figcaption>
+                    <h3>aou_site.jpg</h3>
+                    <span>by Darren Sorrels</span>
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class='lb-trigger' href='img/web_design/hot_wok_site.jpg'>
+                    <img alt='hot_wok_site.jpg' src='img/web_design/hot_wok_site.jpg'>
+                  </a>
+                  <figcaption>
+                    <h3>hot_wok_site.jpg</h3>
+                    <span>by Darren Sorrels</span>
+                  </figcaption>
+                </figure>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+  <footer class='footer'>
+    <p>copyright 2014 Darrenbydesign production</p>
+  </footer>
+</html>
