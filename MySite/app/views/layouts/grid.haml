@@ -1,0 +1,51 @@
+!!! 5
+%html
+	- @title = "grid-box"
+	= Haml::Engine.new(File.read('_header.haml')).render
+	/ = Haml::Engine.new(File.read('_navigation.haml')).render
+	%body
+		/ main part of header page above
+		%div.container
+			%section.slab
+				.blk-12
+					%h1= @title 
+					%h2 Posters & Wallpapers
+					.grid-box
+						%ul 
+							- images = ["batman.jpg","superman.jpg","flash.jpg","brainiac.jpg"].each do |i|
+								%li
+									%figure
+										%a.lb-trigger{:href => "img/phone_wallpapers/#{i}"}
+											%img{:src => "img/phone_wallpapers/#{i}", :alt => "#{i}"}/ 
+										%figcaption 
+											%h3= "#{i}"
+											%span by Darren Sorrels 
+							- logos = ["Flyte_1.jpg", "Flyte_2.jpg", "Flyte_3.jpg","purls&knit_color_logo.png"].each do |l|
+								%li
+									%figure							
+										%a.lb-trigger{:href => "img/Logos/#{l}"} 
+											%img{:src => "img/Logos/#{l}", :alt => "#{l}"}/ 
+										%figcaption 
+											%h3= "#{l}"
+											%span by Darren Sorrels
+
+							- illustration = ["FOTC_Germaine.jpg","starfox_1.jpg"].each do |d|
+								%li
+									%figure 
+										%a.lb-trigger{:href => "img/illustration/#{d}"}
+											%img{:src => "img/illustration/#{d}", :alt => "#{d}"}/ 
+										%figcaption 
+											%h3= "#{d}"
+											%span by Darren Sorrels
+
+							- websites = ["aou_site.jpg","hot_wok_site.jpg"].each do |w|
+								%li
+									%figure 
+										%a.lb-trigger{:href => "img/web_design/#{w}"} 
+											%img{:src => "img/web_design/#{w}", :alt => "#{w}"}/ 
+										%figcaption 
+											%h3= "#{w}"
+											%span by Darren Sorrels
+		%script{:src => "js/jquery-1.11.0.min.js"}
+		%script{:src => "js/DBDlightbox.js"}
+	= Haml::Engine.new(File.read('_footer.haml')).render

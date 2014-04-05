@@ -1,0 +1,51 @@
+!!! 5
+%html
+	- @title = "About Me"
+	= Haml::Engine.new(File.read('_header.haml')).render
+	%body
+		/ main part of header page above
+		%div.container
+			%section.slab
+				.blk-3#aboutMe-list
+					%h1= @title
+					%img.img-portfolio{:src =>"img/me.png"}
+					%h3 Darren Sorrels
+					%h3 Skills:
+					%ul
+						%li Print Design
+						%li Web Design
+						%li Motion Design
+						%li Illustration
+					%h3 Contact Info
+					%ul
+						%li 972.974.2735
+						%li DarrenbyDesign@gmail.com
+				%article.blk-6
+					%p
+						Lorem ipsum Duis qui qui deserunt sed sed minim in enim non sunt elit qui fugiat non elit aliqua Ut commodo officia elit esse laboris Duis est nisi officia consequat amet ut sunt cupidatat exercitation cillum cupidatat id non officia cupidatat fugiat ut culpa Duis pariatur dolore quis dolor est id velit nulla qui laboris consequat exercitation aliqua ullamco laborum culpa commodo enim veniam dolore cupidatat officia cillum sit Duis deserunt reprehenderit exercitation sint veniam aliquip quis fugiat ut occaecat eiusmod voluptate reprehenderit deserunt cupidatat ut cillum deserunt adipisicing mollit sint aute do dolore nulla ad eiusmod culpa tempor enim ut non fugiat eu voluptate voluptate sit consequat do sed sit Ut voluptate ad reprehenderit deserunt incididunt ea aute est nulla nostrud ut deserunt aliquip sunt Duis amet est et laborum nulla nulla adipisicing Excepteur sint exercitation Duis dolor incididunt occaecat pariatur enim ut Duis amet nostrud laborum magna aliquip sunt adipisicing elit cillum enim in commodo cillum do aliqua dolore do proident anim Ut culpa nulla aliqua consequat occaecat reprehenderit aliquip sint aliquip enim pariatur incididunt id anim in reprehenderit sint non proident anim consectetur reprehenderit enim non exercitation non anim sed Excepteur amet sint aliqua fugiat labore sit sint officia ut aliqua officia exercitation nostrud incididunt dolore.
+						%a{:href => "#" } Link to other works
+					%blockquote
+						%p The greater danger for most of us lies not in setting our aim too high and falling short; but in setting our aim too low, and achieving our mark.
+				%aside.blk-3
+					%h2 Social media
+					%ul#mediaList
+						%li 
+							%a{:href=>"https://twitter.com/DarrenSorrels"}
+								%i.fa.fa-twitter.fa-3x
+								witter
+						%li 
+							%a{:href=>"https://www.linkedin.com/pub/darren-sorrels/46/365/525"}
+								%i.fa.fa-linkedin.fa-3x
+								LinkedIn
+						%li 	
+							%a{:href=>"https://www.facebook.com/DarrenTheDork"}
+								%i.fa.fa-facebook.fa-3x
+								acebook
+				.blk-9.blk-offset-3#contactMe
+					%h1 Contact Me
+					%form
+						- contactMe = ["First Name","Last Name", "Email"].each do |info|
+							%label.frm-title.frm-control= info
+							%input.input-medium{ :type => 'text'}
+						%textarea.textarea.frm-control{ :placeholder => 'Message here'}
+	= Haml::Engine.new(File.read('_footer.haml')).render

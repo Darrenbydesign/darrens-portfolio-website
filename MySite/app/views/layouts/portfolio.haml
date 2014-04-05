@@ -1,0 +1,67 @@
+!!! 5
+%html
+	- @title = "Portfolio"
+	= Haml::Engine.new(File.read('_header.haml')).render
+	%body
+		/ main part of header page above
+		%div.container
+			%section.slab
+				.blk-12
+					%h1= @title
+					.grid-box.gb-style-1
+						/ %h2 Posters & Wallpapers
+						%ul
+							- images = ["batman","superman","flash","brainiac"].each do |i|
+								%li
+									%figure
+										%a.lb-trigger{:href => "img/phone_wallpapers/#{i}.jpg"}
+											%img{:src => "img/thumbnail.jpg", :alt => "#{i}"}/
+										%figcaption 
+											%h3= "#{i}"
+											%span Darren Sorrels
+							- posters = ["Observations","Regeneration_Poster","almost_maine_poster","art_of_murder","worldview_lecture","TLOZ_type"].each do |p|
+								%li
+									%figure
+										%a.lb-trigger{:href => "img/posters/#{p}.jpg"} 
+											%img{:src => "img/thumbnail.jpg", :alt => "#{p}"}/
+										%figcaption 
+											%h3= "#{p}"
+											%span Darren Sorrels
+							- books = ["Great_expectations_Cover","moby_dick_cover"].each do |b|
+								%li
+									%figure
+										%a.lb-trigger{:href => "img/posters/#{b}.jpg"}
+											%img{:src => "img/thumbnail.jpg", :alt => "#{b}"}/ 
+										%figcaption 
+											%h3= "#{b}"
+											%span by Darren Sorrels
+							/ %h2 Logos
+							- logos = ["Flyte_1", "Flyte_2", "Flyte_3","purls&knit_color_logo","purls&knit_blk_white_logo","purls&knit_label","blk_epiphany"].each do |l|
+								%li
+									%figure							
+										%a.lb-trigger{:href => "img/Logos/#{l}.jpg"} 
+											%img{:src => "img/thumbnail.jpg", :alt => "#{l}"}/ 
+										%figcaption 
+											%h3= "#{l}"
+											%span by Darren Sorrels
+							/ %h2 Illustrations
+							- illustration = ["FOTC_Germaine","starfox_1"].each do |d|
+								%li
+									%figure 
+										%a.lb-trigger{:href => "img/illustration/#{d}.jpg"}
+											%img{:src => "img/thumbnail.jpg", :alt => "#{d}"}/ 
+										%figcaption 
+											%h3= "#{d}"
+											%span by Darren Sorrels
+							/ %h2 Web Design
+							- websites = ["thumbnail"].each do |w|
+								%li
+									%figure 
+										%a.lb-trigger{:href => "img/web_design/#{w}.jpg"} 
+											%img{:src => "img/thumbnail.jpg", :alt => "#{w}"}/ 
+										%figcaption 
+											%h3= "#{w}"
+											%span by Darren Sorrels
+		%script{:src => "js/jquery-1.11.0.min.js"}
+		%script{:src => "js/DBDlightbox.js"}
+	= Haml::Engine.new(File.read('_footer.haml')).render

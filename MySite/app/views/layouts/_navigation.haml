@@ -1,0 +1,5 @@
+%nav.nav-hrz.center
+	%ul
+		- {"Home" => "index.html", "About" => "about.html", "Portfolio" => "portfolio.html","Blog" => "blog.html"}.each do |name, url|
+			%li
+				%a{:href => url}= name
