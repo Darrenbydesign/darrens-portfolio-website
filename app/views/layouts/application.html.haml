@@ -1,0 +1,18 @@
+!!! 5
+%html
+	- @title = "Home"
+	= render :partial => "layouts/header"
+	%body 
+		.container 
+			.slab
+				.blk-12
+					= yield
+				.blk-8.blk-offset-2
+					-3.times do
+						%article.entry
+							%header
+								%h2.blog-title
+									%a{:href=>"#", :rel=>"bookmark", :title=>" LINK to Blog title"} The title
+							%p
+								Lorem ipsum Esse minim adipisicing nulla commodo anim magna magna non Duis adipisicing reprehenderit aliqua quis officia occaecat velit sed eiusmod tempor mollit do cillum deserunt ut dolor nostrud exercitation nisi qui ut culpa officia officia nisi est in occaecat.
+	= render :partial => "layouts/footer"
