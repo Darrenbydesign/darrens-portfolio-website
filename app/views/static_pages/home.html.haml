@@ -1,0 +1,29 @@
+!!! 5
+%html
+	- @title = "Home"
+	%body 
+		.container 
+			.slab
+				.blk-12
+					.fc-container
+						#featured-content
+							%img#image-1{:src => "img/header_logo.png", :alt => "Image for Gallery"}
+							%img#image-2{:src => "img/header_logo.png", :alt => "Image for Gallery"}
+							%img#image-3{:src => "img/header_logo.png", :alt => "Image for Gallery"}
+							%img#image-4{:src => "img/header_logo.png", :alt => "Image for Gallery"} 
+							%img#image-5{:src => "img/header_logo.png", :alt => "Image for Gallery"}
+					#fc-nav
+						%ul
+							-(1..5).each do |n|
+								%li 
+									%a{:href => "#image-#{n}"}= "#{n}"
+							%button.btn-small.fc-prev <
+							%button.btn-small.fc-next >
+				.blk-8.blk-offset-2
+					-3.times do
+						%article.entry
+							%header
+								%h2.blog-title
+									%a{:href=>"#", :rel=>"bookmark", :title=>" LINK to Blog title"} The title
+							%p
+								Lorem ipsum Esse minim adipisicing nulla commodo anim magna magna non Duis adipisicing reprehenderit aliqua quis officia occaecat velit sed eiusmod tempor mollit do cillum deserunt ut dolor nostrud exercitation nisi qui ut culpa officia officia nisi est in occaecat.

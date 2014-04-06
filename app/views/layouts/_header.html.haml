@@ -1,13 +1,15 @@
 %head
 	%title Darren By Design
 	%meta{:charset => "utf-8" }
-	-# %link{:rel => "stylesheet", :href => "app/assets/stylesheets/mysite.css"}
-	-# %link{:rel => "stylesheet", :href => "app/assets/stylesheets/font-awesome.css"}
-	= stylesheet_link_tag "style", media: "all", "data-turbolinks-track" => true
+	-# %link{:rel => "stylesheet", :href => "/app/assets/stylesheets/mysite.css"}
+	-# %link{:rel => "stylesheet", :href => "/app/assets/stylesheets/font-awesome.css"}
+	= stylesheet_link_tag 'mysite',"data-turbolinks-track" => true
+	-# = sytlesheet_link_tag 'font-awesome' "data-turbolinks-track" => true
+	= javascript_include_tag "jquery-1.11.0.min", "data-turbolinks-track" => true
+	= javascript_include_tag "DBDlightbox", "data-turbolinks-track" => true
 	= csrf_meta_tags
 %header.header
-	%a{:href => "index.html"}
+	%a{:href => "home.html"}
 		%h1.logo.hide-words.text-center
 			Darren Sorrels Graphic & Web Designer
-	-# = Haml::Engine.new(File.read('_navigation.haml')).render
 	= render :partial => "layouts/navigation"

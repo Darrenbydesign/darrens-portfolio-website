@@ -1,0 +1,90 @@
+.accordion
+    overflow: hidden
+    background: lighten($third-color,10)
+    padding: 10px
+    +border-radius(2px)
+    section
+        float: left
+        overflow: hidden
+        background: $secondary-color
+        margin: 3px
+        +border-radius(2px)
+        &:hover
+            background: lighten($primary-color,5)
+        p
+            display: none
+        &:after
+            position: relative
+            color: $alt-text-color
+        &:target
+            background: white
+            padding: 10px
+            overflow: auto
+            &:hover
+                background: white
+            h2
+                width: 100%
+                a
+                    color: lighten($primary-color,5)
+                    padding: 0px
+            p
+                display: block
+        h2
+            a
+                padding: 8px 10px
+                display: block
+                font-weight: normal
+                color: $alt-text-color
+                text-decoration: none
+
+.horizontal
+    [id*="section-"]
+        width: 5%
+        height: 250px
+        transition: width 0.2s ease-out
+        +counter-loop(1, 5)
+        &:after
+            top: 180px
+            left: 15px
+        h2
+            -webkit-transform: rotate(90deg)
+            -moz-transform: rotate(90deg)
+            transform: rotate(90deg)
+            width: 240px
+            position: relative
+            left: -100px
+            top: 100px
+        &:target
+            width: 73%
+            height: 230px
+            h2
+                top: 0px
+                left: 0px
+                -webkit-transform: rotate(0deg)
+                -moz-transform: rotate(0deg)
+                transform: rotate(0deg)
+
+.vertical
+    [id*="section-"]
+        width: 100%
+        height: 40px
+        transition: height 0.2s ease-out
+        h2
+            position: relative
+            left: 0px
+        &:target
+            height: 100%
+            width: 97%
+        &:after
+            // top: -60px
+            // left: 50px
+        &:after
+            top: -60px
+            // left: 810px
+// \:target
+//     animation: target-fade 0.2s 1
+// @keyframes target-fade
+//     0%
+//         background: rgba(0,0,0,0.1)
+//     100%
+//         background: rgba(0,0,0,0)

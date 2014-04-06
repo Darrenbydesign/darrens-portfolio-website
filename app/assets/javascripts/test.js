@@ -1,3 +1,3 @@
 $(function(){
-	alert("Help me!!!");
+	alert("Can you see me!!!");
 });

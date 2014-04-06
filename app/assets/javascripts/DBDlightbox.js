@@ -1,9 +1,7 @@
 $(function() {
-  // alert("Help me!!!");
   // global variables for script
   'use strict';
   var current, size;
-  // console.log("this is from the DBDligthbox.js");
   $('.lb-trigger').click(function(e) {
 
     // prevent default click event
@@ -33,14 +31,6 @@ $(function() {
         '</div>',
       previous_image,
       next_image;
-
-
-    // // find out if .lightbox exists
-    // if ($('.lightbox').length > 0) {
-    //     // .lightbox exists
-    //     $('.lightbox').fadeIn(300);
-    //     // .lightbox does not exist - create and insert (runs 1st time only)
-    // } else {
     //insert lightbox HTML into page
     $('body').append(lightbox);
 
@@ -86,8 +76,6 @@ $(function() {
       $(next_image).click();
     })
   });
-
-
 
   $(document.documentElement).keyup(function(event) {
 

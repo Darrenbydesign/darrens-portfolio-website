@@ -1,0 +1,217 @@
+/*===========Header,Body, Footer==============*/
+.header
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAADklEQVQImWNgQAXGZHAAGioAzdMFH7oAAAAASUVORK5CYII=")
+    width: 100%
+    border-bottom: 5px solid $secondary-color
+    padding: 0px 10px
+    h1
+        color: $base-text-color
+        @extend .txt-shadow
+body
+    background: $background-color
+    // background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAADklEQVQImWNgQAXGZHAAGioAzdMFH7oAAAAASUVORK5CYII=")
+
+.footer
+    background: $background-color
+    border-top: 5px solid $secondary-color
+    padding: 5px 10px
+    position: relative
+    bottom: 0%
+    width: 100%
+
+blockquote
+    p
+        &:before
+            content: "\""
+            font-size: 32px
+            font: $font-stack
+        &:after
+            content: "\""
+            font-size: 32px
+            font: $font-stack
+/*====================================*/
+
+/*============Custom Styles================*/
+.logo
+    background: url(header_logo.png) center no-repeat
+    height: 100px
+    max-height: 100%
+.hide-words
+    font-size: 0px
+#aboutMe-list
+    > ul
+        list-style: none
+#mediaList
+    list-style: none
+    a
+        text-decoration: none
+#contactMe
+    textarea
+        width: 50%
+.fc-container
+    margin: 10px auto
+    width: 100%
+    border-top: 8px solid $secondary-color
+    border-bottom: 8px solid $secondary-color
+#featured-content
+    height: 18em
+    background: $background-color
+    +border-radius(2px)
+    overflow: hidden
+    position: relative
+    img
+        // position: absolute
+        // top: 0
+        // left: -100%
+        max-height: 100%
+        z-index: 1
+        opacity: 0
+        transition: all linear 1s
+        &:first-child
+            // left: 0
+        &:target
+            // left: 10%
+            z-index: 9
+            opacity: 1
+#fc-nav
+    ul
+        text-align: center
+        list-style: none
+        display: block
+        li
+            display: inline-block
+        a
+            text-decoration: none
+            background: darken($background-color,5)
+            border: 1px solid $secondary-color
+            padding: 5px
+            +border-radius(2px)
+            color: $base-text-color
+            &:hover
+                background: $secondary-color
+                color: $base-text-color
+.grid-box
+    margin: 10px auto
+    // background: darken($background-color,5)
+    list-style: none
+    text-align: center
+    li
+        display: inline-block
+        margin: 0
+        width: 200px
+        padding: 10px
+        text-align: left
+        position: relative
+    figure
+        position: relative
+        margin: 0
+        img
+            border: 6px solid $primary-color
+            max-width: 100%
+            max-height: 100%
+            display: block
+            position: relative
+        figcaption
+            position: absolute
+            top: 0
+            left: 0
+            padding: 20px
+            background: lighten($third-color,15)
+            text-align: center
+            font-size: 1.3em
+            line-height: 1.5em
+            h3
+                margin: 0
+                padding: 0
+                color: $alt-text-color
+            a
+                text-align: center
+                text-decoration: none
+                padding: 5px 10px
+                +border-radius(2px)
+                display: inline-block
+                background: $primary-color
+                color: $alt-text-color
+            span
+                font-size: 0.75em
+.gb-style-1
+    figure
+        overflow: hidden
+        &:hover img
+            transform: translateY(-50px)
+        &:hover figcaption
+            opacity: 1
+            transform: translateY(0px)
+            transition: transform 0.4s
+        a
+            bottom: 20px
+        img
+            transition: transform 0.4s
+        figcaption
+            width: 100%
+            top: auto
+            bottom: 0
+            opacity: 0
+            transform: translateY(100%)
+            transition: transform 0.4s
+            a
+                background: none
+            
+.lightbox
+    position: fixed
+    background: rgba($third-color,0.7)
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    text-align: center
+.lb-content
+    margin: 0 auto
+    max-width: 75%
+    max-height: 75%
+    overflow: scroll
+    border: 2px solid $third-color
+    background: rgba($third-color,0.4)
+    box-shadow: 0 0 5px $third-color
+    img
+        // max-width: 100% 
+        max-height: 100%
+        margin: 0 auto
+    figure
+        figcaption
+            background: $secondary-color
+            padding: 10px
+            h3
+                color: $alt-text-color
+            p
+                color: $alt-text-color
+                text-align: left
+                margin: 0 auto
+.lb-nav,
+    z-index: 999
+
+.lb-prev,
+.lb-next,
+.fc-prev,
+.fc-next
+    top: 50%
+    position: absolute
+    cursor: pointer
+    // padding: 0.40em 0.8em
+    background: $primary-color
+    color: $alt-text-color
+    +border-radius(4px)
+
+.lb-prev,
+.fc-prev
+    left: 10px
+.lb-next,
+.fc-next
+    right: 10px
+
+.blog-title
+    a
+        text-decoration: none
+.url
+    text-decoration: none
+/*====================================
