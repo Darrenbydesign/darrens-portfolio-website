@@ -1,4 +1,9 @@
 MySite::Application.routes.draw do
+  # root :to => "static_pages#home"
+  get "static_pages/home"
+  get "static_pages/about"
+  get "static_pages/blog"
+  get "static_pages/portfolio"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

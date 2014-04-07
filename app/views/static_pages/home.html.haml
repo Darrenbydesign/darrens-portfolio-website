@@ -2,14 +2,16 @@
 .blk-12
 	.fc-container
 		#featured-content
-			%img#image-1{:src => "img/header_logo.png", :alt => "Image for Gallery"}
-			%img#image-2{:src => "img/header_logo.png", :alt => "Image for Gallery"}
-			%img#image-3{:src => "img/header_logo.png", :alt => "Image for Gallery"}
-			%img#image-4{:src => "img/header_logo.png", :alt => "Image for Gallery"} 
-			%img#image-5{:src => "img/header_logo.png", :alt => "Image for Gallery"}
+			=# image_tag "header_Logo.png", :alt => "Image for Gallery", :id => "image-1"
+			=# image_tag "header_Logo.png", :alt => "Image for Gallery", :id => "image-2"
+			=# image_tag "header_Logo.png", :alt => "Image for Gallery", :id => "image-3"
+			=# image_tag "header_Logo.png", :alt => "Image for Gallery", :id => "image-4"
+			=# image_tag "header_Logo.png", :alt => "Image for Gallery", :id => "image-5"
+			- @images.each_with_index do |x,y|
+				= image_tag "#{x}", :id => "image-#{y}"
 	#fc-nav
 		%ul
-			-(1..5).each do |n|
+			-@images.each_index do |n|
 				%li 
 					%a{:href => "#image-#{n}"}= "#{n}"
 			%button.btn-small.fc-prev <

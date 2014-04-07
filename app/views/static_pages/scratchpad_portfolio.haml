@@ -1,0 +1,8 @@
+- author_name = 'Test author'
+= def make_portfolio($image_name)
+	%li 
+		%figure 
+			%a= image_path "#{image-name}"
+				=image_tag "#{image-name}"
+			span= author_name 
+end
