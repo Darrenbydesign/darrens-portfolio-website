@@ -2,11 +2,7 @@
 .blk-12
 	.fc-container
 		#featured-content
-			=# image_tag "header_Logo.png", :alt => "Image for Gallery", :id => "image-1"
-			=# image_tag "header_Logo.png", :alt => "Image for Gallery", :id => "image-2"
-			=# image_tag "header_Logo.png", :alt => "Image for Gallery", :id => "image-3"
-			=# image_tag "header_Logo.png", :alt => "Image for Gallery", :id => "image-4"
-			=# image_tag "header_Logo.png", :alt => "Image for Gallery", :id => "image-5"
+			=# image_tag "header_Logo.png", :alt => "Image for Gallery", :id => "image-n"
 			- @images.each_with_index do |x,y|
 				= image_tag "#{x}", :id => "image-#{y}"
 	#fc-nav

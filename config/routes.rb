@@ -1,4 +1,10 @@
 MySite::Application.routes.draw do
+  resources :images
+
+  resources :microposts
+
+  resources :users
+
   # root :to => "static_pages#home"
   get "static_pages/home"
   get "static_pages/about"

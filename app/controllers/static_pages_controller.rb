@@ -22,10 +22,9 @@ class StaticPagesController < ApplicationController
 		posters/Regeneration_Poster.jpg
 		posters/TLOZ_type.jpg
 		posters/worldview_lecture.jpg
-		web_design/thumbnail.jpg
 		weddings/Ruth_Matt_wedding_invite.jpg
 		weddings/Ruth_Matt_wedding_invite_back.jpg
-	 )
+	)
 	end
 
   def about
@@ -57,7 +56,6 @@ class StaticPagesController < ApplicationController
 		posters/Regeneration_Poster.jpg
 		posters/TLOZ_type.jpg
 		posters/worldview_lecture.jpg
-		web_design/thumbnail.jpg
 		weddings/Ruth_Matt_wedding_invite.jpg
 		weddings/Ruth_Matt_wedding_invite_back.jpg
 	)
