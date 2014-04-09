@@ -162,7 +162,7 @@ GEM
       rubyzip (< 1.0.0)
       websocket (~> 1.0.4)
     slop (3.5.0)
-    sprockets (2.11.0)
+    sprockets (2.12.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
@@ -209,6 +209,7 @@ DEPENDENCIES
   pg (= 0.15.1)
   rails (= 4.0.4)
   rails_12factor
+  rb-appscript
   rspec-rails (= 2.13.1)
   sass-rails (= 4.0.1)
   sdoc (= 0.3.20)
