@@ -11,7 +11,7 @@ group :development, :test do
   gem 'rspec-rails', '2.13.1'
 end
 
-group :test do
+#group :test do
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
   gem 'haml-rails'
@@ -24,7 +24,7 @@ group :test do
   gem 'jbuilder', '1.0.2'
   gem 'guard-rspec'
   gem 'growl_notify'
-end
+#end
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false
