@@ -1,15 +1,12 @@
 %head
-	%title Darren By Design
+	%title Darren Sorrels | #{@title}
 	%meta{:charset => "utf-8" }
-	-# %link{:rel => "stylesheet", :href => "/app/assets/stylesheets/mysite.css"}
-	-# %link{:rel => "stylesheet", :href => "/app/assets/stylesheets/font-awesome.css"}
 	= stylesheet_link_tag 'mysite',"data-turbolinks-track" => true
-	-# = sytlesheet_link_tag 'font-awesome' "data-turbolinks-track" => true
 	= javascript_include_tag "jquery-1.11.0.min", "data-turbolinks-track" => true
 	= javascript_include_tag "DBDlightbox", "data-turbolinks-track" => true
 	= csrf_meta_tags
 %header.header
-	%a{:href => "home.html"}
+	%a{:href => "home"}
 		%h1.logo.hide-words.text-center
 			Darren Sorrels Graphic & Web Designer
 	= render :partial => "layouts/navigation"

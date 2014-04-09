@@ -25,12 +25,15 @@ class StaticPagesController < ApplicationController
 		weddings/Ruth_Matt_wedding_invite.jpg
 		weddings/Ruth_Matt_wedding_invite_back.jpg
 	)
+	@title = "Home"
 	end
 
   def about
+  	@title = "About"
   end
 
   def blog
+  	@title = "Blog"
   end
 
   def portfolio
@@ -59,5 +62,6 @@ class StaticPagesController < ApplicationController
 		weddings/Ruth_Matt_wedding_invite.jpg
 		weddings/Ruth_Matt_wedding_invite_back.jpg
 	)
+	@title = "Portfolio"
   end
 end
