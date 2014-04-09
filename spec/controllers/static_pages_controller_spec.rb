@@ -1,7 +1,9 @@
 require 'spec_helper'
 
 describe StaticPagesController do
-
+  before(:each) do
+    @base_title = "Darren Sorrels"
+  end
   describe "GET 'home'" do
     it "returns http success" do
       get 'home'
@@ -10,7 +12,7 @@ describe StaticPagesController do
     it "should have the right title" do
     get 'home'
     response.should have_selector
-    @title = ("title", :content => "Darren By Design | Home")
+      ("title", :content => @base_title + " | Home")
     end
   end
 
@@ -22,7 +24,7 @@ describe StaticPagesController do
     it "should have the right title" do
     get 'home'
     response.should have_selector
-    @title = ("title", :content => "Darren By Design | About")
+      ("title", :content => @base_title + " | About")
     end
   end
 
@@ -34,7 +36,7 @@ describe StaticPagesController do
     it "should have the right title" do
     get 'home'
     response.should have_selector
-    @title = ("title", :content => "Darren By Design | Blog")
+      ("title", :content => @base_title + " | Blog")
     end
   end
 
@@ -46,7 +48,7 @@ describe StaticPagesController do
     it "should have the right title" do
     get 'home'
     response.should have_selector
-    @title = ("title", :content => "Darren By Design | Portfolio")
+      ("title", :content => @base_title + " | Portfolio")
     end
   end
 
