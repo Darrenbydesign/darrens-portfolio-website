@@ -10,9 +10,13 @@ describe StaticPagesController do
       response.should be_success
     end
     it "should have the right title" do
-    get 'home'
-    response.should have_selector
+      get 'home'
+      response.should have_selector
       ("title", :content => @base_title + " | Home")
+    end
+    it "should have a Home page at '/'" do
+      get '/'
+      response.should have_selector('title', :content => "Home")
     end
   end
 
@@ -26,6 +30,10 @@ describe StaticPagesController do
     response.should have_selector
       ("title", :content => @base_title + " | About")
     end
+    it "should have a Home page at '/'" do
+      get '/about'
+      response.should have_selector('title', :content => "About")
+    end
   end
 
   describe "GET 'blog'" do
@@ -37,6 +45,10 @@ describe StaticPagesController do
     get 'home'
     response.should have_selector
       ("title", :content => @base_title + " | Blog")
+    end
+    it "should have a Home page at '/'" do
+      get '/blog'
+      response.should have_selector('title', :content => "blog")
     end
   end
 
@@ -50,6 +62,10 @@ describe StaticPagesController do
     response.should have_selector
       ("title", :content => @base_title + " | Portfolio")
     end
+    it "should have a Home page at '/'" do
+      get '/portfolio'
+      response.should have_selector('title', :content => "portfolio")
+    end
   end
-
+  
 end
