@@ -8,7 +8,7 @@
 					%figure
 						-# %a.lb-trigger{:href => "#{i}"}
 						= link_to(image_tag("#{i}", :alt => "#{i}".sub(/^[^\/]+\//,"")), 
-							"/assets/#{i}", :class => "lb-trigger")
+							asset_path("#{i}"), :class => "lb-trigger")
 						%figcaption 
 							%h3 Image_name
 							%span by Darren Sorrels
