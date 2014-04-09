@@ -14,16 +14,16 @@ end
 group :test do
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
-	gem 'haml-rails'
-	gem 'sass-rails', '4.0.1'
-	gem 'sprockets', '2.11.0'
-	gem 'uglifier', '2.1.1'
-	gem 'coffee-rails', '4.0.1'
-	gem 'jquery-rails', '3.0.4'
-	gem 'turbolinks', '1.1.1'
-	gem 'jbuilder', '1.0.2'
-	gem 'guard-rspec'
-	gem 'growl_notify'
+  gem 'haml-rails'
+  gem 'sass-rails', '4.0.1'
+  gem 'sprockets', '2.11.0'
+  gem 'uglifier', '2.1.1'
+  gem 'coffee-rails', '4.0.1'
+  gem 'jquery-rails', '3.0.4'
+  gem 'turbolinks', '1.1.1'
+  gem 'jbuilder', '1.0.2'
+  gem 'guard-rspec'
+  gem 'growl_notify'
 end
 
 group :doc do
@@ -32,7 +32,7 @@ end
 
 group :production do
   gem 'pg', '0.15.1'
-  gem 'rails_12factor', '0.0.2'
+  gem 'rails_12factor'
   gem 'unicorn'
 end
 
