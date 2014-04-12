@@ -1,5 +1,5 @@
 %h1= @title
-%section#content.blk-8.blk-offset-2
+%section#content.blk-8
 	%ol#post-list.blog-container
 		-3.times do
 			%li
@@ -14,7 +14,7 @@
 					%footer.post-info
 						%abbr.published{:title => Time.now}
 						%address.vcard.author
-							%a.url.fn{:href=>"about"} 
+							%a.url.fn{:href=>"about"}
 								Darren Sorrels 
 								=Time.now
 					.post-content
