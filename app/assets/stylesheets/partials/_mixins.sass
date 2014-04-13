@@ -233,7 +233,7 @@
 =make-grid-columns
     $list: ""
     $i: 1
-    $list: ".blk-phone-#{$i}, .blk-tablet-#{$i}, .blk-desktop-#{$i}, .blk-lgDesktop-#{$i}"
+    $list: ".blk-#{$i},.blk-phone-#{$i}, .blk-tablet-#{$i}, .blk-desktop-#{$i}, .blk-lgDesktop-#{$i}"
     @for $i from 1 + 1 through $grid-columns
         $list: "#{$list}, .blk-phone-#{$i}, .blk-tablet-#{$i}, .blk-desktop-#{$i}, .blk-lgDesktop-#{$i}"
     #{$list}
