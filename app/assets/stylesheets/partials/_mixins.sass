@@ -235,7 +235,7 @@
     $i: 1
     $list: ".blk-#{$i},.blk-phone-#{$i}, .blk-tablet-#{$i}, .blk-desktop-#{$i}, .blk-lgDesktop-#{$i}"
     @for $i from 1 + 1 through $grid-columns
-        $list: "#{$list}, .blk-phone-#{$i}, .blk-tablet-#{$i}, .blk-desktop-#{$i}, .blk-lgDesktop-#{$i}"
+        $list: "#{$list},.blk-#{$i}, .blk-phone-#{$i}, .blk-tablet-#{$i}, .blk-desktop-#{$i}, .blk-lgDesktop-#{$i}"
     #{$list}
         position: relative
         // Prevent columns from collapsing when empty
@@ -248,9 +248,9 @@
 =float-grid-columns($class)
     $list: ""
     $i: 1
-    $list: ".blk-#{$class}-#{$i}"
+    $list: ".blk-#{$i},.blk-#{$class}-#{$i}"
     @for $i from 1 + 1 through $grid-columns
-        $list: "#{$list}, .blk-#{$class}-#{$i}"
+        $list: "#{$list},.blk-#{$i},.blk-#{$class}-#{$i}"
     #{$list}
         float: left
 
