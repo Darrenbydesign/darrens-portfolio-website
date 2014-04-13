@@ -6,19 +6,11 @@
     margin: 0 auto
     // background: $background-color
     padding: 0px 10px 20px 20px
-    &:before,&:after
-        display: table
-        content: ""
-    &:after
-        clear: both
+    +clearfix
 
 .slab
     display: block
-    &:before,&:after
-        display: table
-        content: ""
-    &:after
-        clear: both
+    +clearfix
 
 .blk-1
     width: 8.33%
@@ -59,7 +51,7 @@
 
 
 //Using BOOTSTRAP style offsets Here since I was not able to find a better way, plus it works with my grid percentages
-// except they are more specific
+// except they are a bit more specific
 .blk-offset-12
     margin-left: 100%
 
@@ -122,7 +114,7 @@
 @media (max-width: 480px)
     [class*='blk-']
         width: 100%
-    
+
 
 @media (max-width: 800px)
     .blk-9,

@@ -35,13 +35,12 @@
     border: inset 1px solid $trimColor
 
 =clearfix
-    .cf
-        &:after, &:before
-            content: ""
-            display: table
-        &:after
-            clear: both
-            zoom: 1
+    &:after, &:before
+        content: ""
+        display: table
+    &:after
+        clear: both
+        zoom: 1
 
 =counter-loop($start,$end)
     @for $i from $start through $end
@@ -118,3 +117,166 @@
             left: $hover_position_L
             right: $hover_position_R
             z-index: 5
+
+
+
+// Grid System
+// -----------
+
+// Centered container element
+=container-fixed
+    margin-right: auto
+    margin-left: auto
+    padding-left: $grid-gutter-width / 2
+    padding-right: $grid-gutter-width / 2
+    +clearfix
+
+// Creates a wrapper for a series of columns
+=make-row($gutter: $grid-gutter-width)
+    margin-left: $gutter / -2
+    margin-right: $gutter / -2
+    +clearfix
+
+// Generate the extra small columns
+=make-phone-column($columns, $gutter: $grid-gutter-width)
+    position: relative
+    float: left
+    width: percentage($columns / $grid-columns)
+    min-height: 1px
+    padding-left: $gutter / 2
+    padding-right: $gutter / 2
+
+=make-phone-column-offset($columns)
+    @media (min-width: $screen-phone-min)
+        margin-left: percentage($columns / $grid-columns)
+
+=make-phone-column-push($columns)
+    @media (min-width: $screen-phone-min)
+        left: percentage($columns / $grid-columns)
+
+=make-phone-column-pull($columns)
+    @media (min-width: $screen-phone-min)
+        right: percentage($columns / $grid-columns)
+
+// Generate the small columns
+=make-tablet-column($columns, $gutter: $grid-gutter-width)
+    position: relative
+    min-height: 1px
+    padding-left: $gutter / 2
+    padding-right: $gutter / 2
+    @media (min-width: $screen-tablet-min)
+        float: left
+        width: percentage($columns / $grid-columns)
+
+=make-tablet-column-offset($columns)
+    @media (min-width: $screen-tablet-min)
+        margin-left: percentage($columns / $grid-columns)
+
+=make-tablet-column-push($columns)
+    @media (min-width: $screen-tablet-min)
+        left: percentage($columns / $grid-columns)
+
+=make-tablet-column-pull($columns)
+    @media (min-width: $screen-tablet-min)
+        right: percentage($columns / $grid-columns)
+
+// Generate the medium columns
+=make-desktop-column($columns, $gutter: $grid-gutter-width)
+    position: relative
+    min-height: 1px
+    padding-left: $gutter / 2
+    padding-right: $gutter / 2
+    @media (min-width: $screen-desktop-min)
+        float: left
+        width: percentage($columns / $grid-columns)
+
+=make-desktop-column-offset($columns)
+    @media (min-width: $screen-desktop-min)
+        margin-left: percentage($columns / $grid-columns)
+
+=make-desktop-column-push($columns)
+    @media (min-width: $screen-desktop-min)
+        left: percentage($columns / $grid-columns)
+
+=make-desktop-column-pull($columns)
+    @media (min-width: $screen-desktop-min)
+        right: percentage($columns / $grid-columns)
+
+// Generate the large columns
+=make-lgDesktop-column($columns, $gutter: $grid-gutter-width)
+    position: relative
+    min-height: 1px
+    padding-left: $gutter / 2
+    padding-right: $gutter / 2
+    @media (min-width: $screen-lgDesktop-min)
+        float: left
+        width: percentage($columns / $grid-columns)
+
+=make-lgDesktop-column-offset($columns)
+    @media (min-width: $screen-lgDesktop-min)
+        margin-left: percentage($columns / $grid-columns)
+
+=make-lgDesktop-column-push($columns)
+    @media (min-width: $screen-lgDesktop-min)
+        left: percentage($columns / $grid-columns)
+
+=make-lgDesktop-column-pull($columns)
+    @media (min-width: $screen-lgDesktop-min)
+        right: percentage($columns / $grid-columns)
+
+// Framework grid generation
+//
+// Used only by Bootstrap to generate the correct number of grid classes given
+// any value of `$grid-columns`.
+
+// [converter] This is defined recursively in LESS, but Sass supports real loops
+=make-grid-columns
+    $list: ""
+    $i: 1
+    $list: ".blk-phone-#{$i}, .blk-tablet-#{$i}, .blk-desktop-#{$i}, .blk-lgDesktop-#{$i}"
+    @for $i from 1 + 1 through $grid-columns
+        $list: "#{$list}, .blk-phone-#{$i}, .blk-tablet-#{$i}, .blk-desktop-#{$i}, .blk-lgDesktop-#{$i}"
+    #{$list}
+        position: relative
+        // Prevent columns from collapsing when empty
+        min-height: 1px
+        // Inner gutter via padding
+        padding-left: $grid-gutter-width / 2
+        padding-right: $grid-gutter-width / 2
+
+// [converter] This is defined recursively in LESS, but Sass supports real loops
+=float-grid-columns($class)
+    $list: ""
+    $i: 1
+    $list: ".blk-#{$class}-#{$i}"
+    @for $i from 1 + 1 through $grid-columns
+        $list: "#{$list}, .blk-#{$class}-#{$i}"
+    #{$list}
+        float: left
+
+=calc-grid-column($index, $class, $type)
+    @if $type == width and $index > 0
+        .blk-#{$class}-#{$index}
+            width: percentage($index / $grid-columns)
+    @if $type == push
+        .blk-#{$class}-push-#{$index}
+            left: percentage($index / $grid-columns)
+    @if $type == pull
+        .blk-#{$class}-pull-#{$index}
+            right: percentage($index / $grid-columns)
+    @if $type == offset
+        .blk-#{$class}-offset-#{$index}
+            margin-left: percentage($index / $grid-columns)
+
+// [converter] This is defined recursively in LESS, but Sass supports real loops
+=loop-grid-columns($columns, $class, $type)
+    @for $i from 0 through $columns
+        +calc-grid-column($i, $class, $type)
+
+// Create grid for specific class
+=make-grid($class)
+    +float-grid-columns($class)
+    +loop-grid-columns($grid-columns, $class, width)
+    +loop-grid-columns($grid-columns, $class, pull)
+    +loop-grid-columns($grid-columns, $class, push)
+    +loop-grid-columns($grid-columns, $class, offset)
