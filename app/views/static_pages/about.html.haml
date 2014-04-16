@@ -1,5 +1,4 @@
-.blk-3#aboutMe-list
-	%h1= @title
+.blk-desktop-3.blk-tablet-4#aboutMe-list
 	= image_tag "me.png", :class=> "img-portfolio"
 	%h3 Darren Sorrels
 	%h3 Skills:
@@ -12,14 +11,15 @@
 	%ul
 		%li 972.974.2735
 		%li DarrenbyDesign@gmail.com
-%article.blk-6
+%article.blk-desktop-6.blk-tablet-8
+	%h1= @title
 	%p
-		Lorem ipsum Duis qui qui deserunt sed sed minim in enim non sunt elit qui fugiat non elit aliqua Ut commodo officia elit esse laboris Duis est nisi officia consequat amet ut sunt cupidatat exercitation cillum cupidatat id non officia cupidatat fugiat ut culpa Duis pariatur dolore quis dolor est id velit nulla qui laboris consequat exercitation aliqua ullamco laborum culpa commodo enim veniam dolore cupidatat officia cillum sit Duis deserunt reprehenderit exercitation sint veniam aliquip quis fugiat ut occaecat eiusmod voluptate reprehenderit deserunt cupidatat ut cillum deserunt adipisicing mollit sint aute do dolore nulla ad eiusmod culpa tempor enim ut non fugiat eu voluptate voluptate sit consequat do sed sit Ut voluptate ad reprehenderit deserunt incididunt ea aute est nulla nostrud ut deserunt aliquip sunt Duis amet est et laborum nulla nulla adipisicing Excepteur sint exercitation Duis dolor incididunt occaecat pariatur enim ut Duis amet nostrud laborum magna aliquip sunt adipisicing elit cillum enim in commodo cillum do aliqua dolore do proident anim Ut culpa nulla aliqua consequat occaecat reprehenderit aliquip sint aliquip enim pariatur incididunt id anim in reprehenderit sint non proident anim consectetur reprehenderit enim non exercitation non anim sed Excepteur amet sint aliqua fugiat labore sit sint officia ut aliqua officia exercitation nostrud incididunt dolore.
+		My name is Darren Sorrels and I am a freelance Designer with a knack for creating outstanding branding. I am a creative engineer, avid researcher, detailed oriented, and an overall thinker. My educational background is a bachelor's of science degree in Print Design with some education in other Web and Motion Design. I'm a 23 year old living in a nice apartment in the midtown area of Tulsa, Oklahoma where I enjoy each day with my beautiful wife. We enjoy the occasional hike or two when we aren't scheming up some new idea on how to  make life better in the world.
 		%a{:href => "#" } Link to other works
 	%blockquote
 		%p The greater danger for most of us lies not in setting our aim too high and falling short; but in setting our aim too low, and achieving our mark. 
 		\- Michaelangelo Buonarotti
-%aside.blk-3
+%aside.blk-desktop-3
 	%h2 Social media
 	%ul#mediaList
 		%li 
@@ -34,10 +34,10 @@
 			%a{:href=>"https://www.facebook.com/DarrenTheDork"}
 				%i.fa.fa-facebook.fa-3x
 				Facebook
-.blk-9.blk-offset-3#contactMe
+.blk-desktop-9#contactMe
 	%h1 Contact Me
 	%form
 		- contactMe = ["First Name","Last Name", "Email"].each do |info|
 			%label.frm-title.frm-control= info
 			%input.input-medium{ :type => 'text'}
-		%textarea.textarea.frm-control{ :placeholder => 'Message here'}
+		%textarea{ :placeholder => 'Message here'}

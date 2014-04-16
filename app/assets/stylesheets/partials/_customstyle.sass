@@ -92,7 +92,6 @@ blockquote
                 color: $base-text-color
 .grid-box
     margin: 10px auto
-    // background: darken($background-color,5)
     list-style: none
     text-align: center
     li
@@ -116,7 +115,8 @@ blockquote
             top: 0
             left: 0
             padding: 20px
-            background: rgba($third-color,0.6)
+            background: rgba($third-color,0.9)
+            color: $alt-text-color
             text-align: center
             font-size: 1.3em
             line-height: 1.5em
@@ -195,12 +195,16 @@ blockquote
 .fc-prev,
 .fc-next
     top: 50%
+    // does not work well on mobile
     position: absolute
     cursor: pointer
     background: $primary-color
     color: $alt-text-color
     +border-radius(4px)
-
+    height: 80px
+.fc-prev,
+.fc-next
+    top: 350px
 .lb-prev,
 .fc-prev
     left: 10px
@@ -208,6 +212,9 @@ blockquote
 .fc-next
     right: 10px
 
+.blog-container
+    background: darken($background-color,5)
+    margin: 0 auto
 .blog-title
     a
         text-decoration: none

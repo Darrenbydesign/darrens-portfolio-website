@@ -237,10 +237,12 @@
     @for $i from 1 + 1 through $grid-columns
         $list: "#{$list}, .blk-phone-#{$i}, .blk-tablet-#{$i}, .blk-desktop-#{$i}, .blk-lgDesktop-#{$i}"
     #{$list}
-        position: relative
+        // position: relative
         // Prevent columns from collapsing when empty
         min-height: 1px
         // Inner gutter via padding
+        padding-top: $grid-gutter-width
+        padding-bottom: $grid-gutter-width
         padding-left: $grid-gutter-width / 2
         padding-right: $grid-gutter-width / 2
 
