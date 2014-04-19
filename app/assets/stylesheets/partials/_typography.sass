@@ -4,7 +4,7 @@
 +font-face("source_sans_prosemibold","/fonts/sourcesanspro-semibold-webfont","source_sans_prosemibold")
 +font-face("fontawesome","/fonts/fontawesome","fontawesome")
 +font-face("amblelight","/fonts/Amble-Light-webfont","amblelight")
-+font-face("ambleregular","/fonts/Amble-Regular-webfont","ambleregular")
++font-face("ambleregular",asset_path("/fonts/Amble-Regular-webfont"),"ambleregular")
 
 body
     font-size: $base-text-px
@@ -38,7 +38,8 @@ h6
 
 h1, h2, h3, h4, h5, h6
     font-family: $font-stack-headers
-    color: $third-color
+    color: lighten($third-color,15)
+    @extend .txt-shadow-lgt
 
 p
     font-size: 1em
