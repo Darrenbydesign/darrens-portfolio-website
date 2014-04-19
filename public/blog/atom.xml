@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>BLOG_NAME</title>
+ <link href="YOUR_URL/atom.xml" rel="self"/>
+ <link href="YOUR_URL"/>
+ <updated>2014-04-17T22:32:52-05:00</updated>
+ <id>BLOG_URL</id>
+ <author>
+   <name>BLOG_NAME</name>
+ </author>
+
+ 
+ <entry>
+   <title>TestBlogPost2</title>
+   <link href="YOUR_URL/testblogpost2.html"/>
+   <updated>2014-04-16T00:00:00-05:00</updated>
+   <id>BLOG_URL/testblogpost2</id>
+   <content type="html">&lt;p&gt;This is a second test post to my site[MyName]http://darrensorrels.herokuapp.com&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Test Blog Post</title>
+   <link href="YOUR_URL/testblogpost.html"/>
+   <updated>2014-04-16T00:00:00-05:00</updated>
+   <id>BLOG_URL/testblogpost</id>
+   <content type="html">&lt;hr /&gt;
+
+&lt;h1&gt;Test&lt;/h1&gt;
+
+&lt;p&gt;I am writing a test message in markdown. I am not sure this will work as I really don&#39;t know the syntax and I think it will make life so much harder if I don&#39;t figure it out soon.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>

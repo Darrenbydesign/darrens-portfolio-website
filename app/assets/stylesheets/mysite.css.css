@@ -1947,10 +1947,10 @@ table {
     color: #330000; }
 
 body {
-  background: white; }
+  background: white;
+  background-image: url("handmadepaper.png"); }
 
 .footer {
-  background: white;
   border-top: 5px solid #0b6c95;
   padding: 5px 10px;
   position: relative;
@@ -2027,7 +2027,6 @@ blockquote p:after {
 
 .grid-box {
   margin: 10px auto;
-  background: #f2f2f2;
   list-style: none;
   text-align: center; }
   .grid-box li {
@@ -2150,6 +2149,10 @@ blockquote p:after {
 .lb-next,
 .fc-next {
   right: 10px; }
+
+.blog-container {
+  background: #f2f2f2;
+  margin: 0 auto; }
 
 .blog-title a {
   text-decoration: none; }
