@@ -822,7 +822,7 @@ h6 {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "source_sans_prosemibold", "Helvetica Neue", "Helvetica", sans-serif;
-  color: #5895b9; }
+  color: #404041; }
 
 p {
   font-size: 1em;
@@ -1981,6 +1981,8 @@ blockquote p:after {
 
 #mediaList {
   list-style: none; }
+  #mediaList li {
+    display: inline; }
   #mediaList a {
     text-decoration: none; }
 
