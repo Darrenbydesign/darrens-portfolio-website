@@ -19,7 +19,7 @@ gem 'postmarkdown'
 # gem 'jekyll-sass'
 # gem 'jekyll-haml'
 # gem 'guard-rspec'
-gem 'growl_notify'
+# gem 'growl_notify'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
