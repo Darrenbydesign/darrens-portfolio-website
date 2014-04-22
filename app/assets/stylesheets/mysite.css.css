@@ -756,43 +756,43 @@ a {
 /*===========Typography=============== */
 @font-face {
   font-family: "source_sans_prolight";
-  src: url("../fonts/sourcesanspro-light-webfont.eot");
-  src: url("../fonts/sourcesanspro-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcesanspro-light-webfont.woff") format("woff"), url("../fonts/sourcesanspro-light-webfont.ttf") format("truetype"), url("../fonts/sourcesanspro-light-webfont.svg#source_sans_prolight") format("svg");
+  src: url("/fonts/sourcesanspro-light-webfont.eot");
+  src: url("/fonts/sourcesanspro-light-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/sourcesanspro-light-webfont.woff") format("woff"), url("/fonts/sourcesanspro-light-webfont.ttf") format("truetype"), url("/fonts/sourcesanspro-light-webfont.svg#source_sans_prolight") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: "source_sans_proregular";
-  src: url("../fonts/sourcesanspro-regular-webfont.eot");
-  src: url("../fonts/sourcesanspro-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcesanspro-regular-webfont.woff") format("woff"), url("../fonts/sourcesanspro-regular-webfont.ttf") format("truetype"), url("../fonts/sourcesanspro-regular-webfont.svg#source_sans_proregular") format("svg");
+  src: url("/fonts/sourcesanspro-regular-webfont.eot");
+  src: url("/fonts/sourcesanspro-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/sourcesanspro-regular-webfont.woff") format("woff"), url("/fonts/sourcesanspro-regular-webfont.ttf") format("truetype"), url("/fonts/sourcesanspro-regular-webfont.svg#source_sans_proregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: "source_sans_prosemibold";
-  src: url("../fonts/sourcesanspro-semibold-webfont.eot");
-  src: url("../fonts/sourcesanspro-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcesanspro-semibold-webfont.woff") format("woff"), url("../fonts/sourcesanspro-semibold-webfont.ttf") format("truetype"), url("../fonts/sourcesanspro-semibold-webfont.svg#source_sans_prosemibold") format("svg");
+  src: url("/fonts/sourcesanspro-semibold-webfont.eot");
+  src: url("/fonts/sourcesanspro-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/sourcesanspro-semibold-webfont.woff") format("woff"), url("/fonts/sourcesanspro-semibold-webfont.ttf") format("truetype"), url("/fonts/sourcesanspro-semibold-webfont.svg#source_sans_prosemibold") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: "fontawesome";
-  src: url("../fonts/fontawesome.eot");
-  src: url("../fonts/fontawesome.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome.woff") format("woff"), url("../fonts/fontawesome.ttf") format("truetype"), url("../fonts/fontawesome.svg#fontawesome") format("svg");
+  src: url("/fonts/fontawesome.eot");
+  src: url("/fonts/fontawesome.eot?#iefix") format("embedded-opentype"), url("/fonts/fontawesome.woff") format("woff"), url("/fonts/fontawesome.ttf") format("truetype"), url("/fonts/fontawesome.svg#fontawesome") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: "amblelight";
-  src: url("../fonts/Amble-Light-webfont.eot");
-  src: url("../fonts/Amble-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Amble-Light-webfont.woff") format("woff"), url("../fonts/Amble-Light-webfont.ttf") format("truetype"), url("../fonts/Amble-Light-webfont.svg#amblelight") format("svg");
+  src: url("/fonts/Amble-Light-webfont.eot");
+  src: url("/fonts/Amble-Light-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/Amble-Light-webfont.woff") format("woff"), url("/fonts/Amble-Light-webfont.ttf") format("truetype"), url("/fonts/Amble-Light-webfont.svg#amblelight") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: "ambleregular";
-  src: url("../fonts/Amble-Regular-webfont.eot");
-  src: url("../fonts/Amble-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Amble-Regular-webfont.woff") format("woff"), url("../fonts/Amble-Regular-webfont.ttf") format("truetype"), url("../fonts/Amble-Regular-webfont.svg#ambleregular") format("svg");
+  src: url("/fonts/Amble-Regular-webfont.eot");
+  src: url("/fonts/Amble-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/Amble-Regular-webfont.woff") format("woff"), url("/fonts/Amble-Regular-webfont.ttf") format("truetype"), url("/fonts/Amble-Regular-webfont.svg#ambleregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -822,7 +822,7 @@ h6 {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "source_sans_prosemibold", "Helvetica Neue", "Helvetica", sans-serif;
-  color: #404041; }
+  color: #666668; }
 
 p {
   font-size: 1em;
@@ -1910,10 +1910,10 @@ table {
 .gradient-drk-radial {
   background-image: radial-gradient(center 0, circle farthest-corner, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0)); }
 
-.txt-shadow, .header h1 {
+.txt-shadow {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); }
 
-.txt-shadow-lgt, .nav a, .nav-hrz a, .nav-vrt a, .blog-title a {
+.txt-shadow-lgt, h1, h2, h3, h4, h5, h6, .nav a, .nav-hrz a, .nav-vrt a, .header h1, .blog-title a {
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3); }
 
 .txt-center {
@@ -1939,6 +1939,7 @@ table {
 /*==================================== */
 /*===========Header,Body, Footer============== */
 .header {
+  background: rgba(11, 108, 149, 0.3);
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAADklEQVQImWNgQAXGZHAAGioAzdMFH7oAAAAASUVORK5CYII=");
   width: 100%;
   border-bottom: 5px solid #0b6c95;
@@ -1948,7 +1949,7 @@ table {
 
 body {
   background: white;
-  background-image: url("handmadepaper.png"); }
+  background-image: image-url("handmadepaper.png"); }
 
 .footer {
   border-top: 5px solid #0b6c95;
@@ -1971,10 +1972,13 @@ blockquote p:after {
 .logo {
   background: image-url("header_Logo.png") center no-repeat;
   height: 100px;
-  max-height: 100%; }
+  color: #5895b9; }
 
 .hide-words {
-  font-size: 0px; }
+  font-size: 0px;
+  text-align: center; }
+  .hide-words a {
+    text-decoration: none; }
 
 #aboutMe-list > ul {
   list-style: none; }
@@ -2034,17 +2038,17 @@ blockquote p:after {
   .grid-box li {
     display: inline-block;
     margin: 0;
-    width: 200px;
     padding: 10px;
     text-align: left;
     position: relative; }
   .grid-box figure {
     position: relative;
-    margin: 0; }
+    margin: 0;
+    width: 200px;
+    height: 200px; }
     .grid-box figure img {
       border: 6px solid #5895b9;
       max-width: 100%;
-      max-height: 100%;
       display: block;
       position: relative; }
     .grid-box figure figcaption {
@@ -2105,8 +2109,8 @@ blockquote p:after {
 
 .lb-content {
   margin: 0 auto;
-  max-width: 75%;
-  max-height: 75%;
+  max-width: 90%;
+  max-height: 90%;
   overflow: scroll;
   border: 2px solid #404041;
   background: rgba(64, 64, 65, 0.4);
@@ -2153,8 +2157,9 @@ blockquote p:after {
   right: 10px; }
 
 .blog-container {
-  background: #f2f2f2;
-  margin: 0 auto; }
+  background: #4989ae;
+  margin: 0 auto;
+  width: 40em; }
 
 .blog-title a {
   text-decoration: none; }
