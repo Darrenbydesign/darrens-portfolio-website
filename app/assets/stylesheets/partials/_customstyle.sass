@@ -1,5 +1,6 @@
 /*===========Header,Body, Footer==============*/
 .header
+    background: rgba($secondary-color,0.3)
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAADklEQVQImWNgQAXGZHAAGioAzdMFH7oAAAAASUVORK5CYII=")
     width: 100%
     border-bottom: 5px solid $secondary-color
@@ -36,9 +37,12 @@ blockquote
 .logo
     background: image-url('header_Logo.png') center no-repeat
     height: 100px
-    max-height: 100%
+    color: $primary-color
 .hide-words
     font-size: 0px
+    text-align: center
+    a
+        text-decoration: none
 #aboutMe-list
     > ul
         list-style: none
@@ -174,8 +178,8 @@ blockquote
     text-align: center
 .lb-content
     margin: 0 auto
-    max-width: 75%
-    max-height: 75%
+    max-width: 90%
+    max-height: 90%
     overflow: scroll
     border: 2px solid $third-color
     background: rgba($third-color,0.4)

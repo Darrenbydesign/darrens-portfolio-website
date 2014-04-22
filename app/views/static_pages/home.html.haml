@@ -1,16 +1,16 @@
-.blk-desktop-12
-	.fc-container
-		#featured-content
-			=# image_tag "header_Logo.png", :alt => "Image for Gallery", :id => "image-n"
-			- @images.each_with_index do |x,y|
-				= image_tag "#{x}", :id => "image-#{y}"
-	#fc-nav
-		%ul
-			-@images.each_index do |n|
-				%li 
-					%a{:href => "#image-#{n}"}= "#{n}"
-			%button.btn-small.fc-prev <
-			%button.btn-small.fc-next >
+/ .blk-desktop-12
+.fc-container
+	#featured-content
+		=# image_tag "header_Logo.png", :alt => "Image for Gallery", :id => "image-n"
+		- @images.each_with_index do |x,y|
+			= image_tag "#{x}", :id => "image-#{y}"
+#fc-nav
+	%ul
+		-@images.each_index do |n|
+			%li 
+				%a{:href => "#image-#{n}"}= "#{n}"
+		%button.btn-small.fc-prev <
+		%button.btn-small.fc-next >
 .blk-desktop-8.blk-desktop-offset-2.blk-phone-12
 	-3.times do
 		%article.entry

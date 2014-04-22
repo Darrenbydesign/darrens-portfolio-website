@@ -1,19 +1,22 @@
 MySite::Application.routes.draw do
+  postmarkdown :as => :blog
+
   resources :images
 
   resources :microposts
 
   resources :users
 
+  match '/', :to => 'static_pages#home', :via => 'get'
+  match '/blog', :to => 'static_pages#blog', :via =>'get'
+  match '/about', :to =>  'static_pages#about', :via => 'get'
+  match '/portfolio', :to =>'static_pages#portfolio', :via => 'get'
+
   # get "static_pages/home"
   # get "static_pages/about"
   # get "static_pages/blog"
   # get "static_pages/portfolio"
   # root :to => 'static_pages#home'
-  match '/', :to => 'static_pages#home', :via => 'get'
-  match '/blog', :to => 'static_pages#blog', :via =>'get'
-  match '/about', :to =>  'static_pages#about', :via => 'get'
-  match '/portfolio', :to =>'static_pages#portfolio', :via => 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
