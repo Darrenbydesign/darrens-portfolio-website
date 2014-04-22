@@ -25,8 +25,11 @@
 				\- Michaelangelo Buonarotti
 .blk-desktop-12#contactMe
 	%h1 Contact me
-	%form.blk-desktop-9
+	%form.blk-desktop-8
+		%p 
+			If you want to talk about working together please email me, I'd love to work with you. If you would just like to message me about my work that would great too! I look forward to all types of critique to my work and I am always looking for a way to improve.
 		- contactMe = ["First Name","Last Name", "Email"].each do |info|
 			%label.frm-title.frm-control= info
 			%input.input-medium{ :type => 'text'}
 		%textarea{ :placeholder => 'Message here'}
+		%buton.btn-norm.frm-control Send!
