@@ -1,17 +1,14 @@
 MySite::Application.routes.draw do
   postmarkdown :as => :blog
 
-  resources :images
-
-  resources :microposts
-
-  resources :users
+  resources :images, :microposts, :users
 
   # match '/', :to => 'static_pages#home', :via => 'get'
   match '/blog', :to => 'static_pages#blog', :via =>'get'
   match '/about', :to =>  'static_pages#about', :via => 'get'
   match '/portfolio', :to =>'static_pages#portfolio', :via => 'get'
   root :to => 'static_pages#home'
+
   # get "static_pages/home"
   # get "static_pages/about"
   # get "static_pages/blog"
