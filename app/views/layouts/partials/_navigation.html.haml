@@ -3,3 +3,10 @@
 		- {"Home" => "/", "About" => "about", "Portfolio" => "portfolio","Blog" => "blog"}.each do |name, url|
 			%li
 				%a{:href => url}= name
+			/ 	=link_to 'Home', root_path
+			/ %li 
+			/ 	=link_to 'About', about_path
+			/ %li 
+			/ 	=link_to 'Portfolio', portfolio_path
+			/ %li 
+			/ 	=link_to 'Blog', blog_path

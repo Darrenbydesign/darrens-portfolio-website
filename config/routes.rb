@@ -6,14 +6,15 @@ MySite::Application.routes.draw do
   # match '/blog', :to => 'static_pages#blog', :via =>'get'
   # match '/about', :to =>  'static_pages#about', :via => 'get'
   # match '/portfolio', :to =>'static_pages#portfolio', :via => 'get'
-  root :to => 'static_pages#home'
+  get 'static_pages/home'
   get "static_pages/about"
   get 'about', :to => 'static_pages#about'
   get "static_pages/blog"
   get 'blog', :to => 'static_pages#blog'
   get "static_pages/portfolio"
   get 'portfolio', :to => 'static_pages#portfolio'
-
+  root :to => 'static_pages#home'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

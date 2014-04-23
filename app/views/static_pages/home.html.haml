@@ -1,7 +1,5 @@
-/ .blk-desktop-12
 .fc-container
 	#featured-content
-		=# image_tag "header_Logo.png", :alt => "Image for Gallery", :id => "image-n"
 		- @images.each_with_index do |x,y|
 			= image_tag "#{x}", :id => "image-#{y}"
 #fc-nav
@@ -11,22 +9,25 @@
 				%a{:href => "#image-#{n}"}= "#{n}"
 		%button.btn-small.fc-prev <
 		%button.btn-small.fc-next >
-.blk-desktop-8.blk-desktop-offset-2.blk-phone-12
-	%ol#post-list.blog-container
-		%li
-			%article.entry
-				%header
-					%h2.blog-title
-						%a{:href=>"#", :rel=>"bookmark", :title=>" LINK to POST TITLE"} The title
-					%img.center{:src => "assets/images/header_logo.png", :alt => ""}
-					= image_tag "header_Logo.png", :class => "txt-center"
-				%p
-					Lorem ipsum Esse minim adipisicing nulla commodo anim magna magna non Duis adipisicing reprehenderit aliqua quis officia occaecat velit sed eiusmod tempor mollit do cillum deserunt ut dolor nostrud exercitation nisi qui ut culpa officia officia nisi est in occaecat.
-				%footer.post-info
-					%abbr.published{:title => Time.now}
-					%address.vcard.author
-						%a.url.fn{:href=>"about"}
-							Darren Sorrels 
-							=Time.now
-				.post-content
-					%p Lorem ipsum Minim qui laboris eiusmod veniam in sed tempor est in.
+%section#RecentPosts
+	%h1 Recent Posts
+	/ = render partial: 'posts/post'
+	.blk-desktop-8.blk-desktop-offset-2.blk-phone-12
+		%ol#post-list.blog-container
+			%li
+				%article.entry
+					%header
+						%h2.blog-title
+							%a{:href=>"#", :rel=>"bookmark", :title=>" LINK to POST TITLE"} The title
+						%img.center{:src => "assets/images/header_logo.png", :alt => ""}
+						= image_tag "header_Logo.png", :class => "txt-center"
+					%p
+						Lorem ipsum Esse minim adipisicing nulla commodo anim magna magna non Duis adipisicing reprehenderit aliqua quis officia occaecat velit sed eiusmod tempor mollit do cillum deserunt ut dolor nostrud exercitation nisi qui ut culpa officia officia nisi est in occaecat.
+					%footer.post-info
+						%abbr.published{:title => Time.now}
+						%address.vcard.author
+							%a.url.fn{:href=>"about"}
+								Darren Sorrels 
+								=Time.now
+					.post-content
+						%p Lorem ipsum Minim qui laboris eiusmod veniam in sed tempor est in.
