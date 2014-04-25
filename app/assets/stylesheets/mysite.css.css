@@ -1994,23 +1994,29 @@ blockquote p:after {
   width: 50%; }
 
 .fc-container {
-  margin: 10px auto;
-  width: 100%;
+  margin: 5px auto;
   border-top: 8px solid #0b6c95;
   border-bottom: 8px solid #0b6c95; }
 
 #featured-content {
-  height: 18em;
+  height: 20em;
   background: white;
   border-radius: 2px;
   overflow: hidden;
   position: relative; }
   #featured-content img {
+    position: absolute;
+    top: 0%;
+    left: -100%;
     max-height: 100%;
+    max-width: 100%;
     z-index: 1;
     opacity: 0;
     transition: all linear 1s; }
+    #featured-content img:first-child {
+      left: 0; }
     #featured-content img:target {
+      left: 30%;
       z-index: 9;
       opacity: 1; }
 
@@ -2108,9 +2114,9 @@ blockquote p:after {
   text-align: center; }
 
 .lb-content {
-  margin: 0 auto;
-  max-width: 90%;
-  max-height: 90%;
+  margin: 20px auto;
+  max-width: 75%;
+  max-height: 75%;
   overflow: scroll;
   border: 2px solid #404041;
   background: rgba(64, 64, 65, 0.4);
@@ -2157,9 +2163,8 @@ blockquote p:after {
   right: 10px; }
 
 .blog-container {
-  background: #4989ae;
-  margin: 0 auto;
-  width: 40em; }
+  background: #f2f2f2;
+  margin: 0 auto; }
 
 .blog-title a {
   text-decoration: none; }

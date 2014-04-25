@@ -6,15 +6,12 @@
     border-bottom: 5px solid $secondary-color
     padding: 0px 10px
     h1
-        color: $base-text-color
         @extend .txt-shadow-lgt
 body
     background: $background-color
-    // background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAADklEQVQImWNgQAXGZHAAGioAzdMFH7oAAAAASUVORK5CYII=")
     background-image: image-url("handmadepaper.png")
 
 .footer
-    // background: $background-color
     border-top: 5px solid $secondary-color
     padding: 5px 10px
     position: relative
@@ -35,7 +32,7 @@ blockquote
 
 /*============Custom Styles================*/
 .logo
-    background: image-url('header_Logo.png') center no-repeat
+    background: image-url('header_Logo_small.png') center no-repeat
     height: 100px
     color: $primary-color
 .hide-words
@@ -56,49 +53,28 @@ blockquote
     // background: lighten(rgba($primary-color,0.3),20)
     textarea
         width: 50%
-.fc-container
-    margin: 5px auto
-    // width: 100%
-    border-top: 8px solid $secondary-color
-    border-bottom: 8px solid $secondary-color
-#featured-content
-    height: 20em
-    background: $background-color
-    +border-radius(2px)
-    overflow: hidden
-    position: relative
-    img
-        position: absolute
-        top: 0%
-        left: -100%
-        max-height: 100%
-        max-width: 100%
-        z-index: 1
-        opacity: 0
-        transition: all linear 1s
-        &:first-child
-            left: 0
-        &:target
-            left: 30%
-            z-index: 9
-            opacity: 1
-#fc-nav
+#carousel
+    // width: 600px
+    height: 300px
+    margin: 1em auto
+    background: complement(rgba($secondary-color,0.3))
+    border: 0.5em solid lighten($third-color,15)
     ul
-        text-align: center
-        list-style: none
-        display: block
+        position: relative
         li
-            display: inline-block
-        a
-            text-decoration: none
-            background: darken($background-color,5)
+            list-style: none
+            display: block
             border: 1px solid $secondary-color
-            padding: 5px
-            +border-radius(2px)
-            color: $base-text-color
-            &:hover
-                background: $secondary-color
-                color: $base-text-color
+            overflow: hidden
+            float: left
+            width: 16%
+            height: 200px
+            margin: 2% 
+            background: $primary-color
+            img
+                text-align: center
+                max-width: 100%
+
 .grid-box
     margin: 10px auto
     list-style: none
@@ -206,8 +182,7 @@ blockquote
 .lb-next,
 .fc-prev,
 .fc-next
-    top: 50%
-    // does not work well on mobile
+    top: 50% //  this setting does not work well on mobile
     position: absolute
     cursor: pointer
     background: $primary-color
@@ -225,14 +200,12 @@ blockquote
     right: 10px
 
 .blog-container
-    background: darken($background-color,5)
-    margin: 0 auto
-
+    background: darken($background-color,15)
 .blog-title
     a
+        color: $third-color
         text-decoration: none
-        @extend .txt-shadow-lgt     
-.url
-    text-decoration: none
-
-/*====================================*/
+        @extend .txt-shadow-lgt
+        &:hover
+            color: $secondary-color
+/*====================================

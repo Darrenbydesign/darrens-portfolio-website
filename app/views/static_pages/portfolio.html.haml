@@ -1,15 +1,13 @@
-%h1= @title
+/ %h1= @title
 .blk-lgDesktop-12
-	.grid-box.gb-style-1
-		/ %h2 Posters & Wallpapers
-		%ul
-			- @images.each do |i|
-				%li
-					%figure
-						-# %a.lb-trigger{:href => "#{i}"}
-						= link_to(image_tag("#{i}", :alt => "#{i}".sub(/^[^\/]+\//,"")), 
-							asset_path("#{i}"), :class => "lb-trigger")
-						%figcaption 
-							%h3 Image_name
-							%span by Darren Sorrels
-							
+  .grid-box.gb-style-1
+    %ul
+      - @images.each do |i|
+        %li
+          %figure
+            = link_to(image_tag("#{i}", :alt => "#{i}".sub(/^[^\/]+\//,"")), 
+              asset_path("#{i}"), :class => "lb-trigger")
+            %figcaption 
+              %h3 Image_name
+              %span by Darren Sorrels
+              

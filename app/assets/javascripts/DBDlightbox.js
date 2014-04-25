@@ -57,7 +57,7 @@ $(function() {
     }
 
 
-    console.log("slideNum:" + slideNum + " next_image href: " + next_image.attr("href") + "\tprevious_image href: " + previous_image.attr("href"));
+    // console.log("slideNum:" + slideNum + " next_image href: " + next_image.attr("href") + "\tprevious_image href: " + previous_image.attr("href"));
     // }
 
     //Click anywhere on the page to get rid of lightbox window
@@ -77,29 +77,29 @@ $(function() {
     })
   });
 
-  $(document.documentElement).keyup(function(event) {
+  // $(document.documentElement).keyup(function(event) {
 
-    var $this = $(this),
-      dest;
+  //   var $this = $(this),
+  //     dest;
 
-    if (event.keyCode === 37) { // left arrow key
-      dest = current - 1;
-      if (dest < 0) {
-        dest = size - 1;
-      }
-    } else if (event.keyCode === 39) { // right arrow key
-      dest = current + 1;
-      if (dest > size - 1) {
-        dest = 0;
-      }
+  //   if (event.keyCode === 37) { // left arrow key
+  //     dest = current - 1;
+  //     if (dest < 0) {
+  //       dest = size - 1;
+  //     }
+  //   } else if (event.keyCode === 39) { // right arrow key
+  //     dest = current + 1;
+  //     if (dest > size - 1) {
+  //       dest = 0;
+  //     }
 
-    }
+  //   }
 
-    // fadeOut curent slide, FadeIn next/prev slide
-    $('.lb-content img:eq(' + current + ')').hide();
-    $('.lb-content img:eq(' + dest + ')').show();
+  //   // fadeOut curent slide, FadeIn next/prev slide
+  //   $('.lb-content img:eq(' + current + ')').hide();
+  //   $('.lb-content img:eq(' + dest + ')').show();
 
-    // update current slide
-    current = dest;
-  });
+  //   // update current slide
+  //   current = dest;
+  // });
 });
