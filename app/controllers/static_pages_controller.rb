@@ -34,6 +34,8 @@ class StaticPagesController < ApplicationController
 		phone_wallpapers/brainiac.jpg
 		phone_wallpapers/flash.jpg
 		phone_wallpapers/superman.jpg
+		posters/Moby_Dick_Cover.jpg
+		posters/Great_expectations_Cover.jpg
 		]
 	@title = "Portfolio"
   end

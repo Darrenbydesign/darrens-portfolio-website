@@ -1,11 +1,8 @@
 //=======Typography==========
-+font-face("source_sans_prolight","/fonts/sourcesanspro-light-webfont","source_sans_prolight")
-+font-face("source_sans_proregular","/fonts/sourcesanspro-regular-webfont","source_sans_proregular")
-+font-face("source_sans_prosemibold","/fonts/sourcesanspro-semibold-webfont","source_sans_prosemibold")
-+font-face("fontawesome","/fonts/fontawesome","fontawesome")
-+font-face("amblelight","/fonts/Amble-Light-webfont","amblelight")
-+font-face("ambleregular","/fonts/Amble-Regular-webfont","ambleregular")
-
++font-face("source_sans_prolight","sourcesanspro-light-webfont","source_sans_prolight")
++font-face("source_sans_proregular","sourcesanspro-regular-webfont","source_sans_proregular")
++font-face("source_sans_prosemibold","sourcesanspro-semibold-webfont","source_sans_prosemibold")
++font-face("fontawesome","fontawesome","fontawesome")
 body
     font-size: $base-text-px
     font-size: 100%
@@ -40,7 +37,7 @@ h1, h2, h3, h4, h5, h6
     font-family: $font-stack-headers
     color: lighten($third-color,15)
     @extend .txt-shadow-lgt
-
+    line-height: 1.5
 p
     font-size: 1em
     //16x1=16px
