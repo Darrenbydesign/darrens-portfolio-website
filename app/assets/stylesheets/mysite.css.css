@@ -74,7 +74,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-bottom: 1px solid #ecf0f1;
+  border-bottom: 1px solid #404041;
   margin: 1em 0;
   line-height: 1em;
   padding: 0; }
@@ -760,25 +760,32 @@ a {
   src: font-url("sourcesanspro-light-webfont.eot?#iefix") format("embedded-opentype"), font-url("sourcesanspro-light-webfont.woff") format("woff"), font-url("sourcesanspro-light-webfont.ttf") format("truetype"), font-url("sourcesanspro-light-webfont.svg#source_sans_prolight") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
   font-family: "source_sans_proregular";
   src: font-url("sourcesanspro-regular-webfont.eot");
   src: font-url("sourcesanspro-regular-webfont.eot?#iefix") format("embedded-opentype"), font-url("sourcesanspro-regular-webfont.woff") format("woff"), font-url("sourcesanspro-regular-webfont.ttf") format("truetype"), font-url("sourcesanspro-regular-webfont.svg#source_sans_proregular") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
   font-family: "source_sans_prosemibold";
   src: font-url("sourcesanspro-semibold-webfont.eot");
   src: font-url("sourcesanspro-semibold-webfont.eot?#iefix") format("embedded-opentype"), font-url("sourcesanspro-semibold-webfont.woff") format("woff"), font-url("sourcesanspro-semibold-webfont.ttf") format("truetype"), font-url("sourcesanspro-semibold-webfont.svg#source_sans_prosemibold") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
-  font-family: "MyFont";
-  src: url(font-path("myfont-webfont.eot")?#iefix) format("embedded-opentype"), url(font-path("myfont-webfont.woff")) format("woff"), url(font-path("myfont-webfont.ttf")) format("truetype"), url(font-path("myfont-webfont.svg")#MyFont) format("svg"); }
+  font-family: "fontawesome";
+  src: font-url("fontawesome-webfont.eot");
+  src: font-url("fontawesome-webfont.eot?#iefix") format("embedded-opentype"), font-url("fontawesome-webfont.woff") format("woff"), font-url("fontawesome-webfont.ttf") format("truetype"), font-url("fontawesome-webfont.svg#fontawesome") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 body {
   font-size: 16px;
   font-size: 100%;
-  font-family: "sourcesanspro-regular", "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: "source_sans_proregular", "Helvetica Neue", "Helvetica", sans-serif;
   color: #330000; }
 
 h1 {
@@ -979,8 +986,9 @@ input[type="email"] {
   display: block;
   padding: 5px 10px;
   margin-bottom: -1px;
-  background-color: #5895b9;
-  border: 1px solid #404041; }
+  background-color: #e6e6e6;
+  border: 1px solid #404041;
+  color: #0b6c95; }
   .list-item a, .list-text a, .list-button a {
     color: #330000; }
   .list-item:first-child, .list-text:first-child, .list-button:first-child {
@@ -1764,6 +1772,7 @@ table {
 @keyframes move {
   to {
     margin-left: 99%; } }
+
 .load-bar2, .load-error, .load-success, .load-warning {
   height: 100%;
   position: relative;
@@ -1798,6 +1807,7 @@ table {
 
   100% {
     background-position: 50px 50px; } }
+
 .load-error span, .load-error div, .load-error section {
   color: #460b06;
   border: 1px solid #f9bdb8;
@@ -1885,15 +1895,15 @@ table {
   background-image: radial-gradient(center 0, circle farthest-corner, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)); }
 
 .gradient-drk-linear {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), transparent); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0)); }
 
 .gradient-drk-radial {
-  background-image: radial-gradient(center 0, circle farthest-corner, rgba(0, 0, 0, 0.15), transparent); }
+  background-image: radial-gradient(center 0, circle farthest-corner, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0)); }
 
 .txt-shadow {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); }
 
-.txt-shadow-lgt, .nav a, .nav-hrz a, .nav-vrt a, .list-heading, .header h1, .blog-title a {
+.txt-shadow-lgt, .nav a, .nav-hrz a, .nav-vrt a, .list-item, .list-text, .list-button, .list-item a, .list-text a, .list-button a, .list-heading, .header h1, .blog-title a {
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3); }
 
 .txt-center {
@@ -1940,11 +1950,11 @@ body {
 blockquote p:before {
   content: '"';
   font-size: 32px;
-  font: "sourcesanspro-regular", "Helvetica Neue", "Helvetica", sans-serif; }
+  font: "source_sans_proregular", "Helvetica Neue", "Helvetica", sans-serif; }
 blockquote p:after {
   content: '"';
   font-size: 32px;
-  font: "sourcesanspro-regular", "Helvetica Neue", "Helvetica", sans-serif; }
+  font: "source_sans_proregular", "Helvetica Neue", "Helvetica", sans-serif; }
 
 /*==================================== */
 /*============Custom Styles================ */
@@ -1986,7 +1996,7 @@ blockquote p:after {
       overflow: hidden;
       float: left;
       width: 16%;
-      height: 200px;
+      max-height: 100%;
       margin: 2%;
       background: #5895b9; }
       #carousel ul li img {
@@ -2006,7 +2016,7 @@ blockquote p:after {
   .grid-box figure {
     position: relative;
     margin: 0;
-    width: 200px;
+    width: 300px;
     height: 200px; }
     .grid-box figure img {
       border: 6px solid #5895b9;

@@ -132,6 +132,10 @@ class Post
       visible.first(10)
     end
 
+    def feed3
+      visible.first(3)
+    end
+
     def feed_last_modified
       feed.first.try(:last_modified) || Time.now.utc
     end

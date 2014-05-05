@@ -8,6 +8,8 @@ class StaticPagesController < ApplicationController
 		phone_wallpapers/superman.jpg
 		]
 	@title = "Home"
+
+	@posts_render =  Post.feed3
 	end
 
   def about
