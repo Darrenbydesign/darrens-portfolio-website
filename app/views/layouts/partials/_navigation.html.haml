@@ -1,8 +1,9 @@
 %nav.nav-hrz.center
+	.logo
+		%a{:href => "/"}
+			=image_tag "logo_sm.png", alt: "Darren Sorrels Graphic Designer"
+		%h3 Darren Sorrels Graphic Designer
 	%ul
-		-# {"Home" => "/", "About" => "about", "Portfolio" => "portfolio","Blog" => "blog"}.each do |name, url|
-			/ %li 
-			/ 	/ %a{:href => url}= name
 		%li
 			=link_to 'Home', root_path
 		%li 

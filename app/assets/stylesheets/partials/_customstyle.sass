@@ -30,9 +30,15 @@ blockquote
 
 /*============Custom Styles================*/
 .logo
-    background: image-url('header_Logo_small.png') center no-repeat
-    height: 100px
-    color: $primary-color
+    text-decoration: none
+    font-size: 1.5em
+    h3
+        color: $third-color
+    @extend .center
+    img
+        // max-width: 100%
+        width: 150px
+        max-height: height
 .hide-words
     font-size: 0px
     text-align: center
@@ -40,9 +46,7 @@ blockquote
         text-decoration: none
 #aboutMe-list
     img
-        // width: 250px
         width: 200px
-        // max-height: 100%
         overflow: hidden
     > ul
         list-style: none

@@ -4,6 +4,6 @@
       %li
         = link_to(image_tag("#{i}", :alt => "#{i}".sub(/^[^\/]+\//,"")), portfolio_path)
 %section#RecentPosts
-  %h1.txt-center Recent Posts
+  %h2.txt-center Recent Posts
   = render 'posts/feed_link'
   = render @posts_render, :summary => true 
