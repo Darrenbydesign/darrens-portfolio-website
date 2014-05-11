@@ -1,10 +1,15 @@
 .blk-desktop-3.blk-tablet-4#aboutMe-list
 	= image_tag "darren.jpg", :class=> "img-photo"
-	%h3 Darren Sorrels
 	%h3 Contact Info
-	%ul
-		%li cell: 972.974.2735
-		%li email: DarrenbyDesign@gmail.com
+	%ul.list-group
+		%li.list-item
+			Darren Sorrels
+		%li.list-item
+			%i.fa.fa-mobile-phone
+			972.974.2735
+		%li.list-item
+			%i.fa.fa-envelope-o  
+			DarrenbyDesign@gmail.com
 %article.blk-desktop-8.blk-tablet-8
 	%h1 About me
 	%hr/ 
@@ -12,14 +17,14 @@
 		I'm Darren Sorrels, I'm a freelance designer and I've experimented with a variety of different design disciplines, but my specialty is happy clients. I'm a creative thinker,I'm a problem solver, I'm professional with a sense of humor, I'm dedicated to my work, and I've yet to meet a challenge that I could not overcome. I am an avid researcher and I am always looking into new design techniques and approaches to solutions in the design community. I'm a member of the American Institute for Graphic Artists (AIGA). I have a bachelors of science degree in Graphic Design with an emphasis in print, but I have recently worked on more Web design projects. The most recent work I have done was an innovative, new in-house utility management application for a data analysis company that provided a way to monitor and load incoming data more efficiently.
 	%p
 		I am from the land where the wind comes sweeping down the plains (Tulsa,OK), I'm twenty-three years old and I'm a family man. I enjoy each day of life with my beautiful wife, when we are not cooking, hiking, going to the gym, or cozy'd up in the living room watching Netflix we are probably planning how we can take over the world(or at least on how to make it better a better place).
-		%a{:href => "#" } Connect with my other sites.
+		/ %a{:href => "/" } Connect with my other sites.
 .slab
 	.blk-desktop-3
 		%h2 Skills
 		%hr/ 
 		%ul.list-group
 			%li.list-item 
-				%h2.list-heading Ai
+				%h3.list-heading Ai
 				%i.fa.fa-star 
 				%i.fa.fa-star 
 				%i.fa.fa-star 
@@ -31,7 +36,7 @@
 				%i.fa.fa-star-o
 				%i.fa.fa-star-o
 			%li.list-item 
-				%h2.list-heading Ps  
+				%h3.list-heading Ps  
 				%i.fa.fa-star 
 				%i.fa.fa-star 
 				%i.fa.fa-star 
@@ -43,7 +48,7 @@
 				%i.fa.fa-star-o
 				%i.fa.fa-star-o
 			%li.list-item 
-				%h2.list-heading Id
+				%h3.list-heading Id
 				%i.fa.fa-star 
 				%i.fa.fa-star 
 				%i.fa.fa-star 
@@ -55,7 +60,7 @@
 				%i.fa.fa-star-o 
 				%i.fa.fa-star-o 
 			%li.list-item 
-				%h2.list-heading Ae
+				%h3.list-heading Ae
 				%i.fa.fa-star 
 				%i.fa.fa-star 
 				%i.fa.fa-star 
@@ -67,7 +72,7 @@
 				%i.fa.fa-star-o 
 				%i.fa.fa-star-o 
 			%li.list-item 
-				%h2.list-heading Dw
+				%h3.list-heading Dw
 				%i.fa.fa-star 
 				%i.fa.fa-star 
 				%i.fa.fa-star 
@@ -79,7 +84,7 @@
 				%i.fa.fa-star-o 
 				%i.fa.fa-star-o 
 			%li.list-item 
-				%h2.list-heading Pr
+				%h3.list-heading Pr
 				%i.fa.fa-star 
 				%i.fa.fa-star 
 				%i.fa.fa-star 
@@ -91,7 +96,7 @@
 				%i.fa.fa-star-o 
 				%i.fa.fa-star-o 
 			%li.list-item 
-				%h2.list-heading .CSS
+				%h3.list-heading .CSS
 				%i.fa.fa-star 
 				%i.fa.fa-star 
 				%i.fa.fa-star 
@@ -103,7 +108,7 @@
 				%i.fa.fa-star-o 
 				%i.fa.fa-star-o 
 			%li.list-item 
-				%h2.list-heading .HTML
+				%h3.list-heading .HTML
 				%i.fa.fa-star 
 				%i.fa.fa-star 
 				%i.fa.fa-star 
@@ -120,8 +125,8 @@
 		%form#contactMe
 			%p 
 				If you want to talk about working together please email me, I'd love to work with you. If you would just like to message me about my work that would great too! I look forward to all types of critique to my work and I am always looking for a way to improve.
-			- contactMe = ["First Name","Last Name", "Email"].each do |info|
-				%label.frm-title.frm-control= info
-				%input.input-medium{ :type => 'text'}
+			- contactMe = {"First Name" => "text", "Last Name" => "text", "Email" => "email"}.each do |label,type|
+				%label.frm-title.frm-control= label
+				%input.input-medium{ :type => type}
 			%textarea{ :placeholder => 'Message here'}
-			%buton.btn-norm.frm-control Send!
+			%input.btn-norm.proceed{:type => 'submit', :value => "Send"}

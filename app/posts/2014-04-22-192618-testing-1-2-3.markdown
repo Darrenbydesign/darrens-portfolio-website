@@ -1,5 +1,5 @@
 ---
-title: Testing 1 2 3
+title: The Newest Blog Post
 author: Darren Sorrels
 email: darrenbydesign@gmail.com
 ---

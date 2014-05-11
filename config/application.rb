@@ -21,5 +21,15 @@ module MySite
     # config.i18n.default_locale = :de
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif *.eof *.wof *.ttf .svg)
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+    config.action_mailer.smtp_settings= {
+        :address                => "smtp.gmail.com",
+        :port                   => 587,
+        :domain                 =>
+        :user_name              =>
+        :password               =>
+        :authentication         =>
+        :enable_starttls_auto   =>
+
+    }
   end
 end

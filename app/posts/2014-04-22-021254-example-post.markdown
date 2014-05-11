@@ -1,5 +1,5 @@
 ---
-title: Example post
+title: Oldest Blog Post (Example-Post)
 author: Darren Sorrels
 email: darrenbydesign@gmail.com
 ---
