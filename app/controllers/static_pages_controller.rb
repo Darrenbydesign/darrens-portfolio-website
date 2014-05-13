@@ -14,6 +14,7 @@ class StaticPagesController < ApplicationController
 
   def about
   	@title = "About"
+  	@message_render = @message
   end
 
   def blog

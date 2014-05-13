@@ -118,15 +118,6 @@
 				%i.fa.fa-star 
 				%i.fa.fa-star-half-o 
 				%i.fa.fa-star-o 
-				%i.fa.fa-star-o 
-	.blk-desktop-6
-		%h2 Contact me
-		%hr/ 
-		%form#contactMe
-			%p 
-				If you want to talk about working together please email me, I'd love to work with you. If you would just like to message me about my work that would great too! I look forward to all types of critique to my work and I am always looking for a way to improve.
-			- contactMe = {"First Name" => "text", "Last Name" => "text", "Email" => "email"}.each do |label,type|
-				%label.frm-title.frm-control= label
-				%input.input-medium{ :type => type}
-			%textarea{ :placeholder => 'Message here'}
-			%input.btn-norm.proceed{:type => 'submit', :value => "Send"}
+				%i.fa.fa-star-o
+	-# = render @message_render
+	-#= render 'layouts/partials/contact'

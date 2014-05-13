@@ -11,11 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140408132809) do
+ActiveRecord::Schema.define(version: 20140512022535) do
 
   create_table "images", force: true do |t|
     t.string   "image_name"
     t.string   "filepath"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "messages", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
