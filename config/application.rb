@@ -25,10 +25,12 @@ module MySite
     config.action_mailer.smtp_settings = {
       address:              'smtp.gmail.com',
       port:                 587,
-      domain:               'darrensorrels.herokuapp.com',
-      user_name:            'darrenbydesign',
-      password:             'darrenbydesign@gmail.com',
+      domain:               'gmail.com',
+      user_name:            'username',
+      password:             'password',
       authentication:       'plain',
       enable_starttls_auto: true  }
+    config.action_mailer.default_url_options = { :host => "localhost:3000"}
+    config.action_mailer.raise_delivery_errors = true
   end
 end
