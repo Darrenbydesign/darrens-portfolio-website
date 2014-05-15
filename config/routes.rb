@@ -1,13 +1,12 @@
 MySite::Application.routes.draw do
   postmarkdown :as => :blog
-  resources :message
   root :to => 'static_pages#home'
   %w[about portfolio blog].each do |page|
     get page, controller:'static_pages', action: page
   end
-  match 'contact' => 'contact#new', :as => 'contact', :via => :get
-  match 'contact' => 'contact#create', :as => 'contact', :via => :post
-  
+  resources :contact, only: [:new, :create]
+    match 'contact' => 'contact#new', :as => 'contact', :via => :get
+    match 'contact' => 'contact#create', :as => 'create', :via => :post
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

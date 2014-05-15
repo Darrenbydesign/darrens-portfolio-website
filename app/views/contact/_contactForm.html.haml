@@ -1,0 +1,14 @@
+= form_for  @message,:url => contact_path, :id => "contactMe" do |form|
+    = form.label :name, :class => "frm-title frm-control"
+    = form.text_field :name, :class => "input-medium"
+
+    = form.label :email, :class => "frm-title frm-control"
+    = form.text_field :email, :class => "input-medium"
+
+    = form.label :subject, :class => "frm-title frm-control"
+    = form.text_field :subject, :class => "input-medium"
+
+    = form.label :body, :class => "frm-title frm-control"
+    = form.text_area :body, :placeholder => "Message Here"
+
+    = form.submit "Send", :class => "btn-norm"

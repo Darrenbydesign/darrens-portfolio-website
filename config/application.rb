@@ -21,18 +21,14 @@ module MySite
     # config.i18n.default_locale = :de
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif *.eof *.wof *.ttf .svg)
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
-    config.action_mailer.smtp_settings= {
-        :address                => "smtp.gmail.com",
-        :port                   => 587,
-        :domain                 => "darrensorrels.herokuapp.com",
-        :user_name              => "darren@darrensorrels.herokuapp.com",
-        :password               => "master_sword_27",
-        :authentication         => :plain,
-        :enable_starttls_auto   => true
-    }
-    config.action_mailer.default_url_options = {
-        :host => "darrensorrels.herokuapp.com"
-    }
-    
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+      address:              'smtp.gmail.com',
+      port:                 587,
+      domain:               'darrensorrels.herokuapp.com',
+      user_name:            'darrenbydesign',
+      password:             'darrenbydesign@gmail.com',
+      authentication:       'plain',
+      enable_starttls_auto: true  }
   end
 end

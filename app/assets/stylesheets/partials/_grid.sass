@@ -4,7 +4,6 @@
     width: 100%
     min-height: 100%
     margin: 0 auto
-    // background: $background-color
     padding: 0px 10px 20px 20px
     +clearfix
 
@@ -111,33 +110,32 @@
     &:last-of-type
         padding-right: 20px
 
-@media (max-width: 480px)
-    [class*='blk-']
+@media (min-width: 800px) and (max-width: 1100px) 
+    .blk-4,
+    .blk-8
+    .blk-10
+    .blk-12
         width: 100%
-
+    .blk-2,
+    .blk-7
+        width: 50%
 
 @media (max-width: 800px)
-    .blk-9,
-    .blk-7,
-    .blk-5,
+    .blk-1,
+    .blk-2,
     .blk-3,
-    .blk-1
+    .blk-5,
+    .blk-7,
+    .blk-9,
+    .blk-11
         width: 50%
-    .blk-12,
-    .blk-11,
-    .blk-10,
-    .blk-8,
-    .blk-6,
     .blk-4,
-    .blk-2
+    .blk-6,
+    .blk-8,
+    .blk-10,
+    .blk-12
         width: 100%
 
-@media (min-width: 800px) and (max-width: 1100px)
-    .blk-11,
-    .blk-6
+@media (max-width: 480px) 
+    [class*='blk-']
         width: 100%
-    .blk-9,
-    .blk-5,
-    .blk-3,
-    .blk-1
-        width: 50%

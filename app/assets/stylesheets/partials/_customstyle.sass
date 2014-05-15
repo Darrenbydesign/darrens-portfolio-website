@@ -30,14 +30,17 @@ blockquote
 
 /*============Custom Styles================*/
 .logo
-    text-decoration: none
-    font-size: 1.5em
-    h2
-        color: $third-color
     @extend .center
+    a
+        text-decoration: none
+    span,h2
+        font-size: 1.5em
+        font-family: $font-stack-headers
+        color: $third-color
     img
         width: 8em 
         max-height: 100%
+        vertical-align: middle
 .hide-words
     font-size: 0px
     text-align: center

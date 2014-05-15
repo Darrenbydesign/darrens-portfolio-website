@@ -1,6 +1,6 @@
 class NotificationsMailer < ActionMailer::Base
-  default :from => "darrenbydesign@gmail.com"
-  default :to => "darrensorrels@darrensorrels.herokuapp.com"
+  default :from => email
+  default :to => "darrenbydesign@gmail.com"
 
   def new_message(message)
     @message = message
