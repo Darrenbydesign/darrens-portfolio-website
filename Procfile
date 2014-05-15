@@ -1,3 +1,3 @@
-web: bundle exec rails s
+web: rails s
 .env
 Procfile
