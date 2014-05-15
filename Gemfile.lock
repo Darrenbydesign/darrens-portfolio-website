@@ -46,16 +46,12 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     diff-lcs (1.2.5)
-    dotenv (0.7.0)
     erubis (2.7.0)
     execjs (2.0.2)
     ffi (1.9.3)
     figaro (0.7.0)
       bundler (~> 1.0)
       rails (>= 3, < 5)
-    foreman (0.66.0)
-      dotenv (~> 0.7.0)
-      thor (~> 0.19.1)
     gravtastic (3.2.6)
     haml (4.0.5)
       tilt
@@ -188,7 +184,6 @@ DEPENDENCIES
   capybara (= 2.1.0)
   coffee-rails (= 4.0.1)
   figaro
-  foreman
   haml
   haml-rails
   jbuilder (= 1.0.2)
