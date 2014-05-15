@@ -15,11 +15,6 @@ class Message
     end
   end
 
-  def deliver
-    return false unless valid?
-    true
-  end
-
   def persisted?
     false
   end
