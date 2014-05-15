@@ -5,7 +5,7 @@ class StaticPagesController < ApplicationController
 		Logos/blk_epiphany.jpg
 		Logos/Empire_fence.jpg
 		posters/observations.jpg
-		phone_wallpapers/superman.jpg
+		posters/Regeneration_Poster.jpg
 		]
 	@title = "Home"
 
