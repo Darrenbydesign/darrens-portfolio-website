@@ -26,6 +26,7 @@ gem 'active_attr'
 group :development, :test do
   gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.13.1'
+  gem 'foreman'
 end
 
 group :test do

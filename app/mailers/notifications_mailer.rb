@@ -4,7 +4,7 @@ class NotificationsMailer < ActionMailer::Base
 
   def new_message(message)
     @message = message
-    mail(:to => "darrenbydesign@gmail.com",:subject => "[darrensorrels.herokuapp.com] #{message.subject}")
+    mail(:subject => "[darrensorrels.herokuapp.com] #{message.subject}")
   end
 
 end
