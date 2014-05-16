@@ -6,9 +6,8 @@
 	= javascript_include_tag 'application', media:  "all", "data-turbolinks-track" => true
 	= csrf_meta_tags
 %header.header
-	.slab 
-		.logo
-			%a{:href => "/"}
-				=image_tag "logo.png", alt: "Darren Sorrels Graphic Designer"
-				%h2 Darren Sorrels Graphic Designer
-		= render partial: "layouts/partials/navigation"
+	.logo
+		%a{:href => "/"}
+			=image_tag "logo.png", alt: "Darren Sorrels Graphic Designer"
+			%h2 Darren Sorrels Graphic Designer
+	= render partial: "layouts/partials/navigation"
