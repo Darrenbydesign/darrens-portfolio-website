@@ -1,0 +1,11 @@
+%header.header 
+	%h1 
+	You Have a New Inquiry From Your Website!
+	%h3 
+		= "Name: " + @message.name
+	%h3 	
+		= "Email: " + @message.email
+	%h3 
+		= "Subject: " + @message.subject
+%p 
+	= @message.body
