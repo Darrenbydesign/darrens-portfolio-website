@@ -12,23 +12,25 @@ $(function() {
     // create HTML markup for lightbox window
     var image_href = $(this).attr("href"),
       slideNum = $('.lb-trigger').index(this) + 1,
+      image_name ="=@image.name",
+      image_text = "=@image.content",
       lightbox =
-        '<div class="lightbox">' +
-        '<button class="btn-tiny close">' + "Close Me" + '</button>' +
-        '<div class="lb-content">' +
-        '<div class="lb-nav">' +
-        '<button class="lb-prev btn-norm"> < </button>' +
-        '<button class="lb-next btn-norm"> > </button>' +
-        '</div>' +
-        '<figure>' +
+      '<div class="lightbox">' +
+      '<button class="btn-tiny close">' + "Close Me" + '</button>' +
+      '<div class="lb-content">' +
+      '<div class="lb-nav">' +
+      '<button class="lb-prev btn-norm"> < </button>' +
+      '<button class="lb-next btn-norm"> > </button>' +
+      '</div>' +
+      '<figure>' +
       // '<img src="' + image_href + '"/>' +
       '<figcaption>' +
-        '<h3>' + "image_name" + '</h3>' +
-        '<p>' + 'Lorem ipsum Quis elit ut non ea consequat aliqua cupidatat Ut minim occaecat veniam esse.' + '</p>' +
-        '</figcaption>' +
-        '</figure>' +
-        '</div>' +
-        '</div>',
+      '<h3>' + image_name + '</h3>' +
+      '<p>' + image_text + '</p>' +
+      '</figcaption>' +
+      '</figure>' +
+      '</div>' +
+      '</div>',
       previous_image,
       next_image;
     //insert lightbox HTML into page
@@ -56,7 +58,6 @@ $(function() {
       previous_image = $(this).closest('li').prev('li').find('.lb-trigger'); //.attr("href");
     }
 
-
     // console.log("slideNum:" + slideNum + " next_image href: " + next_image.attr("href") + "\tprevious_image href: " + previous_image.attr("href"));
     // }
 
@@ -75,31 +76,20 @@ $(function() {
       $('.lightbox').click();
       $(next_image).click();
     })
+
+    $(this).keydown(function(e) {
+      e.stopImmediatePropagation();
+      e.preventDefault();
+      var evt = e ? e : window.event;
+      var keycode = evt.keyCode ? evt.keyCode : evt.which;
+      if (keycode === 37 || keycode === 38) { // left or up arrow keys pressed
+        $('.lb-prev').click();
+      } else if (keycode === 39 || keycode === 40) { // right or down arrow keys pressed
+        $('.lb-next').click();
+      } else if (keycode === 27) { // escape key pressed
+        $('.lightbox').click();
+      }
+    });
   });
 
-  // $(document.documentElement).keyup(function(event) {
-
-  //   var $this = $(this),
-  //     dest;
-
-  //   if (event.keyCode === 37) { // left arrow key
-  //     dest = current - 1;
-  //     if (dest < 0) {
-  //       dest = size - 1;
-  //     }
-  //   } else if (event.keyCode === 39) { // right arrow key
-  //     dest = current + 1;
-  //     if (dest > size - 1) {
-  //       dest = 0;
-  //     }
-
-  //   }
-
-  //   // fadeOut curent slide, FadeIn next/prev slide
-  //   $('.lb-content img:eq(' + current + ')').hide();
-  //   $('.lb-content img:eq(' + dest + ')').show();
-
-  //   // update current slide
-  //   current = dest;
-  // });
 });
