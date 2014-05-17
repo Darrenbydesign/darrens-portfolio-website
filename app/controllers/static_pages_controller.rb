@@ -14,7 +14,6 @@ class StaticPagesController < ApplicationController
 
   def about
   	@title = "About"
-  	@message_render = @message
   end
 
   def blog
@@ -33,5 +32,7 @@ class StaticPagesController < ApplicationController
 		posters/Regeneration_Poster.jpg
 		]
 	@title = "Portfolio"
+	@image_name = "Test"
+	@image_content = "lets see if this works"
   end
 end

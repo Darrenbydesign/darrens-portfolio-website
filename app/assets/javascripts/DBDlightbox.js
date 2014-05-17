@@ -12,8 +12,8 @@ $(function() {
     // create HTML markup for lightbox window
     var image_href = $(this).attr("href"),
       slideNum = $('.lb-trigger').index(this) + 1,
-      image_name ="=@image.name",
-      image_text = "=@image.content",
+      image_name = gon.image_name,
+      image_text = = gon.image_content,
       lightbox =
       '<div class="lightbox">' +
       '<button class="btn-tiny close">' + "Close Me" + '</button>' +

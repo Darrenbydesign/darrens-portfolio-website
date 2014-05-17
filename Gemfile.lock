@@ -52,6 +52,9 @@ GEM
     figaro (0.7.0)
       bundler (~> 1.0)
       rails (>= 3, < 5)
+    gon (5.0.4)
+      actionpack (>= 2.3.0)
+      json
     gravtastic (3.2.6)
     haml (4.0.5)
       tilt
@@ -184,6 +187,7 @@ DEPENDENCIES
   capybara (= 2.1.0)
   coffee-rails (= 4.0.1)
   figaro
+  gon
   haml
   haml-rails
   jbuilder (= 1.0.2)

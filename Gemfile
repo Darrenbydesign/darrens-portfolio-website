@@ -18,6 +18,7 @@ gem 'jbuilder', '1.0.2'
 gem 'postmarkdown'
 gem 'active_attr'
 gem 'figaro'
+gem 'gon'
 
 
 group :development, :test do
