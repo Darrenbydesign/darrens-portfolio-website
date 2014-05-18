@@ -12,8 +12,6 @@ $(function() {
     // create HTML markup for lightbox window
     var image_href = $(this).attr("href"),
       slideNum = $('.lb-trigger').index(this) + 1,
-      image_name = gon.image_name,
-      image_text = = gon.image_content,
       lightbox =
       '<div class="lightbox">' +
       '<button class="btn-tiny close">' + "Close Me" + '</button>' +
@@ -25,8 +23,8 @@ $(function() {
       '<figure>' +
       // '<img src="' + image_href + '"/>' +
       '<figcaption>' +
-      '<h3>' + image_name + '</h3>' +
-      '<p>' + image_text + '</p>' +
+      '<h3>' + gon.image_name + '</h3>' +
+      '<p>' + gon.image_text + '</p>' +
       '</figcaption>' +
       '</figure>' +
       '</div>' +
@@ -77,7 +75,7 @@ $(function() {
       $(next_image).click();
     })
 
-    $(this).keydown(function(e) {
+    $('body').keypress(function(e) {
       e.stopImmediatePropagation();
       e.preventDefault();
       var evt = e ? e : window.event;

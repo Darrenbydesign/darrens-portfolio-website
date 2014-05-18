@@ -32,7 +32,16 @@ class StaticPagesController < ApplicationController
 		posters/Regeneration_Poster.jpg
 		]
 	@title = "Portfolio"
-	@image_name = "Test"
-	@image_content = "lets see if this works"
+	gon.image_name = @image_name = %w[
+		Flyte
+		The Black Epiphany
+		Empire Fence co.
+		Purls & knit
+		Almost Maine
+		The Art of Murder
+		Observations
+		Regeneration
+		]
+	gon.image_text = @image_text = "lets see if this works"
   end
 end
