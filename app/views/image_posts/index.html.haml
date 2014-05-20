@@ -1,0 +1,17 @@
+%h1 Listing image_posts
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @image_posts.each do |image_post|
+    %tr
+      %td= link_to 'Show', image_post
+      %td= link_to 'Edit', edit_image_post_path(image_post)
+      %td= link_to 'Destroy', image_post, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Image post', new_image_post_path

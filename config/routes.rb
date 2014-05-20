@@ -1,4 +1,10 @@
 MySite::Application.routes.draw do
+  resources :image_posts
+
+  resources :images
+
+  resources :portfolios
+
   postmarkdown :as => :blog
   root :to => 'static_pages#home'
   %w[about portfolio blog].each do |page|
