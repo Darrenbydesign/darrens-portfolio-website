@@ -32,7 +32,7 @@ class StaticPagesController < ApplicationController
 		posters/Regeneration_Poster.jpg
 		]
 	@title = "Portfolio"
-	gon.image_name = @image_name = %w[
+	gon.image_name = imageName = %w[
 		Flyte
 		The Black Epiphany
 		Empire Fence co.
@@ -42,6 +42,7 @@ class StaticPagesController < ApplicationController
 		Observations
 		Regeneration
 		]
-	gon.image_text = @image_text = "lets see if this works"
+	gon.image_text = imagePath = "Lorem ipsum Nulla cupidatat est aliqua sint aliquip pariatur 
+	quis exercitation laborum et fugiat aute deserunt dolore aliquip reprehenderit dolor."
   end
 end
