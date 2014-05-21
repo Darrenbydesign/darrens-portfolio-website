@@ -1,7 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
      @images = %w[
-		Logos/Flyte_1.jpg
 		Logos/blk_epiphany.jpg
 		Logos/Empire_fence.jpg
 		posters/observations.jpg

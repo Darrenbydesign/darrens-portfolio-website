@@ -62,25 +62,24 @@ blockquote
     textarea
         width: 50%
 #carousel
-    height: 300px
-    margin: 3em auto
-    background: rgba($secondary-color,0.3)
-    border: 0.5em solid lighten($third-color,15)
+    width: 100%
+    overflow: hidden
+    margin: 1em auto
+    border: 5px solid $primary-color
+    background: $third-color
     ul
-        position: relative
+        width: 1920px
+        background: $third-color
         li
+            width: 480px
+            height: 350px
+            text-align: center
             list-style: none
-            display: block
-            border: 2px solid $third-color
-            overflow: hidden
             float: left
-            width: 16%
-            height: 150px
-            margin: 2% 
             img
                 text-align: center
+                max-height: 100%
                 max-width: 100%
-
 .grid-box
     margin: 10px auto
     list-style: none
@@ -116,7 +115,6 @@ blockquote
                 padding: 0
                 font-size: 0.875em
                 color: $alt-text-color
-
             a
                 text-align: center
                 text-decoration: none
@@ -149,7 +147,6 @@ blockquote
             transition: transform 0.4s
             a
                 background: none
-            
 .lightbox
     position: fixed
     background: rgba($third-color,0.7)
