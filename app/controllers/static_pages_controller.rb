@@ -3,7 +3,6 @@ class StaticPagesController < ApplicationController
      @images = %w[
     Logos/blk_epiphany.jpg
     Logos/Empire_fence.jpg
-    phone_wallpapers/brainiac.jpg
     posters/observations.jpg
     posters/Regeneration_Poster.jpg
     ]
