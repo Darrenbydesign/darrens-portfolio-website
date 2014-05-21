@@ -9,6 +9,6 @@
             = link_to(image_tag("#{i}", :alt => "#{i}".sub(/^[^\/]+\//,"")), 
               asset_path("#{i}"), :class => "lb-trigger")
             %figcaption
-              %h3= "#{i}".sub(/^[^\/]+\/&&^(.[a-z])/,"")
+              %h3= "#{i}".sub(/^[^\/]+\/&&(.png||.jpg)/,"")
               %span by Darren Sorrels
               %p 
