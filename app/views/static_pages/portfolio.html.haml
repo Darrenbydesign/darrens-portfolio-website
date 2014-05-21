@@ -1,4 +1,4 @@
-= include_gon(watch: true)
+
 / .blk-12
 .blk-lgDesktop-12
   .grid-box.gb-style-1
@@ -9,6 +9,5 @@
             = link_to(image_tag("#{i}", :alt => "#{i}".sub(/^[^\/]+\//,"")), 
               asset_path("#{i}"), :class => "lb-trigger")
             %figcaption
-              %h3= "#{i}".sub(/^[^\/]+\//,"").sub(/\.(jpg||png)/,"").sub(/\_/," ")
+              %h3= "#{i}".sub(/^[^\/]+\//,"").sub(/\.(jpg||png)/,"").sub(/\_/," ").sub(/\_/," ")
               %span by Darren Sorrels
-              %p 
