@@ -56,11 +56,13 @@ class StaticPagesController < ApplicationController
     # gon.lightbox = @lightbox
     
     @imageName = %w[
-      Flyte The Black EpiphanyEmpire Fence co. Purls & knit Almost Maine 
-      The Art of Murder Observations Regeneration]
+      Flyte TheBlackEpiphany EmpireFenceCo. Purls&knit AlmostMaine 
+      TheArtofMurder Observations Regeneration]
     gon.image_name = @imageName
 
-    @imageText = "testing text 123 Lorem ipsum Occaecat ut occaecat non Ut."
+    @imageText = "Information will displayed here describing my work."
     gon.image_text = @imageText
+    # k = Hash.new{ "loren ipsum"}
+    # k["PICT"] = "TEXT"
   end
 end

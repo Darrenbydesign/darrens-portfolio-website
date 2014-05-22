@@ -30,6 +30,8 @@ $(function() {
       '</div>',
       previous_image,
       next_image;
+      // for (var i = 0; i < gon.imageName.length; i++) {}
+      //   using gon.image_name[i];
     //insert lightbox HTML into page
     $('body').append(lightbox);
 

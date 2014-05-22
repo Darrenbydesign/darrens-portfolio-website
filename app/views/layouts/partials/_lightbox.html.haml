@@ -6,5 +6,6 @@
       %button.lb-next.btn-norm >
     %figure
       %figcaption 
-        %h3= image_name
-        %p= image_text
+      	-@imageName.each do |n|
+	        %h3= '#{n}'
+        %p= '#{t}'
