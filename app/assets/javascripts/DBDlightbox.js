@@ -12,22 +12,21 @@ $(function() {
     // create HTML markup for lightbox window
     var image_href = $(this).attr("href"),
       slideNum = $('.lb-trigger').index(this) + 1,
-      lightbox = 
+      lightbox =
       '<div class="lightbox">' +
-        '<button class="btn-tiny close">' + "Close Me" + '</button>' +
-        '<div class="lb-content">' +
-            '<div class="lb-nav">' +
-              '<button class="lb-prev btn-norm"> < </button>' +
-              '<button class="lb-next btn-norm"> > </button>' +
-            '</div>' +
-            '<figure>' +
-              // '<img src="' + image_href + '"/>' +
-              '<figcaption>' +
-              '<h3>' + gon.image_name + '</h3>' +
-              '<p>' + gon.image_text + '</p>' +
-              '</figcaption>' +
-            '</figure>' +
-        '</div>' +
+      '<button class="btn-tiny close">' + "Close Me" + '</button>' +
+      '<div class="lb-content">' +
+      '<div class="lb-nav">' +
+      '<button class="lb-prev btn-norm"> < </button>' +
+      '<button class="lb-next btn-norm"> > </button>' +
+      '</div>' +
+      '<figure>' +
+      '<figcaption>' +
+      '<h3>' + gon.image_name + '</h3>' +
+      '<p>' + gon.image_text + '</p>' +
+      '</figcaption>' +
+      '</figure>' +
+      '</div>' +
       '</div>',
       previous_image,
       next_image;
@@ -75,7 +74,7 @@ $(function() {
       $(next_image).click();
     })
 
-    $('body').keypress(function(e) {
+    $(this).keypress(function(e) {
       e.stopImmediatePropagation();
       e.preventDefault();
       var evt = e ? e : window.event;

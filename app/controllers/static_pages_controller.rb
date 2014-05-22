@@ -30,21 +30,37 @@ class StaticPagesController < ApplicationController
     posters/observations.jpg
     posters/Regeneration_Poster.jpg
     phone_wallpapers/brainiac.jpg
+    phone_wallpapers/superman.jpg
+    phone_wallpapers/flash.jpg
+    phone_wallpapers/batman.jpg
     ]
+
     @title = "Portfolio"
-    gon.image_name = @imageName = %w[
-      Flyte
-      The Black Epiphany
-      Empire Fence co.
-      Purls & knit
-      Almost Maine
-      The Art of Murder
-      Observations
-      Regeneration
-      ]
-    gon.image_text = @imagePath = "testing text 123 Lorem ipsum Occaecat ut occaecat non Ut."
-    # def lightbox
-    #   gon.lightbox = @lightbox = render partial: "layouts/partials/lightbox"
-    # end
+
+    # @lightbox =
+    # '<div class="lightbox">' +
+    #   '<button class="btn-tiny close">' + "Close Me" + '</button>' +
+    #   '<div class="lb-content">' +
+    #       '<div class="lb-nav">' +
+    #         '<button class="lb-prev btn-norm"> < </button>' +
+    #         '<button class="lb-next btn-norm"> > </button>' +
+    #       '</div>' +
+    #       '<figure>' +
+    #         '<figcaption>' +
+    #         '<h3>' + 'gon.image_name' + '</h3>' +
+    #         '<p>' + 'gon.image_text' + '</p>' +
+    #         '</figcaption>' +
+    #       '</figure>' +
+    #   '</div>' +
+    # '</div>'
+    # gon.lightbox = @lightbox
+    
+    @imageName = %w[
+      Flyte The Black EpiphanyEmpire Fence co. Purls & knit Almost Maine 
+      The Art of Murder Observations Regeneration]
+    gon.image_name = @imageName
+
+    @imageText = "testing text 123 Lorem ipsum Occaecat ut occaecat non Ut."
+    gon.image_text = @imageText
   end
 end
