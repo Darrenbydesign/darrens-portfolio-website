@@ -63,20 +63,40 @@ blockquote
         width: 50%
 #carousel
     width: 100%
+    height: 20em
     overflow: hidden
     margin: 1em auto
     border: 5px solid $primary-color
     background: rgba($third-color, 0.3)
     ul
+        // &:before
+        //     content:  "|"
+        //     position: relative
+        //     left: 10
+        //     display: inline-block
+        //     width: 50px
+        //     height: 20em
+        //     background: rgba($third-color,0.7)
+        // &:after
+        //     content:  "|"
+        //     position: relative
+        //     // left: 20
+        //     right: 0
+        //     display: inline-block
+        //     width: 50px
+        //     height: 20em
+        //     background: rgba($third-color,0.7)
         width: 1920px
-        background: $third-color
         li
-            width: 480px
-            height: 350px
+            display: inline-block
+            width: 400px
+            margin: 0 1em
+            max-height: 100%
             text-align: center
             list-style: none
             float: left
             img
+                display: block
                 text-align: center
                 max-height: 100%
                 max-width: 100%

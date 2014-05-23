@@ -3,8 +3,9 @@ class StaticPagesController < ApplicationController
      @images = %w[
     Logos/blk_epiphany.jpg
     Logos/Empire_fence.jpg
-    posters/observations.jpg
-    posters/Regeneration_Poster.jpg
+    Logos/purls&knit_color_logo.jpg
+    Logos/Flyte_1.jpg
+    posters/Regeneration_Poster_hrz.jpg
     ]
   @title = "Home"
 
