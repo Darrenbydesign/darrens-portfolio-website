@@ -887,9 +887,13 @@ blockquote {
 .frm-input, .input-large, .input-medium, .input-small, .input-line {
   border: 1px solid #5895b9;
   display: inline-block;
-  transition: border 0.3s ease-out; }
-  .frm-input:hover, .input-large:hover, .input-medium:hover, .input-small:hover, .input-line:hover {
-    border: 1px solid #4d4d4e; }
+  transition: border 0.3s ease-out;
+  box-shadow: inset 1px 3px 5px #cccccd; }
+  .frm-input:hover, .input-large:hover, .input-medium:hover, .input-small:hover, .input-line:hover, .frm-input:focus, .input-large:focus, .input-medium:focus, .input-small:focus, .input-line:focus {
+    border: 1px solid #666668;
+    background: white; }
+    .frm-input:hover:after, .input-large:hover:after, .input-medium:hover:after, .input-small:hover:after, .input-line:hover:after, .frm-input:focus:after, .input-large:focus:after, .input-medium:focus:after, .input-small:focus:after, .input-line:focus:after {
+      border: 1px solid #5895b9; }
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -920,9 +924,6 @@ input {
   vertical-align: baseline;
   transition: border 0.2s ease-in;
   border-radius: 2px; }
-  input:hover, input:focus {
-    border: 1px solid #0b6c95;
-    background: white; }
 
 .input-large {
   width: 90%; }
@@ -965,6 +966,7 @@ textarea {
   padding: 5px;
   min-height: 150px;
   border: 1px solid #5895b9;
+  box-shadow: inset 1px 3px 5px #cccccd;
   border-radius: 2px;
   transition: border 0.3s ease-in-out; }
   textarea:hover, textarea:focus {
@@ -1590,11 +1592,13 @@ table {
 /*==================================== */
 /*==============Alert Messages===================== */
 .alert-success {
+  width: 500px;
   height: 150px;
   background: rgba(98, 199, 76, 0.95);
+  color: #faf9f8;
   border-radius: 2px;
   margin: 10px 10px 15px 10px;
-  overflow: hidden; }
+  overflow: auto; }
   .alert-success h3 {
     color: #eaf8e7;
     padding: 5px;
@@ -1606,11 +1610,13 @@ table {
     overflow-y: auto; }
 
 .alert-warning {
+  width: 500px;
   height: 150px;
   background: rgba(255, 127, 0, 0.95);
+  color: #faf9f8;
   border-radius: 2px;
   margin: 10px 10px 15px 10px;
-  overflow: hidden; }
+  overflow: auto; }
   .alert-warning h3 {
     color: #ffe5cc;
     padding: 5px;
@@ -1622,11 +1628,13 @@ table {
     overflow-y: auto; }
 
 .alert-info {
+  width: 500px;
   height: 150px;
   background: rgba(255, 205, 0, 0.95);
+  color: #faf9f8;
   border-radius: 2px;
   margin: 10px 10px 15px 10px;
-  overflow: hidden; }
+  overflow: auto; }
   .alert-info h3 {
     color: #fff5cc;
     padding: 5px;
@@ -1638,11 +1646,13 @@ table {
     overflow-y: auto; }
 
 .alert-error {
+  width: 500px;
   height: 150px;
   background: rgba(240, 101, 91, 0.95);
+  color: #faf9f8;
   border-radius: 2px;
   margin: 10px 10px 15px 10px;
-  overflow: hidden; }
+  overflow: auto; }
   .alert-error h3 {
     color: white;
     padding: 5px;
@@ -1945,19 +1955,23 @@ body {
   bottom: 0%;
   width: 100%; }
 
-blockquote p:before {
-  content: '"';
-  font-size: 32px;
-  font: "source_sans_proregular", "Helvetica Neue", "Helvetica", sans-serif; }
-blockquote p:after {
-  content: '"';
-  font-size: 32px;
-  font: "source_sans_proregular", "Helvetica Neue", "Helvetica", sans-serif; }
+blockquote p {
+  font-size: 1.12em; }
+  blockquote p:before {
+    content: "\f10d ";
+    font-family: "fontawesome"; }
+  blockquote p:after {
+    content: " \f10e";
+    font-family: "fontawesome"; }
 
 /*==================================== */
 /*============Custom Styles================ */
+.logo li:hover {
+  background: none; }
 .logo a {
   text-decoration: none; }
+  .logo a:hover {
+    background: none; }
 .logo span, .logo h2 {
   font-size: 1.5em;
   font-family: "source_sans_prosemibold", "Helvetica Neue", "Helvetica", sans-serif;
@@ -1991,23 +2005,23 @@ blockquote p:after {
   width: 50%; }
 
 #carousel {
-  height: 300px;
+  width: 100%;
+  overflow: hidden;
   margin: 1em auto;
-  background: rgba(11, 108, 149, 0.3);
-  border: 0.5em solid #666668; }
+  border: 5px solid #5895b9;
+  background: rgba(64, 64, 65, 0.7); }
   #carousel ul {
-    position: relative; }
+    width: 1920px;
+    background: #404041; }
     #carousel ul li {
+      width: 480px;
+      height: 350px;
+      text-align: center;
       list-style: none;
-      display: block;
-      border: 2px solid #404041;
-      overflow: hidden;
-      float: left;
-      width: 16%;
-      height: 150px;
-      margin: 2%; }
+      float: left; }
       #carousel ul li img {
         text-align: center;
+        max-height: 100%;
         max-width: 100%; }
 
 .grid-box {

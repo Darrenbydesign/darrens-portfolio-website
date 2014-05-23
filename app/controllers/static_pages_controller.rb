@@ -36,25 +36,23 @@ class StaticPagesController < ApplicationController
     ]
 
     @title = "Portfolio"
-
-    # @lightbox =
-    # '<div class="lightbox">' +
-    #   '<button class="btn-tiny close">' + "Close Me" + '</button>' +
-    #   '<div class="lb-content">' +
-    #       '<div class="lb-nav">' +
-    #         '<button class="lb-prev btn-norm"> < </button>' +
-    #         '<button class="lb-next btn-norm"> > </button>' +
-    #       '</div>' +
-    #       '<figure>' +
-    #         '<figcaption>' +
-    #         '<h3>' + 'gon.image_name' + '</h3>' +
-    #         '<p>' + 'gon.image_text' + '</p>' +
-    #         '</figcaption>' +
-    #       '</figure>' +
-    #   '</div>' +
-    # '</div>'
-    # gon.lightbox = @lightbox
-    
+  end
+  def test
+    @title = 'Test'
+    @images = %w[
+    Logos/Flyte_1.jpg
+    Logos/blk_epiphany.jpg
+    Logos/Empire_fence.jpg
+    Logos/purls&knit_color_logo.jpg
+    posters/almost_maine_poster.jpg
+    posters/Art_of_Murder.jpg
+    posters/observations.jpg
+    posters/Regeneration_Poster.jpg
+    phone_wallpapers/brainiac.jpg
+    phone_wallpapers/superman.jpg
+    phone_wallpapers/flash.jpg
+    phone_wallpapers/batman.jpg
+    ]
     @imageName = %w[
       Flyte TheBlackEpiphany EmpireFenceCo. Purls&knit AlmostMaine 
       TheArtofMurder Observations Regeneration]
@@ -62,7 +60,5 @@ class StaticPagesController < ApplicationController
 
     @imageText = "Information will displayed here describing my work."
     gon.image_text = @imageText
-    # k = Hash.new{ "loren ipsum"}
-    # k["PICT"] = "TEXT"
   end
 end

@@ -3,7 +3,7 @@ MySite::Application.routes.draw do
 
   postmarkdown :as => :blog
   root :to => 'static_pages#home'
-  %w[about portfolio blog].each do |page|
+  %w[about portfolio blog test].each do |page|
     get page, controller:'static_pages', action: page
   end
   resources :contact, only: [:new, :create]

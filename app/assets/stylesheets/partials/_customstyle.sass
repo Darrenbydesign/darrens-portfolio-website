@@ -80,6 +80,31 @@ blockquote
                 text-align: center
                 max-height: 100%
                 max-width: 100%
+.quick-folio
+    figure
+        @extend .center
+        ul
+            position: relative
+            list-style: none
+            li
+                display: inline-block
+                margin: 1em
+                max-width: 75%
+                max-height: 75%
+                overflow: scroll
+                background: rgba($third-color,0.8)
+                box-shadow: 0 0 5px $third-color
+                img
+                    position: relative
+                    max-width: 50%              
+                    max-height: 50%
+                    margin: 1em auto
+        figcaption
+            span
+                &:before
+                    content: 'By: '
+            p
+                text-align: left
 .grid-box
     margin: 10px auto
     list-style: none
