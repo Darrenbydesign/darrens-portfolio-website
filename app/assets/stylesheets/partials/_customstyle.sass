@@ -17,16 +17,21 @@ body
     width: 100%
 
 blockquote
-    width: 45%
-    float: left
+    width: 20em
+    float: right
+    padding: 0px 1.5em
+    margin: 0 1em
+    border-left: 5px solid $primary-color
     +clearfix
     p
-        font-size: 1.12em
+        font-size: 1.1em
         &:before
             content: "\f10d "
+            color: $primary-color
             font-family: $font-awesome
         &:after
             content: " \f10e"
+            color: $primary-color
             font-family: $font-awesome
 /*====================================*/
 
