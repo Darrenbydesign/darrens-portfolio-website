@@ -776,6 +776,27 @@ a {
   font-style: normal; }
 
 @font-face {
+  font-family: "source_serif_pro_regular";
+  src: font-url("sourceserifpro-regular-webfont.eot");
+  src: font-url("sourceserifpro-regular-webfont.eot?#iefix") format("embedded-opentype"), font-url("sourceserifpro-regular-webfont.woff") format("woff"), font-url("sourceserifpro-regular-webfont.ttf") format("truetype"), font-url("sourceserifpro-regular-webfont.svg#source_serif_pro_regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "source_serif_pro_semibold";
+  src: font-url("sourceserifpro-semibold-webfont.eot");
+  src: font-url("sourceserifpro-semibold-webfont.eot?#iefix") format("embedded-opentype"), font-url("sourceserifpro-semibold-webfont.woff") format("woff"), font-url("sourceserifpro-semibold-webfont.ttf") format("truetype"), font-url("sourceserifpro-semibold-webfont.svg#source_serif_pro_semibold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "source_serif_pro_bold";
+  src: font-url("sourceserifpro-bold-webfont.eot");
+  src: font-url("sourceserifpro-bold-webfont.eot?#iefix") format("embedded-opentype"), font-url("sourceserifpro-bold-webfont.woff") format("woff"), font-url("sourceserifpro-bold-webfont.ttf") format("truetype"), font-url("sourceserifpro-bold-webfont.svg#source_serif_pro_bold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
   font-family: "fontawesome";
   src: font-url("fontawesome-webfont.eot");
   src: font-url("fontawesome-webfont.eot?#iefix") format("embedded-opentype"), font-url("fontawesome-webfont.woff") format("woff"), font-url("fontawesome-webfont.ttf") format("truetype"), font-url("fontawesome-webfont.svg#fontawesome") format("svg");
@@ -807,7 +828,7 @@ h6 {
   font-size: 0.625em; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "source_sans_prosemibold", "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: "source_serif_pro_bold", "Helvetica Neue", "Helvetica", sans-serif;
   color: #0b6c95;
   line-height: 1.5; }
 
@@ -1874,7 +1895,7 @@ table {
   visibility: hidden;
   display: none; }
 
-.center, .logo {
+.center, .logo, .quick-folio figure {
   margin: 0 auto;
   text-align: center; }
 
@@ -1955,26 +1976,31 @@ body {
   bottom: 0%;
   width: 100%; }
 
-blockquote p {
-  font-size: 1.12em; }
-  blockquote p:before {
-    content: "\f10d ";
-    font-family: "fontawesome"; }
-  blockquote p:after {
-    content: " \f10e";
-    font-family: "fontawesome"; }
+blockquote {
+  width: 45%;
+  float: left; }
+  blockquote:after, blockquote:before {
+    content: "";
+    display: table; }
+  blockquote:after {
+    clear: both;
+    zoom: 1; }
+  blockquote p {
+    font-size: 1.12em; }
+    blockquote p:before {
+      content: "\f10d ";
+      font-family: "fontawesome"; }
+    blockquote p:after {
+      content: " \f10e";
+      font-family: "fontawesome"; }
 
 /*==================================== */
 /*============Custom Styles================ */
-.logo li:hover {
-  background: none; }
 .logo a {
   text-decoration: none; }
-  .logo a:hover {
-    background: none; }
 .logo span, .logo h2 {
   font-size: 1.5em;
-  font-family: "source_sans_prosemibold", "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: "source_serif_pro_bold", "Helvetica Neue", "Helvetica", sans-serif;
   color: #404041; }
 .logo img {
   width: 8em;
@@ -2006,23 +2032,45 @@ blockquote p {
 
 #carousel {
   width: 100%;
+  height: 20em;
   overflow: hidden;
   margin: 1em auto;
   border: 5px solid #5895b9;
-  background: rgba(64, 64, 65, 0.7); }
+  background: rgba(64, 64, 65, 0.3); }
   #carousel ul {
-    width: 1920px;
-    background: #404041; }
+    width: 1920px; }
     #carousel ul li {
-      width: 480px;
-      height: 350px;
+      display: inline-block;
+      width: 400px;
+      margin: 0 1em;
+      max-height: 100%;
       text-align: center;
       list-style: none;
       float: left; }
       #carousel ul li img {
+        display: block;
         text-align: center;
         max-height: 100%;
         max-width: 100%; }
+
+.quick-folio figure ul {
+  position: relative;
+  list-style: none; }
+  .quick-folio figure ul li {
+    display: inline-block;
+    margin: 1em 0;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: scroll; }
+    .quick-folio figure ul li img {
+      position: relative;
+      max-width: 50%;
+      margin: 1em auto;
+      border: 4px solid rgba(64, 64, 65, 0.8); }
+.quick-folio figure figcaption span:before {
+  content: "By: "; }
+.quick-folio figure figcaption p {
+  text-align: left; }
 
 .grid-box {
   margin: 10px auto;
