@@ -52,8 +52,8 @@
 =font-face($family, $path, $svg, $weight: normal, $style: normal)
     @font-face
         font-family: $family
-        src: font-url('#{$path}.eot')
-        src: font-url('#{$path}.eot?#iefix') format('embedded-opentype'), font-url('#{$path}.woff') format('woff'), font-url('#{$path}.ttf') format('truetype'), font-url('#{$path}.svg##{$svg}') format('svg')
+        src: url(font-path('#{$path}.eot'))
+        src: url(font-path('#{$path}.eot?#iefix')) format('embedded-opentype'), url(font-path('#{$path}.woff')) format('woff'), url(font-path('#{$path}.ttf')) format('truetype'), url(font-path('#{$path}.svg##{$svg}')) format('svg')
         font-weight: $weight
         font-style: $style
 
