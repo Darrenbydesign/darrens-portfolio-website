@@ -2,12 +2,17 @@
 +font-face("source_sans_prolight","sourcesanspro-light-webfont","source_sans_prolight")
 +font-face("source_sans_proregular","sourcesanspro-regular-webfont","source_sans_proregular")
 +font-face("source_sans_prosemibold","sourcesanspro-semibold-webfont","source_sans_prosemibold")
+
++font-face("source_serif_pro_regular","sourceserifpro-regular-webfont","source_serif_pro_regular")
++font-face("source_serif_pro_semibold","sourceserifpro-semibold-webfont","source_serif_pro_semibold")
++font-face("source_serif_pro_bold","sourceserifpro-bold-webfont","source_serif_pro_bold")
+
 +font-face("fontawesome","fontawesome-webfont","fontawesome")
 
 body
     font-size: $base-text-px
     font-size: 100%
-    font-family: $font-stack
+    font-family: $font-stack-sanserif-regular
     color: $base-text-color
 
 h1
@@ -35,7 +40,7 @@ h6
     // 16x0.625=10px
 
 h1, h2, h3, h4, h5, h6
-    font-family: $font-stack-headers
+    font-family: $font-stack-serif-bold
     color: $secondary-color
     @extend .txt-shadow-lgt
     line-height: 1.5
