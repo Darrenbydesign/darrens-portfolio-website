@@ -25,6 +25,8 @@ blockquote
     +clearfix
     p
         font-size: 1.1em
+        // color: $third-color
+        @extend .txt-shadow-lgt
         &:before
             content: "\f10d "
             color: $primary-color
@@ -100,15 +102,23 @@ blockquote
             list-style: none
             li
                 display: inline-block
-                margin: 1em 0
-                max-width: 100%
-                max-height: 100%
-                // overflow: auto
+                margin: 1em
+                // width: 25em
+                // max-width: 100%
+                // max-height: 100%
                 img
                     position: relative
-                    max-width: 50%
+                    width: 15em
+                    // max-height: 100%
                     margin: 1em auto
                     border: 4px solid rgba($third-color,0.8)
+                    &:hover
+                        border: 4px solid rgba($primary-color,1)
+                        cursor: pointer
+                        // width: 20em
+                        transition: all 0.3s ease-in
+                    &:active,&:focus
+                        width: 20em
         figcaption
             span
                 &:before
@@ -244,4 +254,18 @@ blockquote
         @extend .txt-shadow-lgt
         &:hover
             color: $secondary-color
+.folio
+    border: 0.725em solid $secondary-color
+    +border-radius(2px)
+    padding: 0.15em
+    overflow: scroll
+    height: 25em
+    padding: 0.3125em
+    text-align: center
+    img
+        max-width: 100%
+.fl-text
+    text-align: center
+    p
+        text-align: left
 /*====================================

@@ -756,50 +756,50 @@ a {
 /*===========Typography=============== */
 @font-face {
   font-family: "source_sans_prolight";
-  src: font-url("sourcesanspro-light-webfont.eot");
-  src: font-url("sourcesanspro-light-webfont.eot?#iefix") format("embedded-opentype"), font-url("sourcesanspro-light-webfont.woff") format("woff"), font-url("sourcesanspro-light-webfont.ttf") format("truetype"), font-url("sourcesanspro-light-webfont.svg#source_sans_prolight") format("svg");
+  src: url(font-path("sourcesanspro-light-webfont.eot"));
+  src: url(font-path("sourcesanspro-light-webfont.eot?#iefix")) format("embedded-opentype"), url(font-path("sourcesanspro-light-webfont.woff")) format("woff"), url(font-path("sourcesanspro-light-webfont.ttf")) format("truetype"), url(font-path("sourcesanspro-light-webfont.svg#source_sans_prolight")) format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: "source_sans_proregular";
-  src: font-url("sourcesanspro-regular-webfont.eot");
-  src: font-url("sourcesanspro-regular-webfont.eot?#iefix") format("embedded-opentype"), font-url("sourcesanspro-regular-webfont.woff") format("woff"), font-url("sourcesanspro-regular-webfont.ttf") format("truetype"), font-url("sourcesanspro-regular-webfont.svg#source_sans_proregular") format("svg");
+  src: url(font-path("sourcesanspro-regular-webfont.eot"));
+  src: url(font-path("sourcesanspro-regular-webfont.eot?#iefix")) format("embedded-opentype"), url(font-path("sourcesanspro-regular-webfont.woff")) format("woff"), url(font-path("sourcesanspro-regular-webfont.ttf")) format("truetype"), url(font-path("sourcesanspro-regular-webfont.svg#source_sans_proregular")) format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: "source_sans_prosemibold";
-  src: font-url("sourcesanspro-semibold-webfont.eot");
-  src: font-url("sourcesanspro-semibold-webfont.eot?#iefix") format("embedded-opentype"), font-url("sourcesanspro-semibold-webfont.woff") format("woff"), font-url("sourcesanspro-semibold-webfont.ttf") format("truetype"), font-url("sourcesanspro-semibold-webfont.svg#source_sans_prosemibold") format("svg");
+  src: url(font-path("sourcesanspro-semibold-webfont.eot"));
+  src: url(font-path("sourcesanspro-semibold-webfont.eot?#iefix")) format("embedded-opentype"), url(font-path("sourcesanspro-semibold-webfont.woff")) format("woff"), url(font-path("sourcesanspro-semibold-webfont.ttf")) format("truetype"), url(font-path("sourcesanspro-semibold-webfont.svg#source_sans_prosemibold")) format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: "source_serif_pro_regular";
-  src: font-url("sourceserifpro-regular-webfont.eot");
-  src: font-url("sourceserifpro-regular-webfont.eot?#iefix") format("embedded-opentype"), font-url("sourceserifpro-regular-webfont.woff") format("woff"), font-url("sourceserifpro-regular-webfont.ttf") format("truetype"), font-url("sourceserifpro-regular-webfont.svg#source_serif_pro_regular") format("svg");
+  src: url(font-path("sourceserifpro-regular-webfont.eot"));
+  src: url(font-path("sourceserifpro-regular-webfont.eot?#iefix")) format("embedded-opentype"), url(font-path("sourceserifpro-regular-webfont.woff")) format("woff"), url(font-path("sourceserifpro-regular-webfont.ttf")) format("truetype"), url(font-path("sourceserifpro-regular-webfont.svg#source_serif_pro_regular")) format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: "source_serif_pro_semibold";
-  src: font-url("sourceserifpro-semibold-webfont.eot");
-  src: font-url("sourceserifpro-semibold-webfont.eot?#iefix") format("embedded-opentype"), font-url("sourceserifpro-semibold-webfont.woff") format("woff"), font-url("sourceserifpro-semibold-webfont.ttf") format("truetype"), font-url("sourceserifpro-semibold-webfont.svg#source_serif_pro_semibold") format("svg");
+  src: url(font-path("sourceserifpro-semibold-webfont.eot"));
+  src: url(font-path("sourceserifpro-semibold-webfont.eot?#iefix")) format("embedded-opentype"), url(font-path("sourceserifpro-semibold-webfont.woff")) format("woff"), url(font-path("sourceserifpro-semibold-webfont.ttf")) format("truetype"), url(font-path("sourceserifpro-semibold-webfont.svg#source_serif_pro_semibold")) format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: "source_serif_pro_bold";
-  src: font-url("sourceserifpro-bold-webfont.eot");
-  src: font-url("sourceserifpro-bold-webfont.eot?#iefix") format("embedded-opentype"), font-url("sourceserifpro-bold-webfont.woff") format("woff"), font-url("sourceserifpro-bold-webfont.ttf") format("truetype"), font-url("sourceserifpro-bold-webfont.svg#source_serif_pro_bold") format("svg");
+  src: url(font-path("sourceserifpro-bold-webfont.eot"));
+  src: url(font-path("sourceserifpro-bold-webfont.eot?#iefix")) format("embedded-opentype"), url(font-path("sourceserifpro-bold-webfont.woff")) format("woff"), url(font-path("sourceserifpro-bold-webfont.ttf")) format("truetype"), url(font-path("sourceserifpro-bold-webfont.svg#source_serif_pro_bold")) format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: "fontawesome";
-  src: font-url("fontawesome-webfont.eot");
-  src: font-url("fontawesome-webfont.eot?#iefix") format("embedded-opentype"), font-url("fontawesome-webfont.woff") format("woff"), font-url("fontawesome-webfont.ttf") format("truetype"), font-url("fontawesome-webfont.svg#fontawesome") format("svg");
+  src: url(font-path("fontawesome-webfont.eot"));
+  src: url(font-path("fontawesome-webfont.eot?#iefix")) format("embedded-opentype"), url(font-path("fontawesome-webfont.woff")) format("woff"), url(font-path("fontawesome-webfont.ttf")) format("truetype"), url(font-path("fontawesome-webfont.svg#fontawesome")) format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -841,11 +841,6 @@ p {
 
 small {
   font-size: 0.6875em; }
-
-blockquote {
-  padding: 10.5px 21px;
-  margin: 0px 0px 21px;
-  border-left: 5px solid #404041; }
 
 /*==================================== */
 /*===========Navigation=============== */
@@ -1934,7 +1929,7 @@ table {
 .txt-shadow {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); }
 
-.txt-shadow-lgt, h1, h2, h3, h4, h5, h6, .nav a, .nav-hrz a, .nav-vrt a, .list-item, .list-text, .list-button, .list-item a, .list-text a, .list-button a, .list-heading, .header h1, .blog-title a {
+.txt-shadow-lgt, h1, h2, h3, h4, h5, h6, .nav a, .nav-hrz a, .nav-vrt a, .list-item, .list-text, .list-button, .list-item a, .list-text a, .list-button a, .list-heading, .header h1, blockquote p, .blog-title a {
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3); }
 
 .txt-center {
@@ -1977,8 +1972,11 @@ body {
   width: 100%; }
 
 blockquote {
-  width: 45%;
-  float: left; }
+  width: 20em;
+  float: right;
+  padding: 0px 1.5em;
+  margin: 0 1em;
+  border-left: 5px solid #5895b9; }
   blockquote:after, blockquote:before {
     content: "";
     display: table; }
@@ -1986,12 +1984,14 @@ blockquote {
     clear: both;
     zoom: 1; }
   blockquote p {
-    font-size: 1.12em; }
+    font-size: 1.1em; }
     blockquote p:before {
       content: "\f10d ";
+      color: #5895b9;
       font-family: "fontawesome"; }
     blockquote p:after {
       content: " \f10e";
+      color: #5895b9;
       font-family: "fontawesome"; }
 
 /*==================================== */
@@ -2058,15 +2058,18 @@ blockquote {
   list-style: none; }
   .quick-folio figure ul li {
     display: inline-block;
-    margin: 1em 0;
-    max-width: 100%;
-    max-height: 100%;
-    overflow: scroll; }
+    margin: 1em; }
     .quick-folio figure ul li img {
       position: relative;
-      max-width: 50%;
+      width: 15em;
       margin: 1em auto;
       border: 4px solid rgba(64, 64, 65, 0.8); }
+      .quick-folio figure ul li img:hover {
+        border: 4px solid #5895b9;
+        cursor: pointer;
+        transition: all 0.3s ease-in; }
+      .quick-folio figure ul li img:active, .quick-folio figure ul li img:focus {
+        width: 20em; }
 .quick-folio figure figcaption span:before {
   content: "By: "; }
 .quick-folio figure figcaption p {
@@ -2206,6 +2209,16 @@ blockquote {
   text-decoration: none; }
   .blog-title a:hover {
     color: #0b6c95; }
+
+.folio {
+  border: 0.725em solid #404041;
+  border-radius: 2px;
+  text-align: center;
+  padding: 0.15em;
+  overflow: scroll;
+  height: pixel-to-ems(25); }
+  .folio img {
+    max-width: 100%; }
 
 /*==================================== */
 /*==================================== */

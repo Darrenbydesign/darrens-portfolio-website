@@ -22,8 +22,8 @@ $(function() {
       '</div>' +
       '<figure>' +
       '<figcaption>' +
-      '<h3>' + gon.image_name + '</h3>' +
-      '<p>' + gon.image_text + '</p>' +
+      '<h3>' + 'Image Name Here' + '</h3>' +
+      '<p>' + 'Example text Here about images' + '</p>' +
       '</figcaption>' +
       '</figure>' +
       '</div>' +
