@@ -19,6 +19,7 @@ gem 'postmarkdown'
 gem 'active_attr'
 gem 'figaro'
 gem 'gon'
+# gem 'rails-gallery'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'

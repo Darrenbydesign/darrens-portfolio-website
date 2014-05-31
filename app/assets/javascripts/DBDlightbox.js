@@ -23,7 +23,7 @@ $(function() {
       '<figure>' +
       '<figcaption>' +
       '<h3>' + 'Image Name Here' + '</h3>' +
-      '<p>' + 'Example text Here about images' + '</p>' +
+      '<p>' + 'Here is a look at some of my design pieces' + '</p>' +
       '</figcaption>' +
       '</figure>' +
       '</div>' +

@@ -14,6 +14,7 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require turbolinks
+//= require DBDlightbox
+//= require DBDCarousel
 //= require_self
-//= require_tree .
 

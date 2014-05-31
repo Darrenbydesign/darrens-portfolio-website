@@ -2211,14 +2211,20 @@ blockquote {
     color: #0b6c95; }
 
 .folio {
-  border: 0.725em solid #404041;
+  border: 0.725em solid #0b6c95;
   border-radius: 2px;
-  text-align: center;
   padding: 0.15em;
   overflow: scroll;
-  height: pixel-to-ems(25); }
+  height: 25em;
+  padding: 0.3125em;
+  text-align: center; }
   .folio img {
     max-width: 100%; }
+
+.fl-text {
+  text-align: center; }
+  .fl-text p {
+    text-align: left; }
 
 /*==================================== */
 /*==================================== */
