@@ -22,8 +22,8 @@ $(function() {
       '</div>' +
       '<figure>' +
       '<figcaption>' +
-      '<h3>' + 'Image Name Here' + '</h3>' +
-      '<p>' + 'Here is a look at some of my design pieces' + '</p>' +
+      // '<h3>' + 'Image Name Here' + '</h3>' +
+      // '<p>' + 'Here is a look at some of my design pieces' + '</p>' +
       '</figcaption>' +
       '</figure>' +
       '</div>' +
