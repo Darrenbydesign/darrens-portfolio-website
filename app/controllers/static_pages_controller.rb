@@ -1,10 +1,10 @@
 class StaticPagesController < ApplicationController
   def home
      @images = %w[
-    Logos/blk_epiphany.jpg
-    Logos/Empire_fence.jpg
-    Logos/purls&knit_color_logo.jpg
-    Logos/Flyte_1_color.jpg
+    Logos/black_epiphany_logo.jpg
+    Logos/Empire_fence_logo.jpg
+    Logos/purls&knit_logo.jpg
+    Logos/Flyte_logo.jpg
     ]
   @title = "Home"
 
@@ -21,18 +21,20 @@ class StaticPagesController < ApplicationController
 
   def portfolio
     @images = %w[
-    Logos/Flyte_1_color.jpg
-    Logos/blk_epiphany.jpg
-    Logos/Empire_fence.jpg
-    Logos/purls&knit_color_logo.jpg
+    Logos/Flyte_logo.jpg
+    Logos/black_epiphany_logo.jpg
+    Logos/Empire_fence_logo.jpg
+    Logos/purls&knit_logo.jpg
     posters/almost_maine_poster.jpg
-    posters/Art_of_Murder.jpg
-    posters/observations.jpg
+    posters/Art_of_Murder_poster.jpg
+    posters/observations_poster.jpg
     posters/Regeneration_Poster.jpg
-    phone_wallpapers/brainiac.jpg
-    phone_wallpapers/superman.jpg
-    phone_wallpapers/flash.jpg
-    phone_wallpapers/batman.jpg
+    posters/worldview_lecture_poster.jpg
+    phone_wallpapers/brainiac_wallpaper.jpg
+    phone_wallpapers/superman_wallpaper.jpg
+    phone_wallpapers/flash_wallpaper.jpg
+    phone_wallpapers/Green_lantern_wallpaper.jpg
+    phone_wallpapers/batman_wallpaper.jpg
     ]
     @title = "Portfolio"
     gon.image_name = @imageName
