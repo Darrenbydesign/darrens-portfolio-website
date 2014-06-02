@@ -30,6 +30,7 @@ class StaticPagesController < ApplicationController
     posters/observations_poster.jpg
     posters/Regeneration_Poster.jpg
     posters/worldview_lecture_poster.jpg
+    posters/TLOZ_type_poster.jpg
     phone_wallpapers/brainiac_wallpaper.jpg
     phone_wallpapers/superman_wallpaper.jpg
     phone_wallpapers/flash_wallpaper.jpg
@@ -40,7 +41,7 @@ class StaticPagesController < ApplicationController
     gon.image_name = @imageName
     @imageName = %w[
       Flyte TheBlackEpiphany EmpireFenceCo. Purls&knit AlmostMaine 
-      TheArtofMurder Observations Regeneration]    
+      TheArtofMurder Observations Regeneration]   
     gon.image_text = @imageText
     @imageText = "Information will displayed here describing my work."
   end
