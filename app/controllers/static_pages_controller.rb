@@ -6,6 +6,13 @@ class StaticPagesController < ApplicationController
     Logos/purls&knit_logo.jpg
     Logos/Flyte_logo.jpg
     ]
+    @carouselName = 
+    [
+      'The Black Epiphany',
+      'Empire Fence Co.',
+      'Purls & knit',
+      'Flyte'
+    ]
   @title = "Home"
 
   @posts_render =  Post.feed3
@@ -20,6 +27,8 @@ class StaticPagesController < ApplicationController
   end
 
   def portfolio
+    @title = "Portfolio"
+    
     @images = %w[
     Logos/Flyte_logo.jpg
     Logos/black_epiphany_logo.jpg
@@ -37,12 +46,43 @@ class StaticPagesController < ApplicationController
     phone_wallpapers/Green_lantern_wallpaper.jpg
     phone_wallpapers/batman_wallpaper.jpg
     ]
-    @title = "Portfolio"
-    gon.image_name = @imageName
-    @imageName = %w[
-      Flyte TheBlackEpiphany EmpireFenceCo. Purls&knit AlmostMaine 
-      TheArtofMurder Observations Regeneration]   
-    gon.image_text = @imageText
+    gon.imageName = @imageName = 
+    [
+      'Flyte',
+      'The Black Epiphany',
+      'Empire Fence Co.',
+      'Purls & knit',
+      'Almost Maine',
+      'The Art of Murder',
+      'Observations',
+      'Regeneration',
+      'Worldview Lecture Poster',
+      'The Legend Of Zelda: Type as Image',
+      'DC Brainiac Wallpaper',
+      'DC Superman Wallpaper',
+      'DC Flash Wallpaper',
+      'DC Green Lantern Wallpaper',
+      'DC Batman Wallpaper'
+    ]
+    gon.imageText = @imageText = 
+    [
+      'Flyte',
+      'The Black Epiphany',
+      'Empire Fence Co.',
+      'Purls & knit',
+      'Almost Maine',
+      'The Art of Murder',
+      'Observations',
+      'Regeneration',
+      'Worldview Lecture Poster',
+      'The Legend Of Zelda: Type as Image',
+      'DC Brainiac Wallpaper',
+      'DC Superman Wallpaper',
+      'DC Flash Wallpaper',
+      'DC Green Lantern Wallpaper',
+      'DC Batman Wallpaper'
+    ]
+    gon.hashZip = Hash[@imageName.zip(@imageText)]
     @imageText = "Information will displayed here describing my work."
   end
 end

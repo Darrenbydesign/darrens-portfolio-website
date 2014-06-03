@@ -22,8 +22,8 @@ $(function() {
       '</div>' +
       '<figure>' +
       '<figcaption>' +
-      '<h3>' + 'Image Name Here' + '</h3>' +
-      '<p>' + 'Here is a look at some of my design pieces' + '</p>' +
+      '<h3>' + gon.imageName[slideNum - 1] + '</h3>' +
+      '<p>' + gon.imageText[slideNum - 1] + '</p>' +
       '</figcaption>' +
       '</figure>' +
       '</div>' +

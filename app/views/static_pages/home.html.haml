@@ -1,8 +1,8 @@
 #carousel 
   %ul 
-    - @images.each do |i|
+    - @images.each_with_index do |i, idx|
       %li
-        = link_to(image_tag("#{i}", :alt => "#{i}".sub(/^[^\/]+\//,"")), portfolio_path)
+        = link_to(image_tag("#{i}", :alt => @carouselName[idx]), portfolio_path)
 %section#RecentPosts
   = render 'posts/feed_link'
   = render @posts_render, :summary => true 

@@ -1,10 +1,10 @@
 .grid-box.gb-style-1
   %ul
-    - @images.each do |i|
+    - @images.each_with_index do |i, idx|
       %li
         %figure
           = link_to(image_tag("#{i}", :alt => "#{i}".sub(/^[^\/]+\//,"")), 
             asset_path("#{i}"), :class => "lb-trigger")
           %figcaption
-            %h3= "#{i}".sub(/^[^\/]+\//,"").sub(/\.(jpg||png)/,"").sub(/\_/," ").sub(/\_/," ").sub(/\_/," ").upcase
+            %h3= @imageName[idx]
             %span by Darren Sorrels
