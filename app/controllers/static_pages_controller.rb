@@ -82,7 +82,7 @@ class StaticPagesController < ApplicationController
       'DC Green Lantern Wallpaper',
       'DC Batman Wallpaper'
     ]
-    gon.hashZip = Hash[@imageName.zip(@imageText)]
-    @imageText = "Information will displayed here describing my work."
+    # gon.hashZip = Hash[@imageName.zip(@imageText)]
+    # @imageText = "Information will displayed here describing my work."
   end
 end

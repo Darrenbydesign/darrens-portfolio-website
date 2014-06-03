@@ -62,7 +62,6 @@ $(function() {
 
     //Click anywhere on the page to get rid of lightbox window
     $('.lightbox').click(function(event) {
-      // using .on() instead of .live(). more modern, and fixes event bubbling issues
       $(this).fadeOut(300);
       $(this).remove();
     });

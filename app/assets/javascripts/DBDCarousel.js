@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	// set the timing interval to 5 secs for each slide
 	var t = setInterval(function() {
 		$("#carousel ul").animate({
 			marginLeft: -480

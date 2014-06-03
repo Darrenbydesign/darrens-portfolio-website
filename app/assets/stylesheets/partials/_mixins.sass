@@ -5,11 +5,17 @@
     -o-#{$name}: #{$argument}
     #{$name}: #{$argument}
 
+@function calc-percent($target, $container)
+    @return ($target / $container) * 100%
+
+@function pixel-to-ems($base-px,$changing-px)
+    @return ($changing-px/$base-px) + em
+
 @function cp($target, $container)
-    @return calc-percent($target/$container) * 100%
+    @return calc-percent($target, $container)
 
 @function px-em($base-px,$changing-px)
-    @return pixel-to-ems($changing-px/$base-px)
+    @return pixel-to-ems($base-px,$changing-px)
 
 =alert-message($BGcolor)
     width: 500px

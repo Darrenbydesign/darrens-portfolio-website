@@ -1,8 +1,8 @@
 /*===========Header,Body, Footer==============*/
 .header
     width: 100%
-    border-bottom: 5px solid $primary-color
-    padding: 0px 10px
+    border-bottom: px-em($base-text-px,5px) solid $primary-color
+    padding: 0px px-em($base-text-px,10px)
     h1
         @extend .txt-shadow-lgt
 body
@@ -11,7 +11,7 @@ body
 
 .footer
     border-top: 5px solid $primary-color
-    padding: 5px 10px
+    padding: px-em($base-text-px,5px) px-em($base-text-px,10px)
     position: relative
     bottom: 0%
     width: 100%
@@ -21,7 +21,7 @@ blockquote
     float: right
     padding: 0px 1.5em
     margin: 0 1em
-    border-left: 5px solid $primary-color
+    border-left: px-em($base-text-px,5px) solid $primary-color
     +clearfix
     p
         font-size: 1.1em
@@ -73,17 +73,19 @@ blockquote
         width: 50%
 #carousel
     width: 100%
-    height: 20em
+    height: 290px
     overflow: hidden
     margin: 1em auto
     border: 5px solid $primary-color
     background: rgba($third-color, 0.3)
     ul
         width: 1920px
+        margin: 0
+        padding: 0
         li
             display: inline-block
-            width: 400px
-            margin: 0 1em
+            width: cp(400px,1920px)
+            margin: px-em($base-text-px,5px)
             max-height: 100%
             text-align: center
             list-style: none
@@ -111,9 +113,9 @@ blockquote
                     width: 15em
                     // max-height: 100%
                     margin: 1em auto
-                    border: 4px solid rgba($third-color,0.8)
+                    border: px-em($base-text-px,4px) solid rgba($third-color,0.8)
                     &:hover
-                        border: 4px solid rgba($primary-color,1)
+                        border: px-em($base-text-px,4px) solid rgba($primary-color,1)
                         cursor: pointer
                         // width: 20em
                         transition: all 0.3s ease-in
@@ -126,13 +128,13 @@ blockquote
             p
                 text-align: left
 .grid-box
-    margin: 10px auto
+    margin: px-em($base-text-px,10px) auto
     list-style: none
     text-align: center
     li
         display: inline-block
         margin: 0
-        padding: 10px
+        padding: px-em($base-text-px,10px)
         text-align: left
         position: relative
     figure
@@ -141,7 +143,7 @@ blockquote
         width: 300px
         height: 200px
         img
-            border: 6px solid $primary-color
+            border: px-em($base-text-px,6px) solid $primary-color
             max-width: 100%
             display: block
             position: relative
@@ -149,8 +151,8 @@ blockquote
             position: absolute
             top: 0
             left: 0
-            padding: 15px
-            background: rgba($primary-color,1)
+            padding: px-em($base-text-px,15px)
+            background: rgba($primary-color,0.9)
             background-image: image-url("stripes.png")
             color: $alt-text-color
             text-align: center
@@ -159,18 +161,18 @@ blockquote
             h3
                 margin: 0
                 padding: 0
-                font-size: 0.875em
+                font-size: px-em($base-text-px,18px)
                 color: $third-color
             a
                 text-align: center
                 text-decoration: none
-                padding: 5px 10px
+                padding: px-em($base-text-px,5px) px-em($base-text-px,10px)
                 +border-radius(2px)
                 display: inline-block
                 background: $primary-color
                 color: $alt-text-color
             span
-                font-size: 0.75em
+                font-size: px-em($base-text-px,14px)
 .gb-style-1
     figure
         overflow: hidden
@@ -181,7 +183,7 @@ blockquote
             transform: translateY(0px)
             transition: transform 0.4s
         a
-            bottom: 20px
+            bottom: px-em($base-text-px,20px)
         img
             transition: transform 0.4s
         figcaption
@@ -202,11 +204,11 @@ blockquote
     height: 100%
     text-align: center
 .lb-content
-    margin: 20px auto
+    margin: px-em($base-text-px,20px) auto
     max-width: 80%
     max-height: 80%
     overflow: scroll
-    border: 2px solid $primary-color
+    border: px-em($base-text-px,2px) solid $primary-color
     background: rgba($third-color,0.5)
     box-shadow: 0 0 5px $third-color
     img
@@ -216,7 +218,7 @@ blockquote
     figure
         figcaption
             background: $primary-color
-            padding: 10px
+            padding: px-em($base-text-px,10px)
             h3
                 color: $alt-text-color
             p
@@ -224,7 +226,7 @@ blockquote
                 text-align: left
                 margin: 0 auto
 .lb-nav,
-    z-index: 999
+    z-index: 99
 .lb-prev,
 .lb-next,
 .fc-prev,
@@ -235,10 +237,10 @@ blockquote
     background: $primary-color
     color: $alt-text-color
     +border-radius(4px)
-    height: 80px
+    height: px-em($base-text-px,80px)
 .fc-prev,
 .fc-next
-    top: 350px
+    top: cp(350px,1980px)
 .lb-prev,
 .fc-prev
     left: 10px
@@ -255,18 +257,18 @@ blockquote
         @extend .txt-shadow-lgt
         &:hover
             color: $secondary-color
-.folio
-    border: 0.725em solid $secondary-color
-    +border-radius(2px)
-    padding: 0.15em
-    overflow: scroll
-    height: 25em
-    padding: 0.3125em
-    text-align: center
-    img
-        max-width: 100%
-.fl-text
-    text-align: center
-    p
-        text-align: left
+// .folio
+//     border: 0.725em solid $secondary-color
+//     +border-radius(2px)
+//     padding: 0.15em
+//     overflow: scroll
+//     height: 25em
+//     padding: 0.3125em
+//     text-align: center
+//     img
+//         max-width: 100%
+// .fl-text
+//     text-align: center
+//     p
+//         text-align: left
 /*====================================

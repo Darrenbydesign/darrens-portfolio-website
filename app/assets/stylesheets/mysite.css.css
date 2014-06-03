@@ -854,8 +854,8 @@ small {
     padding: 10px 15px;
     list-style: none; }
     .nav ul li:hover, .nav-hrz ul li:hover, .nav-vrt ul li:hover {
-      background: #0b6c95;
-      transition: all 0.5s ease-in-out; }
+      background: #5895b9;
+      transition: all 0.3s ease-in-out; }
     .nav ul li:active, .nav-hrz ul li:active, .nav-vrt ul li:active {
       background: #427b9c; }
   .nav a, .nav-hrz a, .nav-vrt a {
@@ -1890,7 +1890,7 @@ table {
   visibility: hidden;
   display: none; }
 
-.center, .logo, .quick-folio figure {
+.center, .logo {
   margin: 0 auto;
   text-align: center; }
 
@@ -1957,7 +1957,7 @@ table {
 /*===========Header,Body, Footer============== */
 .header {
   width: 100%;
-  border-bottom: 5px solid #0b6c95;
+  border-bottom: 5px solid #5895b9;
   padding: 0px 10px; }
 
 body {
@@ -1965,7 +1965,7 @@ body {
   background-image: image-url("handmadepaper.png"); }
 
 .footer {
-  border-top: 5px solid #0b6c95;
+  border-top: 5px solid #5895b9;
   padding: 5px 10px;
   position: relative;
   bottom: 0%;
@@ -1986,7 +1986,7 @@ blockquote {
   blockquote p {
     font-size: 1.1em; }
     blockquote p:before {
-      content: "\f10d ";
+      content: "\f10d  ";
       color: #5895b9;
       font-family: "fontawesome"; }
     blockquote p:after {
@@ -2041,7 +2041,7 @@ blockquote {
     width: 1920px; }
     #carousel ul li {
       display: inline-block;
-      width: 400px;
+      width: 25em;
       margin: 0 1em;
       max-height: 100%;
       text-align: center;
@@ -2053,28 +2053,6 @@ blockquote {
         max-height: 100%;
         max-width: 100%; }
 
-.quick-folio figure ul {
-  position: relative;
-  list-style: none; }
-  .quick-folio figure ul li {
-    display: inline-block;
-    margin: 1em; }
-    .quick-folio figure ul li img {
-      position: relative;
-      width: 15em;
-      margin: 1em auto;
-      border: 4px solid rgba(64, 64, 65, 0.8); }
-      .quick-folio figure ul li img:hover {
-        border: 4px solid #5895b9;
-        cursor: pointer;
-        transition: all 0.3s ease-in; }
-      .quick-folio figure ul li img:active, .quick-folio figure ul li img:focus {
-        width: 20em; }
-.quick-folio figure figcaption span:before {
-  content: "By: "; }
-.quick-folio figure figcaption p {
-  text-align: left; }
-
 .grid-box {
   margin: 10px auto;
   list-style: none;
@@ -2082,7 +2060,7 @@ blockquote {
   .grid-box li {
     display: inline-block;
     margin: 0;
-    padding: 10px;
+    padding: 0.625em;
     text-align: left;
     position: relative; }
   .grid-box figure {
@@ -2091,7 +2069,7 @@ blockquote {
     width: 300px;
     height: 200px; }
     .grid-box figure img {
-      border: 6px solid #5895b9;
+      border: 0.375em solid #5895b9;
       max-width: 100%;
       display: block;
       position: relative; }
@@ -2099,8 +2077,9 @@ blockquote {
       position: absolute;
       top: 0;
       left: 0;
-      padding: 15px;
-      background: rgba(64, 64, 65, 0.9);
+      padding: 0.9375em;
+      background: #5895b9;
+      background-image: image-url("stripes.png");
       color: #faf9f8;
       text-align: center;
       font-size: 1.3em;
@@ -2109,11 +2088,11 @@ blockquote {
         margin: 0;
         padding: 0;
         font-size: 0.875em;
-        color: #faf9f8; }
+        color: #404041; }
       .grid-box figure figcaption a {
         text-align: center;
         text-decoration: none;
-        padding: 5px 10px;
+        padding: 0.3125em 0.625em;
         border-radius: 2px;
         display: inline-block;
         background: #5895b9;
@@ -2130,22 +2109,22 @@ blockquote {
     transform: translateY(0px);
     transition: transform 0.4s; }
   .gb-style-1 figure a {
-    bottom: 20px; }
+    bottom: 1.25em; }
   .gb-style-1 figure img {
-    transition: transform 0.4s; }
+    transition: transform 0.3s; }
   .gb-style-1 figure figcaption {
     width: 100%;
     top: auto;
     bottom: 0;
     opacity: 0;
     transform: translateY(100%);
-    transition: transform 0.4s; }
+    transition: transform 0.3s; }
     .gb-style-1 figure figcaption a {
       background: none; }
 
 .lightbox {
   position: fixed;
-  background: rgba(64, 64, 65, 0.7);
+  background: rgba(64, 64, 65, 0.9);
   top: 0;
   left: 0;
   width: 100%;
@@ -2153,26 +2132,25 @@ blockquote {
   text-align: center; }
 
 .lb-content {
-  margin: 20px auto;
-  max-width: 75%;
-  max-height: 75%;
-  overflow: scroll;
-  border: 2px solid #404041;
-  background: rgba(64, 64, 65, 0.4);
+  margin: 1.25em auto;
+  max-width: 50%;
+  max-height: 80%;
+  overflow: auto;
+  border: 0.125em solid #5895b9;
+  background: rgba(64, 64, 65, 0.7);
   box-shadow: 0 0 5px #404041; }
   .lb-content img {
     max-width: 50%;
-    max-height: 50%;
-    margin: 0 auto; }
+    max-height: 40%;
+    margin: 0.625em auto; }
   .lb-content figure figcaption {
-    background: #0b6c95;
-    padding: 10px; }
+    background: #5895b9;
+    padding: 0.625em; }
     .lb-content figure figcaption h3 {
       color: #faf9f8; }
     .lb-content figure figcaption p {
       color: #faf9f8;
-      text-align: left;
-      margin: 0 auto; }
+      text-align: left; }
 
 .lb-nav {
   z-index: 999; }
@@ -2184,7 +2162,7 @@ blockquote {
   top: 50%;
   position: absolute;
   cursor: pointer;
-  background: #5895b9;
+  background: #404041;
   color: #faf9f8;
   border-radius: 4px;
   height: 80px; }
@@ -2210,21 +2188,4 @@ blockquote {
   .blog-title a:hover {
     color: #0b6c95; }
 
-.folio {
-  border: 0.725em solid #0b6c95;
-  border-radius: 2px;
-  padding: 0.15em;
-  overflow: scroll;
-  height: 25em;
-  padding: 0.3125em;
-  text-align: center; }
-  .folio img {
-    max-width: 100%; }
-
-.fl-text {
-  text-align: center; }
-  .fl-text p {
-    text-align: left; }
-
-/*==================================== */
 /*==================================== */
