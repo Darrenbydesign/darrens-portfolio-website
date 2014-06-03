@@ -2,22 +2,22 @@
 .btn
     background: $btn-color
     display: inline-block
-    padding: 10px 15px
+    padding: px-em($base-text-px,10px) px-em($base-text-px,15px)
     font-size: 1em
     line-height: 1.42857
     text-align: center
-    margin-top: 10px
-    margin-bottom: 15px
+    margin-top: px-em($base-text-px,10px)
+    margin-bottom: px-em($base-text-px,15px)
     white-space: nowrap
     vertical-align: text-bottom
     color: rgb(255, 255, 255)
     cursor: pointer
-    border: 1px solid transparent
+    border: px-em($base-text-px,2px) solid transparent
     +border-radius(2px)
     -moz-user-select: none
     &:hover
         background: $btn-hover
-        box-shadow: inset 0px 0px 30px rgba(68, 68, 68, 0.3)
+        box-shadow: inset 0px 0px px-em($base-text-px,30px) rgba(68, 68, 68, 0.3)
         +button-border-trim(darken($btn-color,5))
     &:active
         color: darken($btn-color,10)
@@ -34,21 +34,21 @@
 
 .btn-tiny
     @extend .btn
-    padding: 1px 5px
+    padding: px-em($base-text-px,1px) px-em($base-text-px,5px)
     font-size: 0.75em
 
 .btn-small
     @extend .btn
-    padding: 6px 9px
-    font-size: 13px
+    padding: px-em($base-text-px,6px) px-em($base-text-px,9px)
+    font-size: px-em($base-text-px,13px)
     line-height: 1.5
     +border-radius(2px)
 
 .btn-large
     @extend .btn
-    padding: 18px 27px
-    font-size: 19px
-    line-height: 1.33em
+    padding: px-em($base-text-px,18px) px-em($base-text-px,27px)
+    font-size: px-em($base-text-px,19px)
+    line-height: px-em($base-text-px,21px)
     +border-radius(2px)
 
 .btn-block

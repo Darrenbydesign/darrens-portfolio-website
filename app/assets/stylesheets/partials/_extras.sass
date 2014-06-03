@@ -2,12 +2,12 @@
 .testblock
     background: red
     color: $alt-text-color
-    padding: 20px
+    padding: px-em($base-text-px,20px)
     +border-radius(2px)
     text-align: center
     &:hover
         color: #330000
-        box-shadow: inset 0px 0px 30px rgba(68, 68, 68, 0.6)
+        box-shadow: inset 0px 0px px-em($base-text-px,30px) rgba(68, 68, 68, 0.6)
 .cf
     +clearfix
 .unhide
@@ -53,10 +53,10 @@
     background-image: radial-gradient(center 0, circle farthest-corner, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0))
 
 .txt-shadow
-    text-shadow: 0 1px 1px rgba(0,0,0,0.3)
+    text-shadow: 0 px-em($base-text-px,1px) px-em($base-text-px,1px) rgba(0,0,0,0.3)
 
 .txt-shadow-lgt
-    text-shadow: 0 1px 1px rgba(255,255,255,0.3)
+    text-shadow: 0 px-em($base-text-px,1px) px-em($base-text-px,1px) rgba(255,255,255,0.3)
 .txt-center
     text-align: center
 .txt-left
@@ -65,10 +65,10 @@
     text-align: left
 .img-circle
     +border-radius(50%)
-    border: 4px solid $third-color
+    border: px-em($base-text-px,4px) solid $third-color
     overflow: hidden
 .img-photo
-    border: 4px solid $secondary-color
+    border: px-em($base-text-px,4px) solid $secondary-color
     +border-radius(4px)
 .img-portfolio
-    border: 4px solid $third-color
+    border: px-em($base-text-px,4px) solid $third-color

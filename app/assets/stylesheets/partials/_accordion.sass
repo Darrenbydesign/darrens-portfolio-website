@@ -1,13 +1,13 @@
 .accordion
     overflow: hidden
     background: lighten($third-color,10)
-    padding: 10px
+    padding: px-em($base-text-px,10px)
     +border-radius(2px)
     section
         float: left
         overflow: hidden
         background: $secondary-color
-        margin: 3px
+        margin: px-em($base-text-px,3px)
         +border-radius(2px)
         &:hover
             background: lighten($primary-color,5)
@@ -18,7 +18,7 @@
             color: $alt-text-color
         &:target
             background: white
-            padding: 10px
+            padding: px-em($base-text-px,10px)
             overflow: auto
             &:hover
                 background: white
@@ -31,7 +31,7 @@
                 display: block
         h2
             a
-                padding: 8px 10px
+                padding: px-em($base-text-px,8px) px-em($base-text-px,10px)
                 display: block
                 font-weight: normal
                 color: $alt-text-color

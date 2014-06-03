@@ -1,8 +1,8 @@
 //=======Forms==============
 .form
     display: block
-    margin: 10px
-    padding: 10px 15px
+    margin: px-em($base-text-px,10px)
+    padding: px-em($base-text-px,10px) px-em($base-text-px,15px)
     vertical-align: baseline
     +border-radius(2px)
 .frm-block
@@ -35,14 +35,14 @@ input[type="radio"]
     display: inline-block
     cursor: pointer
     position: relative
-    padding-right: 25px
-    margin-right: 25px
+    padding-right: px-em($base-text-px,25px)
+    margin-right: px-em($base-text-px,25px)
     &:before
         content: ""
         display: inline-block
         width: 16px
         height: 16px
-        margin-right: 10px
+        margin-right: px-em($base-text-px,10px)
         background: $secondary-color
         +border-radius(2px)
 
@@ -50,8 +50,8 @@ input
     border: 1px solid $primary-color
     background: $background-color
     display: inline-block
-    padding: 5px 5px 5px 10px
-    margin-bottom: 10px
+    padding: px-em($base-text-px,5px) px-em($base-text-px,5px) px-em($base-text-px,5px) px-em($base-text-px,10px)
+    margin-bottom: px-em($base-text-px,10px)
     line-height: 1.42857
     font-size: 1em
     vertical-align: baseline
@@ -74,13 +74,13 @@ input
     @extend .frm-input
     border: none
     background: transparent
-    border-bottom: 3px $primary-color solid
+    border-bottom: px-em($base-text-px,3px) $primary-color solid
     &:focus
         outline: none
         border-bottom-color: lighten($secondary-color, 15)
 
 .select
-    padding: 2px 3px
+    padding: px-em($base-text-px,2px) px-em($base-text-px,3px)
     width: 200px
     font-size: 1.12em
     +border-radius(2px)
@@ -104,9 +104,9 @@ input
     width: 100%
 
 textarea
-    padding: 5px
+    padding: px-em($base-text-px,5px)
     // min-width: 500px
-    min-height: 150px
+    min-height: px-em($base-text-px,150px)
     border: 1px solid $primary-color
     box-shadow: inset 1px 3px 5px lighten($third-color,55)
     +border-radius(2px)
@@ -129,7 +129,7 @@ input[type="email"]
 .list-item
     position: relative
     display: block
-    padding: 5px 10px
+    padding: px-em($base-text-px,5px) px-em($base-text-px,10px)
     margin-bottom: -1px
     background-color: darken($background-color,10)
     border: 1px solid $third-color
@@ -157,4 +157,4 @@ input[type="email"]
     @extend .list-group
     @extend .list-item
     text-align: center
-    padding-right: 25px
+    padding-right: px-em($base-text-px,25px)

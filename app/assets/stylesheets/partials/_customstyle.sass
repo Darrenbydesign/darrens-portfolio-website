@@ -25,7 +25,6 @@ blockquote
     +clearfix
     p
         font-size: 1.1em
-        // color: $third-color
         @extend .txt-shadow-lgt
         &:before
             content: "\f10d  "
@@ -46,6 +45,7 @@ blockquote
         font-size: 1.5em
         font-family: $font-stack-serif-bold
         color: $third-color
+        @extend .txt-shadow-lgt
     img
         width: 8em 
         max-height: 100%
@@ -163,6 +163,7 @@ blockquote
                 padding: 0
                 font-size: px-em($base-text-px,18px)
                 color: $third-color
+                @extend .txt-shadow-lgt
             a
                 text-align: center
                 text-decoration: none
@@ -221,6 +222,7 @@ blockquote
             padding: px-em($base-text-px,10px)
             h3
                 color: $alt-text-color
+                @extend .txt-shadow-lgt
             p
                 color: $alt-text-color
                 text-align: left
