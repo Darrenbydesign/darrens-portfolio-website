@@ -73,10 +73,10 @@ blockquote
         width: 50%
 #carousel
     width: 100%
-    height: 290px
+    // height: 290px
     overflow: hidden
     margin: 1em auto
-    border: 5px solid $primary-color
+    border: px-em($base-text-px,15px) solid $primary-color
     background: rgba($third-color, 0.3)
     ul
         width: 1920px
@@ -85,14 +85,15 @@ blockquote
         li
             display: inline-block
             width: cp(400px,1920px)
-            margin: px-em($base-text-px,5px)
+            margin: px-em($base-text-px,3px)
             max-height: 100%
-            text-align: center
+            // text-align: center
             list-style: none
             float: left
             img
                 display: block
                 text-align: center
+                margin: px-em($base-text-px,5px)
                 max-height: 100%
                 max-width: 100%
 
@@ -222,7 +223,7 @@ blockquote
             padding: px-em($base-text-px,10px)
             h3
                 color: $alt-text-color
-                @extend .txt-shadow-lgt
+                @extend .txt-shadow
             p
                 color: $alt-text-color
                 text-align: left
