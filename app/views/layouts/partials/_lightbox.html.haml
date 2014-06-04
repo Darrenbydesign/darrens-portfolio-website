@@ -1,11 +1,11 @@
 .lightbox
-  %button.btn-tiny.close Close Me
-  .lb-content
-    .lb-nav
-      %button.lb-prev.btn-norm <
-      %button.lb-next.btn-norm >
-    %figure
-      %figcaption 
-      	-@imageName.each do |n|
-	        %h3= '#{n}'
-        %p= '#{t}'
+	%button.btn-tiny.close Close Me
+	.lb-content
+		.lb-nav
+			%button.lb-prev.btn-norm <
+			%button.lb-next.btn-norm >
+		%figure
+			%figcaption 
+				-@imageName.each do |n|
+					%h3= '#{n}'
+				%p= '#{t}'
