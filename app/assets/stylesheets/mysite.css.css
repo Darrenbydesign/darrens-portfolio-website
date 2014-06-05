@@ -2126,7 +2126,7 @@ blockquote {
 .gb-style-1 figure {
   overflow: hidden; }
   .gb-style-1 figure:hover img {
-    transform: translateY(-50px); }
+    transform: translateY(-3.125em); }
   .gb-style-1 figure:hover figcaption {
     opacity: 1;
     transform: translateY(0px);
@@ -2173,7 +2173,7 @@ blockquote {
       color: #faf9f8; }
     .lb-content figure figcaption p {
       color: #faf9f8;
-      text-align: left;
+      text-align: center;
       margin: 0 auto; }
 
 .lb-nav {
