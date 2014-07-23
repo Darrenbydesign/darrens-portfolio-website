@@ -10,46 +10,63 @@
 +font-face("fontawesome","fontawesome-webfont","fontawesome")
 
 body
-    font-size: $base-text-px
-    font-size: 100%
-    font-family: $font-stack-sanserif-regular
-    color: $base-text-color
+  font-size: $base-text-px
+  font-size: 100%
+  font-family: $font-stack-sanserif-regular
+  color: $base-text-color
 
 h1
-    font-size: 2.25em
-    // 16x2.25=36px
+  font-size: 2.25em
+  // 16x2.25=36px
 
 h2
-    font-size: 1.5em
-    // 16x1.5=24px
+  font-size: 1.5em
+  // 16x1.5=24px
 
 h3
-    font-size: 1.125em
-    // 16x1.125=18px
+  font-size: 1.125em
+  // 16x1.125=18px
 
 h4
-    font-size: 0.875em
-    // 16x0.875=14px
+  font-size: 0.875em
+  // 16x0.875=14px
 
 h5
-    font-size: 0.75em
-    // 16x0.75=12px
+  font-size: 0.75em
+  // 16x0.75=12px
 
 h6
-    font-size: 0.625em
-    // 16x0.625=10px
+  font-size: 0.625em
+  // 16x0.625=10px
 
 h1, h2, h3, h4, h5, h6
-    font-family: $font-stack-serif-bold
-    color: $secondary-color
-    line-height: 1.5
+  font-family: $font-stack-serif-bold
+  color: $secondary-color
+  line-height: 1.5
 p
-    font-size: 1em
-    //16x1=16px
-    text-indent: 0
-    line-height: 1.5
-    margin-top: 1.5em
-    margin-bottom: 1.5em
-
+  font-size: 1em
+  //16x1=16px
+  text-indent: 0
+  line-height: 1.5
+  margin-top: 1.5em
+  margin-bottom: 1.5em
 small
-    font-size: 0.6875em    
+  font-size: 0.6875em 
+blockquote
+  width: 20em
+  float: right
+  padding: 0px 1.5em
+  margin: 0 1em
+  border-left: px-em($base-text-px,5px) solid $primary-color
+  +clearfix
+  p
+    font-size: px-em($base-text-px,24px)
+    @extend .txt-shadow-lgt
+    &:before
+      content: "\f10d  "
+      color: $primary-color
+      font-family: $font-awesome
+    &:after
+      content: " \f10e"
+      color: $primary-color
+      font-family: $font-awesome

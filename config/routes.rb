@@ -4,7 +4,7 @@ MySite::Application.routes.draw do
   postmarkdown :as => :blog, :permalink_format => :slug
 
   root :to => 'static_pages#home'
-  %w[about portfolio blog].each do |page|
+  %w[about portfolio blog inspiration].each do |page|
     get page, controller:'static_pages', action: page
   end
   resources :contact, only: [:new, :create]
