@@ -1,35 +1,34 @@
-.blk-desktop-8
-  %h1 Contact me
-  %hr/ 
-  %p 
-    If you want to talk about working together please email me, I'd love to work with you. If you would just like to message me about my work that would great too! I look forward to all types of critiques to my work!.
-  = render 'contactForm'
-.blk-desktop-4
-  %h1 
-    Follow Me
-  %ul#mediaList-2
-    %li.list-item
-      %a{:href=>"https://www.facebook.com/DarrenSorrelsDesign", alt: "Facebook"}
-        %i.fa.fa-facebook.fa-3x
-    %li.list-item 
-      %a{:href=>"https://www.linkedin.com/in/darrensorrels", alt: "LinkedIn"}
-        %i.fa.fa-linkedin.fa-3x 
-    %li.list-item 
-      %a{:href => "http://www.pinterest.com/darrenbydesign/", alt: "Pinterest"} 
-        %i.fa.fa-pinterest.fa-3x
-    %li.list-item 
-      %a{:href=>"https://twitter.com/DarrenSorrels", alt: "Twitter"}
-        %i.fa.fa-twitter.fa-3x
-
-  %ul.list-group
-  %h3 Darren Sorrels
-  %li.list-item
-    %h3 
-      Phone:
-    %i.fa.fa-mobile-phone.fa-fw 
-    +1 (972) 974-2735
-  %li.list-item
-    %h3 
-      Email 
-    %i.fa.fa-envelope-o.fa-fw
-    DarrenbyDesign@gmail.com
+.blk-desktop-12
+  .blk-desktop-9
+    %h1 Contact me
+    %hr/ 
+    %p 
+      If you want to talk about working together please email me, I'd love to work with you. If you would like to say hello or show your appreciation for my work that is also welcomed.
+    = render 'contactForm'
+  .blk-desktop-3
+    %h1 
+      Follow Me On&hellip;
+      %hr/
+    %ul#mediaList-2
+      %li.list-item
+        %a{:href=>"https://www.facebook.com/DarrenSorrelsDesign", alt: "Facebook"}
+          %i.fa.fa-facebook.fa-3x
+      %li.list-item 
+        %a{:href=>"https://www.linkedin.com/in/darrensorrels", alt: "LinkedIn"}
+          %i.fa.fa-linkedin.fa-3x 
+      %li.list-item 
+        %a{:href => "http://www.pinterest.com/darrenbydesign/", alt: "Pinterest"} 
+          %i.fa.fa-pinterest.fa-3x
+      %li.list-item 
+        %a{:href=>"https://twitter.com/DarrenSorrels", alt: "Twitter"}
+          %i.fa.fa-twitter.fa-3x
+      / %li.list-item
+      /   %a{:href => "https://behance.net/Darrenbydesign", alt: "Behance"}
+      /     %i.fa.fa-behance.fa-3x
+    %ul.list-group
+      %li.list-item
+        %i.fa.fa-mobile.fa-3x.fa-fw
+        (972) 974-2735
+      %li.list-item
+        %i.fa.fa-envelope-o.fa-2x.fa-fw
+        DarrenbyDesign@gmail.com
