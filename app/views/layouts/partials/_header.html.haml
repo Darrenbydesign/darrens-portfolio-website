@@ -23,7 +23,6 @@
 	= javascript_include_tag 'application', media:  "all", "data-turbolinks-track" => true
 	= csrf_meta_tags
 %header.header
-	/ .logo
-	/ 	-#=link_to(image_tag( "header_Logo2.png", alt: "Darren Sorrels Graphic Designer"), root_path)
-	/ 	%h1 Darren Sorrels Graphic Designer
+	.logo
+		=link_to(image_tag( "header_Logo2.png", alt: "Darren Sorrels Graphic Designer"), root_path)
 	= render partial: "layouts/partials/navigation"

@@ -835,6 +835,29 @@ p {
 small {
   font-size: 0.6875em; }
 
+blockquote {
+  width: 20em;
+  float: right;
+  padding: 0px 1.5em;
+  margin: 0 1em;
+  border-left: 0.3125em solid #5895b9; }
+  blockquote:after, blockquote:before {
+    content: "";
+    display: table; }
+  blockquote:after {
+    clear: both;
+    zoom: 1; }
+  blockquote p {
+    font-size: 1.5em; }
+    blockquote p:before {
+      content: "\f10d  ";
+      color: #5895b9;
+      font-family: "fontawesome"; }
+    blockquote p:after {
+      content: " \f10e";
+      color: #5895b9;
+      font-family: "fontawesome"; }
+
 /*==================================== */
 /*===========Navigation=============== */
 .nav, .nav-hrz, .nav-vrt {
@@ -2040,7 +2063,7 @@ table {
 .txt-shadow, .lb-content figure figcaption h3 {
   text-shadow: 0 0.0625em 0.0625em rgba(0, 0, 0, 0.3); }
 
-.txt-shadow-lgt, .nav a, .nav-hrz a, .nav-vrt a, .list-item, .list-text, .list-button, .list-item a, .list-text a, .list-button a, .list-heading, .grid-box figure figcaption h3, .header h1, blockquote p, .logo span, .logo h1, .blog-title a {
+.txt-shadow-lgt, blockquote p, .nav a, .nav-hrz a, .nav-vrt a, .list-item, .list-text, .list-button, .list-item a, .list-text a, .list-button a, .list-heading, .grid-box figure figcaption h3, .header h1, .logo span, .logo h1, .blog-title a {
   text-shadow: 0 0.0625em 0.0625em rgba(255, 255, 255, 0.3); }
 
 .txt-center {
@@ -2078,39 +2101,18 @@ body {
 .alt-header {
   color: #faf9f8; }
 
+.alt-text-color {
+  color: #faf9f8; }
+
 .footer {
   background: #5895b9;
   border-top: 5px double #0b6c95;
   padding: 0.3125em 0.625em;
   position: relative;
   bottom: 0%;
-  height: 20%;
   width: 100%; }
 
-blockquote {
-  width: 20em;
-  float: right;
-  padding: 0px 1.5em;
-  margin: 0 1em;
-  border-left: 0.3125em solid #5895b9; }
-  blockquote:after, blockquote:before {
-    content: "";
-    display: table; }
-  blockquote:after {
-    clear: both;
-    zoom: 1; }
-  blockquote p {
-    font-size: 1.5em; }
-    blockquote p:before {
-      content: "\f10d  ";
-      color: #5895b9;
-      font-family: "fontawesome"; }
-    blockquote p:after {
-      content: " \f10e";
-      color: #5895b9;
-      font-family: "fontawesome"; }
-
-/*==================================== */
+/*========================================== */
 /*============Custom Styles================ */
 .logo a {
   text-decoration: none; }
@@ -2127,6 +2129,15 @@ blockquote {
   text-align: center; }
   .hide-words a {
     text-decoration: none; }
+
+.topBG {
+  background: rgba(255, 255, 255, 0.7); }
+
+.middleBG {
+  background: rgba(88, 149, 185, 0.7); }
+
+.bottomBG {
+  background: rgba(64, 64, 65, 0.9); }
 
 #aboutMe-list img {
   width: 62.5%;
@@ -2146,21 +2157,23 @@ blockquote {
     #mediaList a:hover {
       color: #0b6c95; }
 
+#mediaList-2 {
+  list-style: none;
+  text-decoration: none; }
+  #mediaList-2 li {
+    display: inline;
+    padding: 5px; }
+  #mediaList-2 a {
+    text-decoration: none;
+    color: #0b6c95; }
+    #mediaList-2 a:hover {
+      color: #404041; }
+
 #comingSoon {
-  background: rgba(64, 64, 65, 0.8);
   text-align: center; }
   #comingSoon img {
     width: 15.625%;
     max-height: 100%; }
-
-.topBG {
-  background: rgba(255, 255, 255, 0.7); }
-
-.middleBG {
-  background: rgba(88, 149, 185, 0.7); }
-
-.bottomBG {
-  background: rgba(64, 64, 65, 0.9); }
 
 #contactMe textarea, #new_message textarea {
   width: 50%; }
@@ -2169,7 +2182,7 @@ blockquote {
   width: 100%;
   overflow: hidden;
   margin: 1em auto;
-  border: 0.9375em solid #5895b9;
+  border: 0.9375em double #5895b9;
   background: rgba(64, 64, 65, 0.3); }
   #carousel ul {
     width: 1980px;
@@ -2198,6 +2211,15 @@ blockquote {
   text-decoration: none; }
   .blog-title a:hover {
     color: #0b6c95; }
+
+.more a {
+  font-size: 1.125em;
+  color: #5895b9;
+  text-decoration: none; }
+  .more a:hover {
+    font-size: 1.5em;
+    color: #0b6c95;
+    transition: 0.5s font-size ease-out; }
 
 /*==================================== */
 /*==================================== */
