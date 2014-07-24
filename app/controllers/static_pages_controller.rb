@@ -28,7 +28,7 @@ class StaticPagesController < ApplicationController
   def blog
     @title = "Blog"
   end
-
+  
   def portfolio
     @title = "Portfolio"
     
