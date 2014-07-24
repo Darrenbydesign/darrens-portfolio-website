@@ -7,9 +7,11 @@ MySite::Application.routes.draw do
   %w[about portfolio blog inspiration].each do |page|
     get page, controller:'static_pages', action: page
   end
+  
   resources :contact, only: [:new, :create]
     match 'contact' => 'contact#new', :as => 'contact', :via => :get
     match 'contact' => 'contact#create', :as => 'create', :via => :post
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
