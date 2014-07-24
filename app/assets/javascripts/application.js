@@ -11,8 +11,6 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery.turbolinks
 //= require jquery_ujs
 //= require turbolinks
-//= require DBDCarousel
-//= require DBDlightbox
+//= require_tree .

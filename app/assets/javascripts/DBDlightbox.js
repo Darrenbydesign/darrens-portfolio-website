@@ -1,4 +1,4 @@
-  $(function() {
+var ready =  function() {
     // global variables for script
     'use strict';
     var current, size;
@@ -82,4 +82,6 @@
         }
       });
     });
-  });
+  };
+$(document).ready(ready);
+$(document).on('page:load', ready);
