@@ -3,12 +3,10 @@ $primary-color: #5895b9
 $secondary-color: #0b6c95
 $third-color: #404041
 $background-color: #FFFFFF
-// $primary-trim: darken($primary-color,5)
-// $secondary-trim: darken($secondary-color,5)
 
 //typography variables
 $base-text-px: 16px
-$base-text-color: rgb(51, 0, 0)
+$base-text-color: #231f20
 $alt-text-color: #faf9f8
 $font-stack-serif-regular: "source_serif_pro_regular",'Helvetica Neue','Helvetica', sans-serif
 $font-stack-serif-bold: "source_serif_pro_bold",'Helvetica Neue','Helvetica', sans-serif
@@ -47,8 +45,11 @@ $link-active: #ffa240
 $table-hover: #3aaacf
 $table-cell-stripe: #a3c9d9
 $table-border-top: #999999
-// pagination colors
 
+// Nav colors
+$nav-color: $third-color
+$nav-hover: $primary-color
+$nav-text-active: $alt-text-color
 
 //== Media queries breakpoints
 //
@@ -115,8 +116,3 @@ $container-desktop:                 $container-desktop !default
 $container-large-desktop:      ((1140px + $grid-gutter-width)) !default
 //** For `$screen-lgDesktop-min` and up.
 $container-lgDesktop:                 $container-large-desktop !default
-
-// Nav colors
-$nav-color: $third-color
-$nav-hover: $primary-color
-$nav-text-active: $alt-text-color
