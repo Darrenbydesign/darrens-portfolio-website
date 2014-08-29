@@ -3,9 +3,10 @@
     - @images.each_with_index do |i, idx|
       %li
         %figure
-          = link_to(image_tag("#{i}", :alt => "#{i}".sub(/^[^\/]+\//,"")), 
-            asset_path("#{i}"), :class => "lb-trigger")
+          =image_tag("#{i}", :alt => "#{i}".sub(/^[^\/]+\//,""))
           %figcaption
             %h3= @imageName[idx]
             %span by Darren Sorrels
+            %br/
+            = link_to( "view more", asset_path("#{i}"), :class => "lb-trigger")
 = include_gon(watch: true)

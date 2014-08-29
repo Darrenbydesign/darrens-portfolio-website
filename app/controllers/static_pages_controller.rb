@@ -16,11 +16,12 @@ class StaticPagesController < ApplicationController
   @title = "Home"
 
   @posts_render =  Post.feed3
+  end
+  
   def inspiration
     @title ="Inspiration"
   end
-  end
-
+  
   def about
     @title = "About"
   end
