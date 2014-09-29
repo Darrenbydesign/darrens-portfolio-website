@@ -1,8 +1,8 @@
-var ready =  function() {
+var ready =  function () {
     // global variables for script
     'use strict';
     var current, size;
-    $('.lb-trigger').on('click page:load',function(e) {
+    $('.lb-trigger').on('click page:load',function (e) {
       // prevent default click event
       e.preventDefault();
       // grab href from clicked element
@@ -33,7 +33,7 @@ var ready =  function() {
       //insert lightbox HTML into page
       $('body').append(lightbox);
       // fill lightbox with .lb-trigger hrefs in .grid-box
-      $('.grid-box').find('.lb-trigger').each(function() {
+      $('.grid-box').find('.lb-trigger').each(function () {
         var $href = $(this).attr('href');
         if (image_href === $href) {
           $('.lb-content').prepend($('<img src="' + $href + '">').show());
@@ -56,19 +56,19 @@ var ready =  function() {
       }
 
       //Click anywhere on the page to get rid of lightbox window
-      $('.lightbox').click(function(event) {
+      $('.lightbox').click(function (event) {
         $(this).fadeOut(300);
         $(this).remove();
       });
-      $('.lb-prev').click(function() {
+      $('.lb-prev').click(function () {
         $('.lightbox').click();
         $(previous_image).click();
       })
-      $('.lb-next').click(function() {
+      $('.lb-next').click(function () {
         $('.lightbox').click();
         $(next_image).click();
       })
-      $(this).keypress(function(e) {
+      $(this).keypress(function (e) {
         e.stopImmediatePropagation();
         e.preventDefault();
         var evt = e ? e : window.event;
