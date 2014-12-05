@@ -6,14 +6,14 @@
 //
 // Set the container width, and override it for fixed navbars in media queries.
 
-// .container
-//   +container-fixed
-//   @media (min-width: $screen-tablet-min)
-//     width: $container-tablet
-//   @media (min-width: $screen-desktop-min)
-//     width: $container-desktop
-//   @media (min-width: $screen-lgDesktop-min)
-//     width: $container-lgDesktop
+.container-fixed
+  +container-fixed
+  @media (min-width: $screen-tablet-min)
+    width: $container-tablet
+  @media (min-width: $screen-desktop-min)
+    width: $container-desktop
+  @media (min-width: $screen-lgDesktop-min)
+    width: $container-lgDesktop
 
 // Fluid container
 //

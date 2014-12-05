@@ -4,9 +4,10 @@
 	%body
 		%header.header
 			.logo
-				=link_to(image_tag( "header_Logo2.png", alt: "Darren Sorrels Graphic Designer"), root_path)
-				/ %span Darren Sorrels Graphic Designer
+				=link_to(image_tag("header_Logo2.png", alt: "Darren Sorrels Graphic Designer"), root_path)
 			= render partial: "layouts/partials/navigation"
-		.container
-			= yield
-	= render :partial => "layouts/partials/footer"
+		.wrap
+			.container
+				.slab
+					= yield
+		= render :partial => "layouts/partials/footer"
