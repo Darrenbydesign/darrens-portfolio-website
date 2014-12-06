@@ -82,11 +82,6 @@ hr {
 input, select {
   vertical-align: baseline; }
 
-html, body {
-  height: 100%;
-  width: 100%;
-  min-height: 100%; }
-
 /*========Links============== */
 a {
   color: #06799f; }
@@ -99,6 +94,27 @@ a {
 
 /*==================================== */
 /*==========Grid====================== */
+.container-fixed {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+  .container-fixed:after, .container-fixed:before {
+    content: "";
+    display: table; }
+  .container-fixed:after {
+    clear: both;
+    zoom: 1; }
+  @media (min-width: 768px) {
+    .container-fixed {
+      width: 750px; } }
+  @media (min-width: 992px) {
+    .container-fixed {
+      width: 970px; } }
+  @media (min-width: 1200px) {
+    .container-fixed {
+      width: 1170px; } }
+
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -2270,9 +2286,17 @@ table {
   border-bottom: 0.3125em double #5895b9;
   padding: 0px 0.625em; }
 
+html {
+  position: relative;
+  min-height: 100%; }
+
 body {
   background: white;
-  background-image: image-url("handmadepaper.png"); }
+  background-image: image-url("handmadepaper.png");
+  margin-bottom: 160px; }
+
+.wrap {
+  min-height: 100%; }
 
 .alt-header {
   color: #faf9f8; }
@@ -2280,13 +2304,16 @@ body {
 .alt-text-color {
   color: #faf9f8; }
 
+footer {
+  position: absolute;
+  bottom: 0%;
+  height: 160px;
+  width: 100%; }
+
 .footer {
   background: #5895b9;
   border-top: 5px double #0b6c95;
-  padding: 0.3125em 0.625em;
-  position: relative;
-  bottom: 0%;
-  width: 100%; }
+  padding: 0.3125em 0.625em; }
 
 /*========================================== */
 /*============Custom Styles================ */
@@ -2378,14 +2405,14 @@ body {
     padding: 0; }
     #carousel ul li {
       display: inline-block;
-      width: 22.72727%;
+      width: 30em;
       margin: 0.1875em;
       max-height: 100%;
+      text-align: center;
       list-style: none;
       float: left; }
       #carousel ul li img {
         display: block;
-        text-align: center;
         margin: 0.3125em;
         max-height: 100%;
         max-width: 100%; }

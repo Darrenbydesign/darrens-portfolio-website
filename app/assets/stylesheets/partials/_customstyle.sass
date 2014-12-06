@@ -9,10 +9,11 @@
 html
   position: relative
   min-height: 100%
+
 body
   background: $background-color
   background-image: image-url("handmadepaper.png")
-  margin-bottom: 160px
+  margin-bottom: $footer-height
 
 .wrap
   min-height: 100%
@@ -23,18 +24,14 @@ body
 .alt-text-color
   color: $alt-text-color
 
-footer 
-  // position: absolute
-  bottom: 0%
-  width: 100%
-  height: 160px
-
-
-
 .footer
   background: $primary-color
   border-top: 5px double $secondary-color
   padding: px-em($base-text-px,5px) px-em($base-text-px,10px)
+  position: absolute
+  bottom: 0%
+  height: $footer-height
+  width: 100%
 
 /*==========================================*/
 
@@ -138,7 +135,8 @@ footer
         max-width: 100%
 
 .blog-container
-  width: px-em($base-text-px, 960px)
+  // width: px-em($base-text-px, 960px)
+  margin: 0 auto
 .blog-title
   a
     color: $third-color
