@@ -1,8 +1,13 @@
-.carousel-inner{:role => "listbox"}
+#carousel 
+  %ul 
     - @images.each_with_index do |i, idx|
-        .item.active
-            = link_to(image_tag("#{i}", :alt => @carouselName[idx]), portfolio_path)
-            .carousel-caption
+      %li
+        = link_to(image_tag("#{i}", :alt => @carouselName[idx]), portfolio_path)
+/ .carousel-inner{:role => "listbox"}
+/     - @images.each_with_index do |i, idx|
+/         .item.active
+/             = link_to(image_tag("#{i}", :alt => @carouselName[idx]), portfolio_path)
+/             .carousel-caption
 
 
 %section#RecentPosts
