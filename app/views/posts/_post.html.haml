@@ -1,6 +1,6 @@
 .container-fixed
-	= content_tag_for( :article, post, :class => " blog-container" ) do
-		%header.center.blog-title
+	= content_tag_for( :article, post, :class => "blog-container" ) do
+		%header.blog-title.txt-center
 			%h1
 				= link_to post.title, post
 			.meta

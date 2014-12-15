@@ -18,6 +18,10 @@ body
 .wrap
   min-height: 100%
 
+.contact-container
+  margin: 0 auto
+  padding: 10px
+
 .alt-header
   color: $alt-text-color
 
@@ -82,7 +86,6 @@ body
       color: $secondary-color
 #mediaList-2
   list-style: none
-  // text-align: center
   text-decoration: none
   li
     display: inline
@@ -102,11 +105,9 @@ body
 
 #contactMe,#new_message
   textarea
-    width: 50%
+    width: 100%
 
 #contactText
-  width: cp(600px,1280px)
-  // float: right
   +clearfix
 #carousel
   width: 100%
@@ -124,7 +125,6 @@ body
       width: px-em($base-text-px, 480px)
       margin: px-em($base-text-px,3px)
       max-height: 100%
-      // height: 280px
       text-align: center
       list-style: none
       float: left
@@ -133,7 +133,6 @@ body
         margin: px-em($base-text-px,5px)
         max-height: 100%
         max-width: 100%
-
 .blog-container
   margin: 0 auto
   padding: 5px
@@ -151,7 +150,8 @@ body
     color: $primary-color
     text-decoration: none
     &:hover
-      font-size: px-em($base-text-px,24px)
       color: $secondary-color
       transition: 0.3s font-size ease-out
+
+
 /*====================================
