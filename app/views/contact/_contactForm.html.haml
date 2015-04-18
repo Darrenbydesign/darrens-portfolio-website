@@ -10,6 +10,7 @@
 			Success
 		%p 
 			= flash.notice
+
 = form_for  @message,:url => contact_path, :id => "contactMe" do |form|
 	= form.label :name, :class => "frm-title frm-control"
 	= form.text_field :name, :class => "frm-control"

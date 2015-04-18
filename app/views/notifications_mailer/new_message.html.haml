@@ -1,8 +1,9 @@
 %header.header
 	%h2 
-		="You Have a New Message From" + @message.name + "!"
+		="New Message From" + @message.name
 	%h3 
 		= "Name: " + @message.name
+	%h3
 		= "Email: " + @message.email
 	%h3 
 		= "Subject: " + @message.subject
