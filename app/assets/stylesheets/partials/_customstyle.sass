@@ -6,13 +6,13 @@
   h1
     @extend .txt-shadow-lgt
 
+html,body
+  min-height: 100%
 html
   position: relative
-  min-height: 100%
-
 body
   background: $background-color
-  background-image: image-url("handmadepaper.png")
+  background-image: image-url("white_bed_sheet.png")
   margin-bottom: $footer-height
 
 .wrap
@@ -30,12 +30,12 @@ body
 
 .footer
   background: $primary-color
-  border-top: 5px double $secondary-color
+  border-top: 3px double $secondary-color
   padding: px-em($base-text-px,5px) px-em($base-text-px,10px)
   position: absolute
   bottom: 0%
-  height: $footer-height
   width: 100%
+  height: $footer-height
 
 /*==========================================*/
 
