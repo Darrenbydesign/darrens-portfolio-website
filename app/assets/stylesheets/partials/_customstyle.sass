@@ -151,7 +151,22 @@ body
     text-decoration: none
     &:hover
       color: $secondary-color
-      transition: 0.3s font-size ease-out
+      text-decoration: underline
+      transition: 0.3s text-decoration ease-out
 
+.site-heading
+  display: flex
+  align-items: center
+  justify-content: center
+
+.site-title
+  border-top: px-em($base-text-px,5px) double $primary-color
+  border-bottom: px-em($base-text-px,5px) double $primary-color
+
+.site-logo
+  +img-responsive
+  height: 125px
+ 
+ 
 
 /*====================================

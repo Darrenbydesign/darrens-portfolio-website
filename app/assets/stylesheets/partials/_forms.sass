@@ -9,9 +9,9 @@
 		cursor: pointer
 .frm-block
 	@extend .form
+	@extend .bg-darktrim
 	background: rgba($primary-color, 0.8)
 	color: $base-text-color
-	@extend .bg-darktrim
 
 .frm-title
 	display: inline-block
@@ -82,7 +82,7 @@ input
 		outline: none
 		border-bottom-color: lighten($secondary-color, 15)
 
-.select
+%select
 	padding: px-em($base-text-px,2px) px-em($base-text-px,3px)
 	width: 200px
 	font-size: 1.12em
@@ -91,19 +91,19 @@ input
 	overflow: scroll
 
 .select-small
-	@extend .select
+	@extend %select
 	width: 25%
 
 .select-medium
-	@extend .select
+	@extend %select
 	width: 50%
 
 .select-large
-	@extend .select
+	@extend %select
 	width: 90%
 
 .select-block
-	@extend .select
+	@extend %select
 	width: 100%
 
 textarea
@@ -129,21 +129,21 @@ input[type="email"]
 	margin-bottom: 10px
 
 .list-item
+	@extend .txt-shadow-lgt
 	position: relative
 	display: block
 	padding: px-em($base-text-px,5px) 0
 	margin-bottom: -1px
-	@extend .txt-shadow-lgt
 	a
-		color: $base-text-color
 		@extend .txt-shadow-lgt
+		color: $base-text-color
 	&:first-child
 		border-top-right-radius: 4px
 		border-top-left-radius: 4px
 
 .list-heading
-	color: darken($secondary-color,10)
 	@extend .txt-shadow-lgt
+	color: darken($secondary-color,10)
 	a
 		color: darken($primary-color,10)
 
@@ -157,3 +157,4 @@ input[type="email"]
 	@extend .list-item
 	text-align: center
 	padding-right: px-em($base-text-px,25px)
+

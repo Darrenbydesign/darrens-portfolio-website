@@ -25,7 +25,7 @@ group :development, :test do
   gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.13.1'
 	# gem 'guard-rspec'
-	# gem 'growl_notify'
+	gem 'growl_notify'
 end
 
 group :test do

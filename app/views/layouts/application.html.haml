@@ -3,10 +3,12 @@
 	= render :partial => "layouts/partials/header"
 	%body
 		%header.header
-			.logo.txt-center
-				=link_to(image_tag("header_Logo2.png", alt: "Darren Sorrels Graphic Designer"), root_path)
+			.site-heading
+				%h1.site-title Darren Sorrels
+				=link_to(image_tag("header_Logo2.png", alt: "Darren Sorrels Graphic Designer", :class=> "site-logo"), root_path)
+				%h1.site-title Graphic Designer
 			= render partial: "layouts/partials/navigation"
-		.wrap
+		%main.wrap
 			.container
 				.slab
 					= yield

@@ -1,4 +1,4 @@
-.blk-lgDesktop-offset-2.blk-lgDesktop-8
+.blk-xl-offset-2.blk-xl-8
 	= content_tag_for( :article, post, :class => "blog-container" ) do
 		%header.blog-title.txt-center
 			%h1
@@ -16,3 +16,4 @@
 				= link_to 'Read more&hellip;'.html_safe, post
 		- else
 			~ post_content_html post
+		%hr/

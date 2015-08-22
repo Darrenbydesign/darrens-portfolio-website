@@ -126,8 +126,6 @@
             right: $hover_position_R
             z-index: 5
 
-
-
 // Grid System created by Bootstrap (I adopted this because I couldn't think of a better way to create this)
 // -----------
 
@@ -146,7 +144,7 @@
     +clearfix
 
 // Generate the extra small columns
-=make-phone-column($columns, $gutter: $grid-gutter-width)
+=make-sm-column($columns, $gutter: $grid-gutter-width)
     position: relative
     float: left
     width: percentage($columns / $grid-columns)
@@ -154,82 +152,82 @@
     padding-left: $gutter / 2
     padding-right: $gutter / 2
 
-=make-phone-column-offset($columns)
-    @media (min-width: $screen-phone-min)
+=make-sm-column-offset($columns)
+    @media (min-width: $screen-sm-min)
         margin-left: percentage($columns / $grid-columns)
 
-=make-phone-column-push($columns)
-    @media (min-width: $screen-phone-min)
+=make-sm-column-push($columns)
+    @media (min-width: $screen-sm-min)
         left: percentage($columns / $grid-columns)
 
-=make-phone-column-pull($columns)
-    @media (min-width: $screen-phone-min)
+=make-sm-column-pull($columns)
+    @media (min-width: $screen-sm-min)
         right: percentage($columns / $grid-columns)
 
 // Generate the small columns
-=make-tablet-column($columns, $gutter: $grid-gutter-width)
+=make-md-column($columns, $gutter: $grid-gutter-width)
     position: relative
     min-height: 1px
     padding-left: $gutter / 2
     padding-right: $gutter / 2
-    @media (min-width: $screen-tablet-min)
+    @media (min-width: $screen-md-min)
         float: left
         width: percentage($columns / $grid-columns)
 
-=make-tablet-column-offset($columns)
-    @media (min-width: $screen-tablet-min)
+=make-md-column-offset($columns)
+    @media (min-width: $screen-md-min)
         margin-left: percentage($columns / $grid-columns)
 
-=make-tablet-column-push($columns)
-    @media (min-width: $screen-tablet-min)
+=make-md-column-push($columns)
+    @media (min-width: $screen-md-min)
         left: percentage($columns / $grid-columns)
 
-=make-tablet-column-pull($columns)
-    @media (min-width: $screen-tablet-min)
+=make-md-column-pull($columns)
+    @media (min-width: $screen-md-min)
         right: percentage($columns / $grid-columns)
 
 // Generate the medium columns
-=make-desktop-column($columns, $gutter: $grid-gutter-width)
+=make-lg-column($columns, $gutter: $grid-gutter-width)
     position: relative
     min-height: 1px
     padding-left: $gutter / 2
     padding-right: $gutter / 2
-    @media (min-width: $screen-desktop-min)
+    @media (min-width: $screen-lg-min)
         float: left
         width: percentage($columns / $grid-columns)
 
-=make-desktop-column-offset($columns)
-    @media (min-width: $screen-desktop-min)
+=make-lg-column-offset($columns)
+    @media (min-width: $screen-lg-min)
         margin-left: percentage($columns / $grid-columns)
 
-=make-desktop-column-push($columns)
-    @media (min-width: $screen-desktop-min)
+=make-lg-column-push($columns)
+    @media (min-width: $screen-lg-min)
         left: percentage($columns / $grid-columns)
 
-=make-desktop-column-pull($columns)
-    @media (min-width: $screen-desktop-min)
+=make-lg-column-pull($columns)
+    @media (min-width: $screen-lg-min)
         right: percentage($columns / $grid-columns)
 
 // Generate the large columns
-=make-lgDesktop-column($columns, $gutter: $grid-gutter-width)
+=make-xl-column($columns, $gutter: $grid-gutter-width)
     position: relative
     min-height: 1px
     padding-left: $gutter / 2
     padding-right: $gutter / 2
-    @media (min-width: $screen-lgDesktop-min)
+    @media (min-width: $screen-xl-min)
         float: left
         width: percentage($columns / $grid-columns)
 
-=make-lgDesktop-column-offset($columns)
-    @media (min-width: $screen-lgDesktop-min)
+=make-xl-column-offset($columns)
+    @media (min-width: $screen-xl-min)
         margin-left: percentage($columns / $grid-columns)
 
-=make-lgDesktop-column-push($columns)
-    @media (min-width: $screen-lgDesktop-min)
+=make-xl-column-push($columns)
+    @media (min-width: $screen-xl-min)
         left: percentage($columns / $grid-columns)
 
-=make-lgDesktop-column-pull($columns)
-    @media (min-width: $screen-lgDesktop-min)
+=make-xl-column-pull($columns)
+    @media (min-width: $screen-xl-min)
         right: percentage($columns / $grid-columns)
 
 // Framework grid generation from Bootstrap
@@ -241,9 +239,9 @@
 =make-grid-columns
     $list: ""
     $i: 1
-    $list: ".blk-phone-#{$i}, .blk-tablet-#{$i}, .blk-desktop-#{$i}, .blk-lgDesktop-#{$i}"
+    $list: ".blk-sm-#{$i}, .blk-md-#{$i}, .blk-lg-#{$i}, .blk-xl-#{$i}"
     @for $i from 1 + 1 through $grid-columns
-        $list: "#{$list}, .blk-phone-#{$i}, .blk-tablet-#{$i}, .blk-desktop-#{$i}, .blk-lgDesktop-#{$i}"
+        $list: "#{$list}, .blk-sm-#{$i}, .blk-md-#{$i}, .blk-lg-#{$i}, .blk-xl-#{$i}"
     #{$list}
         // position: relative
         // Prevent columns from collapsing when empty
@@ -322,3 +320,8 @@
     @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)
         background-image: url(if($bootstrap-sass-asset-helper, twbs-image-path(#{$file-2x}), #{$file-2x}))
         background-size: $width-1x $height-1x
+
+
+
+
+
