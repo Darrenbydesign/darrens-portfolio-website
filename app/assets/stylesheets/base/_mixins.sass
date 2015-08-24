@@ -1,3 +1,4 @@
+// Vendor Prefixes
 =vendor-prefix($name,$argument)
     -webkit-#{$name}: #{$argument}
     -ms-#{$name}: #{$argument}
@@ -5,18 +6,7 @@
     -o-#{$name}: #{$argument}
     #{$name}: #{$argument}
 
-@function calc-percent($target, $container)
-    @return ($target / $container) * 100%
-
-@function pixel-to-ems($base-px,$changing-px)
-    @return ($changing-px/$base-px) + em
-
-@function cp($target, $container)
-    @return calc-percent($target, $container)
-
-@function px-em($base-px,$changing-px)
-    @return pixel-to-ems($base-px,$changing-px)
-
+// Alerts Message
 =alert-message($BGcolor)
     width: 500px
     height: 150px
@@ -36,11 +26,14 @@
         margin: 5px
         overflow-y: auto
 
+// Border Radius
 =border-radius($radius)
     border-radius: $radius
 
+
 =button-border-trim($trimColor)
     border: inset 1px solid $trimColor
+
 
 =clearfix
     &:after, &:before
@@ -50,11 +43,13 @@
         clear: both
         zoom: 1
 
+// A Loop creator for nth-child classes
 =counter-loop($start,$end)
     @for $i from $start through $end
         &:nth-child(#{$i}):after
             content: '#{$i}'
 
+// Shortcut to make font family 
 =font-face($family, $path, $svg, $weight: normal, $style: normal)
     @font-face
         font-family: $family
@@ -63,6 +58,7 @@
         font-weight: $weight
         font-style: $style
 
+// Progress bar gradient creator
 =progress-bar-gradients($from, $to)
     background-image: -webkit-linear-gradient(-45deg, $from 25%, transparent 25%, transparent 50%, $to 50%, $to 75%, transparent 75%, transparent)
     background-image: -moz-linear-gradient(-45deg, $from 25%, transparent 25%, transparent 50%, $to 50%, $to 75%, transparent 75%, transparent)
@@ -70,6 +66,7 @@
     background-image: -o-linear-gradient(-45deg, $from 25%, transparent 25%, transparent 50%, $to 50%, $to 75%, transparent 75%, transparent)
     background-image: linear-gradient(-45deg, $from 25%, transparent 25%, transparent 50%, $to 50%, $to 75%, transparent 75%, transparent)
 
+// slide panels are used for off canvas menus
 =slidePanel-tab-position($tab_top, $tab_right, $tab_bottom, $tab_left, $tab_position, $tab_color)
     top: $tab_top
     right: $tab_right
@@ -90,6 +87,7 @@
         -o-transform: rotate(90deg)
         filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3)
 
+// slide panels location
 =slidePanel-position($panel_top, $panel_right, $panel_bottom, $panel_left, $panel_position, $heading_color)
     top: $panel_top
     right: $panel_right
@@ -230,6 +228,7 @@
     @media (min-width: $screen-xl-min)
         right: percentage($columns / $grid-columns)
 
+
 // Framework grid generation from Bootstrap
 //
 // Used only by Bootstrap to generate the correct number of grid classes given
@@ -289,8 +288,8 @@
     +loop-grid-columns($grid-columns, $class, push)
     +loop-grid-columns($grid-columns, $class, offset)
 
-// Opacity
 
+// Opacity creator
 =opacity($opacity)
     opacity: $opacity
     // IE8 filter
@@ -322,6 +321,35 @@
         background-size: $width-1x $height-1x
 
 
+// Media query mixins
+$mq-small: 320px
+$mq-medium: 768px
+$mq-large: 1200px
+$mq-xlarge: 1900px
 
+=breakpoint-sm
+    @media screen and (max-width: $mq-small) 
+        @content
+    
+=breakpoint-lg
+    @media screen and (max-width: $mq-large) 
+        @content
+
+=breakpoint-xlarge
+    @media screen and (max-width: $mq-xlarge)
+        @content
+    
+=respond-to($media) 
+    @if $media == handhelds
+        @media only screen and (max-width: $mq-small) 
+            @content 
+  
+    @else if $media == medium-screens 
+        @media only screen and (min-width: $mq-small + 1) and (max-width: $mq-large - 1) 
+            @content 
+      
+    @else if $media == wide-screens 
+        @media only screen and (min-width: $mq-large) 
+            @content
 
 

@@ -55,6 +55,8 @@
     color: $alt-text-color
     padding-bottom: 20px
     margin-top: 10px
+    +respond-to(handhelds)
+        flex-direction: column
     li
         +border-radius(2px)
         padding: px-em($base-text-px,10px) px-em($base-text-px,15px)
