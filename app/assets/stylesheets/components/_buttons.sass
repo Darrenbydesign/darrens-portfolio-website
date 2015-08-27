@@ -1,5 +1,5 @@
 //=======buttons============
-.btn
+%btn
     background: $btn-color
     display: inline-block
     padding: px-em($base-text-px,10px) px-em($base-text-px,15px)
@@ -24,42 +24,42 @@
         background: $btn-color
 
 .btn-norm
-    @extend .btn
+    @extend %btn
     color: rgb(255, 255, 255)
 .btn-xtiny
-    @extend .btn
+    @extend %btn
     margin: 0
     padding: 0
     font-size: 0.5em
 
 .btn-tiny
-    @extend .btn
+    @extend %btn
     padding: px-em($base-text-px,1px) px-em($base-text-px,5px)
     font-size: 0.75em
 
 .btn-small
-    @extend .btn
+    @extend %btn
     padding: px-em($base-text-px,6px) px-em($base-text-px,9px)
     font-size: px-em($base-text-px,13px)
     line-height: 1.5
     +border-radius(2px)
 
 .btn-large
-    @extend .btn
+    @extend %btn
     padding: px-em($base-text-px,18px) px-em($base-text-px,27px)
     font-size: px-em($base-text-px,19px)
     line-height: px-em($base-text-px,21px)
     +border-radius(2px)
 
 .btn-block
-    @extend .btn
+    @extend %btn
     display: block
     width: 100%
     padding-right: 0px
     padding-left: 0px
 
 .btn-folder
-    @extend .btn
+    @extend %btn
     display: inline-block
 
 .btn-right

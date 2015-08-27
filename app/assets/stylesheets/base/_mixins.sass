@@ -328,15 +328,15 @@ $mq-large: 1200px
 $mq-xlarge: 1900px
 
 =breakpoint-sm
-    @media screen and (max-width: $mq-small) 
+    @media (max-width: $mq-small) 
         @content
     
 =breakpoint-lg
-    @media screen and (max-width: $mq-large) 
+    @media (max-width: $mq-large) 
         @content
 
 =breakpoint-xlarge
-    @media screen and (max-width: $mq-xlarge)
+    @media (max-width: $mq-xlarge)
         @content
     
 =respond-to($media) 

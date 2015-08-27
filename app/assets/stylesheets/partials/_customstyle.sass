@@ -1,45 +1,12 @@
-/*===========Header,Body, Footer==============*/
-.header
-  width: 100%
-  border-bottom: px-em($base-text-px,5px) double $primary-color
-  padding: 0px px-em($base-text-px,10px)
-  h1
-    @extend .txt-shadow-lgt
-
-html,body
-  min-height: 100%
-html
-  position: relative
-body
-  background: $background-color
-  background-image: image-url("white_bed_sheet.png")
-  margin-bottom: $footer-height
-
-.wrap
-  min-height: 100%
 
 .contact-container
   margin: 0 auto
   padding: 10px
 
-.alt-header
-  color: $alt-text-color
-
 .alt-text-color
   color: $alt-text-color
 
-.footer
-  background: $primary-color
-  border-top: 3px double $secondary-color
-  padding: px-em($base-text-px,5px) px-em($base-text-px,10px)
-  position: absolute
-  bottom: 0%
-  width: 100%
-  height: $footer-height
 
-/*==========================================*/
-
-/*============Custom Styles================*/
 .logo
   @extend .center
   a
@@ -99,6 +66,7 @@ body
 #comingSoon
   // background: rgba($third-color,0.8)
   text-align: center
+  height: 100vh
   img
     width: cp(200px,1280px)
     max-height: 100%
@@ -109,6 +77,7 @@ body
 
 #contactText
   +clearfix
+
 #carousel
   width: 100%
   // width: 480px
@@ -166,7 +135,3 @@ body
 .site-logo
   +img-responsive
   height: 125px
- 
- 
-
-/*====================================

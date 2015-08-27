@@ -17,7 +17,7 @@ class StaticPagesController < ApplicationController
 
   # @posts_render =  Post.feed3
   end
-  
+
   def inspiration
     @title ="Inspiration"
   end
@@ -78,4 +78,5 @@ class StaticPagesController < ApplicationController
       'I wanted more options for my Samsung galaxy S3 phone, because I was tired of the default flowers and mountain scape wallpapers available by default. I created a series of DC comic inspired wallpapers using motifs and symbols of some famous heroes and villains.',
     ]
   end
+  
 end
