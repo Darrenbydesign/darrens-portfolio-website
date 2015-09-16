@@ -1,4 +1,5 @@
 //=======Typography==========
+
 +font-face("source_sans_prolight","sourcesanspro-light-webfont","source_sans_prolight")
 +font-face("source_sans_proregular","sourcesanspro-regular-webfont","source_sans_proregular")
 +font-face("source_sans_prosemibold","sourcesanspro-semibold-webfont","source_sans_prosemibold")
@@ -9,47 +10,114 @@
 
 +font-face("fontawesome","fontawesome-webfont","fontawesome")
 
-body
-  font-size: $base-text-px
+html 
   font-size: 100%
   font-family: $font-stack-sanserif-regular
-  color: $base-text-color
 
-h1
-  font-size: 2.25em
-  // 16x2.25=36px
-
-h2
-  font-size: 1.5em
-  // 16x1.5=24px
-
-h3
-  font-size: 1.125em
-  // 16x1.125=18px
-
-h4
-  font-size: 0.875em
-  // 16x0.875=14px
-
-h5
-  font-size: 0.75em
-  // 16x0.75=12px
-
-h6
-  font-size: 0.625em
-  // 16x0.625=10px
-
-h1, h2, h3, h4, h5, h6
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 
+  font-family: $font-stack-serif-regular
   font-family: $font-stack-serif-bold
   color: $secondary-color
   line-height: 1.5
+
+h1 
+  @include font-size(32px)
+  line-height: 1.25em
+  @include breakpoint-lg 
+    @include font-size(48px)
+    line-height: 1.05em
+  
+  @include breakpoint-md 
+    @include font-size(40px)
+    line-height: 1.125em
+    
+
+
+h2 
+  @include font-size(26px)
+  line-height: 1.1538em
+  @include breakpoint-lg 
+    @include font-size(36px)
+    line-height: 1.25em
+  
+  @include breakpoint-md 
+    @include font-size(32px)
+    line-height: 1.1538em
+    
+
+
+h3 
+  @include font-size(22px)
+  line-height: 1.136em
+  @include breakpoint-lg 
+    @include font-size(28px)
+    line-height: 1.25em
+  
+  @include breakpoint-md 
+    @include font-size(24px)
+    line-height: 1.1363em
+    
+
+
+h4 
+  @include font-size(18px)
+  line-height: 1.111em
+  @include breakpoint-lg 
+    @include font-size(18px)
+    line-height: 1.222em
+  
+  @include breakpoint-md 
+    @include font-size(18px)
+    line-height: 1.111em
+    
+
+
+h5 
+  @include font-size(14px)
+  line-height: 1.111em
+  @include breakpoint-lg 
+    @include font-size(14px)
+    line-height: 1.2em
+  
+  @include breakpoint-md 
+    @include font-size(14px)
+    line-height: 1.111em
+    
+
+
+h6 
+  @include font-size(12px)
+  line-height: 1.111em
+  @include breakpoint-lg 
+    @include font-size(12px)
+    line-height: 1.2em
+  
+  @include breakpoint-md 
+    @include font-size(12px)
+    line-height: 1.111em
+  
+
+
+body 
+  @include font-size($base-text-px)
+  font-family: $font-stack-sanserif-regular
+  color: $base-text-color
+
+label
+  font-family: $font-stack-serif-regular
+
 p
-  font-size: 1em
+  font-size: +font-size($base-text-px)
   //16x1=16px
   text-indent: 0
   line-height: 1.5
-  margin-top: 1.5em
-  margin-bottom: 1.5em
+  margin-top: ce(10px)
+  margin-bottom: ce(10px)
 small
   font-size: 0.6875em 
 blockquote

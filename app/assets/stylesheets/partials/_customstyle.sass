@@ -127,11 +127,13 @@
   display: flex
   align-items: center
   justify-content: center
+  a
+    flex: 0 1 10%
 
 .site-title
   border-top: px-em($base-text-px,5px) double $primary-color
   border-bottom: px-em($base-text-px,5px) double $primary-color
 
 .site-logo
-  +img-responsive
-  height: 125px
+  +img-responsive(flex)
+  // height: 125px

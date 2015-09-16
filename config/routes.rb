@@ -1,12 +1,15 @@
 MySite::Application.routes.draw do
-  resources :image_posts
 
   postmarkdown :as => :blog, :permalink_format => :slug
-
+  resources :portfolios
+  
   root :to => 'static_pages#portfolio'
   
   %w[about portfolio blog inspiration resume].each do |page|
     get page, controller:'static_pages', action: page
+  end
+  %w[portfolio].each do |page|
+    get page, controller: 'portfolios', action: page
   end
   
 
