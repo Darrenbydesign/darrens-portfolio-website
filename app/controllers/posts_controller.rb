@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   layout :choose_layout
 
   def show
+    @title = "Blog"
     resource
   end
 

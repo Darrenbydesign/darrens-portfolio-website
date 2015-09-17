@@ -20,10 +20,12 @@ h3,
 h4,
 h5,
 h6 
-  font-family: $font-stack-serif-regular
-  font-family: $font-stack-serif-bold
+  font-family: $font-stack-sanserif-regular
+  // font-family: $font-stack-serif-bold
   color: $secondary-color
   line-height: 1.5
+  // margin-top: 10px
+  margin-bottom: ce(10px)
 
 h1 
   @include font-size(32px)
@@ -35,7 +37,6 @@ h1
   @include breakpoint-md 
     @include font-size(40px)
     line-height: 1.125em
-    
 
 
 h2 
@@ -116,8 +117,9 @@ p
   //16x1=16px
   text-indent: 0
   line-height: 1.5
-  margin-top: ce(10px)
+  // margin-top: ce(10px)
   margin-bottom: ce(10px)
+  
 small
   font-size: 0.6875em 
 blockquote
@@ -131,10 +133,10 @@ blockquote
     font-size: px-em($base-text-px,24px)
     @extend .txt-shadow-lgt
     &:before
-      content: "\f10d  "
+      content: "\f10d"
       color: $primary-color
       font-family: $font-awesome
     &:after
-      content: " \f10e"
+      content: "\f10e"
       color: $primary-color
       font-family: $font-awesome

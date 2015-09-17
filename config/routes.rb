@@ -5,7 +5,7 @@ MySite::Application.routes.draw do
   
   root :to => 'static_pages#portfolio'
   
-  %w[about portfolio blog inspiration resume].each do |page|
+  %w[about blog inspiration resume].each do |page|
     get page, controller:'static_pages', action: page
   end
   %w[portfolio].each do |page|

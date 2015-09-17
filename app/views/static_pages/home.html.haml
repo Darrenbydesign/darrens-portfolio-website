@@ -1,17 +1,4 @@
-/ #carousel 
-/   %ul 
-/     - @images.each_with_index do |i, idx|
-/       %li
-/         = link_to(image_tag("#{i}", :alt => @carouselName[idx]), portfolio_path)
-
-/ / .carousel-inner{:role => "listbox"}
-/ /   .item.active
-/ /     %img{ :src =>"#", :alt=> ""}
-/ /     .carousel-caption
-/ /   .item
-/ /     %img{:src => "#", :alt => ""}
-/ /     .carousel-caption
-
-/ %section#RecentPosts
-/   = render 'posts/feed_link'
-/   = render @posts_render, :summary => true
+%h1 Welcome to me
+%section#RecentPosts
+  = render 'posts/feed_link'
+  = render @posts_render, :summary => true

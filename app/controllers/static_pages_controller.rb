@@ -13,9 +13,9 @@ class StaticPagesController < ApplicationController
     #   'Purls & knit',
     #   'Flyte'
     # ]
-  # @title = "Home"
+  @title = "Home"
 
-  # @posts_render =  Post.feed3
+  @posts_render =  Post.feed3
   end
 
   def inspiration
