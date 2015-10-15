@@ -1,0 +1,10 @@
+.container-fixed
+  %h1.page-title.txt-center My Portfolio
+  #portfolio
+    - @portfolios.each do |portfolio|
+      .portfolio-header
+        %p.portfolio-date.txt-center
+          = portfolio.created_at.strftime('%A, %B %d')
+        %h2.portfolio-title.txt-center
+          %a
+            = link_to portfolio.title, portfolio

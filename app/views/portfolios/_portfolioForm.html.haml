@@ -1,0 +1,29 @@
+/ Formvalidation Goes before the form here
+= form_for @portfolio, html: { multipart: true } do |f|
+  -if @portfolio.errors.any?
+    %h2
+      =pluralize.(@portfolio.errors.count, "error") 
+      Prevented this portfolio from saving:
+    %ul
+      - @portfolio.errors.full_messages.each do |msg|
+        %li
+          =msg
+  / This section is where the form gets built
+  .frm-group
+    =f.label :title , :class => "frm-title"
+    =f.text_field :title, :class => "frm-control"
+
+  .frm-group
+    =f.label :image , :class => "frm-title"
+    =f.file_field :image, :class => "frm-control"
+
+  .frm-group
+    =f.label :description, :class => "frm-title"
+    =f.text_area :description, :class => "frm-control"
+
+  .frm-group
+    =f.label :link ,:class => "frm-title"
+    =f.text_field :link, :class => "frm-control"
+
+  .frm-group
+    =f.submit :class => "btn-block"

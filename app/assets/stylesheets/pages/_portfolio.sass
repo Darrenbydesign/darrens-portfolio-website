@@ -1,0 +1,40 @@
+.portfolio-title
+  text-align: center
+  a
+    text-decoration: none
+.portfolio-date
+  color: $secondary-color
+  text-align: center
+  font-family: $font-stack-serif-regular
+.portfolio-content
+  width: 95vmax
+  margin: 0 auto
+  +breakpoint-lg
+    width: 50vw
+  p
+    margin-top: ce(20px)
+    padding-bottom: ce(20px)
+    border-bottom: 1px solid lighten($third-color, 20%)
+
+.portfolio-img-container
+  +flexbox()
+  +justify-content(center)
+  +align-items(center)
+
+.portfolio-img
+  border: 3px solid $primary-color
+  +img-responsive(flex)
+
+.portfolio-button-container
+  +flexbox()
+  +justify-content(center)
+  +align-items(center)
+
+.portfolio-button
+  +button($primary-color)
+  &:visited
+    color: $white
+  color: $white
+  margin-top: ce(10px)
+  margin-bottom: ce(20px)
+  text-transform: uppercase

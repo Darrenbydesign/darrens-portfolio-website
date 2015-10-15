@@ -1,0 +1,22 @@
+.container-fixed
+  .slab
+    %header
+      %h2.portfolio-title
+        = @portfolio.title
+      %h4.portfolio-date
+        = @portfolio.created_at.strftime('%A, %B %d')
+  .slab
+    .portfolio-content
+      %figure.portfolio-img-container
+        = image_tag @portfolio.image.url(:large) , :class => "portfolio-img"
+
+      = markdown @portfolio.description
+      .portfolio-button-container
+        = link_to (@portfolio.title), @portfolio.link, :target => "_blank", :class => "portfolio-button"
+
+      = if user_signed_in?
+        %ul.admin-controls
+          %li
+            =link_to "Edit Project" , edit_portfolio_path(@portfolio) , :class => "btn-text" 
+          %li
+            =link_to "Delete Project" , portfolio_path(@portfolio) , method: :delete, data: { confirm: "Are you sure?"} ,:class => "btn-text"

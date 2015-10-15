@@ -1,0 +1,27 @@
+
+/*=========== Sticky Footer Styling  using Flexbox ==============*/
+
+body
+  background: $background-color
+  background-image: image-url("white_bed_sheet.png")
+  padding-top: $fixed-header-height
+
+.site
+  +flexbox()
+  +flex-direction(column)
+  height: 100%
+  height: 100vh
+  min-height: 100%
+  min-height: 100vh
+
+.site-header,.site-footer
+  +flex(none)
+.site-content
+  +flex(1 0 auto)
+  width: 100%
+.wrap
+  min-height: 100%
+
+/*========Links==============*/
++link-color($primary-color, $secondary-color , darken($secondary-color, 10%), darken($primary-color, 10%))
+
