@@ -2922,3 +2922,6 @@ table {
 #contactText:after {
   clear: both;
   zoom: 1; }
+
+.my-photo {
+  margin: 1.25em 0; }
