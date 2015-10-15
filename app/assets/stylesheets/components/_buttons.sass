@@ -1,89 +1,58 @@
 //=======buttons============
 %btn
-    background: $btn-color
-    display: inline-block
-    padding: px-em($base-text-px,10px) px-em($base-text-px,15px)
-    font-size: 1em
-    line-height: 1.42857
-    text-align: center
-    margin-top: px-em($base-text-px,10px)
-    margin-bottom: px-em($base-text-px,15px)
-    white-space: nowrap
-    vertical-align: text-bottom
-    color: rgb(255, 255, 255)
-    cursor: pointer
-    border: px-em($base-text-px,2px) solid transparent
-    +border-radius(2px)
-    -moz-user-select: none
-    &:hover
-        background: $btn-hover
-        box-shadow: inset 0px 0px px-em($base-text-px,30px) rgba(68, 68, 68, 0.3)
-        +button-border-trim(darken($btn-color,5))
-    &:active
-        color: darken($btn-color,10)
-        background: $btn-color
+  +button($primary-color)
 
 .btn-norm
-    @extend %btn
-    color: rgb(255, 255, 255)
+  +button($secondary-color)
 .btn-xtiny
-    @extend %btn
-    margin: 0
-    padding: 0
-    font-size: 0.5em
+  +button($primary-color)
+  margin: 0
+  padding: 0
+  font-size: 0.5em
 
 .btn-tiny
-    @extend %btn
-    padding: px-em($base-text-px,1px) px-em($base-text-px,5px)
-    font-size: 0.75em
+  +button($primary-color)
+  padding: px-em($base-text-px,1px) px-em($base-text-px,5px)
+  font-size: 0.75em
 
 .btn-small
-    @extend %btn
-    padding: px-em($base-text-px,6px) px-em($base-text-px,9px)
-    font-size: px-em($base-text-px,13px)
-    line-height: 1.5
-    +border-radius(2px)
+  +button($primary-color)
+  padding: px-em($base-text-px,6px) px-em($base-text-px,9px)
+  font-size: px-em($base-text-px,13px)
+  line-height: 1.5
+  +border-radius(2px)
 
 .btn-large
-    @extend %btn
-    padding: px-em($base-text-px,18px) px-em($base-text-px,27px)
-    font-size: px-em($base-text-px,19px)
-    line-height: px-em($base-text-px,21px)
-    +border-radius(2px)
+  +button($primary-color)
+  padding: px-em($base-text-px,18px) px-em($base-text-px,27px)
+  font-size: px-em($base-text-px,19px)
+  line-height: px-em($base-text-px,21px)
+  +border-radius(2px)
 
 .btn-block
-    @extend %btn
-    display: block
-    width: 100%
-    padding-right: 0px
-    padding-left: 0px
-
-.btn-folder
-    @extend %btn
-    display: inline-block
+  +button($primary-color)
+  display: block
+  width: 100%
+  padding-right: 0px
+  padding-left: 0px
+  
+.btn-text
+  text-decoration: none
+  background: none
+  color: $primary-color
 
 .btn-right
-    float: right
-    clear: left
+  float: right
+  clear: left
 
 .btn-left
-    float: left
-    clear: right
+  float: left
+  clear: right
 
 .close,.error
-    background: $btn-error
-    +button-border-trim($btn-error)
-    &:hover
-        background: $btn-error-hover
-        color: $background-color
-    &:active
-        background: $btn-error
-        color: darken($btn-error,10)
+  +button($btn-error)
+  +button-border-trim($btn-error)
 
 .success,.proceed
-    background: $btn-success
-    &:hover
-        background: $btn-success-hover
-    &:active
-        background: $btn-success
-        color: darken($btn-success,10)
+  +button($btn-success)
+  

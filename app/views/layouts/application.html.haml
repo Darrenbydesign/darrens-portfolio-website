@@ -1,15 +1,18 @@
 !!! 5
 %html
 	= render :partial => "layouts/partials/header"
-	%body
-		%header.header
-			.site-heading
-				
-				=link_to(image_tag("header_Logo2.png", alt: "Darren Sorrels Graphic Designer", :class=> "site-logo"), root_path)
-				
-			= render partial: "layouts/partials/navigation"
-		%main.wrap
-			.container.white-bg.full-height
-				.slab
+	%body.site
+		%header
+			.slab	
+				= render partial: "layouts/partials/navigation"
+		%main.site-content
+			.slab
+				.container.white-bg
+					- if notice
+						%p.txt-center
+							= notice
+					- elsif alert
+						%p.txt-center
+							= alert
 					= yield
 		= render :partial => "layouts/partials/footer"

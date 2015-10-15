@@ -12,21 +12,28 @@
 
 html 
   font-size: 100%
+
+body 
+  @include font-size($base-text-px)
   font-family: $font-stack-sanserif-regular
+  color: $base-text-color
+  line-height: 1.4
 
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 
-  font-family: $font-stack-sanserif-regular
-  // font-family: $font-stack-serif-bold
-  color: $secondary-color
+h6
+  color: $primary-color
   line-height: 1.5
-  // margin-top: 10px
+  margin-top: ce(10px)
   margin-bottom: ce(10px)
 
+h1,h2
+  font-family: $font-stack-sanserif-regular
+h3,h4,h5,h6
+  font-family: $font-stack-serif-bold
 h1 
   @include font-size(32px)
   line-height: 1.25em
@@ -49,8 +56,6 @@ h2
   @include breakpoint-md 
     @include font-size(32px)
     line-height: 1.1538em
-    
-
 
 h3 
   @include font-size(22px)
@@ -62,8 +67,6 @@ h3
   @include breakpoint-md 
     @include font-size(24px)
     line-height: 1.1363em
-    
-
 
 h4 
   @include font-size(18px)
@@ -75,8 +78,6 @@ h4
   @include breakpoint-md 
     @include font-size(18px)
     line-height: 1.111em
-    
-
 
 h5 
   @include font-size(14px)
@@ -88,8 +89,6 @@ h5
   @include breakpoint-md 
     @include font-size(14px)
     line-height: 1.111em
-    
-
 
 h6 
   @include font-size(12px)
@@ -101,36 +100,26 @@ h6
   @include breakpoint-md 
     @include font-size(12px)
     line-height: 1.111em
-  
 
-
-body 
-  @include font-size($base-text-px)
-  font-family: $font-stack-sanserif-regular
-  color: $base-text-color
 
 label
   font-family: $font-stack-serif-regular
 
 p
-  font-size: +font-size($base-text-px)
-  //16x1=16px
-  text-indent: 0
-  line-height: 1.5
-  // margin-top: ce(10px)
-  margin-bottom: ce(10px)
+  +font-size($base-text-px)
+  margin: 0 0 ce(10px)
   
 small
-  font-size: 0.6875em 
+  +font-size($base-text-px - 4) 
+
 blockquote
   width: 20em
   float: right
   padding: 0px 1.5em
   margin: 0 1em
-  // border-left: px-em($base-text-px,5px) solid $primary-color
   +clearfix
   p
-    font-size: px-em($base-text-px,24px)
+    @include font-size(24px)
     @extend .txt-shadow-lgt
     &:before
       content: "\f10d"

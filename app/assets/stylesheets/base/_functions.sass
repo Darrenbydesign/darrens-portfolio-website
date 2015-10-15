@@ -1,28 +1,28 @@
 @function calc-percent($target, $container)
-    @return ($target / $container) * 100%
+  @return ($target / $container) * 100%
 
 @function pixel-to-ems($base-px,$changing-px)
-    @return ($changing-px/$base-px) + em
+  @return ($changing-px/$base-px) + em
 
 @function cp($target, $container)
-    @return calc-percent($target, $container)
+  @return calc-percent($target, $container)
 
 @function px-em($base-px,$changing-px)
-    @return pixel-to-ems($base-px, $changing-px)
+  @return pixel-to-ems($base-px, $changing-px)
 
 // functions for use with the mixin library I am building for FastTrack Projects
 // This calculation converts any given pixel size for type into a relative em unit for better responsize typography on smaller and larger than desktop devices.
 @function calculateRem($size)
-    $remSize: $size /16px
-    @return $remSize * 1rem
+  $remSize: $size /16px
+  @return $remSize * 1rem
 
 @function calculateEm($size)
-    $EmSize: $size /16px
-    @return $EmSize * 1em
+  $EmSize: $size /16px
+  @return $EmSize * 1em
 
 @function calculateBreakpoint($bp-size)
-    $breapointSizeEms: $bp-size /16px
-    @return $breapointSizeEms * 1em
+  $breapointSizeEms: $bp-size /16px
+  @return $breapointSizeEms * 1em
 
 // This function is designed to convert a pixel based size to a percentage unit for responsive purposes. This can be helpful in creating your own grid system if necessary...
 // This formula comes from the responsize design tenant: target / context = result.
@@ -30,28 +30,28 @@
 // This would be the equation: 650px(target)/1000px(context)= 65%(result)
 
 @function calculatePercent($target, $container) 
-    @return ($target / $container) * 100%
+  @return ($target / $container) * 100%
 
 // Createing a shorthand names for quicker use if you're extremely lazy....or cant type...or just don't like long function names
 @function ce($size)
-    @return calculateEm($size)
+  @return calculateEm($size)
 
 @function cb($bp-size)
-    @return calculateBreakpoint($bp-size)
+  @return calculateBreakpoint($bp-size)
 
 @function cr($size) 
-    @return calculateRem($size)
+  @return calculateRem($size)
 @function cp($target, $container)
-    @return calculatePercent($target, $container)
+  @return calculatePercent($target, $container)
 @function dt($color)
-    @return dynamicTextColor($color)
+  @return dynamicTextColor($color)
 
 
 // This bad boy uses Sass to dynamically change the text color to black or white depending on the backrground color of the element you use it in! That is amazing
 $dark-text: #4d4d4d
 $light-text: #fff
 @function dynamicTextColor($color)
-    @if (lightness($color) > 50)
-        @return $dark-text // This should return black text for items with lighter backgrounds
-    @else 
-        @return $light-text // This should return white text for items with dark backgrounds
+  @if (lightness($color) > 50)
+    @return $dark-text // This should return black text for items with lighter backgrounds
+  @else 
+    @return $light-text // This should return white text for items with dark backgrounds

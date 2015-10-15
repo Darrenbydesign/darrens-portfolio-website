@@ -1,232 +1,230 @@
 // Vendor Prefixes
 =vendor-prefix($name,$argument)
-    -webkit-#{$name}: #{$argument}
-    -ms-#{$name}: #{$argument}
-    -moz-#{$name}: #{$argument}
-    -o-#{$name}: #{$argument}
-    #{$name}: #{$argument}
+  -webkit-#{$name}: #{$argument}
+  -ms-#{$name}: #{$argument}
+  -moz-#{$name}: #{$argument}
+  -o-#{$name}: #{$argument}
+  #{$name}: #{$argument}
 
 // Alerts Message
 =alert-message($BGcolor)
-    width: 500px
-    height: 150px
-    background: rgba($BGcolor, 0.95)
-    color: $alt-text-color
+  width: 500px
+  height: 150px
+  background: rgba($BGcolor, 0.95)
+  color: $alt-text-color
+  +border-radius(2px)
+  margin: 10px 10px 15px 10px
+  overflow: auto
+  @extend .bg-shadow
+  h3
+    color: lighten($BGcolor, 40)
+    padding: 5px
+    background: darken($BGcolor, 10)
     +border-radius(2px)
-    margin: 10px 10px 15px 10px
-    overflow: auto
-    @extend .bg-shadow
-    h3
-        color: lighten($BGcolor, 40)
-        padding: 5px
-        background: darken($BGcolor, 10)
-        +border-radius(2px)
-        text-align: center
-    > p
-        margin: 5px
-        overflow-y: auto
+    text-align: center
+  > p
+    margin: 5px
+    overflow-y: auto
 
 // Border Radius
 =border-radius($radius)
-    border-radius: $radius
+  border-radius: $radius
 
 
 =button-border-trim($trimColor)
-    border: inset 1px solid $trimColor
+  border: inset 1px solid $trimColor
 
 
 =clearfix
-    &:after, &:before
-        content: ""
-        display: table
-    &:after
-        clear: both
-        zoom: 1
+  &:after, &:before
+    content: ""
+    display: table
+  &:after
+    clear: both
+    zoom: 1
 
 // A Loop creator for nth-child classes
 =counter-loop($start,$end)
-    @for $i from $start through $end
-        &:nth-child(#{$i}):after
-            content: '#{$i}'
+  @for $i from $start through $end
+    &:nth-child(#{$i}):after
+      content: '#{$i}'
 
 // Shortcut to make font family 
 =font-face($family, $path, $svg, $weight: normal, $style: normal)
-    @font-face
-        font-family: $family
-        src: url(font-path('#{$path}.eot'))
-        src: url(font-path('#{$path}.eot?#iefix')) format('embedded-opentype'), url(font-path('#{$path}.woff')) format('woff'), url(font-path('#{$path}.ttf')) format('truetype'), url(font-path('#{$path}.svg##{$svg}')) format('svg')
-        font-weight: $weight
-        font-style: $style
+  @font-face
+    font-family: $family
+    src: url(font-path('#{$path}.eot'))
+    src: url(font-path('#{$path}.eot?#iefix')) format('embedded-opentype'), url(font-path('#{$path}.woff')) format('woff'), url(font-path('#{$path}.ttf')) format('truetype'), url(font-path('#{$path}.svg##{$svg}')) format('svg')
+    font-weight: $weight
+    font-style: $style
 
 // Progress bar gradient creator
 =progress-bar-gradients($from, $to)
-    background-image: -webkit-linear-gradient(-45deg, $from 25%, transparent 25%, transparent 50%, $to 50%, $to 75%, transparent 75%, transparent)
-    background-image: -moz-linear-gradient(-45deg, $from 25%, transparent 25%, transparent 50%, $to 50%, $to 75%, transparent 75%, transparent)
-    background-image: -ms-linear-gradient(-45deg, $from 25%, transparent 25%, transparent 50%, $to 50%, $to 75%, transparent 75%, transparent)
-    background-image: -o-linear-gradient(-45deg, $from 25%, transparent 25%, transparent 50%, $to 50%, $to 75%, transparent 75%, transparent)
-    background-image: linear-gradient(-45deg, $from 25%, transparent 25%, transparent 50%, $to 50%, $to 75%, transparent 75%, transparent)
+  background-image: -webkit-linear-gradient(-45deg, $from 25%, transparent 25%, transparent 50%, $to 50%, $to 75%, transparent 75%, transparent)
+  background-image: -moz-linear-gradient(-45deg, $from 25%, transparent 25%, transparent 50%, $to 50%, $to 75%, transparent 75%, transparent)
+  background-image: -ms-linear-gradient(-45deg, $from 25%, transparent 25%, transparent 50%, $to 50%, $to 75%, transparent 75%, transparent)
+  background-image: -o-linear-gradient(-45deg, $from 25%, transparent 25%, transparent 50%, $to 50%, $to 75%, transparent 75%, transparent)
+  background-image: linear-gradient(-45deg, $from 25%, transparent 25%, transparent 50%, $to 50%, $to 75%, transparent 75%, transparent)
 
 // slide panels are used for off canvas menus
 =slidePanel-tab-position($tab_top, $tab_right, $tab_bottom, $tab_left, $tab_position, $tab_color)
-    top: $tab_top
-    right: $tab_right
-    bottom: $tab_bottom
-    left: $tab_left
-    position: $tab_position
-    background: $tab_color
-    width: 25px
-    height: 150px
-    transition: all 0.3s ease-in-out
-    vertical-align: middle
-    > h3
-        padding: 0px 15px
-        transform: rotate(90deg)
-        -webkit-transform: rotate(90deg)
-        -moz-transform: rotate(90deg)
-        -ms-transform: rotate(90deg)
-        -o-transform: rotate(90deg)
-        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3)
+  top: $tab_top
+  right: $tab_right
+  bottom: $tab_bottom
+  left: $tab_left
+  position: $tab_position
+  background: $tab_color
+  width: 25px
+  height: 150px
+  transition: all 0.3s ease-in-out
+  vertical-align: middle
+  > h3
+    padding: 0px 15px
+    transform: rotate(90deg)
+    -webkit-transform: rotate(90deg)
+    -moz-transform: rotate(90deg)
+    -ms-transform: rotate(90deg)
+    -o-transform: rotate(90deg)
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3)
 
 // slide panels location
 =slidePanel-position($panel_top, $panel_right, $panel_bottom, $panel_left, $panel_position, $heading_color)
-    top: $panel_top
-    right: $panel_right
-    bottom: $panel_bottom
-    left: $panel_left
-    position: $panel_position
-    width: 30%
-    height: 30%
-    background: lighten($primary-color, 40)
-    transition: all 0.3s ease-in-out
-    text-align: left
-    overflow-y: auto
-    > h3
-        background: $heading_color
-        margin: 0
-        padding: 0.4em
-        text-align: center
-        position: relative
-    li
-        padding: 10px
-        display: block
-        color: #333000
-        word-wrap: break-word
-        &:hover,&:focus
-            background: lighten($BGcolor-info, 30)
-        a
-            &:active
-                background: lighten($BGcolor-info, 20)
+  top: $panel_top
+  right: $panel_right
+  bottom: $panel_bottom
+  left: $panel_left
+  position: $panel_position
+  width: 30%
+  height: 30%
+  background: lighten($primary-color, 40)
+  transition: all 0.3s ease-in-out
+  text-align: left
+  overflow-y: auto
+  > h3
+    background: $heading_color
+    margin: 0
+    padding: 0.4em
+    text-align: center
+    position: relative
+  li
+    padding: 10px
+    display: block
+    color: #333000
+    word-wrap: break-word
+    &:hover,&:focus
+      background: lighten($BGcolor-info, 30)
+    a
+      &:active
+        background: lighten($BGcolor-info, 20)
 
 =slidepanel-hover($hover_position_L, $hover_position_R)
-    &:hover,&:focus
-        [class*="slidePanel-inner"]
-            left: $hover_position_L
-            right: $hover_position_R
-            z-index: 5
+  &:hover,&:focus
+    [class*="slidePanel-inner"]
+      left: $hover_position_L
+      right: $hover_position_R
+      z-index: 5
 
 // Grid System created by Bootstrap (I adopted this because I couldn't think of a better way to create this)
 // -----------
 
 // Centered container element
 =container-fixed($gutter: $grid-gutter-width)
-    margin-right: auto
-    margin-left: auto
-    padding-left: $grid-gutter-width / 2
-    padding-right: $grid-gutter-width / 2
-    +clearfix
+  padding-left: $grid-gutter-width / 2
+  padding-right: $grid-gutter-width / 2
+  +clearfix
 
 // Creates a wrapper for a series of columns
 =make-row($gutter: $grid-gutter-width)
-    margin-left: $gutter / -2
-    margin-right: $gutter / -2
-    +clearfix
+  margin-left: $gutter / -2
+  margin-right: $gutter / -2
+  +clearfix
 
 // Generate the extra small columns
 =make-sm-column($columns, $gutter: $grid-gutter-width)
-    position: relative
-    float: left
-    width: percentage($columns / $grid-columns)
-    min-height: 1px
-    padding-left: $gutter / 2
-    padding-right: $gutter / 2
+  position: relative
+  float: left
+  width: percentage($columns / $grid-columns)
+  min-height: 1px
+  padding-left: $gutter / 2
+  padding-right: $gutter / 2
 
 =make-sm-column-offset($columns)
-    @media (min-width: $screen-sm-min)
-        margin-left: percentage($columns / $grid-columns)
+  @media (min-width: $screen-sm-min)
+    margin-left: percentage($columns / $grid-columns)
 
 =make-sm-column-push($columns)
-    @media (min-width: $screen-sm-min)
-        left: percentage($columns / $grid-columns)
+  @media (min-width: $screen-sm-min)
+    left: percentage($columns / $grid-columns)
 
 =make-sm-column-pull($columns)
-    @media (min-width: $screen-sm-min)
-        right: percentage($columns / $grid-columns)
+  @media (min-width: $screen-sm-min)
+    right: percentage($columns / $grid-columns)
 
 // Generate the small columns
 =make-md-column($columns, $gutter: $grid-gutter-width)
-    position: relative
-    min-height: 1px
-    padding-left: $gutter / 2
-    padding-right: $gutter / 2
-    @media (min-width: $screen-md-min)
-        float: left
-        width: percentage($columns / $grid-columns)
+  position: relative
+  min-height: 1px
+  padding-left: $gutter / 2
+  padding-right: $gutter / 2
+  @media (min-width: $screen-md-min)
+    float: left
+    width: percentage($columns / $grid-columns)
 
 =make-md-column-offset($columns)
-    @media (min-width: $screen-md-min)
-        margin-left: percentage($columns / $grid-columns)
+  @media (min-width: $screen-md-min)
+    margin-left: percentage($columns / $grid-columns)
 
 =make-md-column-push($columns)
-    @media (min-width: $screen-md-min)
-        left: percentage($columns / $grid-columns)
+  @media (min-width: $screen-md-min)
+    left: percentage($columns / $grid-columns)
 
 =make-md-column-pull($columns)
-    @media (min-width: $screen-md-min)
-        right: percentage($columns / $grid-columns)
+  @media (min-width: $screen-md-min)
+    right: percentage($columns / $grid-columns)
 
 // Generate the medium columns
 =make-lg-column($columns, $gutter: $grid-gutter-width)
-    position: relative
-    min-height: 1px
-    padding-left: $gutter / 2
-    padding-right: $gutter / 2
-    @media (min-width: $screen-lg-min)
-        float: left
-        width: percentage($columns / $grid-columns)
+  position: relative
+  min-height: 1px
+  padding-left: $gutter / 2
+  padding-right: $gutter / 2
+  @media (min-width: $screen-lg-min)
+    float: left
+    width: percentage($columns / $grid-columns)
 
 =make-lg-column-offset($columns)
-    @media (min-width: $screen-lg-min)
-        margin-left: percentage($columns / $grid-columns)
+  @media (min-width: $screen-lg-min)
+    margin-left: percentage($columns / $grid-columns)
 
 =make-lg-column-push($columns)
-    @media (min-width: $screen-lg-min)
-        left: percentage($columns / $grid-columns)
+  @media (min-width: $screen-lg-min)
+    left: percentage($columns / $grid-columns)
 
 =make-lg-column-pull($columns)
-    @media (min-width: $screen-lg-min)
-        right: percentage($columns / $grid-columns)
+  @media (min-width: $screen-lg-min)
+    right: percentage($columns / $grid-columns)
 
 // Generate the large columns
 =make-xl-column($columns, $gutter: $grid-gutter-width)
-    position: relative
-    min-height: 1px
-    padding-left: $gutter / 2
-    padding-right: $gutter / 2
-    @media (min-width: $screen-xl-min)
-        float: left
-        width: percentage($columns / $grid-columns)
+  position: relative
+  min-height: 1px
+  padding-left: $gutter / 2
+  padding-right: $gutter / 2
+  @media (min-width: $screen-xl-min)
+    float: left
+    width: percentage($columns / $grid-columns)
 
 =make-xl-column-offset($columns)
-    @media (min-width: $screen-xl-min)
-        margin-left: percentage($columns / $grid-columns)
+  @media (min-width: $screen-xl-min)
+    margin-left: percentage($columns / $grid-columns)
 
 =make-xl-column-push($columns)
-    @media (min-width: $screen-xl-min)
-        left: percentage($columns / $grid-columns)
+  @media (min-width: $screen-xl-min)
+    left: percentage($columns / $grid-columns)
 
 =make-xl-column-pull($columns)
-    @media (min-width: $screen-xl-min)
-        right: percentage($columns / $grid-columns)
+  @media (min-width: $screen-xl-min)
+    right: percentage($columns / $grid-columns)
 
 
 // Framework grid generation from Bootstrap
@@ -236,63 +234,63 @@
 
 // [converter] This is defined recursively in LESS, but Sass supports real loops
 =make-grid-columns
-    $list: ""
-    $i: 1
-    $list: ".blk-sm-#{$i}, .blk-md-#{$i}, .blk-lg-#{$i}, .blk-xl-#{$i}"
-    @for $i from 1 + 1 through $grid-columns
-        $list: "#{$list}, .blk-sm-#{$i}, .blk-md-#{$i}, .blk-lg-#{$i}, .blk-xl-#{$i}"
-    #{$list}
-        // position: relative
-        // Prevent columns from collapsing when empty
-        min-height: 1px
-        // Inner gutter via padding
-        padding-top: $grid-gutter-width
-        padding-bottom: $grid-gutter-width
-        padding-left: $grid-gutter-width / 2
-        padding-right: $grid-gutter-width / 2
+  $list: ""
+  $i: 1
+  $list: ".blk-sm-#{$i}, .blk-md-#{$i}, .blk-lg-#{$i}, .blk-xl-#{$i}"
+  @for $i from 1 + 1 through $grid-columns
+    $list: "#{$list}, .blk-sm-#{$i}, .blk-md-#{$i}, .blk-lg-#{$i}, .blk-xl-#{$i}"
+  #{$list}
+    // position: relative
+    // Prevent columns from collapsing when empty
+    min-height: 1px
+    // Inner gutter via padding
+    // padding-top: $grid-gutter-width
+    // padding-bottom: $grid-gutter-width
+    padding-left: $grid-gutter-width / 2
+    padding-right: $grid-gutter-width / 2
 
 // [converter] This is defined recursively in LESS, but Sass supports real loops
 =float-grid-columns($class)
-    $list: ""
-    $i: 1
-    $list: ".blk-#{$class}-#{$i}"
-    @for $i from 1 + 1 through $grid-columns
-        $list: "#{$list}, .blk-#{$class}-#{$i}"
-    #{$list}
-        float: left
+  $list: ""
+  $i: 1
+  $list: ".blk-#{$class}-#{$i}"
+  @for $i from 1 + 1 through $grid-columns
+    $list: "#{$list}, .blk-#{$class}-#{$i}"
+  #{$list}
+    float: left
 
 =calc-grid-column($index, $class, $type)
-    @if $type == width and $index > 0
-        .blk-#{$class}-#{$index}
-            width: percentage($index / $grid-columns)
-    @if $type == push
-        .blk-#{$class}-push-#{$index}
-            left: percentage($index / $grid-columns)
-    @if $type == pull
-        .blk-#{$class}-pull-#{$index}
-            right: percentage($index / $grid-columns)
-    @if $type == offset
-        .blk-#{$class}-offset-#{$index}
-            margin-left: percentage($index / $grid-columns)
+  @if $type == width and $index > 0
+    .blk-#{$class}-#{$index}
+      width: percentage($index / $grid-columns)
+  @if $type == push
+    .blk-#{$class}-push-#{$index}
+      left: percentage($index / $grid-columns)
+  @if $type == pull
+    .blk-#{$class}-pull-#{$index}
+      right: percentage($index / $grid-columns)
+  @if $type == offset
+    .blk-#{$class}-offset-#{$index}
+      margin-left: percentage($index / $grid-columns)
 
 // [converter] This is defined recursively in LESS, but Sass supports real loops
 =loop-grid-columns($columns, $class, $type)
-    @for $i from 0 through $columns
-        +calc-grid-column($i, $class, $type)
+  @for $i from 0 through $columns
+    +calc-grid-column($i, $class, $type)
 
 // Create grid for specific class
 =make-grid($class)
-    +float-grid-columns($class)
-    +loop-grid-columns($grid-columns, $class, width)
-    +loop-grid-columns($grid-columns, $class, pull)
-    +loop-grid-columns($grid-columns, $class, push)
-    +loop-grid-columns($grid-columns, $class, offset)
+  +float-grid-columns($class)
+  +loop-grid-columns($grid-columns, $class, width)
+  +loop-grid-columns($grid-columns, $class, pull)
+  +loop-grid-columns($grid-columns, $class, push)
+  +loop-grid-columns($grid-columns, $class, offset)
 // Opacity creator
 =opacity($opacity)
-    opacity: $opacity
-    // IE8 filter
-    $opacity-ie: $opacity * 100
-    filter: #{alpha(opacity = $opacity-ie)}
+  opacity: $opacity
+  // IE8 filter
+  $opacity-ie: $opacity * 100
+  filter: #{alpha(opacity = $opacity-ie)}
 
 // Image Mixins
 // - Responsive image
@@ -302,80 +300,81 @@
 //
 // Keep images from scaling beyond the width of their parents.
 =img-responsive($display: block)
-    display: $display
-    max-width: 100%
-    // Part 1: Set a maximum relative to the parent
-    height: auto
-    // Part 2: Scale the height according to the width, otherwise you get stretching
+  display: $display
+  max-width: 100%
+  // Part 1: Set a maximum relative to the parent
+  height: auto
+  // Part 2: Scale the height according to the width, otherwise you get stretching
 
 // Retina image
 //
 // Short retina mixin for setting background-image and -size. Note that the
 // spelling of `min--moz-device-pixel-ratio` is intentional.
 =img-retina($file-1x, $file-2x, $width-1x, $height-1x)
-    background-image: url(if($bootstrap-sass-asset-helper, twbs-image-path(#{$file-1x}), #{$file-1x}))
-    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)
-        background-image: url(if($bootstrap-sass-asset-helper, twbs-image-path(#{$file-2x}), #{$file-2x}))
-        background-size: $width-1x $height-1x
+  background-image: url(if($bootstrap-sass-asset-helper, twbs-image-path(#{$file-1x}), #{$file-1x}))
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)
+    background-image: url(if($bootstrap-sass-asset-helper, twbs-image-path(#{$file-2x}), #{$file-2x}))
+    background-size: $width-1x $height-1x
 
 // Mixins simple solutions to complicated CSS problems... thank me later
 // Vendor Prefix generator for properties that need them. This one is to be used for general cases where there isn't already a mixin built with the prefixes in place.
-@mixin prefix($map, $vendors: webkit moz ms o)
-    @each $prop, $value in $map
-        @if $vendors 
-            @each $vendor in $vendors 
-                #{"-" + $vendor + "-" + $prop}: #{$value}
-        // add regular property to the end of list without vendor prefixes
-        #{$prop}: #{$value}
-    
+=prefix($map, $vendors: webkit moz ms o)
+  @each $prop, $value in $map
+    @if $vendors 
+      @each $vendor in $vendors 
+        #{"-" + $vendor + "-" + $prop}: #{$value}
+    // add regular property to the end of list without vendor prefixes
+    #{$prop}: #{$value}
+  
 // Simple mixin for border-radius changes. just include this mixin and provide a value and you're good to go.
-@mixin border-radius($radius) 
-    @include prefix((border-radius: $radius), webkit ms o moz)
+=border-radius($radius) 
+  @include prefix((border-radius: $radius), webkit ms o moz)
 
 // Button mixin creates a button. All it needs is a color added to background yay! No more using the extend class on the button each time bloating the output CSS.
 $Placeholder-Selectors: ()
-@mixin button($color, $extend: true) 
-    @include button-static($extend)
-    background-color: $color
+=button($color, $extend: true) 
+  @include button-static($extend)
+  background-color: $color
+  color: dt($color)
+  a 
     color: dt($color)
-    a 
-        color: dt($color)
-        text-decoration: none
-    // border-color: mix($white, $color, 25%)
+    text-decoration: none
+    border-color: mix($white, $color, 25%)
+  &:hover 
+    background-color: mix($black, $color, 15%)
+    border-color: mix($black, $color, 40%)
+    color: dt($color)
+    text-decoration: none
+
+=button-static($extend: true) 
+  $button-selector: map-get($Placeholder-Selectors, 'button')
+  @if $extend==true
+    @if $button-selector==null 
+      $button-selector: unique-id()
+      $Placeholder-Selectors: map-merge($Placeholder-Selectors, ('button': $button-selector)) !global
+      @at-root %#{$button-selector}
+        @include button-static(false)
+
+    @extend %#{$button-selector}
+  @else 
+    border: none
+    padding-left: 10px
+    padding-right: 10px
+    padding-top: 10px
+    padding-bottom: 10px
+    display: inline-block
+    text-align: center
+    vertical-align: middle
+    text-decoration: none
+    margin-bottom: 0
+    @include border-radius(0px)
     &:hover 
-        background-color: mix($black, $color, 15%)
-        border-color: mix($black, $color, 40%)
-        color: dt($color)
-        text-decoration: none
-
-@mixin button-static($extend: true) 
-    $button-selector: map-get($Placeholder-Selectors, 'button')
-    @if $extend==true
-        @if $button-selector==null 
-            $button-selector: unique-id()
-            $Placeholder-Selectors: map-merge($Placeholder-Selectors, ('button': $button-selector)) !global
-            @at-root %#{$button-selector}
-            
-                @include button-static(false)
-
-        @extend %#{$button-selector}
-    
-    @else 
-        border: none
-        padding-left: 10px
-        padding-right: 10px
-        display: inline-block
-        text-align: center
-        vertical-align: middle
-        margin-bottom: 0
-        @include border-radius(0px)
-        &:hover 
-            cursor: pointer
+      cursor: pointer
 
 // This mixin calls on the calculateRem function in the functions partial file it will output the pixel size first then the rem unit for browswer that support it (IE9+).
-@mixin font-size($size) 
-    font-size: $size
-    font-size: calculateRem($size)
+=font-size($size) 
+  font-size: $size
+  font-size: calculateRem($size)
 
 $mq-small: 320px
 $mq-medium: 768px
@@ -383,21 +382,21 @@ $mq-large: 1200px
 $mq-xlarge: 1600px
 // These mixins help with creating media queries. They can now be more semantic instead of worrying about the syntax of the @media call you can just call the mixin and place in your content. This does all that for you!
 // Large screen breakpoints (ex. desktop views)
-@mixin breakpoint-xl
+=breakpoint-xl
 // large screen breakpoints (used only when absolutely necessary. targeting over 1800px)
-    @media only screen and (min-width : $mq-xlarge) 
-        @content
-@mixin breakpoint-lg
-    @media only screen and (min-width: $mq-large)
-        @content
+  @media only screen and (min-width : $mq-xlarge) 
+    @content
+=breakpoint-lg
+  @media only screen and (min-width: $mq-large)
+    @content
 // medium screen breakpoints (ex. small laptops,tablets,)
-@mixin breakpoint-md 
-    @media only screen and (min-width: $mq-medium) and (max-width: 1024px)
-        @content
+=breakpoint-md 
+  @media only screen and (min-width: $mq-medium) and (max-width: 1024px)
+    @content
 // small screen breakpoints (ex. phones and phablets)
-@mixin breakpoint-sm
-    @media only screen and (min-width: $mq-small) and (max-width: 480px)
-        @content
+=breakpoint-sm
+  @media only screen and (min-width: $mq-small) and (max-width: 480px)
+    @content
 
 $fq-xlarge: cb(1920px) !default
 $fq-large: cb(1440px) !default
@@ -409,100 +408,102 @@ $fq-medium-range: ($fq-small + ce(1px), $fq-medium) !default
 $fq-large-range: ($fq-medium + ce(1px), $fq-large ) !default
 $fq-xlarge-range: ($fq-large + ce(1px), $fq-xlarge) !default
 // ==========================FLEXBOX Media Queries for Flex Grid============================
-@mixin flexpoint-xl
-    // Smaller and Medium screen sizes
-    @media (min-width: $fq-xlarge)
-        @content
-@mixin flexpoint-lg
-    // Smaller and Medium screen sizes
-    @media (min-width: $fq-large)
-        @content
-@mixin flexpoint-md
-    // Smaller and Medium screen sizes
-    @media (min-width: $fq-medium)
-        @content
+=flexpoint-xl
+  // Smaller and Medium screen sizes
+  @media (min-width: $fq-xlarge)
+    @content
+=flexpoint-lg
+  // Smaller and Medium screen sizes
+  @media (min-width: $fq-large)
+    @content
+=flexpoint-md
+  // Smaller and Medium screen sizes
+  @media (min-width: $fq-medium)
+    @content
 // smaller screen breakpoints
-@mixin flexpoint-sm
-    @media (min-width: $fq-small)
-        @content
+=flexpoint-sm
+  @media (min-width: $fq-small)
+    @content
 
 
 
 
 // This mixin will alleviate the need to write the vendor prefixes your self for animations. Now all you have to do is call this mixin and enter your animation name and enter your actions.
-@mixin keyframes($animation-name) 
-    @-webkit-keyframes $animation-name 
-        @content
-    @-moz-keyframes $animation-name 
-        @content
-    @-ms-keyframes $animation-name 
-        @content
-    @-o-keyframes $animation-name 
-        @content
-    @keyframes $animation-name 
-        @content
+=keyframes($animation-name) 
+  @-webkit-keyframes $animation-name 
+    @content
+  @-moz-keyframes $animation-name 
+    @content
+  @-ms-keyframes $animation-name 
+    @content
+  @-o-keyframes $animation-name 
+    @content
+  @keyframes $animation-name 
+    @content
 
 // This mixin can to be coupled with the keyframes animation above. Use this one to give animation action values like timing and looping, etc.
-@mixin animation($str)
-    @include prefix((animation: #{str}), webkit moz ms o)
+=animation($str)
+  @include prefix((animation: #{str}), webkit moz ms o)
 
 // Quick hip-fire way to call transition effects in your Sass files. No more worrying about prefixes either.
-@mixin transition($args)
-    @include prefix ((transition: $args), webkit moz ms o)
-@mixin link-color($link, $visited, $hover, $active) 
-    a 
-        color: $link
-        &:visited 
-            color: $visited
-        &:hover 
-            color: $hover
-        &:active 
-            color: $active
+=transition($args)
+  @include prefix ((transition: $args), webkit moz ms o)
+
+// Create default link colors with this mixin
+=link-color($link, $visited, $hover, $active) 
+  a 
+    color: $link
+    &:visited 
+      color: $visited
+    &:hover 
+      color: $hover
+    &:active 
+      color: $active
 
 // FlexBox mixins for browser support
 =flexbox() 
-    display: -webkit-box
-    display: -moz-box
-    display: -ms-flexbox
-    display: -webkit-flex
-    display: flex
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
 
-=flex($values)
-    -webkit-box-flex: $values
-    -moz-box-flex: $values
-    -webkit-flex: $values
-    -ms-flex: $values
-    flex: $values
-
-
-=flex-direction($values)
-    -ms-flex-direction: $values
-    flex-direction: $values
+=flex($values: 0)
+  -webkit-box-flex: $values
+  -moz-box-flex: $values
+  -webkit-flex: $values
+  -ms-flex: $values
+  flex: $values
 
 
-=flex-flow($direction, $wrap) 
-    flex-flow: $direction $wrap
+=flex-direction($values: flex-start)
+  -ms-flex-direction: $values
+  flex-direction: $values
 
 
-=align-items($values) 
-    -webkit-box-align: $values
-    -moz-box-align: $values
-    -ms-flex-align: $values
-    -webkit-align-items: $values
-    align-items: $values
+=flex-flow($direction: row, $wrap: wrap) 
+  flex-flow: $direction $wrap
 
 
-=justify-content($values) 
-    -webkit-box-pack: $values
-    -moz-box-pack: $values
-    -ms-flex-pack: $values
-    -webkit-justify-content: $values
-    justify-content: $values
+=align-items($values: flex-start) 
+  -webkit-box-align: $values
+  -moz-box-align: $values
+  -ms-flex-align: $values
+  -webkit-align-items: $values
+  align-items: $values
 
-=order($value) 
-    -webkit-box-ordinal-group: $value
-    -moz-box-ordinal-group: $value
-    -ms-flex-order: $value
-    -webkit-order: $value
-    order: $value
+
+=justify-content($values: flex-start) 
+  -webkit-box-pack: $values
+  -moz-box-pack: $values
+  -ms-flex-pack: $values
+  -webkit-justify-content: $values
+  justify-content: $values
+
+=order($value: 1) 
+  -webkit-box-ordinal-group: $value
+  -moz-box-ordinal-group: $value
+  -ms-flex-order: $value
+  -webkit-order: $value
+  order: $value
 

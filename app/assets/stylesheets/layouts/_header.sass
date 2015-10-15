@@ -2,7 +2,25 @@
   width: 100%
   border-bottom: px-em($base-text-px,5px) double $primary-color
   padding: px-em($base-text-px,10px)
-  h1
-    @extend .txt-shadow-lgt
-.alt-header
-  color: $alt-text-color
+
+.site-header
+  background: $white
+  box-shadow: 0px 8px 3px -8px rgba($third-color, 0.65)
+  margin-bottom: 0
+  z-index: 3
+    
+// .site-heading
+//   +flexbox()
+//   align-items: center
+//   +justify-content(center)
+
+.site-title
+  border-top: ce(5px) double $primary-color
+  border-bottom: ce(5px) double $primary-color
+
+.site-logo
+  +img-responsive(flex)
+  height: ce(80px)
+
+.page-header
+  border-bottom: 2px solid  $third-color

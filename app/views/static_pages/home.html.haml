@@ -1,4 +1,15 @@
-%h1 Welcome to me
-%section#RecentPosts
-  = render 'posts/feed_link'
-  = render @posts_render, :summary => true
+
+%article
+  %section
+    %p.intro-message
+      Hi, my name is 
+      =link_to "Darren Sorrels", about_path
+      \.
+      I'm a User Experience / User Interface Designer Designer &amp; a Front-end Developer based in the Silicon Prarie of Kansas City.
+      Feel free to check out my
+      =link_to  "recent work", portfolios_path 
+      ,
+      =link_to "contact me", contact_path
+      about work or just to say hi.
+      
+

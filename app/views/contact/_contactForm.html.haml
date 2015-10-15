@@ -11,17 +11,18 @@
 		%p 
 			= flash.notice
 
-= form_for  @message,:url => contact_path, :id => "contactMe" do |form|
-	= form.label :name, :class => "frm-title frm-control"
-	= form.text_field :name, :class => "frm-control"
-
-	= form.label :email, :class => "frm-title frm-control"
-	= form.text_field :email, :class => "frm-control"
-
-	= form.label :message, :class => "frm-title frm-control"
-	= form.text_field :subject, :class => "frm-control"
-
-	= form.label :body, :class => "frm-title frm-control"
-	= form.text_area :body, :class => "frm-control", :placeholder => "Message me"
-
-	= form.submit "send", :class => "btn-block"
+= form_for  @message, :url => contact_path, :class=>"contactForm", :id => "contactMe" do |form|
+	.frm-group
+		= form.label :name, :class => "frm-title"
+		= form.text_field :name, :class => "frm-control"
+	.frm-group
+		= form.label :email, :class => "frm-title"
+		= form.text_field :email, :class => "frm-control"
+	.frm-group
+		= form.label :message, :class => "frm-title"
+		= form.text_field :subject, :class => "frm-control"
+	.frm-group
+		= form.label :body, :class => "frm-title"
+		= form.text_area :body, :class => "frm-control", :placeholder => "Message me"
+	.frm-group
+		= form.submit "send", :class => "btn-block"

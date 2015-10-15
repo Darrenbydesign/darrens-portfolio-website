@@ -1,19 +1,19 @@
-.blk-xl-8.blk-xl-offset-2
-	= content_tag_for( :article, post, :class => "blog-container full-height" ) do
-		%header.blog-title.txt-center
-			%h1
-				= link_to post.title, post
-			.meta
-				Posted on
-				%time{:pubdate => 'true', :datetime => post.timestamp.iso8601}
-					= post.date.strftime '%e %B %Y'
-				%span
-					by
+= content_tag_for( :article, post, :class => "blog-container" ) do
+	%header.blog-title.txt-center
+		%h2
+			= link_to post.title, post
+		.meta
+			Posted on
+			%time{:pubdate => 'true', :datetime => post.timestamp.iso8601}
+				= post.date.strftime '%e %B %Y'
+			%span
+				by
+				%em.author
 					= post.author
-		- if summary
-			= post_summary_html post
-			%p.more
-				= link_to 'Read more&hellip;'.html_safe, post
-		- else
-			~ post_content_html post
-		%hr/
+	- if summary
+		= post_summary_html post
+		%p.more
+			= link_to 'Read more&hellip;'.html_safe, post
+	- else
+		~ post_content_html post
+	%hr/

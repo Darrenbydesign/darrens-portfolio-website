@@ -1,81 +1,116 @@
 //=======Navigation========
+.navbar
+  width: 100%
+  background: $white
+  box-shadow: 0px 8px 3px -8px rgba($third-color, 0.65)
+  margin-bottom: 10px
+  z-index: 3
+.navbar-flex
+  +flexbox()
+  +flex-flow()
+  +justify-content()
+  align-items: center
+
+
 %nav
-    width: 100%
-    color: $alt-text-color
-    padding: px-em($base-text-px,15px) px-em($base-text-px,10px)
-    margin-top: 1em
-    ul li
-        +border-radius(2px)
-        padding: px-em($base-text-px,10px) px-em($base-text-px,15px)
-        list-style: none
-        &:hover
-            background: $primary-color
-            transition: all 0.3s ease-in-out
-        &:active
-            background: darken($nav-hover,10%)
-    a
-        text-decoration: none
-        text-transform: uppercase
-        padding: px-em($base-text-px,10px)
-        @extend .txt-shadow-lgt
-        &:hover
-            color: $alt-text-color
-        &:active
-            color: $nav-text-active
+  width: 100%
+  color: $alt-text-color
+  padding: px-em($base-text-px,15px) px-em($base-text-px,10px)
+  // margin-top: 1em
+  ul li
+    +border-radius(2px)
+    padding: px-em($base-text-px,10px) px-em($base-text-px,15px)
+    list-style: none
+    &:hover
+      border-bottom: 2px solid $primary-color
+      transition: all 0.3s ease-in-out
+    &:active
+      background: darken($nav-hover,10%)
+  a
+    text-decoration: none
+    text-transform: uppercase
+    padding: px-em($base-text-px,10px)
+    @extend .txt-shadow-lgt
+    &:hover
+      color: $alt-text-color
+    &:active
+      color: $nav-text-active
 
 .nav-hrz
-    @extend %nav
-    ul li
-        display: inline-block
-.nav-vrt
-    @extend %nav
-    background: lighten($primary-color,10)
+  @extend %nav
+  ul li
     display: inline-block
-    height: auto
-    padding: px-em($base-text-px,5px) px-em($base-text-px,10px)
-    @extend .bg-darktrim
-    ul li
-        background: $primary-color
-        margin: px-em($base-text-px,10px) px-em($base-text-px,3px)
-        &:hover
-            @extend .bg-shadow
-        a
-            display: block
+.nav-vrt
+  @extend %nav
+  background: lighten($primary-color,10)
+  display: inline-block
+  height: auto
+  padding: px-em($base-text-px,5px) px-em($base-text-px,10px)
+  @extend .bg-darktrim
+  ul li
+    background: $primary-color
+    margin: px-em($base-text-px,10px) px-em($base-text-px,3px)
+    &:hover
+      @extend .bg-shadow
+    a
+      display: block
 
 .flex-nav
-    margin: 0
+  // margin: 0 0 10px 0
+  padding-top: 10px
+  padding-bottom: 10px
+  list-style: none
+  +flexbox()
+  +flex-flow(column,wrap)
+  +justify-content(center)
+  text-align: center
+  color: $alt-text-color
+  li
+    +border-radius(2px)
+    padding: px-em($base-text-px,10px) px-em($base-text-px,15px)
     list-style: none
-    display: -webkit-box
-    display: -moz-box
-    display: -ms-flexbox
-    display: -webkit-flex
-    display: flex
-    flex-flow: row wrap
-    justify-content: center
-    color: $alt-text-color
-    padding-bottom: 20px
-    margin-top: 10px
-    li
-        +border-radius(2px)
-        padding: px-em($base-text-px,10px) px-em($base-text-px,15px)
-        list-style: none
-        &:hover
-            background: $primary-color
-            transition: all 0.3s ease-in-out
-        &:active
-            background: darken($nav-hover,10%)
-        a
-
-            text-decoration: none
-            text-transform: uppercase
-            padding: px-em($base-text-px,10px)
-            @extend .txt-shadow-lgt
-            &:hover
-                color: $alt-text-color
-            &:active
-                color: $nav-text-active
-    +breakpoint-sm
-        flex-direction: column
-        text-align: center
-        li
-            +border-radius(1)
+    a
+      text-decoration: none
+      text-transform: uppercase
+      padding: ce(10px)
+      @extend .txt-shadow-lgt
+      &:hover
+        // color: $alt-text-color
+        border-bottom: 2px solid $primary-color
+        transition: all 0.3s ease-in-out
+      &:active
+        color: $nav-text-active
+        border-bottom: 2px solid $primary-color
+        transition: all 0.3s ease-in-out
+  // +breakpoint-md
+  //   +justify-content(space-around)
+  +flexpoint-sm
+    +flex-flow(row, wrap)
+    +justify-content(flex-start)
+.flex-nav-center
+  +justify-content(center)
+.navbar-logo
+  +flexbox()
+  +justify-content(flex-start)
+// Mobile nav styles
+.navbar-toggle 
+  float: left
+  margin-right: 0
+  padding: 9px 10px
+  margin-top: 11px
+  margin-bottom: 11px
+  background-color: transparent
+  background-image: none
+  border-radius: 0
+  position: relative
+  z-index: 3
+.navbar-fixed-top
+  background: rgba($white, 0.9)
+  transition: height 0.3s
+  +flexpoint-sm
+    position: fixed
+    top: 0
+    left: 0
+    overflow: hidden
+    z-index: 10000
+    height: $fixed-header-height

@@ -23,6 +23,8 @@ gem 'newrelic_rpm'
 gem 'friendly_id', '~> 5.1.0'
 gem 'pygments.rb', '~> 0.6.0'
 gem 'redcarpet', '~> 3.2.2'
+gem 'paperclip', '~> 4.3'
+gem 'devise', '~> 3.4.1'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
