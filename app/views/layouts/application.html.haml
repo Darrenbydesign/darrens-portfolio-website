@@ -9,10 +9,10 @@
 			.slab
 				.container.white-bg
 					- if notice
-						%p.txt-center
+						%p.notice.txt-center
 							= notice
 					- elsif alert
-						%p.txt-center
+						%p.notice.txt-center
 							= alert
 					= yield
 		= render :partial => "layouts/partials/footer"
