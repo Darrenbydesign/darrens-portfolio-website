@@ -1,16 +1,11 @@
 =if flash.alert
 	.alert-error
-		%h3 
-			Error
-		%p
-			= flash.alert
+		%h3 Error
+		%p= flash.alert
 =if flash.notice
 	.alert-success
-		%h3 
-			Success
-		%p 
-			= flash.notice
-
+		%h3 Success
+		%p= flash.notice
 = form_for  @message, :url => contact_path, :class=>"contactForm", :id => "contactMe" do |form|
 	.frm-group
 		= form.label :name, :class => "frm-title"

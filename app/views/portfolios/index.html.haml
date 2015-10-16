@@ -8,3 +8,6 @@
         %h2.portfolio-title.txt-center
           %a
             = link_to portfolio.title, portfolio
+    = if user_signed_in?
+      %ul.admin-controls
+        %li= link_to "Create New Project", new_portfolio_path, :class => "btn-text"

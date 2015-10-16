@@ -12,7 +12,7 @@
 
       = markdown @portfolio.description
       .portfolio-button-container
-        = link_to (@portfolio.title), @portfolio.link, :target => "_blank", :class => "portfolio-button"
+        = link_to "View More: " + (@portfolio.title), @portfolio.link, :target => "_blank", :class => "portfolio-button"
 
       = if user_signed_in?
         %ul.admin-controls

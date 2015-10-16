@@ -21,8 +21,5 @@ class ContactController < ApplicationController
 			render :new
 		end
 	end
-	def contact
-		@title = "Contact"
-	end
 	
 end

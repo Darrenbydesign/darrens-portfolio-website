@@ -3,6 +3,7 @@ class PortfoliosController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
+    @title = "Portfolio"
     @portfolios = Portfolio.all.order("created_at desc")
   end
 
@@ -13,7 +14,7 @@ class PortfoliosController < ApplicationController
   def create
     @portfolio = Portfolio.new portfolio_params
     if @portfolio.save
-      redirect_to @portfolio , notice: "Awesome work man! Your portfolio is now saved!"
+      redirect_to @portfolio , notice: "Awesome work man! Your project is now saved!"
     else
       render 'new'
     end
@@ -27,7 +28,7 @@ class PortfoliosController < ApplicationController
 
   def update
     if @portfolio.update portfolio_params
-      redirect_to @portfolio , notice: "Awesome work man! Your portfolio is now updated!"
+      redirect_to @portfolio , notice: "Awesome work man! Your project is now updated!"
     else
       render 'edit'
     end
