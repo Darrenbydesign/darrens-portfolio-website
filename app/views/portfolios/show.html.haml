@@ -14,7 +14,7 @@
       .portfolio-button-container
         = link_to "View More: " + (@portfolio.title), @portfolio.link, :target => "_blank", :class => "portfolio-button"
 
-      = if user_signed_in?
+      - if user_signed_in?
         %ul.admin-controls
           %li
             =link_to "Edit Project" , edit_portfolio_path(@portfolio) , :class => "btn-text" 
