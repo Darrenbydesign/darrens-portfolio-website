@@ -11,8 +11,9 @@
         = image_tag @portfolio.image.url(:large) , :class => "portfolio-img"
 
       = markdown @portfolio.description
-      .portfolio-button-container
-        = link_to "View More: " + (@portfolio.title), @portfolio.link, :target => "_blank", :class => "portfolio-button"
+      %ul.portfolio-button-container
+        %li
+          = link_to "View More: " + (@portfolio.title), @portfolio.link, :target => "_blank", :class => "portfolio-button"      
 
       - if user_signed_in?
         %ul.admin-controls
