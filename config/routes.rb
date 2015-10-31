@@ -3,6 +3,7 @@ MySite::Application.routes.draw do
   devise_for :users
   postmarkdown :as => :blog, :permalink_format => :slug
   resources :portfolios
+  resources :contacts, only: [:new, :create]
 
   
   root :to => 'static_pages#home'
@@ -16,9 +17,6 @@ MySite::Application.routes.draw do
   
   # This is a redirect for users if they reach a route that doesn't exist anymore or is not accesible
   # get '*path'=> redirect('/')
-    resources :contact, only: [:new, :create]
-    match 'contact' => 'contact#new', :as => 'contact', :via => :get
-    match 'contact' => 'contact#create', :as => 'create', :via => :post
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
