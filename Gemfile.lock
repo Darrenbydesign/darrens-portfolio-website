@@ -225,7 +225,7 @@ DEPENDENCIES
   jbuilder (= 1.0.2)
   jquery-rails (= 3.0.4)
   json (= 1.8.1)
-  mail_form (~> 1.5, >= 1.5.1)
+  mail_form
   newrelic_rpm
   paperclip (~> 4.3)
   pg
