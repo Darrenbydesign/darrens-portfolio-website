@@ -16,7 +16,7 @@ MySite::Application.routes.draw do
   end
   
   # This is a redirect for users if they reach a route that doesn't exist anymore or is not accesible
-  # get '*path'=> redirect('/')
+  get '*path'=> redirect('/')
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

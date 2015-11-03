@@ -19,6 +19,7 @@ module MySite
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
     config.assets.precompile += %w(.eot .woff .ttf .svg)
@@ -27,16 +28,16 @@ module MySite
     config.action_mailer.perform_deliveries = true
     config.action_mailer.raise_delivery_errors = true
     config.action_mailer.default :charset => "utf-8"
-
     config.action_mailer.default_url_options = { :host => 'http://darrensorrels.herokuapp.com/' }
+    
     config.action_mailer.smtp_settings = {
-      address:              'smtp.gmail.com',
-      port:                 587,
-      domain:               'gmail.com',
-      user_name:            ENV['GMAIL_USERNAME'],
-      password:             ENV['GMAIL_PASSWORD'],
-      authentication:       'plain',
-      enable_starttls_auto: true
-    }
+    :address        => 'smtp.sendgrid.net',
+    :port           => '587',
+    :authentication => :plain,
+    :user_name      => ENV['SENDGRID_USERNAME'],
+    :password       => ENV['SENDGRID_PASSWORD'],
+    :domain         => 'heroku.com',
+    :enable_starttls_auto => true
+  }
   end
 end

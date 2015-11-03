@@ -28,7 +28,7 @@ gem 'pygments.rb', '~> 0.6.0'
 gem 'redcarpet', '~> 3.2.2'
 gem 'paperclip', '~> 4.3'
 gem 'devise', '~> 3.4.1'
-gem 'mail_form', '~> 1.5', '>= 1.5.1'
+gem 'mail_form'
 
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
