@@ -4,7 +4,9 @@
 body
   background: $background-color
   background-image: image-url("white_bed_sheet.png")
-  padding-top: $fixed-header-height
+  padding: 0
+  +flexpoint-sm
+    padding-top: $fixed-header-height
 
 .site
   +flexbox()
