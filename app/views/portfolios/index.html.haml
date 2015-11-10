@@ -1,13 +1,13 @@
 .container-fixed
-  %h1.page-title.txt-center My Portfolio
+  %h1.page-title.txt-center My Work
   #portfolio
     - @portfolios.each do |portfolio|
       .portfolio-header
         %p.portfolio-date.txt-center
           = portfolio.created_at.strftime('%A, %B %d')
         %h2.portfolio-title.txt-center
-          %a
-            = link_to portfolio.title, portfolio
+          = link_to portfolio.title, portfolio
     - if user_signed_in?
       %ul.admin-controls
-        %li= link_to "Create New Project", new_portfolio_path, :class => "btn-text"
+        %li
+          = link_to "Create New Project", new_portfolio_path, :class => "btn-text"
