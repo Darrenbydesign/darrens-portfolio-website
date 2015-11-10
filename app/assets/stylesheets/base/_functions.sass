@@ -51,7 +51,7 @@
 $dark-text: #4d4d4d
 $light-text: #fff
 @function dynamicTextColor($color)
-  @if (lightness($color) > 50)
+  @if (lightness($color) > 60)
     @return $dark-text // This should return black text for items with lighter backgrounds
   @else 
     @return $light-text // This should return white text for items with dark backgrounds
