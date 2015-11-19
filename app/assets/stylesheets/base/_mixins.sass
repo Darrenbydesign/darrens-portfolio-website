@@ -1,4 +1,9 @@
-// Vendor Prefixes
+////
+/// @group Mixins
+/// @author Darren Sorrels
+////
+
+/// Vendor Prefixes
 =vendor-prefix($name,$argument)
   -webkit-#{$name}: #{$argument}
   -ms-#{$name}: #{$argument}
@@ -6,7 +11,7 @@
   -o-#{$name}: #{$argument}
   #{$name}: #{$argument}
 
-// Alerts Message
+/// Alerts Message
 =alert-message($BGcolor)
   width: 500px
   height: 150px
@@ -26,15 +31,16 @@
     margin: 5px
     overflow-y: auto
 
-// Border Radius
+/// Border Radius
 =border-radius($radius)
   border-radius: $radius
 
-
+/// Border Trim
 =button-border-trim($trimColor)
   border: inset 1px solid $trimColor
 
 
+/// Clearfix as made famous by Nick Gallagher
 =clearfix
   &:after, &:before
     content: ""
@@ -43,13 +49,13 @@
     clear: both
     zoom: 1
 
-// A Loop creator for nth-child classes
+/// A Loop creator for nth-child classes
 =counter-loop($start,$end)
   @for $i from $start through $end
     &:nth-child(#{$i}):after
       content: '#{$i}'
 
-// Shortcut to make font family 
+/// Shortcut to make font family stack with webfonts
 =font-face($family, $path, $svg, $weight: normal, $style: normal)
   @font-face
     font-family: $family
@@ -63,7 +69,7 @@
   // +prefix(background: linear-gradient($deg, $from, $to), webkit,moz,ms,o)
 
 
-// Progress bar gradient creator
+/// Progress bar gradient creator
 =progress-bar-gradients($from, $to)
   background-image: -webkit-linear-gradient(-45deg, $from 25%, transparent 25%, transparent 50%, $to 50%, $to 75%, transparent 75%, transparent)
   background-image: -moz-linear-gradient(-45deg, $from 25%, transparent 25%, transparent 50%, $to 50%, $to 75%, transparent 75%, transparent)
@@ -71,7 +77,7 @@
   background-image: -o-linear-gradient(-45deg, $from 25%, transparent 25%, transparent 50%, $to 50%, $to 75%, transparent 75%, transparent)
   background-image: linear-gradient(-45deg, $from 25%, transparent 25%, transparent 50%, $to 50%, $to 75%, transparent 75%, transparent)
 
-// slide panels are used for off canvas menus
+/// slide panels are used for off canvas menus
 =slidePanel-tab-position($tab_top, $tab_right, $tab_bottom, $tab_left, $tab_position, $tab_color)
   top: $tab_top
   right: $tab_right
@@ -92,7 +98,7 @@
     -o-transform: rotate(90deg)
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3)
 
-// slide panels location
+/// slide panels location
 =slidePanel-position($panel_top, $panel_right, $panel_bottom, $panel_left, $panel_position, $heading_color)
   top: $panel_top
   right: $panel_right
