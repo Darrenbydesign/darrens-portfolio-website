@@ -16,5 +16,5 @@ MySite::Application.routes.draw do
   end
 
   # This is a redirect for users if they reach a route that doesn't exist anymore or is not accesible
-  get '*path'=> redirect('/')
+  # get '*path'=> redirect('/')
 end

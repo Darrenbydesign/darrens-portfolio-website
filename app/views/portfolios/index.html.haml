@@ -3,6 +3,7 @@
   #portfolio
     - @portfolios.each do |portfolio|
       .portfolio-header
+        / = image_tag @portfolio.image.url(:thumb)
         %p.portfolio-date.txt-center
           = portfolio.created_at.strftime('%A, %B %d')
         %h2.portfolio-title.txt-center

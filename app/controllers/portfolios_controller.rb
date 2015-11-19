@@ -4,7 +4,7 @@ class PortfoliosController < ApplicationController
 
   def index
     @title = "Portfolio"
-    @portfolios = Portfolio.all.order("created_at desc")
+    @portfolios = Portfolio.all.order("created_at desc") 
   end
 
   def new
