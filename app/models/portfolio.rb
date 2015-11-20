@@ -1,6 +1,6 @@
 class Portfolio < ActiveRecord::Base
   extend FriendlyId
-  friendly_id :title, use: :slugged,
+  friendly_id :title, use: :slugged
   
   has_attached_file :image, styles: { 
     large: "600 x 600>", 
