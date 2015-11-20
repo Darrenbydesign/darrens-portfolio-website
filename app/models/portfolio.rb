@@ -1,7 +1,12 @@
 class Portfolio < ActiveRecord::Base
   extend FriendlyId
-  friendly_id :title, use: :slugged
+  friendly_id :title, use: :slugged,
+  :image_attributes
   
-  has_attached_file :image, styles: { large: "600x600>", medium: "300x300>", thumb: "100x100>" }
+  has_attached_file :image, styles: { 
+    large: "600 x 600>", 
+    medium: "300 x 300>", 
+    thumb: "100 x 100>" 
+  }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 end

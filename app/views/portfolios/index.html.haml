@@ -7,6 +7,9 @@
           = portfolio.created_at.strftime('%A, %B %d')
         %h2.portfolio-title.txt-center
           = link_to portfolio.title, portfolio
+    .flex-pagination
+      = will_paginate @portfolios, :class => "digg_pagination pagination"
+
     - if user_signed_in?
       %ul.admin-controls
         %li

@@ -29,6 +29,7 @@ gem 'redcarpet', '~> 3.2.2'
 gem 'paperclip', '~> 4.3'
 gem 'devise', '~> 3.4.1'
 gem 'mail_form'
+gem 'will_paginate'
 
 group :development, :test do
   gem 'rspec-rails', '2.13.1'

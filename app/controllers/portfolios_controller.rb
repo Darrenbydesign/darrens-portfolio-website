@@ -4,7 +4,7 @@ class PortfoliosController < ApplicationController
 
   def index
     @title = "Portfolio"
-    @portfolios = Portfolio.all.order("created_at desc") 
+    @portfolios = Portfolio.all.order("created_at desc").paginate(page: params[:page], per_page: 3)
   end
 
   def new
@@ -48,8 +48,6 @@ class PortfoliosController < ApplicationController
   def portfolio_params
     params.require(:portfolio).permit(:title, :description, :image, :link, :slug)
   end
-
-
 
 
 end

@@ -26,3 +26,4 @@ doc/
 .secret
 # Ignore application configuration
 /config/application.yml
+/public/system

@@ -60,3 +60,22 @@
   text-align: center
   padding: 15px 0
   margin-bottom: 20px
+.flex-pagination
+  +flexbox
+  +flex-flow(row, wrap)
+  +align-items(center)
+  +align-content(center)
+  +justify-content(center)
+
+  .previous_page,
+  .next_page,
+  .current
+    padding: 0 10px
+  .current
+    +align-self(center)
+
+  .previous_page
+    +align-self(flex-start)
+    
+  .next_page
+    +align-self(flex-end)

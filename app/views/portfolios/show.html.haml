@@ -8,7 +8,7 @@
   .slab
     .portfolio-content
       %figure.portfolio-img-container
-        = image_tag @portfolio.image.url(:large) , :class => "portfolio-img"
+        = image_tag @portfolio.image.url , :class => "portfolio-img"
 
       = markdown @portfolio.description
       %ul.portfolio-button-container
