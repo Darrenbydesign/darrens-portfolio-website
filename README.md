@@ -1,28 +1,27 @@
-== README
+== Darren Sorrels Portfolio
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version: 2.0.0p451
+* Ruby version: 2.1.5
+* Rails 4.0.4
 
 * System dependencies
+
+```
+  gem 'Haml'
+  gem 'Sass'
+  gem 'Sprockets'
+  gem 'Postmarkdown'
+  gem 'Figaro'
+  gem 'NewRelic'
+  gem 'FriendlyID'
+  gem 'Redcarpet'
+  gem 'Paperclip'
+  gem 'Devise'
+  gem 'Mail Form'
+  gem 'Will paginate'
+
+```
 
 * Configuration
 
 * Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+  This application uses Postgresql
