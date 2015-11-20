@@ -1,4 +1,6 @@
-== Darren Sorrels Portfolio
+# Darren Sorrels Portfolio Site
+
+This Rails app uses the following:
 
 * Ruby version: 2.1.5
 * Rails 4.0.4
@@ -11,7 +13,6 @@
   gem 'Sprockets'
   gem 'Postmarkdown'
   gem 'Figaro'
-  gem 'NewRelic'
   gem 'FriendlyID'
   gem 'Redcarpet'
   gem 'Paperclip'
