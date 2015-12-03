@@ -336,7 +336,8 @@
         #{"-" + $vendor + "-" + $prop}: #{$value}
     // add regular property to the end of list without vendor prefixes
     #{$prop}: #{$value}
-  
+
+
 // Simple mixin for border-radius changes. just include this mixin and provide a value and you're good to go.
 =border-radius($radius) 
   @include prefix((border-radius: $radius), webkit ms o moz)
@@ -441,24 +442,40 @@ $fq-xlarge-range: ($fq-large + ce(1px), $fq-xlarge) !default
 
 // This mixin will alleviate the need to write the vendor prefixes your self for animations. Now all you have to do is call this mixin and enter your animation name and enter your actions.
 =keyframes($animation-name) 
-  @-webkit-keyframes $animation-name 
+  @-webkit-keyframes #{$animation-name }
     @content
-  @-moz-keyframes $animation-name 
+  @-moz-keyframes #{$animation-name }
     @content
-  @-ms-keyframes $animation-name 
+  @-ms-keyframes #{$animation-name }
     @content
-  @-o-keyframes $animation-name 
+  @-o-keyframes #{$animation-name }
     @content
-  @keyframes $animation-name 
+  @keyframes #{$animation-name }
     @content
 
 // This mixin can to be coupled with the keyframes animation above. Use this one to give animation action values like timing and looping, etc.
 =animation($str)
-  @include prefix((animation: #{str}), webkit moz ms o)
+  +prefix((animation: $str))
 
 // Quick hip-fire way to call transition effects in your Sass files. No more worrying about prefixes either.
 =transition($args)
-  @include prefix ((transition: $args), webkit moz ms o)
+  +prefix((transition: $args))
+
+/// Rotate shortcut
+=rotate($args)
+  +prefix((transform: rotate($args)))
+
+/// Skew
+=skew($args)
+  +prefix((transform: skew($args)))
+
+/// Scale
+=scale($args)
+  +prefix((transform: scale($args)))
+
+/// Translate
+=translate($args)
+  +prefix((transform: translate($args)))
 
 // Create default link colors with this mixin
 =link-color($link, $visited, $hover, $active) 
