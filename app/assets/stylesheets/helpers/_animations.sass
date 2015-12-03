@@ -1,0 +1,60 @@
+/* ============================================================= */
+/* $animations - this is where animation classes will be located */
+/* ============================================================= */
+
++keyframes(flydown)
+  0%
+    +translate((-200px, -400px))
+    background: $primary-color-dark
+
+  10%
+    +scale((0.1))
+  30%
+    +rotate(45deg)
+    +skew(5deg)
+  100%
+    +translate((-400px, 100vmax))
+    background: $primary-color-light
+
++keyframes(bounceIn)
+  0% 
+    transform: scale(0.1)
+
+    opacity: 0
+  60% 
+    transform: scale(1.2)
+    opacity: 1
+  100% 
+    transform: scale(1)
+
+
+.streaks-container
+  +flexbox()
+  +align-items(flex-start)
+  +justify-content(center)
+
+  .streak
+    +border-radius(50%)
+    list-style: none
+    width: 5px
+    height: 5px
+    margin-top: -200px
+    margin-left: auto
+    margin-right: auto
+    background: rgba($primary-color-dark, 0.6)
+    z-index: -2
+
+  li
+    &:nth-child(6n+1)
+      +animation((flydown 2s ease-in-out infinite 1s))
+
+    &:nth-child(2n+1)
+      +animation((flydown 2.5s ease-in-out infinite 1.5s))
+
+    &:nth-child(3n+1)
+      +animation((flydown 1.5s ease-in-out infinite 3.5s))
+
+    &:nth-child(4n+4)
+      +animation((flydown 3.5s ease-in-out infinite 2.5s))
+
+
