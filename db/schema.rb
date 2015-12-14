@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151015012725) do
+ActiveRecord::Schema.define(version: 20151214124504) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,10 @@ ActiveRecord::Schema.define(version: 20151015012725) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "industry"
+    t.string   "services"
+    t.string   "offerings"
+    t.string   "medium"
   end
 
   add_index "portfolios", ["slug"], name: "index_portfolios_on_slug", unique: true, using: :btree

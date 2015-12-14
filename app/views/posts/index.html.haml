@@ -1,6 +1,9 @@
 = render 'feed_link'
 
 %section#posts
+  .page-header
+    %h1 My Thoughts
+    
   - if collection.present?
     = render collection, :summary => true
     = paginate collection

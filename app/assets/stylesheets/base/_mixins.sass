@@ -477,6 +477,10 @@ $fq-xlarge-range: ($fq-large + ce(1px), $fq-xlarge) !default
 =translate($args)
   +prefix((transform: translate($args)))
 
+/// Translate3D
+=translate3d($args)
+  +prefix((transform: translate3d($args)))
+
 // Create default link colors with this mixin
 =link-color($link, $visited, $hover, $active) 
   a 

@@ -9,15 +9,40 @@
     .portfolio-content
       %figure.portfolio-img-container
         = image_tag @portfolio.image.url , :class => "portfolio-img"
+      
+      %ul.portfolio-list
+        %li.port-list-item
+          %label.port-label
+            Medium:
+          %span
+            = @portfolio.medium
+
+        %li.port-list-item
+          %label.port-label
+            Industry:
+          %span
+            = @portfolio.industry
+
+        %li.port-list-item
+          %label.port-label
+            Services:
+          %span
+            = @portfolio.services
+        %li.port-list-item
+          %label.port-label
+            Offerings:
+          %span
+            = @portfolio.offerings
 
       = markdown @portfolio.description
       %ul.portfolio-button-container
         %li
           = link_to "View More: " + (@portfolio.title), @portfolio.link, :target => "_blank", :class => "portfolio-button"      
-
+          
       - if user_signed_in?
         %ul.admin-controls
           %li
             =link_to "Edit Project" , edit_portfolio_path(@portfolio) , :class => "btn-text" 
           %li
             =link_to "Delete Project" , portfolio_path(@portfolio) , method: :delete, data: { confirm: "Are you sure?"} ,:class => "btn-text"
+      %hr/

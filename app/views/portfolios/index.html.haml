@@ -1,16 +1,16 @@
-.container-fixed
-  %h1.page-title.txt-center My Work
-  #portfolio
-    - @portfolios.each do |portfolio|
-      .portfolio-header
-        %p.portfolio-date.txt-center
-          = portfolio.created_at.strftime('%A, %B %d')
-        %h2.portfolio-title.txt-center
-          = link_to portfolio.title, portfolio
-    .flex-pagination
-      = will_paginate @portfolios, :class => "digg_pagination pagination"
+.page-header
+  %h1 My Work
+#portfolio
+  - @portfolios.each do |portfolio|
+    .portfolio-header
+      %h2.portfolio-title
+        = link_to portfolio.title, portfolio
+      %p.portfolio-date
+        = portfolio.created_at.strftime('%A, %B %d')
+  .flex-pagination
+    = will_paginate @portfolios, :class => "pagination"
 
-    - if user_signed_in?
-      %ul.admin-controls
-        %li
-          = link_to "Create New Project", new_portfolio_path, :class => "btn-text"
+  - if user_signed_in?
+    %ul.admin-controls
+      %li
+        = link_to "Create New Project", new_portfolio_path, :class => "btn-text"

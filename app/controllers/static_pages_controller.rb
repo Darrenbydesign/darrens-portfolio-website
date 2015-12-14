@@ -5,7 +5,7 @@ class StaticPagesController < ApplicationController
   end
 
   def inspiration
-    @title ="Inspiration"
+    @title = "Inspiration"
   end
   
   def about

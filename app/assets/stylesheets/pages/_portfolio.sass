@@ -2,17 +2,23 @@
   text-align: center
   a
     text-decoration: none
+    
 .portfolio-date
   color: $secondary-color
   text-align: center
   font-family: $font-stack-serif-regular
 .portfolio-content
-  +breakpoint-lg
-    width: 50vw
   width: 95vmin
   margin: 0 auto
-  border-bottom: 1px solid lighten($third-color, 20%)
   padding: ce(10px) ce(15px)
+  // border-bottom: 1px solid lighten($third-color, 20%)
+  hr
+    border: 0
+    height: 0
+    border-top: 1px solid rgba($gray, 0.1)
+    border-bottom: 1px solid rgba($white, 0.3)
+  +breakpoint-lg
+    width: 50vw
   p
     margin-top: ce(20px)
     padding-bottom: ce(20px)
@@ -32,7 +38,35 @@
   +align-items(center)
   list-style: none
   li
-    margin: 10px 15px
+    margin: ce(10px) ce(15px)
+
+
+.portfolio-list
+  margin-top: ce(20px)
+  margin-bottom: ce(10px)
+  list-style: none
+
+  .port-list-item
+    padding-right: ce(5px)
+    +flexbox
+    +flex-flow(row, wrap)
+    +justify-content(flex-start)
+    +align-content(center)
+    +align-items(baseline)
+
+    span
+      display: inline-block
+      margin-left: 0
+      margin-bottom: ce(15px)
+      padding: ce(5px)
+      background: $white
+      border: 1px solid $primary-color
+
+.portfolio-list
+  .port-label
+    +font-size($base-text-px + 4)
+    font-family: $font-stack-serif-bold
+    padding-right: ce(20px)
 
 .portfolio-button
   +button($primary-color)

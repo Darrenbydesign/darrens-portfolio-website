@@ -1,16 +1,44 @@
 .blog-container
+  margin-top: 0
+  margin-bottom: ce(40px)
+  padding: 0
+
+.post-container
   width: 90vw
   margin: 0 auto
-  padding-bottom: ce(40px)
   +breakpoint-lg
     width: 50vw
+  hr
+    border: 0
+    height: 0
+    border-top: 1px solid rgba($gray, 0.1)
+    border-bottom: 1px solid rgba($white, 0.3)
+
+.blog-header
+  background: rgba($primary-color, 0.8)
+  padding-top: ce(20px)
+  margin-bottom: ce(40px)
+  width: 100%
+  height: 40vh
+  color: dt($primary-color)
+  .blog-title
+    +flexbox
+    +justify-content(center)
+    +align-items(center)
+    text-align: center
+    h2
+      color: dt($primary-color)
+    a
+      color: dt($primary-color)
 
 .blog-title
   text-align: center
+  margin-bottom: ce(22px)
+  h2
+    margin-bottom: 0
   a
     color: $third-color
     text-decoration: none
-    @extend .txt-shadow-lgt
     &:hover
       color: $secondary-color
 .more
