@@ -114,6 +114,14 @@
 .navbar-fixed-top
   background: rgba($white, 0.9)
   transition: height 0.3s
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    top: 0 
+    height: 0.5em
+    +stripes($darren-by-design-auto, to right)
   +flexpoint-sm
     position: fixed
     top: 0

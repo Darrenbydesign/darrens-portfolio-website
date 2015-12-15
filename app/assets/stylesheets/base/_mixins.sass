@@ -69,13 +69,31 @@
   // +prefix(background: linear-gradient($deg, $from, $to), webkit,moz,ms,o)
 
 
+/// Stripe gradient generator
+@mixin stripes($colors, $direction: "to bottom") 
+  $stripe-width: 100% / length($colors)
+  $auto:         if( type-of(nth($colors, 1)) == list, false, true )
+  $gradient:     ()
+
+  @for $i from 1 through length($colors)
+    $item: nth($colors, $i)
+    $dump: ()
+  
+    @if $auto == true 
+      $dump: $item $stripe-width * ($i - 1), $item $stripe-width * $i
+    
+    @else
+      @if $i > 1 
+        $previous-item: nth($colors, $i - 1)
+        $dump: append($dump, nth($item, 1) nth($previous-item, 2))
+      $dump: append($dump, $item)
+
+    $gradient: join($gradient, $dump, comma)
+  background-image: linear-gradient($direction, $gradient)
+
 /// Progress bar gradient creator
 =progress-bar-gradients($from, $to)
-  background-image: -webkit-linear-gradient(-45deg, $from 25%, transparent 25%, transparent 50%, $to 50%, $to 75%, transparent 75%, transparent)
-  background-image: -moz-linear-gradient(-45deg, $from 25%, transparent 25%, transparent 50%, $to 50%, $to 75%, transparent 75%, transparent)
-  background-image: -ms-linear-gradient(-45deg, $from 25%, transparent 25%, transparent 50%, $to 50%, $to 75%, transparent 75%, transparent)
-  background-image: -o-linear-gradient(-45deg, $from 25%, transparent 25%, transparent 50%, $to 50%, $to 75%, transparent 75%, transparent)
-  background-image: linear-gradient(-45deg, $from 25%, transparent 25%, transparent 50%, $to 50%, $to 75%, transparent 75%, transparent)
+  +prefix((background-image: linear-gradient(-45deg, $from 25%, transparent 25%, transparent 50%, $to 50%, $to 75%, transparent 75%, transparent)))
 
 /// slide panels are used for off canvas menus
 =slidePanel-tab-position($tab_top, $tab_right, $tab_bottom, $tab_left, $tab_position, $tab_color)

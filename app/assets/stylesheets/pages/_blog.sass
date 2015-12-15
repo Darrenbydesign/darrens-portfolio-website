@@ -2,6 +2,7 @@
   margin-top: 0
   margin-bottom: ce(40px)
   padding: 0
+  position: relative
 
 .post-container
   width: 90vw
@@ -19,8 +20,10 @@
   padding-top: ce(20px)
   margin-bottom: ce(40px)
   width: 100%
-  height: 40vh
+  height: 30vh
   color: dt($primary-color)
+  +flexpoint-sm
+    height: 25vh
   .blog-title
     +flexbox
     +justify-content(center)
