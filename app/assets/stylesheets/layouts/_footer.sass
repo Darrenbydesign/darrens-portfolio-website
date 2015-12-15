@@ -1,15 +1,18 @@
 .footer
   background: $primary-color
-  border-top: 3px double $secondary-color
   padding: ce(10px) ce(15px)
-  // position: absolute
-  // height: $footer-height
-  // bottom: 0
-  // width: 100%
   
 .site-footer
   +flex(none)
   width: 100%
   background: $primary-color
-  border-top: 3px double $secondary-color
   padding: ce(10px) ce(15px)
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    // border-top: 5em solid $primary-color 
+    height: 0.5em
+    +stripes($darren-by-design-auto, to left)
