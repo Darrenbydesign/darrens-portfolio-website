@@ -54,7 +54,7 @@
 
 // This bad boy uses Sass to dynamically change the text color to black or white depending on the backrground color of the element you use it in! That is amazing
 $dark-text: #4d4d4d
-$light-text: #fff
+$light-text: #e1e1e1
 @function dynamicTextColor($color)
   @if (lightness($color) > 60)
     @return $dark-text // This should return black text for items with lighter backgrounds
