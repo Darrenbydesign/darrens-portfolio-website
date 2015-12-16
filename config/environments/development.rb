@@ -26,6 +26,7 @@ MySite::Application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default :charset => "utf-8"
   config.action_mailer.default_url_options = { :host => 'localhost:3000'}
+
   # ActionMailer::Base.smtp_settings = {
   #   :address        => 'smtp.sendgrid.net',
   #   :port           => '587',
@@ -35,4 +36,11 @@ MySite::Application.configure do
   #   :domain         => 'heroku.com',
   #   :enable_starttls_auto => true
   # }
+  
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_host_name => 'REMOVE_THIS_LINE_IF_UNNECESSARY',
+    :bucket => 'S3_BUCKET_NAME'
+  }
+
 end
