@@ -7,9 +7,11 @@
         = link_to portfolio.title, portfolio
       %p.portfolio-date
         = portfolio.created_at.strftime('%A, %B %d')
-  .flickr_pagination
-    = will_paginate @portfolios
 
+.slab
+  .custom_pagination
+    = will_paginate @portfolios
+  
   - if user_signed_in?
     %ul.admin-controls
       %li
