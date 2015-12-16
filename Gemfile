@@ -20,25 +20,21 @@ gem 'postmarkdown'
 gem 'active_attr'
 gem 'figaro'
 
-# gem 'gon'
-
 gem 'newrelic_rpm'
 gem 'friendly_id', '~> 5.1.0'
 gem 'pygments.rb', '~> 0.6.0'
 gem 'redcarpet', '~> 3.2.2'
 gem 'paperclip', '~> 4.3'
+gem 'aws-sdk'
 gem 'devise', '~> 3.4.1'
 gem 'mail_form'
 gem 'will_paginate'
 
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
-	# gem 'guard-rspec'
-	# gem 'growl_notify'
 end
 
 group :test do
-  # gem 'sqlite3', '1.3.8'
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
 
@@ -53,7 +49,6 @@ group :production do
   gem 'unicorn'
 end
 group :production, :development, :test do
-  # gem 'pg', '0.15.1'
   gem 'pg'
 end
 
