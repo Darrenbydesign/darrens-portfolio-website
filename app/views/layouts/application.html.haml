@@ -6,13 +6,12 @@
 			.slab	
 				= render partial: "layouts/partials/navigation"
 		%main.site-content
-			.slab
-				.container
-					- if notice
-						%p.notice.txt-center
-							= notice
-					- elsif alert
-						%p.notice.txt-center
-							= alert
-					= yield
+			.container
+				- if notice
+					%p.notice.txt-center
+						= notice
+				- elsif alert
+					%p.notice.txt-center
+						= alert
+				= yield
 		= render :partial => "layouts/partials/footer"
