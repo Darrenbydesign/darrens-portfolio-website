@@ -8,11 +8,13 @@
       %p.portfolio-date
         = portfolio.created_at.strftime('%A, %B %d')
 
-.slab
   .custom_pagination
     = will_paginate @portfolios
-  
-  - if user_signed_in?
+
+- if user_signed_in?
+  %header
+    %h3 Admin Controls
+  .slab
     %ul.admin-controls
       %li
-        = link_to "Create New Project", new_portfolio_path, :class => "btn-text"
+        = link_to "Create New Project", new_portfolio_path, :class => "admin-button"

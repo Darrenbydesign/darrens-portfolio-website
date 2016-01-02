@@ -1,24 +1,23 @@
 .page-header
   %h1
     Let&rsquo;s Talk
-.contact-container
-  = form_for @contact do |f|
-    .frm-group
-      =f.label :name, :class => "frm-title"
-      =f.text_field :name, required: true, :class => "frm-control"
-    .frm-group
-      =f.label :message, :class => "frm-title"
-      =f.text_field :message, required: true, :class => "frm-control"
-    .frm-group
-      =f.label :email, :class => "frm-title"
-      =f.email_field :email, required: true, :class => "frm-control"
-    .frm-group
-      =f.label :message, :class => "frm-title"
-      =f.text_area :message, as: :text, :class => "frm-control"
+= form_for @contact, html: {class: "form-container"} do |f|
+  .frm-group.blk-lg-4
+    =f.label :name, :class => "frm-title"
+    =f.text_field :name, required: true, :class => "frm-control"
+  .frm-group.blk-lg-4
+    =f.label :message, :class => "frm-title"
+    =f.text_field :message, required: true, :class => "frm-control"
+  .frm-group.blk-lg-4
+    =f.label :email, :class => "frm-title"
+    =f.email_field :email, required: true, :class => "frm-control"
+  .frm-group.blk-lg-4
+    =f.label :message, :class => "frm-title"
+    =f.text_area :message, as: :text, :class => "frm-control"
 
-    .hidden
-      =f.label :nickname
-      =f.text_field :nickname, hint: 'Leave this field blank'
+  .hidden
+    =f.label :nickname
+    =f.text_field :nickname, hint: 'Leave this field blank'
 
-    .frm-group
-      =f.submit "Send Message", :class => "btn-block"
+  .frm-group.blk-lg-4
+    =f.submit "Send Message", :class => "form-button"

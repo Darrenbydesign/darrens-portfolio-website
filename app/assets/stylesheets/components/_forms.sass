@@ -1,94 +1,116 @@
-.form
-  display: block
-  margin: px-em($base-text-px,10px)
-  padding: px-em($base-text-px,10px) px-em($base-text-px,15px)
+%form
+  // display: block
+  margin: ce(10px)
+  padding: $common-padding
   vertical-align: baseline
-  +border-radius(2px)
+  +border-radius(1px)
   label
     cursor: pointer
+
+%form-input-base
+  width: 100%
+  display: block
+  border: 1px solid $primary-color
+  padding: ce(5px) ce(5px) ce(5px) ce(10px)
+  transition: border 0.3s ease-out
+  &:hover,&:focus
+    border: 1px solid lighten($primary-color-light,15)
+    background: $white
+    &:after
+      border: 1px solid $primary-color
+
+.form-container
+  @extend %form
+  +flexbox
+  +flex-flow(column, wrap)
+  +justify-content(center)
+  +align-items(center)
+  .frm-control
+    +flexbox
+    width: 100%
+
 .frm-block
-  @extend .form
+  @extend %form
   @extend .bg-darktrim
   background: rgba($primary-color, 0.8)
   color: $base-text-color
+
+.frm-control
+  @extend %form-input-base
+
+.frm-group
+  margin-bottom: ce(10px)
+
+.form-button
+  +button($white)
+  color: $primary-color-dark
+  border: 1px solid $primary-color
+  width: 100%
 
 .frm-title
   display: inline-block
   text-align: left
 
-.frm-control
-  display: block
-  width: 100%
-
-.frm-group
-  margin-bottom: ce(10px)
-
-.frm-input
-  border: 1px solid $primary-color
-  display: inline-block
-  transition: border 0.3s ease-out
-  box-shadow: inset 1px 3px 5px lighten($third-color,55)
-  &:hover,&:focus
-    border: 1px solid lighten($third-color,15)
-    background: $background-color
-    &:after
-      border: 1px solid $primary-color
+input[type="search"],
+input[type="text"],
+input[type="email"]
+  @extend %form-input-base
 
 input[type="checkbox"],
 input[type="radio"]
   cursor: pointer
-  display: inline-block
-  cursor: pointer
   position: relative
-  padding-right: px-em($base-text-px,25px)
-  margin-right: px-em($base-text-px,25px)
+  padding-right: ce(25px)
+  margin-right: ce(25px)
   &:before
     content: " "
     display: inline-block
     width: 16px
     height: 16px
-    margin-right: px-em($base-text-px,10px)
-    // background: $secondary-color
-    +border-radius(2px)
+    margin-right: ce(10px)
 
 input
+  +border-radius(1px)
   border: 1px solid $primary-color
   background: $background-color
   display: inline-block
-  padding: px-em($base-text-px,5px) px-em($base-text-px,5px) px-em($base-text-px,5px) px-em($base-text-px,10px)
-  margin-bottom: px-em($base-text-px,10px)
+  margin-bottom: ce(10px)
   line-height: 1.42857
   font-size: 1em
   vertical-align: baseline
   transition: border 0.2s ease-in
-  +border-radius(2px)
 
 .input-large
-  @extend .frm-input
+  @extend %form-input-base
   width: 90%
 
 .input-medium
-  @extend .frm-input
+  @extend %form-input-base
   width: 50%
 
 .input-small
-  @extend .frm-input
+  @extend %form-input-base
   width: 25%
 
 .input-line
-  @extend .frm-input
+  @extend %form-input-base
   border: none
   background: transparent
-  border-bottom: px-em($base-text-px,3px) $primary-color solid
+  border-bottom: ce(3px) solid $primary-color 
   &:focus
     outline: none
-    border-bottom-color: lighten($secondary-color, 15)
+    border-bottom-color: lighten($primary-color-light, 15)
+
+textarea
+  @extend %form-input-base
+  padding: ce(5px)
+  border: 1px solid $primary-color
+  min-height: ce(150px)
 
 %select
-  padding: px-em($base-text-px,2px) px-em($base-text-px,3px)
-  // width: 200px
-  font-size: 1.12em
   +border-radius(2px)
+  padding: ce(2px) ce(3px)
+  font-size: 1.12em
   font-family: $font-stack-secondary
   overflow: scroll
 
@@ -108,15 +130,6 @@ input
   @extend %select
   width: 100%
 
-textarea
-  padding: px-em($base-text-px,5px)
-  min-height: px-em($base-text-px,150px)
-  border: 1px solid $primary-color
-  // box-shadow: inset 1px 3px 5px lighten($third-color,55)
-  +border-radius(2px)
-  transition: border 0.3s ease-in-out
-  &:hover,&:focus
-    border: 1px solid $secondary-color
 
 .list-group
   padding-left: 0px
@@ -126,7 +139,7 @@ textarea
   @extend .txt-shadow-lgt
   position: relative
   display: block
-  padding: px-em($base-text-px,5px) 0
+  padding: ce(5px) 0
   margin-bottom: -1px
   a
     @extend .txt-shadow-lgt
@@ -169,4 +182,6 @@ textarea
   li
     display: inline-block
     padding: 10px 15px
+  .admin-button
+    +button($third-color-dark)
   

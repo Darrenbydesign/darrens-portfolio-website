@@ -1,5 +1,5 @@
-/ Formvalidation Goes before the form here
-= form_for @portfolio, html: { multipart: true } do |f|
+/ Form validation Goes before the form here
+= form_for @portfolio, html: { multipart: true, class: "form-container" } do |f|
   -if @portfolio.errors.any?
     %h2
       =pluralize.(@portfolio.errors.count, "error") 
@@ -9,37 +9,37 @@
         %li
           =msg
   / This section is where the form gets built
-  .frm-group
+  .frm-group.blk-lg-4
     =f.label :title , :class => "frm-title"
     =f.text_field :title, :class => "frm-control"
 
-  .frm-group
+  .frm-group.blk-lg-4
     =f.label :image , :class => "frm-title"
     =f.file_field :image, :class => "frm-control"
 
-  .frm-group
+  .frm-group.blk-lg-4
     =f.label :description, :class => "frm-title"
     =f.text_area :description, :class => "frm-control"
 
-  .frm-group
+  .frm-group.blk-lg-4
     =f.label :link ,:class => "frm-title"
     =f.text_field :link, :class => "frm-control"
 
-  .frm-group
+  .frm-group.blk-lg-4
     =f.label :medium ,:class => "frm-title"
     =f.text_field :medium, :class => "frm-control"
   
-  .frm-group
+  .frm-group.blk-lg-4
     =f.label :industry ,:class => "frm-title"
     =f.text_field :industry, :class => "frm-control"
 
-  .frm-group
+  .frm-group.blk-lg-4
     =f.label :services ,:class => "frm-title"
     =f.text_field :services, :class => "frm-control"
   
-  .frm-group
+  .frm-group.blk-lg-4
     =f.label :offerings ,:class => "frm-title"
     =f.text_field :offerings, :class => "frm-control"
 
-  .frm-group
-    =f.submit :class => "btn-block"
+  .frm-group.blk-lg-4
+    =f.submit :class => "form-button"
