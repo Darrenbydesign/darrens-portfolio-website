@@ -2,11 +2,10 @@
   %h1 My Projects and Case Studies
 #portfolio
   - @portfolios.each do |portfolio|
-    .portfolio-header
-      %h2.portfolio-title
-        = link_to portfolio.title, portfolio
-      %p.portfolio-date
-        = portfolio.created_at.strftime('%A, %B %d')
+    %h2.portfolio-title
+      = link_to portfolio.title, portfolio
+    %p.portfolio-date
+      = portfolio.created_at.strftime('%A, %B %d')
 
   .custom_pagination
     = will_paginate @portfolios
