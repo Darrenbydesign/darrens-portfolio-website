@@ -1,8 +1,17 @@
 //============ Tabs =================
 
 // Flexbox Tabs
-.f-tab
+.flex-tabs
   +flexbox
+  border-bottom: 1px solid $primary-color
+  .flex-tab
+    cursor: pointer
+    padding: 5px 30px
+    color: $base-text-color
+    +font-size($base-text-px - 4)
+    border-bottom: 2px solid transparent
+    &.tab-selected
+      border-bottom-color: $primary-color-dark
 
 
 // Original tab box horizontal very limited functionality but can be nested
