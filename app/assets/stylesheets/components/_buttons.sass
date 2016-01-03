@@ -4,6 +4,15 @@
 .btn-norm
   +button($secondary-color)
 
+.btn-primary
+  +button($white)
+  border: 1px solid $primary-color-dark
+  color: $primary-color-dark
+  width: 100%
+  &:hover
+    background: $primary-color-dark
+    color: dt($primary-color-dark)
+
 .btn-xtiny
   +button($primary-color)
   margin: 0

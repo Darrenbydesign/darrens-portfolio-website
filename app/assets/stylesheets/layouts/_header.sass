@@ -23,3 +23,29 @@
   text-align: center
   a
     text-decoration: none
+
+// new concept flexbox header
+.flex-header
+  +flexbox
+  +justify-content(space-between)
+  padding: 10px
+  background-color: $primary-color-light
+
+.flex-header-section
+  +flexbox
+  +align-items(center)
+.flex-header-item
+  padding: 5px 15px
+  & + &
+    margin-left: 5px
+  &.flex-header-item-selected
+    +border-radius(1px)
+    color: dt($primary-color)
+    background-color: $primary-color
+.flex-header-logo
+  +font-size(20px)
+  line-height: 0
+  color: $base-text-color
+.flex-header-button
+  cursor: pointer
+  color: dt($primary-color-light)

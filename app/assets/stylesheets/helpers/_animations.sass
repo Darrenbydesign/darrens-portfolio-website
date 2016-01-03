@@ -29,27 +29,31 @@
   to 
     transform: none
 
++keyframes(dotsSpinner)
+  0% 
+    +rotate(0deg)
+  100% 
+    +rotate(360deg)
 
-.streaks-container
+.dots-container
   +flexbox()
   +align-items(flex-start)
   +justify-content(center)
 
-  .streak
+  .dot
     +border-radius(50%)
     list-style: none
     width: 5px
     height: 5px
-    // margin-top: -200px
     margin-left: auto
     margin-right: auto
     background: rgba($primary-color-dark, 0.6)
     z-index: -2
-
   li
     &:nth-child(odd)
       +animation((bounceIn 2s ease-in-out infinite))
     &:nth-child(even)
       +animation((bounceIn 1s ease-in-out infinite))
 
-
+.dotsSpinner 
+  +animation(dotsSpinner 1s infinite steps(8, end))

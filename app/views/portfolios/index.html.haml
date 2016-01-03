@@ -1,5 +1,5 @@
 .page-header
-  %h1 My Work
+  %h1 My Projects and Case Studies
 #portfolio
   - @portfolios.each do |portfolio|
     .portfolio-header
@@ -13,7 +13,8 @@
 
 - if user_signed_in?
   %header
-    %h3 Admin Controls
+    %h3.txt-center 
+      Admin Controls
   .slab
     %ul.admin-controls
       %li

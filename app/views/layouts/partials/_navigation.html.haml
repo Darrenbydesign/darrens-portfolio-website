@@ -1,12 +1,12 @@
 .navbar.navbar-fixed-top.navbar-flex.flex-nav-center
-  %div.navbar-logo
+  .navbar-logo
     =link_to(image_tag("header_Logo2.png", alt: "Darren Sorrels Design", :class=> "site-logo"), root_path)
   %nav
     %ul.flex-nav
       %li
         =link_to 'Home', root_path
       %li
-        =link_to 'Portfolio', portfolios_path
+        =link_to 'Work', portfolios_path
       %li 
         =link_to 'Blog', blog_path
       %li 

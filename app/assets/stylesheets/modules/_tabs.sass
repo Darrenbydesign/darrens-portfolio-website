@@ -3,10 +3,12 @@
 // Flexbox Tabs
 .flex-tabs
   +flexbox
+  +justify-content(center)
+  margin-bottom: ce($common-bottom-margin)
   border-bottom: 1px solid $primary-color
   .flex-tab
     cursor: pointer
-    padding: 5px 30px
+    padding: ce(5px) ce(30px)
     color: $base-text-color
     +font-size($base-text-px - 4)
     border-bottom: 2px solid transparent

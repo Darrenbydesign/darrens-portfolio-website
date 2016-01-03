@@ -1,41 +1,36 @@
-.container-fixed
-  .slab
-    %header
-      %h2.portfolio-title
-        = @portfolio.title
-      %h4.portfolio-date
-        = @portfolio.created_at.strftime('%A, %B %d')
-  .slab
-    .portfolio-content
-      %figure.portfolio-img-container
-        = image_tag @portfolio.image.url , :class => "portfolio-img"
-      
-      %ul.portfolio-list
-        %li.port-list-item
-          %label.port-label
-            Medium:
-          %span
-            = @portfolio.medium
+.slab
+  %header.portfolio-header
+    %h2.portfolio-title
+      = @portfolio.title
+  %figure.portfolio-img-container
+    = image_tag @portfolio.image.url , :class => "portfolio-img"
+  .portfolio-content
+    %ul.portfolio-list
+      %li.port-list-item
+        %label.port-label
+          Medium:
+        %span
+          = @portfolio.medium
 
-        %li.port-list-item
-          %label.port-label
-            Industry:
-          %span
-            = @portfolio.industry
+      %li.port-list-item
+        %label.port-label
+          Industry:
+        %span
+          = @portfolio.industry
 
-        %li.port-list-item
-          %label.port-label
-            Services:
-          %span
-            = @portfolio.services
-        %li.port-list-item
-          %label.port-label
-            Offerings:
-          %span
-            = @portfolio.offerings
+      %li.port-list-item
+        %label.port-label
+          Services:
+        %span
+          = @portfolio.services
+      %li.port-list-item
+        %label.port-label
+          Offerings:
+        %span
+          = @portfolio.offerings
 
-      = markdown @portfolio.description
-      %hr/
+    = markdown @portfolio.description
+    %hr/
 
 %ul.portfolio-button-container
   - if @portfolio.link
@@ -49,7 +44,8 @@
 
 - if user_signed_in?
   %header
-    %h3 Admin Controls
+    %h3.txt-center 
+      Admin Controls
   .slab
     %ul.admin-controls
       %li

@@ -2,6 +2,9 @@
 $white: #ffffff
 $black: #000000
 $gray: lighten($black, 15%)
+$red: #f0655b
+$green: #62c74c
+$yellow: #ff7f00
 $blue:  #5895b9
 
 $primary-color: #5895b9
@@ -21,7 +24,8 @@ $background-color: #FFFFFF
 
 //commonly used paddding for elements
 $common-padding: 10px 15px
-$common-box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.35)
+$common-bottom-margin: 10px
+$common-box-shadow: 0px 8px 3px -8px rgba($third-color, 0.65)
 
 $fixed-header-height: 100px
 // margin-styles
@@ -41,23 +45,24 @@ $font-stack-sanserif-regular: "source_sans_proregular",'Helvetica Neue','Helveti
 $font-awesome: "fontawesome"
 
 // button colors
-$btn-color: $primary-color
-$btn-hover: darken($btn-color,10)
-$btn-warning: #ff7f00
-$btn-warning-hover: darken($btn-warning, 10)
-$btn-error: #f0655b
+$btn-color: $primary-color-dark
+$btn-hover: $primary-color-light
+$btn-warning: $yellow
+$btn-warning-hover: lighten($btn-warning, 10)
+$btn-error: $red
 $btn-error-hover: darken($btn-error,10)
-$btn-success: #62c74c
+$btn-success: $green
 $btn-success-hover: darken($btn-success,10)
 
 
 // Box shadow defaults
 $brand-box-shadow: 0px 8px 3px -8px rgba($third-color, 0.65)
+
 // Alert message colors
-$BGcolor-warning: #ff7f00
+$BGcolor-warning: $yellow
 $BGcolor-info: #FFCD00
-$BGcolor-error: #f0655b
-$BGcolor-success: #62c74c
+$BGcolor-error: $red
+$BGcolor-success: $green
 
 //loading bar gradient colors : defaulted to blue for the standard loading bar
 $color-start-gradient: $primary-color

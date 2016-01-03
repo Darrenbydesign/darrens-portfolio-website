@@ -7,11 +7,11 @@
   color: $secondary-color
   text-align: center
   font-family: $font-stack-serif-regular
+
 .portfolio-content
   width: 95vmin
   margin: 0 auto
   padding: ce(10px) ce(15px)
-  // border-bottom: 1px solid lighten($third-color, 20%)
   hr
     border: 0
     height: 0
@@ -27,9 +27,24 @@
   +flexbox()
   +justify-content(center)
   +align-items(center)
+  background-color: $primary-color
+  padding-top: ce(20px)
+  padding-bottom: ce(20px)
+
+.portfolio-header
+  @extend .page-header
+  background-color: $white
+  margin-top: 0
+  margin-bottom: 0
+  h2
+    margin-top: 0
+    padding-top: ce(10px)
+    color: dt($white)
+  
 
 .portfolio-img
-  border: 3px solid $primary-color
+  border: 3px solid $primary-color-dark
+  box-shadow: $common-box-shadow
   +img-responsive(flex)
 
 .portfolio-button-container
@@ -69,10 +84,7 @@
     padding-right: ce(20px)
 
 .portfolio-button
-  +button($primary-color)
-  &:visited
-    color: $white
-  color: $white
+  @extend .btn-primary
   margin-top: ce(10px)
   margin-bottom: ce(20px)
   text-transform: uppercase
