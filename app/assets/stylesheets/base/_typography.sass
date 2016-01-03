@@ -7,16 +7,23 @@
 +font-face("source_serif_pro_semibold","sourceserifpro-semibold-webfont","source_serif_pro_semibold")
 +font-face("source_serif_pro_bold","sourceserifpro-bold-webfont","source_serif_pro_bold")
 
+//Font face import isn't working using gem instead...
 +font-face("fontawesome","fontawesome-webfont","fontawesome")
 
 html 
   font-size: 100%
 
 body 
-  @include font-size($base-text-px)
+  +font-size($base-text-px)
   font-family: $font-stack-sanserif-regular
   color: $base-text-color
   line-height: 1.4
+
+%headings-base
+  color: $third-color-dark
+  line-height: 1.5
+  margin-top: ce(10px)
+  margin-bottom: ce(10px)
 
 h1,
 h2,
@@ -24,15 +31,13 @@ h3,
 h4,
 h5,
 h6
-  color: $primary-color
-  line-height: 1.5
-  margin-top: ce(10px)
-  margin-bottom: ce(10px)
+  @extend %headings-base
 
 h1,h2
   font-family: $font-stack-sanserif-regular
 h3,h4,h5,h6
   font-family: $font-stack-serif-bold
+
 h1 
   @include font-size(32px)
   line-height: 1.25em
@@ -99,7 +104,6 @@ h6
   @include breakpoint-md 
     @include font-size(12px)
     line-height: 1.111em
-
 
 label
   font-family: $font-stack-serif-regular

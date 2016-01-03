@@ -28,3 +28,25 @@
     margin-right: 1em
   .next_page
     margin-left: 1em
+
+// Flex pagination
+
+.flex-pagination
+  +flexbox
+  +flex-flow(row, wrap)
+  +align-items(center)
+  +align-content(center)
+  +justify-content(center)
+
+  .previous_page,
+  .next_page,
+  .current
+    padding: 0 10px
+  .current
+    +align-self(center)
+
+  .previous_page
+    +align-self(flex-start)
+    
+  .next_page
+    +align-self(flex-end)

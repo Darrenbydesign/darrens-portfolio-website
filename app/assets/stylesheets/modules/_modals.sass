@@ -11,11 +11,8 @@
     height: auto
     z-index: 20
     overflow-y: auto
-    -webkit-transform: translateX(-50%) translateY(-50%)
-    -moz-transform: translateX(-50%) translateY(-50%)
-    -ms-transform: translateX(-50%) translateY(-50%)
-    -o-transform: translateX(-50%) translateY(-50%)
-    transform: translateX(-50%) translateY(-50%)
+    // transform: translateX(-50%) translateY(-50%)
+    +translate((-50% -50%))
 
 .md-unhide
     visibility: visible
@@ -64,7 +61,8 @@
         background: rgba(0, 0, 0, 0.1)
     .md-format
         padding: 15px 40px 30px
-    div,section
+    div,
+    section
         margin: 0
         p
             font-size: 1em

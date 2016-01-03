@@ -49,12 +49,12 @@
   display: inline-block
   height: auto
   padding: px-em($base-text-px,5px) px-em($base-text-px,10px)
-  @extend .bg-darktrim
+  @extend %bg-darktrim
   ul li
     background: $primary-color
     margin: px-em($base-text-px,10px) px-em($base-text-px,3px)
     &:hover
-      @extend .bg-shadow
+      box-shadow: $common-box-shadow
     a
       display: block
 

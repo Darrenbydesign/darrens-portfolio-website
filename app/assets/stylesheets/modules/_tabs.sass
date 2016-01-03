@@ -1,4 +1,9 @@
-//============Tabs=================
+//============ Tabs =================
+
+// Flexbox Tabs
+.f-tab
+  +flexbox
+
 
 // Original tab box horizontal very limited functionality but can be nested
 .tabBox
@@ -7,43 +12,43 @@
   z-index: 1
   min-height: 32em
   color: white
-  padding: px-em($base-text-px,5px) px-em($base-text-px,21px)
-  margin: px-em($base-text-px,10px) 0 0 0
+  padding: ce(5px) ce(21px)
+  margin: ce(10px) 0 0 0
   > section
     display: inline
     > div
+      +border-radius(2px)
+      border: 2px solid rgb(255, 255, 255)
+      box-shadow: 0px 0px 0px 4px $primary-color, 2px 1px 6px 4px rgba(10, 10, 0, 0.5)
       background: $primary-color
-      z-index: -2
+      padding: ce(10px) ce(5px)
+      overflow: auto
       left: 1.3em
       top: 1.3em
       bottom: 1.3em
       right: 1.3em
-      overflow: auto
-      padding: px-em($base-text-px,10px) px-em($base-text-px,5px)
-      border: 2px solid rgb(255, 255, 255)
-      +border-radius(2px)
-      box-shadow: 0px 0px 0px 4px $primary-color, 2px 1px 6px 4px rgba(10, 10, 0, 0.5)
+      z-index: -2
     &:not(:target) > div
       position: absolute
     &:target > div
       position: absolute
       z-index: -1
     > a
-      padding: px-em($base-text-px,10px) px-em($base-text-px,10px) px-em($base-text-px,5px) px-em($base-text-px,15px)
+      padding: ce(10px) ce(10px) ce(5px) ce(15px)
       background: rgba($primary-color, 0.7)
       color: rgb(240, 240, 240)
       border: none
-      border-radius: px-em($base-text-px,4px) px-em($base-text-px,4px) 0px 0px
-      border-top: px-em($base-text-px,2px) solid rgb(255, 255, 255)
-      border-left: px-em($base-text-px,2px) solid rgb(255, 255, 255)
-      border-right: px-em($base-text-px,2px) solid rgb(255, 255, 255)
+      border-radius: ce(4px) ce(4px) 0px 0px
+      border-top: ce(2px) solid rgb(255, 255, 255)
+      border-left: ce(2px) solid rgb(255, 255, 255)
+      border-right: ce(2px) solid rgb(255, 255, 255)
       border-bottom: none
       box-shadow: -4px -2px $primary-color
     &:not(:target) > a
-      border-bottom: px-em($base-text-px,1px) rgba($primary-color, 1)
+      border-bottom: ce(1px) rgba($primary-color, 1)
       border-top: none
-      border-left: px-em($base-text-px,2px) solid rgb(255, 255, 255)
-      border-right: px-em($base-text-px,2px) solid rgba(255, 255, 255, 0.05)
+      border-left: ce(2px) solid rgb(255, 255, 255)
+      border-right: ce(2px) solid rgba(255, 255, 255, 0.05)
       background: lighten(rgba($primary-color, 1), 10%)
     &:target > a
       background: rgba($primary-color, 1)
@@ -56,7 +61,7 @@
 .tb-index
   float: left
   width: 28%
-  margin: px-em($base-text-px,10px) px-em($base-text-px,5px)
+  margin: ce(10px) ce(5px)
   list-style: none
   max-height: 31em
   overflow: auto
@@ -69,19 +74,19 @@
     background: $background-color
     text-decoration: none
     +border-radius(2px)
-    padding: px-em($base-text-px,5px)
-    margin: px-em($base-text-px,15px) px-em($base-text-px,5px)
+    padding: ce(5px)
+    margin: ce(15px) ce(5px)
     max-width: 90%
     &:hover
       background: $BGcolor-success
       color: $alt-text-color
     &:active,&:border
-      focus: px-em($base-text-px,2px) solid $secondary-color
+      focus: ce(2px) solid $secondary-color
 
 .tb-content
   max-height: 31em
   overflow: auto
-  margin: px-em($base-text-px,8px)
+  margin: ce(8px)
   +border-radius(2px)
   a
     text-decoration: none

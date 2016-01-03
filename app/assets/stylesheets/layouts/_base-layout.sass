@@ -6,7 +6,6 @@ body
   +flexpoint-sm
     padding-top: $fixed-header-height
 
-
 .site
   +flexbox
   +flex-direction(column)
@@ -15,13 +14,16 @@ body
   min-height: 100%
   min-height: 100vh
 
-.site-header,.site-footer
+.site-header,
+.site-footer
   +flex(none)
+
 .site-content
   +flex(1 0 auto)
   width: 100%
-.wrap
+
+.wrapper
   min-height: 100%
 
-+link-color($primary-color, $secondary-color , darken($secondary-color, 10%), darken($primary-color, 10%))
++link-color($primary-color-dark, $primary-color-dark , $primary-color-light, $primary-color)
 

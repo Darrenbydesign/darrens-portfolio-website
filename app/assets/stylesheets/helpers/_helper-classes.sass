@@ -1,11 +1,14 @@
+.full-height
+  height: 100vh
+
 .alt-text-color
   color: $alt-text-color
 .font-gray
-  color: $third-color
+  color: $gray
 .font-blue
-  color: $primary-color
+  color: $blue
 .font-white
-  color: $secondary-color
+  color: $white
 .cf
   +clearfix
 
@@ -26,17 +29,17 @@
 .center
   margin: 0 auto
 
-.bg-metro
+%bg-metro
   box-shadow: 0px 0px 0px 4px $primary-color, 2px 1px 6px 4px rgba(gray,0.5)
 
-.bg-trim
+%bg-trim
   box-shadow: inset 0 0 0 7px rgba(255, 255, 255, 0.5)
 
-.bg-darktrim
+%bg-darktrim
   border: 2px solid rgb(255, 255, 255)
   box-shadow: 0px 0px 0px 4px $primary-color, 2px 1px 6px 4px rgba(gray, 0.5)
 
-.bg-shadow
+%bg-shadow
   box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.35)
 
 .embossed
@@ -59,10 +62,10 @@
   background-image: radial-gradient(center 0, circle farthest-corner, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0))
 
 .txt-shadow
-  text-shadow: 0 px-em($base-text-px,1px) px-em($base-text-px,1px) rgba(0,0,0,0.3)
+  text-shadow: 0 ce(1px) ce(1px) rgba(0,0,0,0.3)
 
 .txt-shadow-lgt
-  text-shadow: 0 px-em($base-text-px,1px) px-em($base-text-px,1px) rgba(255,255,255,0.3)
+  text-shadow: 0 ce(1px) ce(1px) rgba(255,255,255,0.3)
 
 .txt-center
   text-align: center
@@ -75,17 +78,17 @@
 
 .img-circle
   +border-radius(50%)
-  border: px-em($base-text-px,4px) solid $third-color
+  border: ce(4px) solid $third-color
   overflow: hidden
 
 .img-photo
-  border: px-em($base-text-px,4px) solid $secondary-color
+  border: ce(4px) solid $secondary-color
   +border-radius(4px)
 .img-portfolio
-  border: px-em($base-text-px,4px) solid $third-color
+  border: ce(4px) solid $third-color
   
 .img-responsive
-  +img-responsive()
+  +img-responsive
 
 .font-white
   color: #fff
@@ -98,6 +101,7 @@
   text-align: center
   text-decoration: none
   display: none
+
 .topBG
   background: rgba($background-color,0.7)
 .middleBG

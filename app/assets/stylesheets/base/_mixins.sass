@@ -3,156 +3,6 @@
 /// @author Darren Sorrels
 ////
 
-/// Vendor Prefixes
-=vendor-prefix($name,$argument)
-  -webkit-#{$name}: #{$argument}
-  -ms-#{$name}: #{$argument}
-  -moz-#{$name}: #{$argument}
-  -o-#{$name}: #{$argument}
-  #{$name}: #{$argument}
-
-/// Alerts Message
-=alert-message($BGcolor)
-  width: 500px
-  height: 150px
-  background: rgba($BGcolor, 0.95)
-  color: $alt-text-color
-  +border-radius(2px)
-  margin: 10px 10px 15px 10px
-  overflow: auto
-  @extend .bg-shadow
-  h3
-    color: lighten($BGcolor, 40)
-    padding: 5px
-    background: darken($BGcolor, 10)
-    +border-radius(2px)
-    text-align: center
-  > p
-    margin: 5px
-    overflow-y: auto
-
-/// Border Radius
-=border-radius($radius)
-  border-radius: $radius
-
-/// Border Trim
-=button-border-trim($trimColor)
-  border: inset 1px solid $trimColor
-
-
-/// Clearfix as made famous by Nick Gallagher
-=clearfix
-  &:after, &:before
-    content: ""
-    display: table
-  &:after
-    clear: both
-    zoom: 1
-
-/// A Loop creator for nth-child classes
-=counter-loop($start,$end)
-  @for $i from $start through $end
-    &:nth-child(#{$i}):after
-      content: '#{$i}'
-
-/// Shortcut to make font family stack with webfonts
-=font-face($family, $path, $svg, $weight: normal, $style: normal)
-  @font-face
-    font-family: $family
-    src: url(font-path('#{$path}.eot'))
-    src: url(font-path('#{$path}.eot?#iefix')) format('embedded-opentype'), url(font-path('#{$path}.woff')) format('woff'), url(font-path('#{$path}.ttf')) format('truetype'), url(font-path('#{$path}.svg##{$svg}')) format('svg')
-    font-weight: $weight
-    font-style: $style
-
-// Linear Gradient Creator
-// =linear-gradients($deg: 90, $from, $to)
-  // +prefix(background: linear-gradient($deg, $from, $to), webkit,moz,ms,o)
-
-
-/// Stripe gradient generator
-@mixin stripes($colors, $direction: "to bottom") 
-  $stripe-width: 100% / length($colors)
-  $auto:         if( type-of(nth($colors, 1)) == list, false, true )
-  $gradient:     ()
-
-  @for $i from 1 through length($colors)
-    $item: nth($colors, $i)
-    $dump: ()
-  
-    @if $auto == true 
-      $dump: $item $stripe-width * ($i - 1), $item $stripe-width * $i
-    
-    @else
-      @if $i > 1 
-        $previous-item: nth($colors, $i - 1)
-        $dump: append($dump, nth($item, 1) nth($previous-item, 2))
-      $dump: append($dump, $item)
-
-    $gradient: join($gradient, $dump, comma)
-  background-image: linear-gradient($direction, $gradient)
-
-/// Progress bar gradient creator
-=progress-bar-gradients($from, $to)
-  +prefix((background-image: linear-gradient(-45deg, $from 25%, transparent 25%, transparent 50%, $to 50%, $to 75%, transparent 75%, transparent)))
-
-/// slide panels are used for off canvas menus
-=slidePanel-tab-position($tab_top, $tab_right, $tab_bottom, $tab_left, $tab_position, $tab_color)
-  top: $tab_top
-  right: $tab_right
-  bottom: $tab_bottom
-  left: $tab_left
-  position: $tab_position
-  background: $tab_color
-  width: 25px
-  height: 150px
-  transition: all 0.3s ease-in-out
-  vertical-align: middle
-  > h3
-    padding: 0px 15px
-    transform: rotate(90deg)
-    -webkit-transform: rotate(90deg)
-    -moz-transform: rotate(90deg)
-    -ms-transform: rotate(90deg)
-    -o-transform: rotate(90deg)
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3)
-
-/// slide panels location
-=slidePanel-position($panel_top, $panel_right, $panel_bottom, $panel_left, $panel_position, $heading_color)
-  top: $panel_top
-  right: $panel_right
-  bottom: $panel_bottom
-  left: $panel_left
-  position: $panel_position
-  width: 30%
-  height: 30%
-  background: lighten($primary-color, 40)
-  transition: all 0.3s ease-in-out
-  text-align: left
-  overflow-y: auto
-  > h3
-    background: $heading_color
-    margin: 0
-    padding: 0.4em
-    text-align: center
-    position: relative
-  li
-    padding: 10px
-    display: block
-    color: #333000
-    word-wrap: break-word
-    &:hover,&:focus
-      background: lighten($BGcolor-info, 30)
-    a
-      &:active
-        background: lighten($BGcolor-info, 20)
-
-=slidepanel-hover($hover_position_L, $hover_position_R)
-  &:hover,&:focus
-    [class*="slidePanel-inner"]
-      left: $hover_position_L
-      right: $hover_position_R
-      z-index: 5
-
 // Grid System created by Bootstrap (I adopted this because I couldn't think of a better way to create this)
 // -----------
 
@@ -345,6 +195,153 @@
     background-image: url(if($bootstrap-sass-asset-helper, twbs-image-path(#{$file-2x}), #{$file-2x}))
     background-size: $width-1x $height-1x
 
+
+
+// CUSTOM MIXINS
+//=========================
+
+/// Vendor Prefixes
+=vendor-prefix($name,$argument)
+  -webkit-#{$name}: #{$argument}
+  -ms-#{$name}: #{$argument}
+  -moz-#{$name}: #{$argument}
+  -o-#{$name}: #{$argument}
+  #{$name}: #{$argument}
+
+/// Alerts Message
+=alert-message($BGcolor)
+  +border-radius(2px)
+  @extend %bg-shadow
+  background: rgba($BGcolor, 0.95)
+  color: dt($BGcolor)
+  margin: 10px 10px 15px 10px
+  overflow: auto
+  width: 500px
+  height: 150px
+  h3
+    +border-radius(2px)
+    background: darken($BGcolor, 10)
+    color: lighten($BGcolor, 40)
+    padding: 5px
+    text-align: center
+  > p
+    margin: 5px
+    overflow-y: auto
+
+/// Border Trim
+=button-border-trim($trimColor)
+  border: inset 1px solid $trimColor
+
+
+/// Clearfix as made famous by Nick Gallagher
+=clearfix
+  &:after, &:before
+    content: ""
+    display: table
+  &:after
+    clear: both
+    zoom: 1
+
+/// A Loop creator for nth-child classes
+=counter-loop($start,$end)
+  @for $i from $start through $end
+    &:nth-child(#{$i}):after
+      content: '#{$i}'
+
+/// Shortcut to make font family stack with webfonts
+=font-face($family, $path, $svg, $weight: normal, $style: normal)
+  @font-face
+    font-family: $family
+    src: url(font-path('#{$path}.eot'))
+    src: url(font-path('#{$path}.eot?#iefix')) format('embedded-opentype'), url(font-path('#{$path}.woff')) format('woff'), url(font-path('#{$path}.ttf')) format('truetype'), url(font-path('#{$path}.svg##{$svg}')) format('svg')
+    font-weight: $weight
+    font-style: $style
+
+// Linear Gradient Creator
+// =linear-gradients($deg: 90, $from, $to)
+  // +prefix(background: linear-gradient($deg, $from, $to), webkit,moz,ms,o)
+
+
+/// Stripe gradient generator
+@mixin stripes($colors, $direction: "to bottom") 
+  $stripe-width: 100% / length($colors)
+  $auto:         if( type-of(nth($colors, 1)) == list, false, true )
+  $gradient:     ()
+
+  @for $i from 1 through length($colors)
+    $item: nth($colors, $i)
+    $dump: ()
+  
+    @if $auto == true 
+      $dump: $item $stripe-width * ($i - 1), $item $stripe-width * $i
+    
+    @else
+      @if $i > 1 
+        $previous-item: nth($colors, $i - 1)
+        $dump: append($dump, nth($item, 1) nth($previous-item, 2))
+      $dump: append($dump, $item)
+
+    $gradient: join($gradient, $dump, comma)
+  background-image: linear-gradient($direction, $gradient)
+
+/// Progress bar gradient creator
+=progress-bar-gradients($from, $to)
+  +prefix((background-image: linear-gradient(-45deg, $from 25%, transparent 25%, transparent 50%, $to 50%, $to 75%, transparent 75%, transparent)))
+
+/// slide panels are used for off canvas menus
+=slidePanel-tab-position($tab_top, $tab_right, $tab_bottom, $tab_left, $tab_position, $tab_color)
+  +transition(all 0.3s ease-in-out)
+  top: $tab_top
+  right: $tab_right
+  bottom: $tab_bottom
+  left: $tab_left
+  position: $tab_position
+  background: $tab_color
+  width: 25px
+  height: 150px
+  vertical-align: middle
+  > h3
+    +rotate(90deg)
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3)
+    padding: 0px 15px
+
+/// slide panels location
+=slidePanel-position($panel_top, $panel_right, $panel_bottom, $panel_left, $panel_position, $heading_color)
+  +transition( all 0.3s ease-in-out)
+  background: lighten($primary-color, 40)
+  position: $panel_position
+  top: $panel_top
+  right: $panel_right
+  bottom: $panel_bottom
+  left: $panel_left
+  width: 30%
+  height: 30%
+  text-align: left
+  overflow-y: auto
+  > h3
+    background: $heading_color
+    margin: 0
+    padding: 0.4em
+    text-align: center
+    position: relative
+  li
+    display: block
+    padding: 10px
+    color: #333000
+    word-wrap: break-word
+    &:hover,&:focus
+      background: lighten($BGcolor-info, 30)
+    a
+      &:active
+        background: lighten($BGcolor-info, 20)
+
+=slidepanel-hover($hover_position_L, $hover_position_R)
+  &:hover,&:focus
+    [class*="slidePanel-inner"]
+      left: $hover_position_L
+      right: $hover_position_R
+      z-index: 5
+
 // Mixins simple solutions to complicated CSS problems... thank me later
 // Vendor Prefix generator for properties that need them. This one is to be used for general cases where there isn't already a mixin built with the prefixes in place.
 =prefix($map, $vendors: webkit moz ms o)
@@ -460,15 +457,15 @@ $fq-xlarge-range: ($fq-large + ce(1px), $fq-xlarge) !default
 
 // This mixin will alleviate the need to write the vendor prefixes your self for animations. Now all you have to do is call this mixin and enter your animation name and enter your actions.
 =keyframes($animation-name) 
-  @-webkit-keyframes #{$animation-name }
+  @-webkit-keyframes #{$animation-name}
     @content
-  @-moz-keyframes #{$animation-name }
+  @-moz-keyframes #{$animation-name}
     @content
-  @-ms-keyframes #{$animation-name }
+  @-ms-keyframes #{$animation-name}
     @content
-  @-o-keyframes #{$animation-name }
+  @-o-keyframes #{$animation-name}
     @content
-  @keyframes #{$animation-name }
+  @keyframes #{$animation-name}
     @content
 
 // This mixin can to be coupled with the keyframes animation above. Use this one to give animation action values like timing and looping, etc.
@@ -525,15 +522,12 @@ $fq-xlarge-range: ($fq-large + ce(1px), $fq-xlarge) !default
   -ms-flex: $values
   flex: $values
 
-
 =flex-direction($values: flex-start)
   -ms-flex-direction: $values
   flex-direction: $values
 
-
 =flex-flow($direction: row, $wrap: wrap) 
   flex-flow: $direction $wrap
-
 
 =align-items($values: flex-start) 
   -webkit-box-align: $values

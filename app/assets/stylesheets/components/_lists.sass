@@ -1,0 +1,40 @@
+.list-group
+  padding-left: 0px
+  margin-bottom: 10px
+
+.list-item
+  @extend .txt-shadow-lgt
+  position: relative
+  display: block
+  padding: ce(5px) 0
+  margin-bottom: -1px
+  a
+    @extend .txt-shadow-lgt
+    color: $base-text-color
+  &:first-child
+    border-top-right-radius: 4px
+    border-top-left-radius: 4px
+
+.list-heading
+  @extend .txt-shadow-lgt
+  color: darken($secondary-color,10)
+  a
+    color: darken($primary-color,10)
+
+.list-text
+  @extend .list-item
+  margin-bottom: 0
+  line-height: 1.5
+
+.list-button
+  @extend .list-group
+  @extend .list-item
+  text-align: center
+  padding-right: px-em($base-text-px,25px)
+
+
+.list-unstyled
+  margin-bottom: ce(10px)
+  list-style: none
+  li
+    padding-right: 5px

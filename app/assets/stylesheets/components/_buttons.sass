@@ -1,8 +1,9 @@
 %btn
-  +button($primary-color)
+  +button($primary-color-dark)
 
 .btn-norm
   +button($secondary-color)
+
 .btn-xtiny
   +button($primary-color)
   margin: 0
@@ -11,22 +12,22 @@
 
 .btn-tiny
   +button($primary-color)
-  padding: px-em($base-text-px,1px) px-em($base-text-px,5px)
+  padding: ce(1px) ce(5px)
   font-size: 0.75em
 
 .btn-small
   +button($primary-color)
-  padding: px-em($base-text-px,6px) px-em($base-text-px,9px)
-  font-size: px-em($base-text-px,13px)
-  line-height: 1.5
   +border-radius(2px)
+  padding: ce(6px) ce(9px)
+  font-size: ce(13px)
+  line-height: 1.5
 
 .btn-large
   +button($primary-color)
-  padding: px-em($base-text-px,18px) px-em($base-text-px,27px)
-  font-size: px-em($base-text-px,19px)
-  line-height: px-em($base-text-px,21px)
   +border-radius(2px)
+  padding: ce(18px) ce(27px)
+  font-size: ce(19px)
+  line-height: ce(21px)
 
 .btn-block
   +button($primary-color)

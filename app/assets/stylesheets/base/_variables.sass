@@ -1,6 +1,8 @@
 // base colors
 $white: #ffffff
 $black: #000000
+$gray: lighten($black, 15%)
+$blue:  #5895b9
 
 $primary-color: #5895b9
 $primary-color-dark: darken($primary-color, 15%)
@@ -16,9 +18,10 @@ $third-color-light: lighten($third-color,15%)
 
 $background-color: #FFFFFF
 
-$gray: lighten($black, 15%)
 
+//commonly used paddding for elements
 $common-padding: 10px 15px
+$common-box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.35)
 
 $fixed-header-height: 100px
 // margin-styles
@@ -61,19 +64,19 @@ $color-start-gradient: $primary-color
 $color-stop-gradient: $primary-color
 
 // link colors
-$link-color: #06799f
-$link-hover: #61b4cf
-$link-active: #ffa240
+$link-color: $primary-color-dark
+$link-hover: $primary-color-light
+$link-active: $primary-color
 
 // table colors
-$table-hover: #3aaacf
-$table-cell-stripe: #a3c9d9
-$table-border-top: #999999
+$table-hover: $secondary-color
+$table-cell-stripe: $secondary-color-light
+$table-border-top: $third-color-light
 
 // Nav colors
 $nav-color: $third-color
-$nav-hover: $primary-color
-$nav-text-active: $alt-text-color
+$nav-hover: $primary-color-light
+$nav-text-active: $primary-color
 
 // Gradient color stops
 $darren-by-design-auto: $primary-color, $secondary-color, $third-color, $primary-color-dark, $secondary-color-light, $third-color-dark, $primary-color-light, $secondary-color-dark, $third-color-light

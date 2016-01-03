@@ -1,60 +1,53 @@
 %form
-  // display: block
-  margin: ce(10px)
-  padding: $common-padding
-  vertical-align: baseline
+  +flexbox
+  +flex-flow(column, wrap)
+  +justify-content(center)
+  +align-items(center)
   +border-radius(1px)
+  padding: $common-padding
+  margin: ce(10px)
+  vertical-align: baseline
+  .frm-control
+    +flexbox
+    width: 100%
   label
     cursor: pointer
 
-%form-input-base
+%input-base
+  +border-radius(1px)
   width: 100%
-  display: block
+  font-size: 1em
+  background: $background-color
+  display: inline-block
   border: 1px solid $primary-color
+
+  margin-bottom: ce(10px)
   padding: ce(5px) ce(5px) ce(5px) ce(10px)
+
+  line-height: 1.42857
+  vertical-align: baseline
   transition: border 0.3s ease-out
+
   &:hover,&:focus
     border: 1px solid lighten($primary-color-light,15)
     background: $white
     &:after
       border: 1px solid $primary-color
 
-.form-container
-  @extend %form
-  +flexbox
-  +flex-flow(column, wrap)
-  +justify-content(center)
-  +align-items(center)
-  .frm-control
-    +flexbox
-    width: 100%
+%select-base
+  +border-radius(2px)
+  padding: ce(2px) ce(3px)
+  font-size: 1.12em
+  font-family: $font-stack-secondary
+  overflow: scroll
 
-.frm-block
-  @extend %form
-  @extend .bg-darktrim
-  background: rgba($primary-color, 0.8)
-  color: $base-text-color
-
-.frm-control
-  @extend %form-input-base
-
-.frm-group
-  margin-bottom: ce(10px)
-
-.form-button
-  +button($white)
-  color: $primary-color-dark
-  border: 1px solid $primary-color
-  width: 100%
-
-.frm-title
-  display: inline-block
-  text-align: left
+input
+  @extend %input-base
 
 input[type="search"],
 input[type="text"],
 input[type="email"]
-  @extend %form-input-base
+  @extend %input-base
 
 input[type="checkbox"],
 input[type="radio"]
@@ -69,31 +62,50 @@ input[type="radio"]
     height: 16px
     margin-right: ce(10px)
 
-input
-  +border-radius(1px)
-  border: 1px solid $primary-color
-  background: $background-color
-  display: inline-block
+
+.form-container
+  @extend %form
+
+.frm-block
+  @extend %form
+  @extend %bg-darktrim
+  background: rgba($primary-color, 0.8)
+  color: $base-text-color
+
+.frm-group
   margin-bottom: ce(10px)
-  line-height: 1.42857
-  font-size: 1em
-  vertical-align: baseline
-  transition: border 0.2s ease-in
+
+.frm-control
+  @extend %input-base
+
+.frm-title
+  display: inline-block
+  text-align: left
+
+.form-button
+  +button($white)
+  border: 1px solid $primary-color-dark
+  color: $primary-color-dark
+  width: 100%
+  &:hover
+    background: $secondary-color
+    color: $primary-color-light
+
 
 .input-large
-  @extend %form-input-base
+  @extend %input-base
   width: 90%
 
 .input-medium
-  @extend %form-input-base
+  @extend %input-base
   width: 50%
 
 .input-small
-  @extend %form-input-base
+  @extend %input-base
   width: 25%
 
 .input-line
-  @extend %form-input-base
+  @extend %input-base
   border: none
   background: transparent
   border-bottom: ce(3px) solid $primary-color 
@@ -102,75 +114,27 @@ input
     border-bottom-color: lighten($primary-color-light, 15)
 
 textarea
-  @extend %form-input-base
+  @extend %input-base
   padding: ce(5px)
   border: 1px solid $primary-color
   min-height: ce(150px)
 
-%select
-  +border-radius(2px)
-  padding: ce(2px) ce(3px)
-  font-size: 1.12em
-  font-family: $font-stack-secondary
-  overflow: scroll
 
 .select-small
-  @extend %select
+  @extend %select-base
   width: 25%
 
 .select-medium
-  @extend %select
+  @extend %select-base
   width: 50%
 
 .select-large
-  @extend %select
+  @extend %select-base
   width: 90%
 
 .select-block
-  @extend %select
+  @extend %select-base
   width: 100%
-
-
-.list-group
-  padding-left: 0px
-  margin-bottom: 10px
-
-.list-item
-  @extend .txt-shadow-lgt
-  position: relative
-  display: block
-  padding: ce(5px) 0
-  margin-bottom: -1px
-  a
-    @extend .txt-shadow-lgt
-    color: $base-text-color
-  &:first-child
-    border-top-right-radius: 4px
-    border-top-left-radius: 4px
-
-.list-heading
-  @extend .txt-shadow-lgt
-  color: darken($secondary-color,10)
-  a
-    color: darken($primary-color,10)
-
-.list-text
-  @extend .list-item
-  margin-bottom: 0
-  line-height: 1.5
-
-.list-button
-  @extend .list-group
-  @extend .list-item
-  text-align: center
-  padding-right: px-em($base-text-px,25px)
-
-
-.list-unstyled
-  margin-bottom: ce(10px)
-  list-style: none
-  li
-    padding-right: 5px
 
 .admin-controls
   border-top: 1px solid  $third-color
