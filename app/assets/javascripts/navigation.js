@@ -1,7 +1,7 @@
-var navigationStep = function() {
-  var currentNav = $('.menu-item');
-  $('.menu-link').click(function() {
-    currentNav.addClass('menu-item-current');
-  });
-}
-$(document).ready(navigationStep);
+$(function() {
+  $('.menu-link').on('click', function() {
+    var currentNav = $('.menu-item');
+    $('.menu-item.menu-item-current').removeClass('menu-class-current');
+    $('.menu-link').addClass('menu-class-current');
+  })
+})
