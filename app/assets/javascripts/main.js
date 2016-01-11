@@ -74,8 +74,6 @@ $(function() {
         });
         setInterval(5000);
     };
-
-
     LightBox = function() {
         // var current, size;
         $('.lb-trigger').on('click page:load', function(e) {

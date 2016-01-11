@@ -1,3 +1,29 @@
+%nav-base
+  width: 100%
+  color: $alt-text-color
+  padding: ce(15px) ce(10px)
+  ul 
+    li
+      +border-radius(2px)
+      display: inline-block
+      padding: ce(10px) ce(15px)
+      list-style: none
+      &:hover
+        +transition(border 0.3s ease-in-out)
+        border-bottom: 2px solid $primary-color
+      &:active
+        +transition(background 0.3s ease-in-out)
+        background: $secondary-color
+      a
+        @extend .txt-shadow-lgt
+        padding: ce(10px) ce(5px)
+        text-decoration: none
+        text-transform: uppercase
+        &:hover
+          color: $alt-text-color
+        &:active
+          color: $primary-color-dark
+
 .navbar
   width: 100%
   background: $white
@@ -7,93 +33,12 @@
     margin-bottom: 10px
   z-index: 3
 .navbar-flex
-  +flexpoint-sm
-    +flex-flow(row, wrap)
   +flexbox
   +flex-flow(column, wrap)
-  +justify-content()
-  align-items: center 
-
-
-%nav
-  width: 100%
-  color: $alt-text-color
-  padding: px-em($base-text-px,15px) px-em($base-text-px,10px)
-  // margin-top: 1em
-  ul li
-    +border-radius(2px)
-    padding: px-em($base-text-px,10px) px-em($base-text-px,15px)
-    list-style: none
-    &:hover
-      border-bottom: 2px solid $primary-color
-      transition: all 0.3s ease-in-out
-    &:active
-      background: darken($nav-hover,10%)
-  a
-    text-decoration: none
-    text-transform: uppercase
-    padding: px-em($base-text-px,10px)
-    @extend .txt-shadow-lgt
-    &:hover
-      color: $alt-text-color
-    &:active
-      color: $nav-text-active
-
-.nav-hrz
-  @extend %nav
-  ul li
-    display: inline-block
-.nav-vrt
-  @extend %nav
-  background: lighten($primary-color,10)
-  display: inline-block
-  height: auto
-  padding: px-em($base-text-px,5px) px-em($base-text-px,10px)
-  @extend %bg-darktrim
-  ul li
-    background: $primary-color
-    margin: px-em($base-text-px,10px) px-em($base-text-px,3px)
-    &:hover
-      box-shadow: $common-box-shadow
-    a
-      display: block
-
-.flex-nav
-  // margin: 0 0 10px 0
-  padding-top: 10px
-  padding-bottom: 10px
-  list-style: none
-  +flexbox()
-  +flex-flow(column,wrap)
-  +justify-content(center)
-  text-align: center
-  color: $alt-text-color
-  li
-    +border-radius(2px)
-    padding: px-em($base-text-px,10px) px-em($base-text-px,15px)
-    list-style: none
-    a
-      text-decoration: none
-      text-transform: uppercase
-      padding: ce(10px)
-      @extend .txt-shadow-lgt
-      &:hover
-        // color: $alt-text-color
-        border-bottom: 2px solid $primary-color
-        transition: all 0.3s ease-in-out
-      &:active
-        color: $nav-text-active
-        border-bottom: 2px solid $primary-color
-        transition: all 0.3s ease-in-out
-  // +breakpoint-md
-  //   +justify-content(space-around)
+  +justify-content
   +flexpoint-sm
     +flex-flow(row, wrap)
-    +justify-content(flex-start)
-
-.flex-nav-center
-  +justify-content(center)
-
+  align-items: center 
 .navbar-logo
   +flexbox()
   +justify-content(flex-start)
@@ -115,17 +60,125 @@
   background: rgba($white, 0.9)
   transition: height 0.3s
   &:before
+    +stripes($darren-by-design-auto, to right)
     content: ''
     position: absolute
     left: 0
     right: 0
     top: 0 
     height: 0.5em
-    +stripes($darren-by-design-auto, to right)
   +flexpoint-sm
+    height: $fixed-header-height
     position: fixed
+    overflow: hidden
     top: 0
     left: 0
-    overflow: hidden
     z-index: 10000
-    height: $fixed-header-height
+
+.nav-hrz
+  @extend %nav-base
+.nav-vrt
+  @extend %nav-base
+  @extend %bg-darktrim
+  background: lighten($primary-color,10)
+  padding: ce(5px) ce(10px)
+  height: auto
+  ul 
+    li
+      background: $primary-color
+      a
+        display: block
+    &:hover
+      box-shadow: $common-box-shadow
+
+.flex-nav
+  +flexbox
+  +flex-flow(column,wrap)
+  +justify-content(center)
+  color: $alt-text-color
+  padding-top: ce(10px)
+  padding-bottom: ce(10px)
+  list-style: none
+  text-align: center
+  li
+    +border-radius(2px)
+    padding: ce(10px) ce(15px)
+    list-style: none
+    a
+      @extend .txt-shadow-lgt
+      padding: ce(10px)
+      text-decoration: none
+      text-transform: uppercase
+      &:hover
+        border-bottom: 2px solid $primary-color
+        transition: all 0.3s ease-in-out
+      &:active
+        color: $nav-text-active
+        border-bottom: 2px solid $primary-color
+        transition: all 0.3s ease-in-out
+  +flexpoint-sm
+    +flex-flow(row, wrap)
+    +justify-content(flex-start)
+
+.flex-nav-center
+  +justify-content(center)
+
+// Cool menu item
+.menu
+  line-height: 1
+  // margin: 0 auto 10px
+  
+.menu-list
+  +flexbox
+  +flex-flow
+  margin: 0
+  padding: 0
+  list-style: none
+  position: relative
+
+.menu-item
+  display: block
+  margin: 16px 0
+
+.menu-link
+  +font-size(16px)
+  padding: ce(16px)
+  display: block
+  cursor: pointer
+  +prefix((user-select: none))
+  +prefix((touch-callout: none))
+  +prefix((highlight-color: rgba(0, 0, 0, 0)))
+  &:hover,&:focus
+    outline: none
+
+.menu-prospero
+  .menu-link
+    position: relative
+    display: block
+    text-align: center
+    text-decoration: none
+    text-transform: uppercase
+    margin: 0 1.5em
+    padding: 0.75em 0
+    color: $primary-color
+    +transition(color 0.3s)
+    &:hover,&:focus
+      color: $primary-color-dark
+    &:before
+      content: ''
+      background: $primary-color
+      width: 100%
+      height: 4px
+      position: absolute
+      bottom: 0
+      left: 0
+      +scale3d((0, 1, 1))
+      +transition(transform 0.1s)
+
+  .menu-item-current
+    .menu-link
+      &:before
+        +scale3d((1, 1, 1))
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+        transition-duration: 0.3s
+

@@ -1,18 +1,18 @@
 .navbar.navbar-fixed-top.navbar-flex.flex-nav-center
   .navbar-logo
     =link_to(image_tag("header_Logo2.png", alt: "Darren Sorrels Design", :class=> "site-logo"), root_path)
-  %nav
-    %ul.flex-nav
-      %li
-        =link_to 'Home', root_path
-      %li
-        =link_to 'Work', portfolios_path
-      %li 
-        =link_to 'Blog', blog_path
-      %li 
-        =link_to 'About', about_path
-      %li 
-        =link_to 'Contact', new_contact_path
-      %li
+  %nav.menu.menu-prospero
+    %ul.menu-list
+      %li.menu-item.menu-item-current
+        =link_to 'Home', root_path, :class=> "menu-link"
+      %li.menu-item
+        =link_to 'Work', portfolios_path, :class=> "menu-link"
+      %li.menu-item 
+        =link_to 'Blog', blog_path, :class=> "menu-link"
+      %li.menu-item 
+        =link_to 'About', about_path, :class=> "menu-link"
+      %li.menu-item 
+        =link_to 'Contact', new_contact_path, :class=> "menu-link"
+      %li.menu-item 
         - if user_signed_in?
           =link_to "Sign Out" , destroy_user_session_path, method: :delete

@@ -1,9 +1,39 @@
-.footer
-  background: $primary-color
+%footer-base
+  width: 100%
+  margin-top: 60px
+  margin-left: auto
+  margin-right: auto
   padding: ce(10px) ce(15px)
-  
+  overflow: hidden
+
+.footer
+  @extend %footer-base
+  background: $white
+
 .site-footer
   +flex(none)
-  width: 100%
-  background: $primary-color
-  padding: ce(10px) ce(15px)
+  @extend %footer-base
+  background: $white
+  border-top: 2px solid  $black
+  &:before
+    +stripes($darren-by-design-auto, to right)
+    height: 0.5em
+    content: ' '
+    position: absolute
+    margin-top: -12px
+    right: 0
+    left: 0
+
+#mediaList
+  list-style: none
+  color: $primary-color
+  padding-top: ce(20px)
+  padding-bottom: ce(20px)
+  li
+    display: inline-block
+    padding: ce(5px)
+  a
+    text-decoration: none
+    color: $primary-color
+    &:hover
+      color: $secondary-color

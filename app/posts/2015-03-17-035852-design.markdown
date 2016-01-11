@@ -7,13 +7,17 @@ email: darrenbydesign@gmail.com
 
 Today is the first day that I have written anything purely for myself in about a year.
 Lately it seems the only important things I write are explanations about why an interface design works and why we should follow existing patterns for the sake of users in spite of stakeholders. All this is really wonderful because I've come to realize that I love educating non designers, but sometimes it wears on my designer soul and I need to rehabilitate. With that being said, I want to talk about designing for the sake of design. No stakeholders, no vague project requirements, just a concept and a computer if necessary.
-
-![Test image](http://darrensorrelsdesign.com/assets/images/header_logo2.png)
+<div class="slab">  
+  <figure class="blk-lg-12">
+    <img class="img-responsive" src="" alt="Test image">
+    <figcaption>explanatory caption</figcaption>
+  </figure>
+</div>
 
 Design is not fully art, it is also bit of a science. It seems almost nonsensical to say the phrase  " Design for design's sake" . What is my point you ask?
 Simple designing is like exercising if you stop designing when you don't have stakeholders breathing down your neck, your  skills can atrophy. What's a designer to do to remedy this? Well here are a few things I find helpful.
 
-##Research
+## Research
 ---
 Find new things in the world that interest you. Find a problem with those things and try and create a design solution. Its that simple. Really. Even if that interest is something as different as creating greeting cards for the blind.
 
@@ -24,14 +28,14 @@ After ruminating on your research, you will reach a point where you can't take i
 
 How do you accomplish this you ask? Simple you can try...
 
-##Doing Something Completely Different
+## Doing Something Completely Different
 ---
 Try doing something in a completely different discipline from the design work you are doing. For example, when I am stuck on some  visual design work I sometimes grab my guitar and play music while my unconscious mind continues to ruminate on the problem (becasue we humans can never stop thinking about the problem completely). Often I come back to my design work and I see things with a fresh perspective that helps me solve the problems.
 
 
-##Observe your past work
+## Observe your past work
 ---
 Looking back at your past work is a great way to find inspiration. Old work can often be improved upon and that can be a great project to undertake when you are in a lull period on design work.
-##Rest
+## Rest
 ---
 Sometime its ok to just take a break completely when you don't have official client work. Go do something with the friends you've been avoiding due to crazy deadlines and demanding clients. Taking a break is healthy and should be an integral part of your design process.

@@ -1,49 +1,43 @@
+$table-border-bottom: 3px solid  $primary-color
+$table-font-family: $font-stack-sanserif-semibold
+
+%thead-base
+  border-bottom: $table-border-bottom
+  th 
+    +font-size(14px)
+    font-family: $table-font-family
+    font-weight: 400
+    padding: 10px 5px
+    text-align: left
+
+%tbody-base
+  border-bottom: $table-border-bottom
+  tr
+    border-bottom: 2px solid $gray
+    td 
+      padding: ce(5px)
+      a 
+        color: $primary-color
+        text-decoration: none
+        display: inline-block
+        margin-right: 0.5em
+        &:hover, &:active, &:focus
+          color: $primary-color-dark
+          border: none  
+
+%tfoot-base
+  td 
+    +font-size(14px)
+    font-family: $table-font-family
+    text-align: left
+    padding: 10px 5px
+    
 table
   width: 100%
-  margin-bottom: px-em($base-text-px,21px)
-  max-width: 100%
-  background-color: transparent
-  border-collapse: collapse
-  border-spacing: 0px
-  th
-    text-align: left
-    border-spacing: px-em($base-text-px,5px) px-em($base-text-px,15px)
-    padding: px-em($base-text-px,5px) px-em($base-text-px,10px)
-    color: #f0f0f0
-    background: #128fbf
-    border-bottom: px-em($base-text-px,2px) solid #111111
-    border-top: px-em($base-text-px,1px) solid #999999
-    letter-spacing: 0.1em
-    text-align: left
-    text-transform: uppercase
-  td
-    > a
-      color: #5a5854
-  td
-    border-spacing: px-em($base-text-px,5px) px-em($base-text-px,15px)
-    padding: px-em($base-text-px,5px) px-em($base-text-px,10px)
-  tr
-    &:nth-of-type(odd)
-      background: $table-cell-stripe
-    &:hover
-      background: $table-hover
-      color: #333000
-
-.table
-  thead > tr > th, tbody > tr > th, tfoot > tr > th, thead > tr > td, tbody > tr > td, tfoot > tr > td
-    padding: px-em($base-text-px,8px)
-    line-height: 1.42857
-    vertical-align: top
-    border-top: px-em($base-text-px,1px) solid rgb(236, 240, 241)
-  .table
-    caption + thead tr:first-child th,
-    colgroup + thead tr:first-child th,
-    thead:first-child tr:first-child th,
-      border-top: 0px none
-  .table tr a:hover
-    color: #128fbf
-
-.table-bordered >
-  thead > tr > th, tbody > tr > th, tfoot > tr > th, thead > tr > td, tbody > tr > td, tfoot > tr > td
-    border: px-em($base-text-px,1px) solid rgb(236, 240, 241)
-
+  float: left
+  thead
+    @extend %thead-base
+  tbody
+    @extend %tbody-base
+  tfoot
+    @extend %tfoot-base

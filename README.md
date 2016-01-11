@@ -23,7 +23,7 @@ This Rails app uses the following:
 ```
 
 ## Database creation
-  This application uses Postgresql
+  This application uses Postgresql for the database
 
 # Plan of the Application
   1. Answer Questions
@@ -45,6 +45,5 @@ This Rails app uses the following:
   3. What features does it need?
 
 ## User Stories
-
-  As a blank, I want to able to blank so that blank.
-  As a user I want to be able to create posts so that I can share what I have learned with others in a blog.
+  As an admin user I want to be able to create posts so that I can share what I have learned with others in a blog.
+  As an admin user I want to add pictures of my work and document them in case study fashion so that users can view the process

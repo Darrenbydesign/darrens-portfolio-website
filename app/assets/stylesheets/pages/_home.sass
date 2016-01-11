@@ -1,12 +1,14 @@
 .intro-message
-  width: 90vw
-  margin: ce(20px) auto
   +font-size (40px)
+  width: 90vw
+  margin: 0 auto
+  padding-top: ce(20px)
+  padding-bottom: ce(40px)
   +breakpoint-lg
     width: 50vw
 
 .home-bg
-  background: linear-gradient( rgba($third-color, 0.6), rgba($third-color, 0.6) ), url(asset_path('hero-image.png')) no-repeat bottom right
+  background: linear-gradient( rgba($third-color, 0.6), rgba($third-color, 0.6) ), url(asset_path('hero-image.png')) no-repeat top center
 
 %masthead-base
   background-size: cover
@@ -21,5 +23,6 @@
   z-index: 1
   @extend %masthead-base
   .intro-message
-    // color: dt($third-color)
-    color: $third-color
+    color: dt($third-color)
+    a 
+      color: $primary-color-light
