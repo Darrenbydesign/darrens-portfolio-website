@@ -5,17 +5,18 @@
         %h2
           = link_to post.title, post
         .meta
-          Posted on
-          %time{:pubdate => 'true', :datetime => post.timestamp.iso8601}
-            = post.date.strftime '%e %B %Y'
           %span
-            by
+            By:
             %em.author
               = post.author
+          |
+          %time{:pubdate => 'true', :datetime => post.timestamp.iso8601}
+            = post.date.strftime '%e %B %Y'
     .post-container
       = post_summary_html post
       %span.more
-        = link_to 'Read more&hellip;'.html_safe, post
+        = link_to 'Continue Story&hellip;'.html_safe, post
+      %hr/
   - else
     %header.blog-header
       .blog-title
@@ -23,13 +24,13 @@
           %h2
             = post.title
           .meta
-            Posted on
-            %time{:pubdate => 'true', :datetime => post.timestamp.iso8601}
-              = post.date.strftime '%e %B %Y'
             %span
-              by
+              By:
               %em.author
                 = post.author
+            |
+            %time{:pubdate => 'true', :datetime => post.timestamp.iso8601}
+              = post.date.strftime '%e %B %Y'
     .post-container
       ~ post_content_html post
       %hr/

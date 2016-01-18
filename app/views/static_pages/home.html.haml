@@ -1,11 +1,14 @@
-%article.masthead.home-bg
-  %section
-    %p.intro-message
-      Hi, I'm
-      =link_to "Darren Sorrels", about_path
-      \.
-      I'm a UI/UX designer &amp; front-end developer based in the Silicon Prarie of the US, Kansas City. Feel free to look at my
-      =link_to  "recent work", portfolios_path 
-      ,
-      =link_to "contact me", new_contact_path
-      about work or just to say hello.
+- @UX = "<UX> Researcher </UX>"
+- @UI = "<UI> Designer </UI>"
+- @Dev = "<developer> Front-end </developer>"
+
+.masthead.home-bg
+  %section.intro-message
+    %h1
+      Hi, my name is Darren, and I'm a :
+    %p
+      = @UX
+    %p
+      = @UI
+    %p
+      = @Dev

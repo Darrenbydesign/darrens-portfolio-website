@@ -496,6 +496,12 @@ $fq-xlarge-range: ($fq-large + ce(1px), $fq-xlarge) !default
 =translate($args)
   +prefix((transform: translate($args)))
 
+=translateX($args)
+  +prefix((transform: translateX($args)))
+
+=translateY($args)
+  +prefix((transform: translateY($args)))
+
 /// Translate3D
 =translate3d($args)
   +prefix((transform: translate3d($args)))
@@ -559,4 +565,29 @@ $fq-xlarge-range: ($fq-large + ce(1px), $fq-xlarge) !default
   -ms-flex-order: $value
   -webkit-order: $value
   order: $value
+
+/// Mixin to customize scrollbars
+/// Beware, this does not work in all browsers
+/// @author Hugo Giraudel
+/// @param {Length} $size - Horizontal scrollbar's height and vertical scrollbar's width
+/// @param {Color} $foreground-color - Scrollbar's color
+/// @param {Color} $background-color [mix($foreground-color, white, 50%)] - Scrollbar's color
+/// @example scss - Scrollbar styling
+///   @include scrollbars(.5em, slategray);
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%))
+  // For Google Chrome
+  ::-webkit-scrollbar
+    width:  $size
+    height: $size
+
+  ::-webkit-scrollbar-thumb
+    background: $foreground-color
+
+  ::-webkit-scrollbar-track
+    background: $background-color
+
+  // For Internet Explorer
+  body 
+    scrollbar-face-color: $foreground-color
+    scrollbar-track-color: $background-color
 

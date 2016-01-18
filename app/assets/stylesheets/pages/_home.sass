@@ -1,28 +1,4 @@
-.intro-message
-  +font-size (40px)
-  width: 90vw
-  margin: 0 auto
-  padding-top: ce(20px)
-  padding-bottom: ce(40px)
-  +breakpoint-lg
-    width: 50vw
-
 .home-bg
-  background: linear-gradient( rgba($third-color, 0.6), rgba($third-color, 0.6) ), url(asset_path('hero-image.png')) no-repeat top center
-
-%masthead-base
+  background: linear-gradient(rgba($primary-color-dark, 0.9), rgba($primary-color-light, 0.75) ), url($night-sky) no-repeat
   background-size: cover
-  min-width: 100%
-  min-height: 100%
-  max-width: 100%
-  height: 100vh
-.masthead
-  position: relative
-  top: 0
-  left: 0
-  z-index: 1
-  @extend %masthead-base
-  .intro-message
-    color: dt($third-color)
-    a 
-      color: $primary-color-light
+  background-position: center center

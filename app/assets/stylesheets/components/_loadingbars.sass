@@ -21,7 +21,7 @@
       margin-left: 99%
 
 
-%load-bar2
+%load-bar-base
   +border-radius(25px)
   position: relative
   padding: 10px
@@ -52,7 +52,7 @@
         background-position: 50px 50px
 
 .load-error
-  @extend %load-bar2
+  @extend %load-bar-base
   span,div,section
     color: darken($BGcolor-error, 50)
     border: 1px solid lighten($BGcolor-error, 20)
@@ -60,7 +60,7 @@
     +progress-bar-gradients($BGcolor-error, $BGcolor-error)
 
 .load-success
-  @extend %load-bar2
+  @extend %load-bar-base
   span,div,section
     color: darken($BGcolor-success, 50)
     border: 1px solid lighten($BGcolor-success, 20)
@@ -68,7 +68,7 @@
     +progress-bar-gradients($BGcolor-success, $BGcolor-success)
 
 .load-warning
-  @extend %load-bar2
+  @extend %load-bar-base
   span,div,section
     color: darken($BGcolor-warning, 50)
     border: 1px solid lighten($BGcolor-warning, 20)

@@ -1,7 +1,7 @@
 %nav-base
   width: 100%
-  color: $alt-text-color
-  padding: ce(15px) ce(10px)
+  color: $third-color
+  // padding: ce(15px) ce(10px)
   ul 
     li
       +border-radius(2px)
@@ -15,7 +15,6 @@
         +transition(background 0.3s ease-in-out)
         background: $secondary-color
       a
-        @extend .txt-shadow-lgt
         padding: ce(10px) ce(5px)
         text-decoration: none
         text-transform: uppercase
@@ -160,9 +159,9 @@
     text-transform: uppercase
     margin: 0 1.5em
     padding: 0.75em 0
-    color: $primary-color
+    color: $third-color
     +transition(color 0.3s)
-    &:hover,&:focus
+    &:hover,&:focus,&:active
       color: $primary-color-dark
     &:before
       content: ''

@@ -1,4 +1,3 @@
-
 +font-face("source_sans_prolight","sourcesanspro-light-webfont","source_sans_prolight")
 +font-face("source_sans_proregular","sourcesanspro-regular-webfont","source_sans_proregular")
 +font-face("source_sans_prosemibold","sourcesanspro-semibold-webfont","source_sans_prosemibold")
@@ -25,84 +24,84 @@ body
   margin-top: ce(10px)
   margin-bottom: ce(10px)
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6
+h1,.h1,
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,.h5,
+h6,.h6,
   @extend %headings-base
 
-h1,h2
+h1,.h1,h2,.h2
   font-family: $font-stack-sanserif-regular
-h3,h4,h5,h6
+h3,.h3,h4,.h4,h5,.h5,h6,.h6
   font-family: $font-stack-serif-bold
 
-h1 
-  @include font-size(32px)
+h1,.h1 
+  +font-size(32px)
   line-height: 1.25em
-  @include breakpoint-lg 
-    @include font-size(48px)
+  +breakpoint-lg 
+    +font-size(48px)
     line-height: 1.05em
   
-  @include breakpoint-md 
-    @include font-size(40px)
+  +breakpoint-md 
+    +font-size(40px)
     line-height: 1.125em
 
 
-h2 
-  @include font-size(26px)
+h2,.h2
+  +font-size(26px)
   line-height: 1.1538em
-  @include breakpoint-lg 
-    @include font-size(36px)
+  +breakpoint-lg 
+    +font-size(36px)
     line-height: 1.25em
   
-  @include breakpoint-md 
-    @include font-size(32px)
+  +breakpoint-md 
+    +font-size(32px)
     line-height: 1.1538em
 
-h3 
-  @include font-size(22px)
+h3,.h3
+  +font-size(22px)
   line-height: 1.136em
-  @include breakpoint-lg 
-    @include font-size(28px)
+  +breakpoint-lg 
+    +font-size(28px)
     line-height: 1.25em
   
-  @include breakpoint-md 
-    @include font-size(24px)
+  +breakpoint-md 
+    +font-size(24px)
     line-height: 1.1363em
 
-h4 
-  @include font-size(18px)
+h4,.h4
+  +font-size(18px)
   line-height: 1.111em
-  @include breakpoint-lg 
-    @include font-size(18px)
+  +breakpoint-lg 
+    +font-size(18px)
     line-height: 1.222em
   
-  @include breakpoint-md 
-    @include font-size(18px)
+  +breakpoint-md 
+    +font-size(18px)
     line-height: 1.111em
 
-h5 
-  @include font-size(14px)
+h5,.h5
+  +font-size(14px)
   line-height: 1.111em
-  @include breakpoint-lg 
-    @include font-size(14px)
+  +breakpoint-lg 
+    +font-size(14px)
     line-height: 1.2em
   
-  @include breakpoint-md 
-    @include font-size(14px)
+  +breakpoint-md 
+    +font-size(14px)
     line-height: 1.111em
 
-h6 
-  @include font-size(12px)
+h6.h6
+  +font-size(12px)
   line-height: 1.111em
-  @include breakpoint-lg 
-    @include font-size(12px)
+  +breakpoint-lg 
+    +font-size(12px)
     line-height: 1.2em
   
-  @include breakpoint-md 
-    @include font-size(12px)
+  +breakpoint-md 
+    +font-size(12px)
     line-height: 1.111em
 
 label
@@ -126,8 +125,7 @@ blockquote
   margin: 0 1em
   +clearfix
   p
-    @include font-size(24px)
-    @extend .txt-shadow-lgt
+    +font-size(24px)
     &:before
       content: "\f10d"
       color: $primary-color

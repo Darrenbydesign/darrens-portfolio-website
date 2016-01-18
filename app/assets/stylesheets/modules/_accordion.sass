@@ -1,24 +1,24 @@
 .accordion
-  overflow: hidden
-  background: lighten($third-color,10)
-  padding: px-em($base-text-px,10px)
   +border-radius(2px)
+  background: lighten($third-color,10)
+  padding: ce(10px)
+  overflow: hidden
   section
-    float: left
-    overflow: hidden
-    background: $secondary-color
-    margin: px-em($base-text-px,3px)
     +border-radius(2px)
+    background: $secondary-color
+    margin: ce(3px)
+    overflow: hidden
+    float: left
     &:hover
       background: lighten($primary-color,5)
     p
       display: none
     &:after
-      position: relative
       color: $alt-text-color
+      position: relative
     &:target
+      padding: ce(10px)
       background: white
-      padding: px-em($base-text-px,10px)
       overflow: auto
       &:hover
         background: white
@@ -31,7 +31,7 @@
         display: block
     h2
       a
-        padding: px-em($base-text-px,8px) px-em($base-text-px,10px)
+        padding: ce(8px) ce(10px)
         display: block
         font-weight: normal
         color: $alt-text-color
@@ -47,9 +47,7 @@
       top: 180px
       left: 15px
     h2
-      -webkit-transform: rotate(90deg)
-      -moz-transform: rotate(90deg)
-      transform: rotate(90deg)
+      +rotate(90deg)
       width: 240px
       position: relative
       left: -100px
