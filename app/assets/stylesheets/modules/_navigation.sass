@@ -1,7 +1,6 @@
 %nav-base
   width: 100%
   color: $third-color
-  // padding: ce(15px) ce(10px)
   ul 
     li
       +border-radius(2px)
@@ -39,8 +38,11 @@
     +flex-flow(row, wrap)
   align-items: center 
 .navbar-logo
-  +flexbox()
+  +flexbox
   +justify-content(flex-start)
+  margin-top: ce(20px)
+  +flexpoint-sm
+    margin-top: 0
 
 // Mobile nav styles
 .navbar-toggle 
@@ -104,7 +106,6 @@
     padding: ce(10px) ce(15px)
     list-style: none
     a
-      @extend .txt-shadow-lgt
       padding: ce(10px)
       text-decoration: none
       text-transform: uppercase
@@ -129,11 +130,15 @@
   
 .menu-list
   +flexbox
-  +flex-flow
+  +flex-flow(column, wrap)
+  +justify-content(center)
   margin: 0
   padding: 0
   list-style: none
   position: relative
+  +flexpoint-sm
+    +flex-flow(row, wrap)
+    +justify-content(flex-start)
 
 .menu-item
   display: block
