@@ -30,13 +30,15 @@
   +flexpoint-sm
     margin-bottom: 10px
   z-index: 3
+
 .navbar-flex
   +flexbox
   +flex-flow(column, wrap)
   +justify-content
+  +align-items(center)
   +flexpoint-sm
     +flex-flow(row, wrap)
-  align-items: center 
+
 .navbar-logo
   +flexbox
   +justify-content(flex-start)
@@ -78,6 +80,7 @@
 
 .nav-hrz
   @extend %nav-base
+   
 .nav-vrt
   @extend %nav-base
   @extend %bg-darktrim
