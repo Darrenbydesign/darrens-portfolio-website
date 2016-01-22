@@ -9,25 +9,19 @@
       %li.port-list-item
         %label.port-label
           Medium:
-        %span
-          = @portfolio.medium
-
+        %span= @portfolio.medium
       %li.port-list-item
         %label.port-label
           Industry:
-        %span
-          = @portfolio.industry
-
+        %span= @portfolio.industry
       %li.port-list-item
         %label.port-label
           Services:
-        %span
-          = @portfolio.services
+        %span= @portfolio.services
       %li.port-list-item
         %label.port-label
           Offerings:
-        %span
-          = @portfolio.offerings
+        %span= @portfolio.offerings
 
     = markdown @portfolio.description
     %hr/
