@@ -149,17 +149,18 @@
 
 .menu-link
   +font-size(16px)
-  padding: ce(16px)
-  display: block
-  cursor: pointer
   +prefix((user-select: none))
   +prefix((touch-callout: none))
   +prefix((highlight-color: rgba(0, 0, 0, 0)))
+  padding: ce(16px)
+  display: block
+  cursor: pointer
   &:hover,&:focus
     outline: none
 
 .menu-prospero
   .menu-link
+    +transition(color 0.3s)
     position: relative
     display: block
     text-align: center
@@ -168,10 +169,11 @@
     margin: 0 1.5em
     padding: 0.75em 0
     color: $third-color
-    +transition(color 0.3s)
     &:hover,&:focus,&:active
       color: $primary-color-dark
     &:before
+      +scale3d((0, 1, 1))
+      +transition(transform 0.1s ease-in-out)
       content: ''
       background: $primary-color
       width: 100%
@@ -179,8 +181,6 @@
       position: absolute
       bottom: 0
       left: 0
-      +scale3d((0, 1, 1))
-      +transition(transform 0.1s)
 
   .menu-item-current
     .menu-link

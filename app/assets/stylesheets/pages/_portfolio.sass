@@ -48,12 +48,16 @@
   +img-responsive(flex)
 
 .portfolio-button-container
-  +flexbox()
+  +flexbox
+  +flex-flow(column, wrap)
   +justify-content(center)
   +align-items(center)
   list-style: none
   li
-    margin: ce(10px) ce(15px)
+    margin: 0
+    +flexpoint-lg
+      margin: $common-margin
+
 
 
 .portfolio-list
