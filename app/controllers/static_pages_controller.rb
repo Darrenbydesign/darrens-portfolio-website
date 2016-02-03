@@ -3,17 +3,9 @@ class StaticPagesController < ApplicationController
     @title = "Home"
     @posts_render =  Post.feed3
   end
-
-  def inspiration
-    @title = "Inspiration"
-  end
   
   def about
     @title = "About"
-  end
-
-  def blog
-    @title = "Blog"
   end
   
 end

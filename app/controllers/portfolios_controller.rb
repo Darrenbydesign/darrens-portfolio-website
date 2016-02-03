@@ -49,5 +49,4 @@ class PortfoliosController < ApplicationController
     params.require(:portfolio).permit(:title, :description, :image, :link,:medium, :industry, :services, :offerings, :slug)
   end
 
-
 end
