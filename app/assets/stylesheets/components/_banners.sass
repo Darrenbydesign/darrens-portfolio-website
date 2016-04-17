@@ -13,25 +13,6 @@
 
 .masthead
   @extend %masthead-base
-  .intro-message
-    +transition(all o.3s ease-in)
-    color: dt($third-color)
-    padding-top: ce(50px)
-    width: 100%
-    height: auto
-    +flexpoint-lg
-      width: 90vmax
-    h1
-      color: inherit
-      +flexpoint-lg
-        +font-size(60px)
-    p
-      +font-size(22px)
-      +flexpoint-sm
-        +font-size(35px)
-      +flexpoint-lg
-        +font-size(40px)
- 
 .link-hover-state
   a 
     color: $primary-color-light

@@ -1,14 +1,26 @@
-- @UX = "<UX> Researcher </UX>"
-- @UI = "<UI> Designer </UI>"
-- @Dev = "<developer> Front-end </developer>"
+- @UX = "UX Research"
+- @UI = "UI Design"
+- @Dev = "<development/>"
 
 .masthead.home-bg
-  %section.intro-message
-    %h1
-      Hi, my name is Darren, and I'm a :
-    %p
-      = @UX
-    %p
-      = @UI
-    %p
-      = @Dev
+  .intro-message
+    %h2.intro-heading-large
+      Hello. 
+      %br/
+      My name is Darren Sorrels. 
+      %br/
+      I am a UX designer &amp; Front-end developer
+    %hr/
+%section
+  %h2.txt-center  Here's what I bring to the table
+  %hr/
+  %ul.intro-list
+    %li.intro-list-item
+      UX Research
+      %p I work smart to discover the problems that really need to be solved. I then work hard to discover and implement the best solution to solve that problem.
+    %li.intro-list-item
+      UI Design
+      %p With the knowledge gained from the researh phase I can craft beautiful interfaces that will make your products look and feel like less of a chore.
+    %li.intro-list-item
+      =@Dev
+      %p In addition to my visual and organizational skills I can also help bring these designs to life with code. I can create HTML/CSS/JS versions of my designs to show the functional side of my interfaces

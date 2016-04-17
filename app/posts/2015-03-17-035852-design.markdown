@@ -7,6 +7,7 @@ email: darrenbydesign@gmail.com
 
 Today is the first day that I have written anything purely for myself in about a year.
 Lately it seems the only important things I write are explanations about why an interface design works and why we should follow existing patterns for the sake of users in spite of stakeholders. All this is really wonderful because I've come to realize that I love educating non designers, but sometimes it wears on my designer soul and I need to rehabilitate. With that being said, I want to talk about designing for the sake of design. No stakeholders, no vague project requirements, just a concept and a computer if necessary.
+
 <div class="slab">  
   <figure class="blk-lg-12">
     <img class="img-responsive" src="" alt="Test image">
@@ -14,7 +15,7 @@ Lately it seems the only important things I write are explanations about why an 
   </figure>
 </div>
 
-Design is not fully art, it is also bit of a science. It seems almost nonsensical to say the phrase  " Design for design's sake" . What is my point you ask?
+Design is not fully art, it is also bit of a science. It seems almost nonsensical to say the phrase  " Design for design's sake" . What is my point you might ask?
 Simple designing is like exercising if you stop designing when you don't have stakeholders breathing down your neck, your  skills can atrophy. What's a designer to do to remedy this? Well here are a few things I find helpful.
 
 ## Research

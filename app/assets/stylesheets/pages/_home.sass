@@ -1,4 +1,51 @@
 .home-bg
-  background: linear-gradient(rgba($primary-color-dark, 0.9), rgba($primary-color-light, 0.75) ), url($night-sky) no-repeat
+  background: url($polygonal-bg) no-repeat
   background-size: cover
   background-position: center center
+  height: 30vh
+  max-height: 30vh
+  +breakpoint-lg
+    height: 45vh
+    max-height: 45vh
+
+.intro-message
+  +flexbox
+  +flex-flow(row,wrap)
+  +align-items(center)
+  +justify-content(center)
+  +transition(all 0.3s ease-in)
+  padding-top: ce(20px)
+  color: $third-color
+  +flexpoint-lg
+    width: 50vmax
+    
+.intro-heading
+  color: inherit
+.intro-heading-large
+  @extend .intro-heading
+  // +font-size(30px)
+  line-height: 1.35
+  +flexpoint-md
+    +font-size(60px)
+
+.intro-list
+  +flexbox
+  +flex-flow(column,wrap)
+  +justify-content(center)
+  +align-items(flex-start)
+  list-style: none
+  +flexpoint-md
+    +flex-flow(row,wrap)
+.intro-list-item
+  +font-size(22px)
+  +flex(1)
+  color: $primary-color
+  padding-right: 20px
+  padding-left: 20px
+  margin-bottom: 20px
+  p
+    color: $base-text-color
+  +flexpoint-sm
+    +font-size(35px)
+  +flexpoint-lg
+    +font-size(40px)
