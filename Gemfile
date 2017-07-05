@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.1.5'
 #ruby-gemset=railstutorial_rails_4_0
-
+# Testing push access
 gem 'rails', '4.0.4'
 gem 'json', '1.8.1'
 gem 'haml'
