@@ -1,9 +1,12 @@
 source 'https://rubygems.org'
-ruby '2.1.5'
-#ruby-gemset=railstutorial_rails_4_0
+ruby '2.3.4'
 
-gem 'rails', '5.0.0'
-gem 'json', '1.8.1'
+# Upgrading from rails 4 to rails 5
+gem 'rails', '4.2.7'
+# gem 'rails', '>= 5.0.0.rc2', '< 5.1'
+gem "nokogiri"
+
+gem 'json'
 gem 'haml'
 gem 'sass'
 gem 'haml-rails'
