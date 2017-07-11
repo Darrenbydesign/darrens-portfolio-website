@@ -2,8 +2,8 @@
 
 This Rails app uses the following:
 
-* Ruby version: 2.1.5
-* Rails 4.0.4
+* Ruby version: 2.3.4
+* Rails 5.0.0.rc2
 
 ## System dependencies
 

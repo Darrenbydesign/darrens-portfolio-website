@@ -32,13 +32,16 @@ gem 'devise'
 gem 'mail_form'
 gem 'will_paginate'
 
+group :development do
+  gem 'web-console', '~> 3.0'
+end
 group :development, :test do
   gem 'rspec-rails'
 end
 
 group :test do
-  gem 'selenium-webdriver', '2.35.1'
-  gem 'capybara', '2.1.0'
+  gem 'selenium-webdriver'
+  gem 'capybara'
   gem 'rspec'
   gem 'rspec-mocks'
   gem 'rspec-expectations'
