@@ -1,1 +1,0 @@
-Postmarkdown::Config.options[:allow_preview] = true

@@ -18,7 +18,7 @@ gem 'jquery-rails'
 
 gem 'turbolinks'
 gem 'jbuilder'
-gem 'postmarkdown'
+# gem 'postmarkdown'
 gem 'active_attr'
 gem 'figaro'
 

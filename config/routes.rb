@@ -1,13 +1,13 @@
 MySite::Application.routes.draw do
 
   devise_for :users
-  postmarkdown :as => :blog, :permalink_format => :slug
+  # postmarkdown :as => :blog, :permalink_format => :slug
   resources :portfolios
   resources :contacts, only: [:new, :create]
   
   root :to => 'static_pages#home'
 
-  %w[home about blog].each do |page|
+  %w[home about].each do |page|
     get page, controller:'static_pages', action: page
   end
 
