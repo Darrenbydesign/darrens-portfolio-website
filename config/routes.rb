@@ -1,7 +1,6 @@
 MySite::Application.routes.draw do
 
   devise_for :users
-  # postmarkdown :as => :blog, :permalink_format => :slug
   resources :portfolios
   resources :contacts, only: [:new, :create]
   

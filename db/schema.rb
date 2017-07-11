@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20151214124504) do
     t.string   "industry",           limit: 255
     t.string   "services",           limit: 255
     t.string   "offerings",          limit: 255
-    t.string   "medium",             limit: 255
+    t.string   "medium"
     t.index ["slug"], name: "index_portfolios_on_slug", unique: true, using: :btree
   end
 
