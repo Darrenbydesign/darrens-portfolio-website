@@ -381,8 +381,8 @@ $Placeholder-Selectors: ()
       $Placeholder-Selectors: map-merge($Placeholder-Selectors, ('button': $button-selector)) !global
       @at-root %#{$button-selector}
         @include button-static(false)
-
     @extend %#{$button-selector}
+
   @else 
     border: none
     padding-left: 10px
