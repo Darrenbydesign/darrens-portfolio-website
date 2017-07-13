@@ -9,37 +9,35 @@
         %li
           =msg
   / This section is where the form gets built
-  .frm-group.blk-lg-4
+  .frm-group.blk-lg-6
     =f.label :title , :class => "frm-title"
     =f.text_field :title, :class => "frm-control"
 
-  .frm-group.blk-lg-4
+  .frm-group.blk-lg-6
     =f.label :image , :class => "frm-title"
     =f.file_field :image, :class => "frm-control"
 
-  .frm-group.blk-lg-4
-    =f.label :description, :class => "frm-title"
-    =f.text_area :description, :class => "frm-control"
-
-  .frm-group.blk-lg-4
+  .frm-group.blk-lg-6
     =f.label :link ,:class => "frm-title"
     =f.text_field :link, :class => "frm-control"
 
-  .frm-group.blk-lg-4
+  .frm-group.blk-lg-6
     =f.label :medium ,:class => "frm-title"
     =f.text_field :medium, :class => "frm-control"
   
-  .frm-group.blk-lg-4
+  .frm-group.blk-lg-6
     =f.label :industry ,:class => "frm-title"
     =f.text_field :industry, :class => "frm-control"
 
-  .frm-group.blk-lg-4
+  .frm-group.blk-lg-6
     =f.label :services ,:class => "frm-title"
     =f.text_field :services, :class => "frm-control"
   
-  -# .frm-group.blk-lg-4
-  -#   =f.label :offerings ,:class => "frm-title"
-  -#   =f.text_field :offerings, :class => "frm-control"
+  .frm-group.blk-lg-6
+    =f.label :description, :class => "frm-title"
+    =f.text_area :description, :class => "frm-control textarea-large"
+  
+  %hr/
 
   .frm-group.blk-lg-4
     =f.submit :class => "form-button"

@@ -1,18 +1,27 @@
 /*==============Alert Messages=====================*/
+.alert,.notice
+  background: $white
+  text-align: center
+  padding: 15px 0
+  margin-bottom: 20px
+  z-index: 4
+  
 .alert-success
-    +alert-message($BGcolor-success)
+  +alert-message($BGcolor-success)
 
 .alert-warning
-    +alert-message($BGcolor-warning)
+  +alert-message($BGcolor-warning)
 
 .alert-info
-    +alert-message($BGcolor-info)
+  +alert-message($BGcolor-info)
 
 .alert-error
-    +alert-message($BGcolor-error)
+  +alert-message($BGcolor-error)
 
 .alert-popup
-    position: relative
-    right: 0px
-    top: px-em($base-text-px,50px)
-    z-index: 3
+  position: relative
+  right: 0px
+  top: px-em($base-text-px,50px)
+  z-index: 3
+
+
