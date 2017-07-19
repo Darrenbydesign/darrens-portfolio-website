@@ -4,9 +4,8 @@
     text-decoration: none
     
 .portfolio-date
-  color: $white
-  text-align: center
   font-family: $font-stack-serif-regular
+  text-align: center
 
 .portfolio-content
   width: 95vmin
@@ -20,32 +19,32 @@
   +breakpoint-lg
     width: 50vw
   p
-    margin-top: ce(20px)
     padding-bottom: ce(20px)
+    margin-top: ce(20px)
 
 .portfolio-img-container
   +flexbox()
   +justify-content(center)
   +align-items(center)
-  background-color: $primary-color
-  padding-top: ce(20px)
+  background-color: rgba($primary-color, 0.54)
   padding-bottom: ce(20px)
+  padding-top: ce(20px)
 
 .portfolio-header
   @extend .page-header
   background-color: none
-  margin-top: 0
   margin-bottom: 0
+  margin-top: 0
   h2
-    margin-top: 0
     padding-top: ce(10px)
     color: dt($white)
+    margin-top: 0
   
 
 .portfolio-img
-  border: 3px solid $primary-color-dark
-  box-shadow: $common-box-shadow
   +img-responsive(flex)
+  border: 2px solid darken($primary-color, 15%)
+  box-shadow: $common-box-shadow
 
 .portfolio-button-container
   +flexbox
@@ -66,13 +65,12 @@
   list-style: none
 
   .port-list-item
-    padding-right: ce(5px)
     +flexbox
     +flex-flow(row, wrap)
     +justify-content(flex-start)
     +align-content(center)
     +align-items(baseline)
-
+    padding-right: ce(5px)
     span
       display: inline-block
       margin-left: 0

@@ -27,7 +27,7 @@
 %ul.portfolio-button-container
   - if @portfolio.link
     %li
-      = link_to (@portfolio.title) + "Screens", @portfolio.link, :target => "_blank", :class => "portfolio-button"
+      = link_to (@portfolio.title) + " Screens", @portfolio.link, :target => "_blank", :class => "portfolio-button"
     %li
       = link_to "Back to portfolio", portfolios_path, :class => "portfolio-button"
   - else

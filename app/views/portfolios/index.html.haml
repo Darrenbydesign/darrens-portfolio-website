@@ -1,11 +1,13 @@
 .page-header
   %h1 Portfolio
-#portfolio
-  - @portfolios.each do |portfolio|
-    %h2.portfolio-title
-      = link_to portfolio.title, portfolio
-    %p.portfolio-date
-      = portfolio.created_at.strftime('%A, %B %d')
+#portfolioContainer
+  .grid-wrapper
+    - @portfolios.each do |portfolio|
+      .grid-item
+        %h2.portfolio-title
+          = link_to portfolio.title, portfolio
+        %p.portfolio-date
+          = portfolio.created_at.strftime('%A, %B %d')
 
   .custom_pagination
     = will_paginate @portfolios
