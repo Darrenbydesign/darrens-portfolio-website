@@ -1,11 +1,11 @@
-.navbar.navbar-fixed-top.navbar-flex.flex-nav-center
+.navbar.navbar-fixed-top.navbar-flex
   .navbar-logo
     =link_to(image_tag("logo/header_logo.png", alt: "Darren Sorrels Design", :class=> "site-logo"), root_path)
   %nav.menu.menu-prospero
     %ul.menu-list
       =nav_link 'Home', root_path
       =nav_link 'Work', portfolios_path
-      =nav_link 'Blog', blog_path
+      -# =nav_link 'Blog', blog_path
       =nav_link 'About', about_path
       =nav_link 'Contact', new_contact_path
       - if user_signed_in?

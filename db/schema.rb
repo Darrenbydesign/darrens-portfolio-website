@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -16,41 +15,39 @@ ActiveRecord::Schema.define(version: 20151214124504) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "portfolios", force: true do |t|
-    t.string   "title"
+  create_table "portfolios", force: :cascade do |t|
+    t.string   "title",              limit: 255
     t.text     "description"
-    t.string   "link"
+    t.string   "link",               limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "slug"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
+    t.string   "slug",               limit: 255
+    t.string   "image_file_name",    limit: 255
+    t.string   "image_content_type", limit: 255
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.string   "industry"
-    t.string   "services"
-    t.string   "offerings"
+    t.string   "industry",           limit: 255
+    t.string   "services",           limit: 255
+    t.string   "offerings",          limit: 255
     t.string   "medium"
+    t.index ["slug"], name: "index_portfolios_on_slug", unique: true, using: :btree
   end
 
-  add_index "portfolios", ["slug"], name: "index_portfolios_on_slug", unique: true, using: :btree
-
-  create_table "users", force: true do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
+  create_table "users", force: :cascade do |t|
+    t.string   "email",                  limit: 255, default: "", null: false
+    t.string   "encrypted_password",     limit: 255, default: "", null: false
+    t.string   "reset_password_token",   limit: 255
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",                      default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
+    t.string   "current_sign_in_ip",     limit: 255
+    t.string   "last_sign_in_ip",        limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end

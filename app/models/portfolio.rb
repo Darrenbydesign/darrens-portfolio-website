@@ -1,4 +1,4 @@
-class Portfolio < ActiveRecord::Base
+class Portfolio < ApplicationRecord
   extend FriendlyId
   friendly_id :title, use: :slugged
   
