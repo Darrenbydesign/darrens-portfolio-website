@@ -36,36 +36,36 @@ describe StaticPagesController do
     end
   end
 
-  describe "GET 'blog'" do
-    it "returns http success" do
-      get 'blog'
-      response.should be_success
-    end
-    it "should have the right title" do
-    get 'home'
-    response.should have_selector
-      ("title", :content => @base_title + " | Blog")
-    end
-    it "should have a Blog page at '/'" do
-      get '/blog'
-      response.should have_selector('title', :content => "blog")
-    end
-  end
+  # describe "GET 'blog'" do
+  #   it "returns http success" do
+  #     get 'blog'
+  #     response.should be_success
+  #   end
+  #   it "should have the right title" do
+  #   get 'home'
+  #   response.should have_selector
+  #     ("title", :content => @base_title + " | Blog")
+  #   end
+  #   it "should have a Blog page at '/'" do
+  #     get '/blog'
+  #     response.should have_selector('title', :content => "blog")
+  #   end
+  # end
 
-  describe "GET 'portfolio'" do
-    it "returns http success" do
-      get 'portfolio'
-      response.should be_success
-    end
-    it "should have the right title" do
-    get 'home'
-    response.should have_selector
-      ("title", :content => @base_title + " | Portfolio")
-    end
-    it "should have a Portfolio page at '/'" do
-      get '/portfolio'
-      response.should have_selector('title', :content => "portfolio")
-    end
-  end
+  # describe "GET 'portfolio'" do
+  #   it "returns http success" do
+  #     get 'portfolio'
+  #     response.should be_success
+  #   end
+  #   it "should have the right title" do
+  #   get 'home'
+  #   response.should have_selector
+  #     ("title", :content => @base_title + " | Portfolio")
+  #   end
+  #   it "should have a Portfolio page at '/'" do
+  #     get '/portfolio'
+  #     response.should have_selector('title', :content => "portfolio")
+  #   end
+  # end
   
 end
