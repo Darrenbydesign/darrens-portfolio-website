@@ -16,7 +16,7 @@ class PortfoliosController < ApplicationController
     if @portfolio.save
       redirect_to @portfolio , notice: "Awesome work man! Your project is now saved!"
     else
-      error: "Something went wrong adding your new image"
+       flash[:alert] = "Something went wrong adding your new image"
       render 'new'
     end
   end
