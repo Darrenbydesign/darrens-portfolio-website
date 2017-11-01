@@ -1,43 +1,58 @@
 / Form validation Goes before the form here
 = form_for @portfolio, html: { multipart: true, class: "form-container" } do |f|
   -if @portfolio.errors.any?
-    %h2
-      =pluralize.(@portfolio.errors.count, "error") 
-      Prevented this portfolio from saving:
+    %h2 Prevented this portfolio from saving:
+    %ul
+      %li
+        =pluralize.(@portfolio.errors.count, "error") 
     %ul
       - @portfolio.errors.full_messages.each do |msg|
         %li
           =msg
+
   / This section is where the form gets built
+
+  / This is the Project Title
   .frm-group.blk-lg-6
     =f.label :title , :class => "frm-title"
     =f.text_field :title, :class => "frm-control"
 
+  / This is the Project Image Header
   .frm-group.blk-lg-6
     =f.label :image , :class => "frm-title"
     =f.file_field :image, :class => "frm-control"
 
+  / This is the Link to the project webpage or external link
   .frm-group.blk-lg-6
     =f.label :link ,:class => "frm-title"
     =f.text_field :link, :class => "frm-control"
 
+  / This is the where we enter the tools used to create the project
   .frm-group.blk-lg-6
     =f.label :medium ,:class => "frm-title"
     =f.text_field :medium, :class => "frm-control"
   
+  / Listing the industries this project is apart of
   .frm-group.blk-lg-6
     =f.label :industry ,:class => "frm-title"
     =f.text_field :industry, :class => "frm-control"
 
+  / Listing the design disciplines provided on the project
   .frm-group.blk-lg-6
     =f.label :services ,:class => "frm-title"
     =f.text_field :services, :class => "frm-control"
   
+  -# Offerings for design work here
+  -# .frm-group.blk-lg-6
+  -#   =f.label :offerings ,:class => "frm-title"
+  -#   =f.text_field :offerings, :class => "frm-control"
+
+  -# This is where the story of the design is entered
   .frm-group.blk-lg-6
     =f.label :description, :class => "frm-title"
     =f.text_area :description, :class => "frm-control textarea-large"
   
   %hr/
-
+  
   .frm-group.blk-lg-4
     =f.submit :class => "form-button"

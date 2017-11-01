@@ -16,6 +16,7 @@ class PortfoliosController < ApplicationController
     if @portfolio.save
       redirect_to @portfolio , notice: "Awesome work man! Your project is now saved!"
     else
+      error: "Something went wrong adding your new image"
       render 'new'
     end
   end
@@ -46,7 +47,7 @@ class PortfoliosController < ApplicationController
   end
 
   def portfolio_params
-    params.require(:portfolio).permit(:title, :description, :image, :link,:medium, :industry, :services, :offerings, :slug)
+    params.require(:portfolio).permit(:title, :description, :image, :link, :medium, :industry, :services, :offerings, :slug)
   end
 
 end

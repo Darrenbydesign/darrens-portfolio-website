@@ -28,11 +28,9 @@
   - if @portfolio.link
     %li
       = link_to (@portfolio.title) + " Screens", @portfolio.link, :target => "_blank", :class => "portfolio-button"
-    %li
-      = link_to "Back to portfolio", portfolios_path, :class => "portfolio-button"
   - else
     %li
-      = link_to "Back to portfolio", portfolios_path, :class => "portfolio-button"
+      = link_to "Return to portfolio", portfolios_path, :class => "portfolio-button"
 
 - if user_signed_in?
   %header

@@ -18,7 +18,6 @@ gem 'jquery-rails'
 
 gem 'turbolinks'
 gem 'jbuilder'
-# gem 'postmarkdown'
 gem 'active_attr'
 gem 'figaro'
 
@@ -26,11 +25,14 @@ gem 'newrelic_rpm'
 gem 'friendly_id', '~> 5.1.0'
 gem 'pygments.rb', '~> 0.6.0'
 gem 'redcarpet', '~> 3.2.2'
-gem 'paperclip', '~> 4.3'
+gem 'paperclip'
 gem 'aws-sdk'
+gem 'aws-sdk-resources'
 gem 'devise'
 gem 'mail_form'
 gem 'will_paginate'
+# gem 'postmarkdown'
+gem 'pkg-config'
 
 group :development do
   gem 'web-console', '~> 3.0'
