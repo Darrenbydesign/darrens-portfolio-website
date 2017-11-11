@@ -3,7 +3,7 @@
     %h2.portfolio-title
       = @portfolio.title
   %figure.portfolio-img-container
-    = image_tag @portfolio.image.url , :class => "portfolio-img"
+    = image_tag @portfolio.image.url(:medium) , :class => "portfolio-img"
     
   .portfolio-content
     %ul.portfolio-list
