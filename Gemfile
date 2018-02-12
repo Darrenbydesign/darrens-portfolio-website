@@ -15,6 +15,7 @@ gem 'sprockets'
 gem 'uglifier'
 gem 'coffee-rails' 
 gem 'jquery-rails'
+gem 'yajl-ruby', '>= 1.3.1'
 
 gem 'turbolinks'
 gem 'jbuilder'
@@ -23,7 +24,7 @@ gem 'figaro'
 
 gem 'newrelic_rpm'
 gem 'friendly_id', '~> 5.1.0'
-gem 'pygments.rb', '~> 0.6.0'
+gem 'pygments.rb'
 gem 'redcarpet', '~> 3.2.2'
 gem 'paperclip', '~> 5.2.0'
 
