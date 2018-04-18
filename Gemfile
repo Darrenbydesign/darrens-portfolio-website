@@ -4,7 +4,6 @@ ruby '2.3.4'
 # Upgrading from rails 4 to rails 5
 gem 'rails', '5.0.0.rc2'
 
-gem 'nokogiri'
 gem 'json'
 gem 'haml'
 gem 'sass'
@@ -15,7 +14,9 @@ gem 'sprockets'
 gem 'uglifier'
 gem 'coffee-rails' 
 gem 'jquery-rails'
-gem 'yajl-ruby', '>= 1.3.1'
+gem 'yajl-ruby', '~> 1.3', '>= 1.3.1'
+gem 'nokogiri', '~> 1.8', '>= 1.8.2'
+gem 'loofah', '~> 2.2', '>= 2.2.2'
 
 gem 'turbolinks'
 gem 'jbuilder'

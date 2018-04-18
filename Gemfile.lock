@@ -305,7 +305,7 @@ DEPENDENCIES
   paperclip (~> 5.2.0)
   pg (= 0.20.0)
   pkg-config
-  pygments.rb (~> 0.6.0)
+  pygments.rb
   rails (= 5.0.0.rc2)
   rails-controller-testing
   rails_12factor
