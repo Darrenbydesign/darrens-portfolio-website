@@ -5,11 +5,9 @@
     - @portfolios.each do |portfolio|
       .grid-item
         %figure.port-image-preview
-          = image_tag portfolio.image
+          = image_tag portfolio.image.url
         %h2.portfolio-title
           = link_to portfolio.title, portfolio
-        -# %p
-          -# = markdown portfolio.description
         %p.portfolio-date
           = portfolio.created_at.strftime('%A, %B %d')
 
