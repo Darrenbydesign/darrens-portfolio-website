@@ -1,18 +1,19 @@
 .page-header
   %h1 Portfolio
-#portfolioContainer
-  .grid-wrapper
-    - @portfolios.each do |portfolio|
-      .grid-item
-        %figure.port-image-preview
-          = image_tag portfolio.image.url
-        %h2.portfolio-title
-          = link_to portfolio.title, portfolio
-        %p.portfolio-date
-          = portfolio.created_at.strftime('%A, %B %d')
+.container
+  #portfolioContainer
+    .grid-wrapper
+      - @portfolios.each do |portfolio|
+        .grid-item
+          %figure.port-image-preview
+            = image_tag portfolio.image.url
+          %h2.portfolio-title
+            = link_to portfolio.title, portfolio
+          %p.portfolio-date
+            = portfolio.created_at.strftime('%A, %B %d')
 
-  .custom_pagination
-    = will_paginate @portfolios
+    .custom_pagination
+      = will_paginate @portfolios
 
 - if user_signed_in?
   %header
