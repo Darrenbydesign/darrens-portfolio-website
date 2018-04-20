@@ -6,7 +6,7 @@
       - @portfolios.each do |portfolio|
         .grid-item
           %figure.port-image-preview
-            = image_tag portfolio.image.url
+            = image_tag portfolio.image.url, :class => "img-responsive"
           %h2.portfolio-title
             = link_to portfolio.title, portfolio
           %p.portfolio-date
