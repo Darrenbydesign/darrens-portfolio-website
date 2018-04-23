@@ -94,7 +94,7 @@ MySite::Application.configure do
   # config/environments/production.rb
   config.paperclip_defaults = {
     :storage => :s3,
-    :s3_region => 'us-east-1',
+    :s3_region => ENV["AWS_REGION"],
     :s3_credentials => {
       :s3_host_name => ENV["AWS_S3_HOST_NAME"],
       :bucket => ENV['S3_BUCKET_NAME'],
