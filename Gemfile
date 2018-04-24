@@ -41,6 +41,7 @@ gem 'mail_form'
 
 # Active Admin gems
 gem 'activeadmin'
+gem 'active_skin'
 gem 'cancan' # or cancancan
 gem 'pundit'
 

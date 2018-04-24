@@ -27,6 +27,7 @@ GEM
     active_attr (0.10.3)
       activemodel (>= 3.0.2, < 6.0)
       activesupport (>= 3.0.2, < 6.0)
+    active_skin (0.0.12)
     activeadmin (1.3.0)
       arbre (>= 1.1.1)
       coffee-rails
@@ -331,6 +332,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_attr
+  active_skin
   activeadmin
   aws-sdk (~> 2.0)
   aws-sdk-resources
