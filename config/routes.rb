@@ -1,9 +1,12 @@
 MySite::Application.routes.draw do
 
+  get 'pages/show'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
   resources :contacts, only: [:new, :create]
+  resources :pages, only: [:show]
   
   root :to => 'static_pages#home'
 

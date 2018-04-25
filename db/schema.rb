@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180424134025) do
+ActiveRecord::Schema.define(version: 20180425130804) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,29 @@ ActiveRecord::Schema.define(version: 20180424134025) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  create_table "blocks", force: :cascade do |t|
+    t.string   "title"
+    t.text     "body"
+    t.string   "position"
+    t.string   "display"
+    t.boolean  "show_title"
+    t.string   "class_sufix"
+    t.boolean  "is_published"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "order"
+  end
+
+  create_table "pages", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "section_id"
+    t.text     "body"
+    t.integer  "order"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.boolean  "is_published"
+  end
+
   create_table "portfolios", force: :cascade do |t|
     t.string   "title",              limit: 255
     t.text     "description"
@@ -62,6 +85,12 @@ ActiveRecord::Schema.define(version: 20180424134025) do
     t.string   "offerings",          limit: 255
     t.string   "medium"
     t.index ["slug"], name: "index_portfolios_on_slug", unique: true, using: :btree
+  end
+
+  create_table "sections", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

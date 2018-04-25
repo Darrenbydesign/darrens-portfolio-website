@@ -11,7 +11,10 @@
 @import "active_admin/mixins";
 @import "active_admin/base";
 
-$skinLogo: none;
+$skinLogo: url(asset-path("logo/header_logo.svg")) no-repeat;
+$skinActiveColor: #5895b9;
+$skinHeaderBck: #0b6c95;
+$panelHeaderBck: #002744;
 
 @import "active_skin";
 
