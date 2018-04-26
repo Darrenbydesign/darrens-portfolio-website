@@ -4,9 +4,11 @@
   %nav.menu.menu-prospero
     %ul.menu-list
       =nav_link 'Home', root_path
-      -# =nav_link 'Work', portfolios_path
+      - @pageNav.each do |page|
+        =nav_link page.title, page_path(page.id) 
       =nav_link 'About', about_path
       =nav_link 'Contact', new_contact_path
-      - if user_signed_in?
-        %li.menu-item
-          =link_to "Sign Out" , destroy_user_session_path, method: :delete, :class => "menu-link"
+
+      -# - if user_signed_in?
+      -#   %li.menu-item
+      -#     =link_to "Sign Out" , destroy_user_session_path, method: :delete, :class => "menu-link"
