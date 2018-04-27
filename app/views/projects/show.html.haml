@@ -1,0 +1,38 @@
+.slab
+  %header.portfolio-header
+    %h2.portfolio-title
+      Project Title: 
+      = @project.title
+  %figure.portfolio-img-container
+    Project Image Header Goes Here:
+    = image_tag @project.image.url(:large) , :class => "portfolio-img", :alt => "Image Header Here"
+
+  .portfolio-content
+    %header
+      %h3 Tools Used
+    - 3.times do
+      %ul
+        %li
+    %header
+      %h3 Role
+    - 3.times do
+      %ul
+        %li
+    %header
+      %h3 Services
+    - 3.times do
+      %ul
+        %li
+
+    .markdown-body
+      = @project.body
+.slab
+  %header
+    %h3 Related Projects
+  - @projects.each do |project|
+    .grid-wrapper
+      .grid-item
+        %figure.port-image-preview
+          = image_tag project.image.url(:medium), :class=> "img-responsive"
+        %h2.portfolio-title
+          = link_to project.title, project
