@@ -1,35 +1,24 @@
 .slab
   %header.portfolio-header
     %h2.portfolio-title
-      -# = @project.title
-      Project Title Goes here
+      -# = @page.title
+      Project Title goes here
   %figure.portfolio-img-container
-    = image_tag "@project.image.url" , :class => "portfolio-img"
+    = image_tag asset-path("/headers/site_header_bg.png") , :class => "portfolio-img"
     
   .portfolio-content
-    %ul.portfolio-list
-      %li.port-list-item
-        %label.port-label
-          Tools Used:
-        -# %span= @project.medium
-      %li.port-list-item
-        %label.port-label
-          Industry:
-        -# %span= @project.industry
-      %li.port-list-item
-        %label.port-label
-          Role:
-        -# %span= @project.services
+    %header
+      %h3 Tools Used
+      %ul.porfolio-list
+        %li.port-list-item
+    %header
+      %h3 Industry
+      %ul.porfolio-list
+        %li.port-list-item
+    %header
+      %h3 Role
+      %ul.porfolio-list
+        %li.port-list-item
 
     .markdown-body 
-      -# = markdown @project.description
-      Description of project goes here
-      @page.body
-    %hr/
-
--# %ul.portfolio-button-container
--#   - if @project.link
--#     %li
--#       = link_to (@portfolio.title) + " Screens", @project.link, :target => "_blank", :class => "portfolio-button"
--#     %li
--#       = link_to "Return to portfolio", portfolios_path, :class => "btn-link"
+      
