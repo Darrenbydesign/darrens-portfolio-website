@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151214124504) do
+ActiveRecord::Schema.define(version: 20180428082951) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,13 @@ ActiveRecord::Schema.define(version: 20151214124504) do
     t.string   "offerings",          limit: 255
     t.string   "medium"
     t.index ["slug"], name: "index_portfolios_on_slug", unique: true, using: :btree
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
