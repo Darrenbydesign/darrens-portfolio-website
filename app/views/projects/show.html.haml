@@ -2,7 +2,7 @@
   %h2.portfolio-title
     = @project.title
 %figure.portfolio-img-container
-  = image_tag @project.image.url(:medium) , :class => "portfolio-img", :alt => "Image Header Here"
+  = image_tag @project.image.url , :class => "portfolio-img", :alt => "Image Header Here"
 
 .portfolio-content
   .markdown-body
@@ -13,5 +13,7 @@
   .grid-wrapper
     - @projects.each do |project|
       .grid-item
+        %figure.port-image-preview
+              = link_to(image_tag project.image.url, :class=> "img-responsive"), project
         %h2.portfolio-title
           = link_to project.title, project
