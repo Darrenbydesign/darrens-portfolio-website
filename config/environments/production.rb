@@ -102,5 +102,9 @@ MySite::Application.configure do
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
   }
+  # added for active admin editor
+  config.initialize_on_precompile = true
+  heroku labs:enable user-env-compile -a darrensorrels
+
 
 end
