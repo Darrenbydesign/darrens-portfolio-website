@@ -7,6 +7,7 @@ MySite::Application.routes.draw do
   devise_for :users
   resources :portfolios
   resources :contacts, only: [:new, :create]
+  resources :projects
   
   root :to => 'static_pages#home'
 
