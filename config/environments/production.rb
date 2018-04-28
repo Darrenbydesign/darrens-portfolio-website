@@ -104,7 +104,7 @@ MySite::Application.configure do
   }
   # added for active admin editor
   config.initialize_on_precompile = true
-  heroku labs:enable user-env-compile -a darrensorrels
+  # heroku labs:enable user-env-compile -a darrensorrels
 
 
 end
