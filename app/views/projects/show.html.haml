@@ -1,0 +1,10 @@
+.slab
+  %header.portfolio-header
+    %h2.portfolio-title
+      -# = @portfolio.title
+  %figure.portfolio-img-container
+    -# = image_tag @portfolio.image.url(:large) , :class => "portfolio-img"
+    
+  .portfolio-content
+    .markdown-body 
+      -# =markdown @portfolio.description
