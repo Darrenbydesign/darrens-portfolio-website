@@ -1,5 +1,9 @@
 MySite::Application.routes.draw do
 
+  get 'projects/index'
+
+  get 'projects/show'
+
   devise_for :users
   resources :portfolios
   resources :contacts, only: [:new, :create]
