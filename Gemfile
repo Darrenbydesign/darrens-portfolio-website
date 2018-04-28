@@ -28,14 +28,23 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'pygments.rb'
 gem 'redcarpet', '~> 3.2.2'
 gem 'paperclip', '~> 5.2.0'
+gem 'pkg-config'
 
+#  Amazon Web Services Integration
 gem 'aws-sdk', '~> 2.0'
 gem 'aws-sdk-resources'
+
+# User Authentication Gems
 gem 'devise'
+# Contact Form Mailer Gems
 gem 'mail_form'
-gem 'will_paginate'
-# gem 'postmarkdown'
-gem 'pkg-config'
+
+# Active Admin gems
+gem 'activeadmin'
+gem 'active_admin_editor', git: 'https://github.com/boontdustie/active_admin_editor'
+gem 'active_skin'
+gem 'cancan' # or cancancan
+gem 'pundit'
 
 group :development do
   gem 'web-console', '~> 3.0'
