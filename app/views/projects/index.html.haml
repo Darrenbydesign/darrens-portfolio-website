@@ -1,2 +1,13 @@
-%h1 Projects#index
-%p Find me in app/views/projects/index.html.haml
+.page-header
+  %h1 Portfolio
+.container
+  #portfolioContainer
+    .grid-wrapper
+      - @projects.each do |project|
+        .grid-item
+          %figure.port-image-preview
+            = image_tag project.image.url(:medium), :class=> "img-responsive"
+          %h2.portfolio-title
+            = link_to project.title, project
+          %p.portfolio-date
+            = project.created_at.strftime('%A, %B %d')
