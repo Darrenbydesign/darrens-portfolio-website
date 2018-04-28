@@ -6,7 +6,6 @@ ActiveAdmin.register Project do
   index do
     column :id
     column :title, :sortable => :title
-    column :body
     column :image_file_name
     column :image_file_size
     column :created_at, :sortable => :created_at
