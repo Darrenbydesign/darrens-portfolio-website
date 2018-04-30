@@ -16,6 +16,9 @@ MySite::Application.routes.draw do
     get page, controller:'static_pages', action: page
   end
 
+  %w[projects].each do |page|
+    get page, controller:'projects', action: page
+  end
   # This is a redirect for users if they reach a route that doesn't exist anymore or is not accesible
   # get '*path'=> redirect('/')
 end
