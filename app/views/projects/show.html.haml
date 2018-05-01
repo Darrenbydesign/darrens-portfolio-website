@@ -14,6 +14,6 @@
   - @projects.each do |project|
     .grid-item
       %figure.port-image-preview
-        = image_tag project.image.url(:large), :class=> "img-responsive"
+        = image_tag project.image.url, :class=> "img-responsive"
       %h2.portfolio-title
         = link_to project.title, project
