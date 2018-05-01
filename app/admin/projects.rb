@@ -16,7 +16,7 @@ ActiveAdmin.register Project do
       row :title
       row :body
       row :image do
-        project.image? ? image_tag(project.image.url) :content_tag(:span, "No Photo Yet")
+        project.image? ? image_tag(project.image.url(:thumb)) :content_tag(:span, "No Photo Yet")
       end
     end
   end
