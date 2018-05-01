@@ -2,7 +2,7 @@ ActiveAdmin.register Project do
   # Permit our parameters for the form
   permit_params :title, :body, :image
 
-  # Determine which parameters whill show on the User Interface
+  # Determine which parameters will show on the User Interface
   index do
     column :id
     column :title, :sortable => :title
@@ -25,7 +25,7 @@ ActiveAdmin.register Project do
     f.inputs "Project Details" do
       f.input :title, :label => "Project Title"
       f.input :body, as: :html_editor, :label => "Project Description"
-      f.input :image, :label => "Project Header Image", hint: f.project.image? ? image_tag(project.image.url) : content_tag(:span, "Upload JPG/PNG/GIF Image")
+      f.input :image, :label => "Project Header Image", hint: f.project.image? ? image_tag(project.image.url(:thumb)) : content_tag(:span, "Upload JPG/PNG/GIF Image")
     end
     f.actions
   end
