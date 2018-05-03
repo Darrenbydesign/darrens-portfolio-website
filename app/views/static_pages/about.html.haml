@@ -1,10 +1,9 @@
-.page-header
+.page-header.mb-0
   %h1 A little more about me
 
 .blk-lg-12
-  .slab
-    %figure.txt-center
-      = image_tag "photos/darren_lo.jpg", :class=> "img-circle my-photo img-responsive"
+  %figure.image-header
+    = image_tag "headers/hero-image-min.png", :class=> "img-responsive"
 
   %article.bio-container
     %h1 Hi I'm Darren, and I'm a UX & Interaction designer. 
@@ -14,7 +13,9 @@
       \.
 
     %p.text-large
-      I really enjoy side projects and work that makes the world a better place. Take a look at my work or say hello to me on 
+      I really enjoy side projects and work that makes the world a better place. Take a look at my 
+      =link_to "work", projects_path 
+      or say hello to me on 
       = link_to "Twitter", "https://twitter.com/Darrenbydesign", :target => "_blank"
       and 
       = link_to "Instagram", "https://www.instagram.com/darrensorrelsdesign", :target => "_blank"
