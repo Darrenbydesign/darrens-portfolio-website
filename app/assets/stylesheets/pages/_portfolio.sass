@@ -53,35 +53,26 @@
   max-height: 200px
   overflow: hidden
   
-.portfolio-button-container
-  +flexbox
-  +flex-flow(column, wrap)
-  +justify-content(center)
-  +align-items(center)
-  list-style: none
-  li
-    margin: 0
-    +flexpoint-lg
-      margin: $common-margin
-
-
-
 .portfolio-list
+  +flexbox
+  +flex-flow(row, wrap)
+  +justify-content(space-between)
+  +align-content(center)
   margin-top: ce(20px)
   margin-bottom: ce(10px)
   list-style: none
-  .port-list-item
-    +flexbox
-    +flex-flow(row, wrap)
-    +justify-content(flex-start)
-    +align-content(center)
-    +align-items(baseline)
-    padding-right: ce(5px)
-    span
-      display: inline-block
-      margin-left: 0
-      margin-bottom: ce(15px)
-      padding: ce(5px)
+  
+.port-list-item
+  +align-content(center)
+  +flexbox
+  +flex-flow(column, wrap)
+  +justify-content(flex-start)
+  padding-right: ce(5px)
+  span
+    display: inline-block
+    margin-left: 0
+    margin-bottom: ce(15px)
+    padding: ce(5px)
 
 .portfolio-list
   .port-label

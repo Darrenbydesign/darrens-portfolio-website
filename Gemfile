@@ -73,7 +73,7 @@ group :production do
   gem 'unicorn'
 end
 group :production, :development, :test do
-  gem 'pg', '0.20.0'
+  gem 'pg'
 end
 
 
