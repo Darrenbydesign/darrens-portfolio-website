@@ -42,6 +42,7 @@ gem 'mail_form'
 # Active Admin gems
 gem 'activeadmin'
 gem 'active_admin_editor', git: 'https://github.com/boontdustie/active_admin_editor'
+# gem 'activeadmin_trumbowyg'
 gem 'active_skin'
 gem 'cancan' # or cancancan
 gem 'pundit'
@@ -73,7 +74,7 @@ group :production do
   gem 'unicorn'
 end
 group :production, :development, :test do
-  gem 'pg'
+  gem 'pg', '0.20.0'
 end
 
 
