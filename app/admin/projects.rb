@@ -1,7 +1,7 @@
 ActiveAdmin.register Project do
   # Permit our parameters for the form
   permit_params :title, :body, :image
-
+  menu priority: 1
   # Determine which parameters will show on the User Interface
   index do
     column :id
