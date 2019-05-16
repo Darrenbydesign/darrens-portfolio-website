@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.3.4'
 
-# Upgrading from rails 4 to rails 5
-gem 'rails', '5.0.0.rc2'
+# Upgrading from rails 4 to rails 5.1.7
+gem 'rails', '5.1.7'
 
 gem 'json'
 gem 'haml'
