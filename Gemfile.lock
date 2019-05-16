@@ -176,7 +176,7 @@ GEM
       kaminari-core (= 1.1.1)
     kaminari-core (1.1.1)
     kgio (2.11.2)
-    loofah (2.2.2)
+    loofah (2.2.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -369,7 +369,7 @@ DEPENDENCIES
   jbuilder
   jquery-rails
   json
-  loofah (= 2.2.2)
+  loofah (= 2.2.3)
   mail_form
   newrelic_rpm
   nokogiri (= 1.8.5)

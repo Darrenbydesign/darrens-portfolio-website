@@ -16,7 +16,7 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'yajl-ruby', '~> 1.3.1'
 gem 'nokogiri', '1.8.5'
-gem 'loofah', ' 2.2.2'
+gem 'loofah', ' 2.2.3'
 
 gem 'turbolinks'
 gem 'jbuilder'
