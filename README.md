@@ -3,7 +3,7 @@
 This Rails app uses the following:
 
 * Ruby version: 2.3.4
-* Rails 5.1.3
+* Rails 5.1.7
 
 ## System dependencies
 
