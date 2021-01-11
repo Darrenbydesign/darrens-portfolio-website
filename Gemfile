@@ -27,7 +27,7 @@ gem 'figaro'
 gem 'newrelic_rpm'
 gem 'friendly_id', '~> 5.1.0'
 gem 'pygments.rb'
-gem 'redcarpet', '~> 3.2.2'
+gem 'redcarpet', '~> 3.5.1'
 gem 'paperclip', '~> 5.2.0'
 gem 'pkg-config'
 
