@@ -197,13 +197,13 @@ GEM
     mime-types-data (3.2019.0331)
     mimemagic (0.3.3)
     mini_mime (1.0.1)
-    mini_portile2 (2.5.0)
+    mini_portile2 (2.6.1)
     minitest (5.14.1)
     multi_json (1.13.1)
     newrelic_rpm (6.4.0.356)
     nio4r (2.3.1)
-    nokogiri (1.11.0)
-      mini_portile2 (~> 2.5.0)
+    nokogiri (1.12.5)
+      mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     paperclip (5.2.1)
@@ -388,7 +388,7 @@ DEPENDENCIES
   loofah (= 2.3.1)
   mail_form
   newrelic_rpm
-  nokogiri (= 1.11.0)
+  nokogiri (= 1.12.5)
   paperclip (~> 5.2.0)
   pg (= 0.20.0)
   pkg-config
