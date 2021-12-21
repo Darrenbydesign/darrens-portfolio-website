@@ -5,7 +5,7 @@ ruby '2.6.3'
 # Upgrading from rails 4 to rails 5.2.3
 gem 'rails', '5.2.3'
 
-gem 'json'
+gem "json", ">= 2.3.0"
 gem 'haml'
 gem 'sass'
 gem 'haml-rails'
@@ -18,6 +18,7 @@ gem 'jquery-rails'
 gem 'yajl-ruby', '~> 1.3.1'
 gem 'nokogiri', '1.10.8'
 gem 'loofah', '2.3.1'
+gem "rdoc", ">=6.3.1"
 
 gem 'turbolinks'
 gem 'jbuilder'
