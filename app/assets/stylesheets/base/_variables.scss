@@ -1,0 +1,215 @@
+// base colors
+$white: #ffffff;
+$black: #000000;
+$gray: lighten($black, 15%);
+$red: #f0655b;
+$green: #62c74c;
+$yellow: #ff7f00;
+$blue:  #5895b9;
+
+$primary-color: #5895b9;
+$primary-color-dark: darken($primary-color, 15%);
+$primary-color-light: lighten($primary-color, 15%);
+
+$secondary-color: #0b6c95;
+$secondary-color-dark: darken($secondary-color,15%);
+$secondary-color-light: lighten($secondary-color,15%);
+
+$third-color: #404041;
+$third-color-dark: lighten($third-color,15%);
+$third-color-light: lighten($third-color,15%);
+
+$background-color: #FFFFFF;
+//commonly used margin for elements
+$common-margin: 10px 15px;
+
+//commonly used padding for elements
+$common-padding: 10px 15px;
+$common-bottom-margin: 10px;
+$common-box-shadow: 0px 8px 3px -8px rgba($third-color, 0.65);
+
+$fixed-header-height: 100px;
+// margin-styles
+$margin-padding-bottom: 80px;
+// footer styles
+$footer-height: 70px;
+
+//typography
+$base-text-px: 16px;
+$base-text-color: #231f20;
+$alt-text-color: #faf9f8;
+$font-stack-serif-regular: "source_serif_pro_regular",'Helvetica Neue','Helvetica', sans-serif;
+$font-stack-serif-bold: "source_serif_pro_bold",'Helvetica Neue','Helvetica', sans-serif;
+$font-stack-secondary: "amblelight",'courier','Calibri', sans-serif;
+$font-stack-sanserif-semibold: "source_sans_prosemibold",'Helvetica Neue','Helvetica', sans-serif;
+$font-stack-sanserif-regular: "source_sans_proregular",'Helvetica Neue','Helvetica', sans-serif;
+$font-awesome: "fontawesome";
+
+// button colors
+$btn-color: $primary-color-dark;
+$btn-hover: $primary-color-light;
+$btn-warning: $yellow;
+$btn-warning-hover: lighten($btn-warning, 10);
+$btn-error: $red;
+$btn-error-hover: darken($btn-error,10);
+$btn-success: $green;
+$btn-success-hover: darken($btn-success,10);
+
+
+// Box shadow defaults
+$brand-box-shadow: 0px 8px 3px -8px rgba($third-color, 0.65);
+
+// Alert message colors
+$BGcolor-warning: $yellow;
+$BGcolor-info: #FFCD00;
+$BGcolor-error: $red;
+$BGcolor-success: $green;
+
+//loading bar gradient colors : defaulted to blue for the standard loading bar
+$color-start-gradient: $primary-color;
+$color-stop-gradient: $primary-color;
+
+// link colors
+$link-color: $primary-color-dark;
+$link-hover: $primary-color-light;
+$link-active: $primary-color;
+
+// table colors
+$table-hover: $secondary-color;
+$table-cell-stripe: $secondary-color-light;
+$table-border-top: $third-color-light;
+
+$table-border-bottom: 3px solid  $primary-color;
+$table-font-family: $font-stack-sanserif-semibold;
+
+// Nav colors
+$nav-color: $third-color;
+$nav-hover: $primary-color-light;
+$nav-text-active: $primary-color;
+
+// Gradient color stops
+$darren-by-design-auto: $primary-color, $secondary-color, $third-color, $primary-color-dark, $secondary-color-light, $third-color-dark, $primary-color-light, $secondary-color-dark, $third-color-light;
+
+
+:root {
+  --color-primary: #{$primary-color};
+  --color-primary-dark: #{$primary-color-dark};
+  --color-primary-light: #{$primary-color-light};
+  --color-secondary: #{$secondary-color};
+  --color-secondary-dark: #{$secondary-color-dark};
+  --color-secondary-light: #{$secondary-color-light};
+  --color-third: #{$third-color};
+  --color-third-dark: #{$third-color-dark};
+  --color-third-light: #{$third-color-light};
+  --color-bg: #{$background-color};
+
+  --text-base-color: #{$base-text-color};
+  --text-alt-color: #{$alt-text-color};
+
+  --font-sans-regular: #{$font-stack-sanserif-regular};
+  --font-sans-semibold: #{$font-stack-sanserif-semibold};
+  --font-serif-regular: #{$font-stack-serif-regular};
+}
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+// Note: Deprecated $screen-sm and $screen-sm as of v3.0.1
+$screen-sm:                  480px !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-sm:               $screen-sm-min !default;
+
+// Small screen / tablet
+// Note: Deprecated $screen-md and $screen-md as of v3.0.1
+$screen-md:                  768px !default;
+$screen-md-min:              $screen-md !default;
+$screen-md:              $screen-md-min !default;
+
+// Medium screen / desktop
+// Note: Deprecated $screen-lg and $screen-lg as of v3.0.1
+$screen-lg:                  992px !default;
+$screen-lg-min:              $screen-lg !default;
+$screen-lg:             $screen-lg-min !default;
+
+// Large screen / wide desktop
+// Note: Deprecated $screen-xl and $screen-xl-desktop as of v3.0.1
+$screen-xl:                  1200px !default;
+$screen-xl-min:              $screen-xl !default;
+$screen-xl-desktop:          $screen-xl-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+$screen-lg-max:              ($screen-xl-min - 1) !default;
+
+//Grid Stuff Here from Bootstrap
+//
+//## Define your custom responsive grid.
+
+//** Number of columns in the grid.
+$grid-columns:              12 !default;
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width:         30px !default;
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+$grid-float-breakpoint:     $screen-md-min !default;
+//** Point at which the navbar begins collapsing.
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
+
+//== Container size from Bootstrap
+//
+//## Define the maximum width of `.container` for different screen sizes.
+
+// Small screen / tablet
+$container-md:             ((720px + $grid-gutter-width)) !default;
+//** For `$screen-md-min` and up.
+$container-md:                 $container-md !default;
+
+// Medium screen / desktop
+$container-lg:            ((940px + $grid-gutter-width)) !default;
+//** For `$screen-lg-min` and up.
+$container-lg:                 $container-lg !default;
+
+// Large screen / wide desktop
+$container-xl:      ((1140px + $grid-gutter-width)) !default;
+//** For `$screen-xl-min` and up.
+$container-xl:                 $container-xl !default;
+
+
+//== Carousel
+//
+//##
+
+$carousel-text-shadow:                        0 1px 2px rgba(0,0,0,0.6) !default;
+
+$carousel-control-color:                      #fff !default;
+$carousel-control-width:                      15% !default;
+$carousel-control-opacity:                    0.5 !default;
+$carousel-control-font-size:                  20px !default;
+
+$carousel-indicator-active-bg:                #fff !default;
+$carousel-indicator-border-color:             #fff !default;
+
+$carousel-caption-color:                      #fff !default;
+
+
+//Images
+$logo: asset-path("logo/header_logo.png");
+$logo-white: asset-path("logo/header_logo_white.png");
+$logo-svg: asset-path("logo/header_logo.svg");
+
+$profile-pic: asset-path("photos/darren_lo.png");
+
+$stripes: asset-path('patterns/stripes.png');
+$hand-made-paper: asset-path('patterns/handmadepaper_@2x.png');
+$white-bed-sheet: asset-path('patterns/white_bed_sheet_@2X.png');
+
+$hero-image: asset-path("headers/hero-image.png");
+$night-sky: asset_path('headers/night_sky.jpeg');
+$night-sky2: asset_path('headers/night_sky_2.jpeg');
+$union-station: asset_path('headers/union_station.jpeg');
+$mountain-side: asset_path('headers/mountain_side.jpeg');
+$abstract-building: asset_path('headers/abstract_building.jpeg');
+$polygonal-bg: asset_path('headers/site_header_bg.png');

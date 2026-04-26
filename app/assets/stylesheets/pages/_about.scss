@@ -1,0 +1,7 @@
+.bio-container {
+  margin: 0 auto 20px auto;
+  width: 90vw;
+  +breakpoint-lg {
+    width: 80vw;
+  }
+}
