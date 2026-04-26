@@ -1,0 +1,46 @@
+
+body {
+  background: linear-gradient(rgba($white, 0.85), rgba($white, 0.25));
+  position: relative;
+  padding: 0;
+  +flexpoint-sm {
+    padding-top: $fixed-header-height;
+
+  }
+}
+.site {
+  +flexbox;
+  +flex-direction(column);
+  height: 100%;
+  min-height: 100%;
+  min-height: 100vh;
+
+}
+.site-header,
+.site-footer {
+  +flex(none);
+
+}
+.site-content {
+  +flex(1 0 auto);
+  width: 100%;
+
+}
+.wrapper {
+  min-height: 100%;
+
+}
++link-color($primary-color-dark, $primary-color-dark , $primary-color-light, $primary-color);
+
++scrollbars(0.5em, rgba($primary-color-light, 0.5));
+
+hr {
+  display: block;
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba($third-color, 0.1);
+  border-bottom: 1px solid rgba($white, 0.3);
+  margin: 5px 0;
+  line-height: 1;
+  padding: 0;
+}

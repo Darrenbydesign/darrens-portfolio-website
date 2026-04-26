@@ -1,0 +1,167 @@
++font-face("source_sans_prolight","sourcesanspro-light-webfont","source_sans_prolight");
++font-face("source_sans_proregular","sourcesanspro-regular-webfont","source_sans_proregular");
++font-face("source_sans_prosemibold","sourcesanspro-semibold-webfont","source_sans_prosemibold");
+
++font-face("source_serif_pro_regular","sourceserifpro-regular-webfont","source_serif_pro_regular");
++font-face("source_serif_pro_semibold","sourceserifpro-semibold-webfont","source_serif_pro_semibold");
++font-face("source_serif_pro_bold","sourceserifpro-bold-webfont","source_serif_pro_bold");
+
+//Font face import isn't working using gem instead...
++font-face("fontawesome","fontawesome-webfont","fontawesome");
+
+html {
+  font-size: 100%;
+
+}
+body {
+  +font-size($base-text-px);
+  font-family: var(--font-sans-regular);
+  color: var(--text-base-color);
+  line-height: 1.4;
+
+}
+%headings-base {
+  color: var(--color-third-dark);
+  line-height: 1.5;
+  margin-top: ce(10px);
+  margin-bottom: ce(10px);
+
+}
+h1,.h1,
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,.h5,
+h6,.h6 {
+  @extend %headings-base;
+
+}
+h1,.h1,h2,.h2 {
+  font-family: var(--font-sans-regular);
+}
+h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
+  font-family: var(--font-serif-regular);
+
+}
+h1,.h1 {
+  +font-size(32px);
+  line-height: 1.25em;
+  +breakpoint-lg {
+    +font-size(48px);
+    line-height: 1.05em;
+
+  }
+  +breakpoint-md {
+    +font-size(40px);
+    line-height: 1.125em;
+
+
+  }
+}
+h2,.h2 {
+  +font-size(26px);
+  line-height: 1.1538em;
+  +breakpoint-lg {
+    +font-size(36px);
+    line-height: 1.25em;
+
+  }
+  +breakpoint-md {
+    +font-size(32px);
+    line-height: 1.1538em;
+
+  }
+}
+h3,.h3 {
+  +font-size(22px);
+  line-height: 1.136em;
+  +breakpoint-lg {
+    +font-size(28px);
+    line-height: 1.25em;
+
+  }
+  +breakpoint-md {
+    +font-size(24px);
+    line-height: 1.1363em;
+
+  }
+}
+h4,.h4 {
+  +font-size(18px);
+  line-height: 1.111em;
+  +breakpoint-lg {
+    +font-size(18px);
+    line-height: 1.222em;
+
+  }
+  +breakpoint-md {
+    +font-size(18px);
+    line-height: 1.111em;
+
+  }
+}
+h5,.h5 {
+  +font-size(14px);
+  line-height: 1.111em;
+  +breakpoint-lg {
+    +font-size(14px);
+    line-height: 1.2em;
+
+  }
+  +breakpoint-md {
+    +font-size(14px);
+    line-height: 1.111em;
+
+  }
+}
+h6,.h6 {
+  +font-size(12px);
+  line-height: 1.111em;
+  +breakpoint-lg {
+    +font-size(12px);
+    line-height: 1.2em;
+
+  }
+  +breakpoint-md {
+    +font-size(12px);
+    line-height: 1.111em;
+
+  }
+}
+label {
+  font-family: var(--font-serif-regular);
+
+}
+p {
+  margin: 0 0 ce(10px);
+
+}
+.lead {
+  +font-size($base-text-px * 2);
+  margin: 0 0 ce(10px);
+
+}
+small {
+  +font-size($base-text-px - 4);
+
+}
+blockquote {
+  width: 20em;
+  float: right;
+  padding: 0px 1.5em;
+  margin: 0 1em;
+  +clearfix;
+  p {
+    +font-size(24px);
+    &:before {
+      content: "\f10d";
+      color: var(--color-primary);
+      font-family: $font-awesome;
+    }
+    &:after {
+      content: "\f10e";
+      color: var(--color-primary);
+      font-family: $font-awesome;
+    }
+  }
+}

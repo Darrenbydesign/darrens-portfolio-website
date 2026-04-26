@@ -1,0 +1,68 @@
+.custom_pagination {
+  margin-top: ce(40px);
+  margin-bottom: ce(40px);
+  text-align: center;
+  padding: 0.3em;
+  cursor: default;
+  a, span, em {
+    padding: 0.2em 0.5em;
+  }
+  .disabled {
+    color: #aaaaaa;
+  }
+  .current {
+    font-style: normal;
+    font-weight: bold;
+    color: var(--color-primary-dark);
+  }
+  a {
+    border: 1px solid #dddddd;
+    color: var(--color-secondary);
+    text-decoration: none;
+    &:hover, &:focus {
+      border-color: rgba($third-color, 0.5);
+      background: var(--color-secondary);
+      color: white;
+    }
+  }
+  .page_info {
+    color: #aaaaaa;
+    padding-top: 0.8em;
+  }
+  .previous_page, .next_page {
+    border-width: 2px;
+  }
+  .previous_page {
+    margin-right: 1em;
+  }
+  .next_page {
+    margin-left: 1em;
+
+  }
+}
+// Flex pagination
+
+.flex-pagination {
+  +flexbox;
+  +flex-flow(row, wrap);
+  +align-items(center);
+  +align-content(center);
+  +justify-content(center);
+
+  .previous_page,
+  .next_page,
+  .current {
+    padding: 0 10px;
+  }
+  .current {
+    +align-self(center);
+
+  }
+  .previous_page {
+    +align-self(flex-start);
+
+  }
+  .next_page {
+    +align-self(flex-end);
+  }
+}
